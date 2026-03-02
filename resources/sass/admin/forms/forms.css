@@ -1,0 +1,222 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../../../public/assets/fonts/Roboto.ttf);
+}
+.admin-content {
+  margin: 0 auto;
+  width: 80vw;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  border-bottom: 1px solid #cac9c2;
+}
+.admin-content .forms-head-block {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-right: 15vw;
+  padding: 20px 0;
+  width: 60vw;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.admin-content .forms-head-block .title-block {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.admin-content .forms-head-block .title-block .title-box {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.admin-content .forms-head-block .title-block .title-box .title {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #1b1357;
+}
+.admin-content .form-input {
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 90px;
+  margin-right: 15vw;
+  width: 60vw;
+  height: auto;
+  border: 1px solid #cac9c2;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-around;
+}
+.admin-content .form-input .input-box {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 90%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.admin-content .form-input .input-box .input-lable {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 2.4vh;
+  font-weight: 300;
+  line-height: 2.4vh;
+  letter-spacing: 0;
+  color: #370c80;
+}
+.admin-content .form-input .input-box .input-text {
+  margin: 0 auto;
+  margin-top: 10px;
+  padding-left: 10px;
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: #181818;
+  border: 1px solid #cac9c2;
+  border-radius: 3px;
+  outline: none;
+  box-sizing: border-box;
+}
+.admin-content .form-input .input-box .input-text:focus {
+  border: 2px solid #abbee6;
+}
+.admin-content .form-input .input-box .notread {
+  background-color: #e9e7e0;
+}
+.admin-content .form-input .input-box .area {
+  min-height: 80px;
+  padding-top: 10px;
+  line-height: normal;
+}
+.admin-content .form-input .input-box .link-page {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 2.4vh;
+  font-weight: 300;
+  line-height: 2.4vh;
+  letter-spacing: 0;
+  text-decoration: none;
+  text-align: left;
+  color: #370c80;
+}
+.admin-content .form-input .input-box .link-page:hover {
+  text-decoration: underline;
+}
+.admin-content .form-input .input-box .btn-form {
+  margin: 0 auto;
+  margin-left: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 25%;
+  height: 60px;
+  font-size: 2.4vh;
+  font-weight: 300;
+  line-height: 2.4vh;
+  letter-spacing: 0;
+  color: #fdfcf4;
+  background-color: #1b1357;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: center;
+}
+.admin-content .form-input .input-box .btn-form:hover {
+  background-color: #abbee6;
+  color: #370c80;
+}
+.admin-content .form-input .input-box .cancel {
+  margin-right: 0;
+  margin-left: 20px;
+  color: #1b1357;
+  background-color: #ffffff;
+  border: 1px solid #1b1357;
+  font-weight: 400;
+}
+.admin-content .form-input .input-box .cancel:hover {
+  color: #6423b0;
+  background-color: #ffffff;
+  border: 1px solid #2799b0;
+}
+.admin-content .form-input .input-box .input-group {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.admin-content .form-input .input-box .input-group .half {
+  margin-left: 0;
+  margin-right: 0;
+  width: 50%;
+}
+.admin-content .form-input .input-box .input-group .half .file {
+  padding-left: 0;
+  border: none;
+}
+.admin-content .form-input .input-box .input-group .half .file::file-selector-button {
+  margin-right: 20px;
+  margin-left: 0;
+  padding: 0 20px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #1b1357;
+  border: 1px solid #1b1357;
+  border-radius: 3px;
+  color: #fdfcf4;
+  height: 100%;
+}
+.admin-content .form-input .input-box .input-group .half .file::file-selector-button:hover {
+  background-color: #abbee6;
+  border-color: #abbee6;
+  color: #1b1357;
+}
+.admin-content .form-input .input-box .input-group .mini {
+  margin-right: 0;
+  margin-left: 0;
+  width: 30%;
+}
+.admin-content .form-input .input-box .input-group .edit {
+  width: 20%;
+}
+.admin-content .form-input .input-box .input-group .dates {
+  background-color: #e9e7e0;
+}
+.admin-content .form-input .first {
+  margin-top: 40px;
+}
+.admin-content .form-input .admin {
+  margin-top: 20px;
+}
+.admin-content .admin {
+  margin-top: 0;
+}/*# sourceMappingURL=forms.css.map */

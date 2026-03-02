@@ -1,0 +1,71 @@
+@use "sass:math";
+@use "sass:list";
+
+$site-width: 100%;
+
+$block-width: 70%;
+
+$header-width: $site-width;
+$header-center-width: $block-width;
+$header-height: 10vh;
+
+$footer-width: $site-width;
+$footer-center-width: $block-width;
+$footer-height: 7vh; //10vh;
+
+$main-width: $block-width;
+$min-main-height: 100vh - $header-height - $footer-height;
+
+$color-accent: #d91a60; //rgb(217,26,96)
+$color-accent-light: #fccfe0; //rgb(252,207,224)
+$color-blick: #f5a836; //rgb(245,168,54)
+$color-blick-light: #f7d5a1; //rgb(247,213,161)
+$color-blick-light-lang: #fff2de; //rgb(255,242,222)
+$color-light: #fcfcfc; //rgb(252,252,252)
+$color-grey: #dae6e8; //rgb(218,230,232)
+$color-grey-dark: #c2cacc; //rgb(194,202,204)
+$color-grey-hover: #d7dbdb;
+$color-dark: #0f1a1c; //rgb(15,26,28)
+
+$color-lang-light: #f2f7f7; //rgb(194,202,204)
+$color-lang-middle: #e6eaeb; //rgb(230,234,235)
+$color-lang-dark: #d7dbdb; //rgb(215,219,219)
+$color-right: #c2fceb; //rgb(194,252,235)
+$color-right-dark: #ade0d1; //rgb(173,224,209)
+
+$maket-width: 1440px;
+$viewport-width: var(--viewport-width);
+
+@font-face {
+  font-family: Roboto;
+  src: url(../../assets/fonts/Roboto.ttf);
+}
+
+@font-face {
+  font-family: NotoSansArmenian;
+  src: url(../../assets/fonts/NotoSansArmenian-VariableFont_wdth\wght.ttf);
+}
+
+@mixin flex-vertical {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@mixin flex-horizontal {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+@mixin text-font($font-size, $font-weight, $line-height, $letter-spacing) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin text-size($maket-width, $viewport-width, $font-size) {
+  font-size: list.slash($viewport-width * $font-size, $maket-width);
+}

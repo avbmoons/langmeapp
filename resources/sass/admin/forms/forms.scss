@@ -1,0 +1,201 @@
+@use 'sass:math';
+
+@import '../../vars/vars.scss';
+
+        .admin-content {
+          margin: 0 auto;
+          width: 100vw - ($admin-sidebar-width);
+          height: inherit;
+          @include flex-vertical();
+          justify-content: flex-start;
+          border-bottom: 1px solid $admin-color-grey;
+          .forms-head-block {
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-right: 15vw;
+            padding: 20px 0;
+            width: 60vw;    // 60%; // 100%;
+            height: 80px;
+            @include flex-horizontal();
+            justify-content: space-between;
+            //border: 1px solid red;
+            .title-block {
+              margin: 0 auto;
+              width:100%;   // 40%; // 30vw;
+              height: 100%;
+              @include flex-vertical();
+              //border: 1px solid green;
+              .title-box {
+                margin: 0 auto;
+                width: 100%;
+                height: 100%; // auto;
+                @include flex-horizontal();
+                justify-content: flex-start;
+                //border: 1px solid orange;
+                .title {
+                  //margin-left: 2vw;
+                  //padding-left: 2vw;
+                  //@include text-font(2.5vh, 300, 2.5vh, 0);
+                  @include text-font(24px, 300, 24px, 0);
+                  color: $admin-color-main-dark;
+                }
+              }
+            }
+          }
+          .form-input {
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 90px;
+            margin-right: 15vw;
+            width: 60vw;    // 60%;
+            //min-height: 75%;  // 70%;
+            height: auto;
+            border: 1px solid $admin-color-grey;  // $color-main;
+            border-radius: 5px;
+            @include flex-vertical();
+            justify-content: space-around;
+            //background-color: grey;
+            .input-box {
+              margin: 0 auto;
+              margin-bottom: $input-marginb;
+              width: $input-width;
+              height: auto;
+              @include flex-vertical();
+              justify-content: space-between;
+              //border: 1px solid green;
+              .input-lable {
+                margin: 0 auto;
+                width: 100%;
+                //margin-bottom: 10px;  // $input-lable-marginb;
+                @include text-font(2.4vh, 300, 2.4vh, 0);
+                color: $color-main-dark;
+              }
+              .input-text {
+                margin: 0 auto;
+                margin-top: $input-lable-marginb; // 10px;
+                padding-left: 10px;
+                //margin-bottom: $input-marginb;
+                width: 100%;  // $input-width;
+                height: $input-height;
+                @include text-font(14px, 300, 14px, 0);
+                color: $color-black;
+                border: 1px solid $admin-color-grey;
+                border-radius: 3px;
+                outline: none;
+                box-sizing: border-box;
+              }
+              .input-text:focus {
+                border: 2px solid $color-main;
+              }
+              .notread {
+                background-color: $color-grey-light;
+              }
+              .area {
+                min-height: 2*$input-height;
+                padding-top: 10px;
+                line-height: normal;
+              }
+              .link-page {
+                margin: 0 auto;
+                width: 100%;
+                @include text-font(2.4vh, 300, 2.4vh, 0);
+                text-decoration: none;
+                text-align: left;
+                color: $color-main-dark;
+              }
+              .link-page:hover {
+                text-decoration: underline;
+              }
+              .btn-form {
+                margin: 0 auto;
+                margin-left: 0;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                width: $form-btn-width;
+                height: $form-btn-height;
+                @include text-font(2.4vh, 300, 2.4vh, 0);
+                color: $color-white;
+                background-color: $admin-color-main-dark;
+                border: none;
+                outline: none;
+                border-radius: 3px;
+                cursor: pointer;
+                @include flex-vertical();
+                //align-items: center;
+                text-decoration: none;
+                text-align: center;
+              }
+              .btn-form:hover {
+                background-color: $color-main;
+                color: $color-main-dark;
+              } 
+              .cancel {
+                margin-right: 0;
+                margin-left: 20px;
+                color: $admin-color-main-dark;
+                background-color: $color-basic-white;
+                border: 1px solid $admin-color-main-dark;
+                font-weight: 400;
+              }
+              .cancel:hover {
+                color: $admin-color-accent;
+                background-color: $color-basic-white;
+                border: 1px solid $admin-color-accent-light;
+              }
+            .input-group {
+                width: 100%;
+                @include flex-horizontal();
+                justify-content: space-between;
+                //border: 1px solid red;
+                .half {
+                    margin-left: 0;
+                    margin-right: 0;
+                    width: 50%; // 100%;    // 60%;
+                    .file {
+                        padding-left: 0;
+                        border: none;                        
+                    }
+                    .file::file-selector-button { 
+                        margin-right: 20px; 
+                        margin-left: 0;
+                        padding: 0 20px;
+                        height: $input-height;
+                        cursor: pointer;
+                        background-color: $admin-color-main-dark;
+                        border: 1px solid $admin-color-main-dark;
+                        border-radius: 3px;
+                        color: $color-white;
+                        height: 100%;
+                    }
+                    .file::file-selector-button:hover {
+                        background-color: $color-main;
+                        border-color: $color-main;
+                        color: $admin-color-main-dark;                        
+                    }
+                }
+                .mini {
+                    margin-right: 0;
+                    margin-left: 0;
+                    width: 30%; // 40%;        
+                }
+                .edit {
+                      width: 20%;
+                    }
+                .dates {
+                  background-color: $color-grey-light;
+                }
+            }                       
+            }
+            .first {
+              margin-top: 40px;
+
+            } 
+            .admin {
+                margin-top: 20px;
+            }               
+          }
+          .admin {
+            margin-top: 0;
+          }
+        }
+

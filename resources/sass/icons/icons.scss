@@ -1,0 +1,8 @@
+.icon {
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    &__icon-Search {
+        mask-image: url("/public/assets/icons/icon-Search.svg");
+    }
+}

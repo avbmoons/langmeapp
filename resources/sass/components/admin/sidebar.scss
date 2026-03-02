@@ -1,0 +1,91 @@
+@use 'sass:math';
+
+@import '../../vars/vars.scss';
+
+@font-face {
+  font-family: Roboto;
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+@mixin adminsidebar($font-family) {
+  .sidebar {
+    margin: 0 auto;
+    width: 20vw; 
+    height: 100%; 
+    @include flex-vertical();
+    justify-content: flex-start;
+    background-color: $color-grey-light;
+    .sidebar-head {
+      margin: 0 auto;
+      width: 100%;
+      height: 80px;
+      @include flex-vertical();
+      .service-time {
+        margin: 20px auto;
+        @include flex-vertical();
+        z-index: 999;
+        p {
+          @include text-font(14px, 300, 14px, 0);
+          color: $admin-color-main-dark;
+        }
+      }
+    }
+    .sidebar-menu-block {
+      margin: 0 auto;
+      margin-left: $admn-sidebar-marginl;
+      width: $admin-sidebar-menu-width;
+      height: auto;
+      overflow-y: auto;
+      @include flex-vertical();
+      justify-content: flex-start;
+      .sidebar-menu-box {
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 100%;
+        height: fit-content;
+        @include flex-horizontal();
+        justify-content: flex-start;
+        .menu-icon {
+          width: 20px;
+          height: 20px;
+        }
+        .bth-menu-item {
+          font-family: $font-family; 
+          margin: 0 auto;
+          margin-left: 0;
+          padding: 0 20px;
+          background: none;
+          border: none;
+          outline: none;
+          text-transform: uppercase;
+          @include text-font(16px, 700, 16px, 0);
+          color: $admin-color-main-dark;
+          cursor: pointer;
+        }
+        .active {
+          color: $admin-color-accent-dark;
+        }
+        .active path {
+          stroke: $admin-color-accent-dark;
+        }
+      }
+      .sidebar-menu-box:hover .bth-menu-item {
+        color: $admin-color-accent-light;
+      }
+      .sidebar-menu-box:hover .menu-icon path {
+        stroke: $admin-color-accent-light;
+      }
+    }
+  }
+}
+
+@include adminsidebar(Roboto);

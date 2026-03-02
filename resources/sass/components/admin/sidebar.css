@@ -1,0 +1,111 @@
+@font-face {
+  font-family: Roboto;
+  src: url(../../assets/font/Roboto-Regular.ttf);
+}
+@font-face {
+  font-family: RobotoCondensed;
+  src: url(../../assets/font/RobotoCondensed-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+.sidebar {
+  margin: 0 auto;
+  width: 20vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  background-color: #e9e7e0;
+}
+.sidebar .sidebar-head {
+  margin: 0 auto;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.sidebar .sidebar-head .service-time {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 999;
+}
+.sidebar .sidebar-head .service-time p {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 14px;
+  letter-spacing: 0;
+  color: #1b1357;
+}
+.sidebar .sidebar-menu-block {
+  margin: 0 auto;
+  margin-left: 23%;
+  width: 65%;
+  height: auto;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.sidebar .sidebar-menu-block .sidebar-menu-box {
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.sidebar .sidebar-menu-block .sidebar-menu-box .menu-icon {
+  width: 20px;
+  height: 20px;
+}
+.sidebar .sidebar-menu-block .sidebar-menu-box .bth-menu-item {
+  font-family: Roboto;
+  margin: 0 auto;
+  margin-left: 0;
+  padding: 0 20px;
+  background: none;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #1b1357;
+  cursor: pointer;
+}
+.sidebar .sidebar-menu-block .sidebar-menu-box .active {
+  color: #6171b0;
+}
+.sidebar .sidebar-menu-block .sidebar-menu-box .active path {
+  stroke: #6171b0;
+}
+.sidebar .sidebar-menu-block .sidebar-menu-box:hover .bth-menu-item {
+  color: #2799b0;
+}
+.sidebar .sidebar-menu-block .sidebar-menu-box:hover .menu-icon path {
+  stroke: #2799b0;
+}/*# sourceMappingURL=sidebar.css.map */

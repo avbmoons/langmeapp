@@ -1,0 +1,272 @@
+@use 'sass:math';
+
+@import '../../vars/vars.scss';
+@import '../../components/admin/header.scss';
+@import '../../components/admin/footer.scss';
+@import '../../components/admin/sidebar.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+
+body {
+  font-family: Roboto;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: $site-width;
+  min-height: 100vh;
+  @include flex-vertical();
+  justify-content: space-between;
+  .top {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    position: relative;
+    @include flex-vertical();
+    justify-content: space-between;
+    flex-grow: 1;
+
+    @include adminheader(Roboto);
+    main {
+      margin: 0 auto;
+      margin-top: $admin-header-height;
+      width: 100%;
+      height: $admin-min-main-height;
+      @include flex-vertical();
+      justify-content: flex-start;
+      background-color: white;
+      .main-block {
+        margin: 0 auto;
+        width: 100%;
+        height: inherit;
+        @include flex-horizontal();
+        justify-content: space-between;
+
+        @include adminsidebar(Roboto);
+        .admin-content {
+          margin: 0 auto;
+          width: 100vw - ($admin-sidebar-width);
+          height: inherit;
+          @include flex-vertical();
+          justify-content: flex-start;
+          border-bottom: 1px solid $admin-color-grey;
+          .head-block {
+            margin: 0 auto;
+            width: 100%;
+            height: 80px;
+            @include flex-horizontal();
+            justify-content: space-between;
+            .title-block {
+              margin: 0 auto;
+              width: 40%; 
+              height: 100%;
+              @include flex-vertical();
+              .title-box {
+                margin: 0 auto;
+                width: 100%;
+                height: auto;
+                @include flex-horizontal();
+                justify-content: flex-start;
+                .title {
+                  padding-left: 2vw;
+                  @include text-font(24px, 300, 24px, 0);
+                  color: $admin-color-main-dark;
+                }
+              }
+            }
+            .services-block {
+              margin: 0 auto;
+              width: 60%; 
+              height: 100%;
+              @include flex-vertical();
+              .services-box {
+                margin: 0 auto;
+                width: 100%;
+                height: 50%;
+                @include flex-horizontal();
+                justify-content: flex-start;
+                .search-block {
+                  margin: 0 auto;
+                  width: 34vw; 
+                  height: 100%;
+                  @include flex-vertical();
+                  .search-box {
+                    margin: 0 auto;
+                    width: 100%;
+                    height: inherit;
+                    @include flex-horizontal();
+                    justify-content: flex-end;
+                    .input-search {
+                      padding-left: 10px;
+                      min-width: 90%;
+                      @include text-font(14px, 300, 14px, 0);
+                      border: 1px solid $admin-color-grey;
+                      border-radius: 3px;
+                    }
+                    .input-search::placeholder {
+                      @include text-font(14px, 200, 14px, 0);
+                      color: $admin-color-grey;
+                    }
+                    .input-search:focus {
+                      border: 2px solid $admin-color-accent-light;
+                      outline: none;
+                    }
+                    .btn-search {
+                      background: none;
+                      border: none;
+                      border-radius: 3px;
+                      cursor: pointer;
+                    }
+                    .btn-search:hover {
+                      background-color: $admin-color-accent-light;
+                    }
+                  }
+                }
+                .add-block {
+                  margin: 0 auto;
+                  width: 15vw; 
+                  height: 100%;
+                  @include flex-vertical();
+                  .add-box {
+                    margin: 0 auto;
+                    width: 100%;
+                    height: inherit;
+                    @include flex-horizontal();
+                    .btn-add {
+                      background: none;
+                      border: none;
+                      border-radius: 3px;
+                      color: $admin-color-main-dark;
+                      cursor: pointer;
+                      .img-add:hover path {
+                        fill: $admin-color-accent-light;
+                      }
+                    }
+
+                    .lable-add {
+                      margin-right: 5vw;
+                      padding-left: 1vw;
+                      @include flex-vertical();
+                      @include text-font(14px, 300, 14px, 0);
+                      color: $admin-color-main-dark;
+                    }
+                  }
+                  .add-box:hover .btn-add .img-add path {
+                    fill: $admin-color-accent-light;
+                  }
+                  .add-box:hover .lable-add {
+                    color: $admin-color-accent-light;
+                  }
+                }
+              }
+            }
+          }
+          .table-block {
+            margin: 0 auto;
+            margin-top: 30px;
+            width: 100%;
+            height: auto;
+            @include flex-vertical();
+            justify-content: flex-start;
+            table {
+              margin: 0 auto;
+              margin-left: 2vw;
+              margin-right: 5vw;
+              width: 91.25%; 
+              height: auto;
+              border-collapse: collapse;
+              border: 1px solid $admin-color-grey;
+              thead {
+                font-family: Roboto;
+                @include text-font(14px, 400, 14px, 0);
+                color: $admin-color-main-dark;
+                text-transform: uppercase;
+                tr {
+                  width: 100%;
+                  height: fit-content;
+                  th {
+                    padding: 8px 0 8px 10px;
+                    text-align: left;
+                    border: 1px solid $admin-color-grey;
+                  }
+                  .th-fixed {
+                    width: 140px; 
+                  }
+                  .th-status {
+                    width: 120px; 
+                  }
+                  .th-id {
+                    width: 60px; 
+                  }
+                }
+              }
+              tbody {
+                @include text-font(14px, 300, 14px, 0);
+                color: $color-black;
+                tr {
+                  width: 100%;
+                  height: fit-content;
+                  td {
+                    padding: 4px 0 4px 10px;
+                    text-align: left;
+                    word-wrap: break-word;
+                    border: 1px solid $admin-color-grey;
+                    .statuses {
+                      @include flex-horizontal();
+                      justify-content: flex-start;
+                      img {
+                        height: 16px;
+                        width: auto;
+                      }
+                      p {
+                        margin-left: 10px;
+                        @include text-font(14px, 300, 18px, 0);
+                        text-transform: uppercase;
+                      }
+                    }
+                    .actions {
+                      @include flex-horizontal();
+                      justify-content: flex-start;
+                      .btn-action {
+                        margin-right: 10px;
+                        padding: 0 2px;
+                        border: none;
+                        background: none;
+                        cursor: pointer;
+                        svg {
+                          width: 20px;
+                          height: 20px;
+                        }
+                      }
+                      .btn-action:hover svg path {
+                        fill: $admin-color-accent-light;
+                      }
+                      a {
+                        margin-right: 10px;
+                        height: 70%;
+                      }
+                    }
+                  }
+                  .descriptions {
+                    max-width: 20vw;
+                    line-height: normal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include adminfooter();
+}
