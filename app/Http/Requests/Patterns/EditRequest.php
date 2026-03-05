@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests\Patterns;
 
+use App\Enums\Status;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\Enum;
 
 class EditRequest extends FormRequest
 {
@@ -11,7 +13,7 @@ class EditRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +24,20 @@ class EditRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'lang_id' => ['required'],
+            'lang_id' => ['exists:langs,id'],
+            'title' => ['required', 'string', 'min:3', 'max:100'],
+            'description' => ['nullable', 'string'],
+            'status' => ['required', new Enum (Status::class)],
+        ];
+    }
+
+    public function attributes(): array{
+        return [
+            'code' => 'Code',
+            'title' => 'Title',
+            'description' => 'Description',
+            'status' => 'Status',          
         ];
     }
 }

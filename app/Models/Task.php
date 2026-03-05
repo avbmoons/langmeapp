@@ -22,6 +22,11 @@ class Task extends Model
         'status',
     ];
 
+    protected $casts = [
+        'lang_ids' => 'array',
+        'theme_ids' => 'array',
+    ];
+
     public function modes()
     {
         return $this->belongsTo(Mode::class, 'mode_id', 'id');

@@ -68,7 +68,8 @@
         @forelse ($lexiconsList as $lexicon)
         <tr>
           <td>{{ $lexicon->id }}</td>
-          <td>{{ $lexicon->word_id }}</td>
+          <td>{{ $lexicon->words->title }}</td>
+          {{-- <td>{{ $lexicon->word_id }}</td> --}}
           <td>{{ $lexicon->translation }}</td>
           <td>{{ $lexicon->spell_base }}</td>
           <td>{{ $lexicon->spell_eng }}</td>
@@ -114,7 +115,7 @@
                   </a>
                 </button>              
                 <button class="btn-action">
-                  <a href="" class="delete">
+                  <a href="javascript:;" class="delete" rel="{{ $lexicon->id }}">
                   <svg
                     width="24"
                     height="24"
@@ -150,3 +151,35 @@
 </div>
     
 @endsection
+
+@push('js')
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function() {
+            let elements = document.querySelectorAll(".delete");
+            elements.forEach(function(e, k) {
+                e.addEventListener("click", function() {
+                const id = this.getAttribute('rel');
+                if(confirm(`Подтверждаете удаление записи с #ID = ${id}`)) {
+                    send(`/admin/lexicons/${id}`).then(() => {
+                        location.reload();
+                    });
+                } else {
+                    alert("Удаление отменено");
+                }
+            });
+            });
+        });
+
+        async function send(url) {
+            let response = await fetch(url, {
+                method: 'DELETE',
+                headers: {
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+                }
+            });
+
+            let result = await response.json();
+            return result.ok;
+        }
+    </script>
+@endpush

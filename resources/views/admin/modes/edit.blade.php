@@ -11,12 +11,17 @@
         </div>
       </div>
     </section>
+    @if ($errors->any())
+      @foreach ($errors->all() as $error)
+        <x-alert type="danger" :message="$error"></x-alert>        
+      @endforeach        
+    @endif
     <form method="post" action="{{ route('admin.modes.update', ['mode' => $mode]) }}" class="form-input admin">
       @csrf
       @method('put')
       <div class="input-box admin" name="title-box">
         <label for="title" class="input-lable">Title</label>            
-        <input type="text" class="input-text" name="title" id="title" value="{{ $mode->title }}">              
+        <input type="text" class="input-text" name="title" id="title" value="{{ $mode->title }}" @error('title') is-invalid @enderror>              
       </div>
       <div class="input-box" name="description-box">
         <label for="description" class="input-lable">Description</label>
@@ -30,7 +35,7 @@
           </div>
           <div class="input-box mini" name="code-box">
             <label for="code" class="input-lable">Code</label>
-            <input type="number" class="input-text" name="code" id="code" value="{{ $mode->code }}">            
+            <input type="number" class="input-text" name="code" id="code" value="{{ $mode->code }}" @error('code') is-invalid @enderror>            
           </div>
           <div class="input-box mini" name="status-box">
             <label for="status" class="input-lable">Status</label>            
@@ -48,7 +53,10 @@
           {{-- <button type="reset" class="btn-form cancel">Clear</button>  --}}
           <a class="btn-form cancel" href="{{ route('admin.modes.index') }}">Cancel</a>       
         </div>
-      </div> 
+      </div>
+      @error('title', 'code')
+          <div class="alert alert-danger">{{ $message }}</div>
+      @enderror 
     </form>
   </div>
     

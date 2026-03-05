@@ -85,8 +85,16 @@ class LangsController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Lang $lang)
     {
-        //
+        try {
+            $lang->delete();
+
+            return \response()->json('ok');
+        } catch (\Exception $exception) {
+            //\Log::error($exception->getMessage(), [$exception]);
+
+            return \response()->json('error', 400);
+        }
     }
 }

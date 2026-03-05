@@ -33,10 +33,10 @@ class CreateRequest extends FormRequest
 
     public function attributes(): array{
         return [
-            'code' => 'Код исх.',
-            'title' => 'Название',
-            'description' => 'Описание',
-            'status' => 'Статус',
+            'code' => 'Code',
+            'title' => 'Title',
+            'description' => 'Description',
+            'status' => 'Status',
           
         ];
     }

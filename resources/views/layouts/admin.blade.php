@@ -11,7 +11,7 @@
       @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     @show
 
-     <script defer src="{{ asset('resources/js/timenow.js') }}"></script>
+     {{-- <script defer src="{{ asset('resources/js/timenow.js') }}"></script> --}}
   </head>
   <body>
     <div class="wrapper">

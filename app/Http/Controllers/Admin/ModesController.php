@@ -82,8 +82,16 @@ class ModesController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Mode $mode)
     {
-        //
+        try {
+            $mode->delete();
+
+            return \response()->json('ok');
+        } catch (\Exception $exception) {
+            //\Log::error($exception->getMessage(), [$exception]);
+
+            return \response()->json('error', 400);
+        }
     }
 }

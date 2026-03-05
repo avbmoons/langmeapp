@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests\Words;
 
+use App\Enums\Status;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rules\Enum;
 
 class EditRequest extends FormRequest
 {
@@ -11,7 +13,7 @@ class EditRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +24,23 @@ class EditRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'theme_ids' => ['required', 'array'],
+            'theme_ids' => ['exists:themes,id'],
+            'code' => ['integer'],
+            'title' => ['required', 'string', 'min:3', 'max:50'],
+            'status' => ['required', new Enum (Status::class)],
+        ];
+    }
+
+    public function getThemeIds(): array{
+        return (array) $this->validated('theme_ids');
+    }
+
+    public function attributes(): array{
+        return [
+            'code' => 'Code',
+            'title' => 'Title',
+            'status' => 'Status',          
         ];
     }
 }

@@ -11,25 +11,30 @@
         </div>
       </div>
     </section>
+    @if ($errors->any())
+      @foreach ($errors->all() as $error)
+        <x-alert type="danger" :message="$error"></x-alert>        
+      @endforeach        
+    @endif
     <form method="post" action="{{ route('admin.langs.store') }}" class="form-input admin">
       @csrf
       <div class="input-box admin" name="title-box">
         <label for="title" class="input-lable">Title</label>            
-        <input type="text" class="input-text" name="title" id="title" value="{{ old('title') }}">              
+        <input type="text" class="input-text" name="title" id="title" value="{{ old('title') }}" @error('title') is-invalid @enderror>              
       </div>
       <div class="input-box" name="native-box">
         <label for="native" class="input-lable">Native</label>            
-        <input type="text" class="input-text" name="native" id="native" value="{{ old('native') }}">              
+        <input type="text" class="input-text" name="native" id="native" value="{{ old('native') }}" @error('native') is-invalid @enderror>              
       </div>
       <div class="input-box" name="alias-box">
         <label for="alias" class="input-lable">Alias</label>            
-        <input type="text" class="input-text" name="alias" id="alias" value="{{ old('alias') }}">              
+        <input type="text" class="input-text" name="alias" id="alias" value="{{ old('alias') }}" @error('alias') is-invalid @enderror>              
       </div>         
       <div class="input-box" name="image-box">
         <div class="input-group">
           <div class="input-box mini" name="code-box">
             <label for="code" class="input-lable">Code</label>
-            <input type="number" class="input-text" name="code" id="code" value="{{ old('code') }}">            
+            <input type="number" class="input-text" name="code" id="code" value="{{ old('code') }}" @error('code') is-invalid @enderror>            
           </div>
           <div class="input-box mini" name="status-box">
             <label for="status" class="input-lable">Status</label>            
@@ -56,6 +61,9 @@
           <a class="btn-form cancel" href="{{ route('admin.langs.index') }}">Cancel</a>       
         </div>
       </div> 
+      @error('title', 'code', 'native', 'alias')
+          <div class="alert alert-danger">{{ $message }}</div>
+      @enderror
     </form>
   </div>
     
