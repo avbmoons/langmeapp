@@ -79,7 +79,7 @@
           <td>{{ $theme->updated_at }}</td>
           <td>
             <div class="actions">              
-                <button class="btn-action">
+                <button class="btn-action show" name="actionShow">
                   <a href="">
                   <svg
                     width="24"
@@ -95,7 +95,7 @@
                   </svg>
                   </a>
                 </button>              
-                 <button class="btn-action">
+                 <button class="btn-action" name="actionEdit">
                   <a href="{{ route('admin.themes.edit', ['theme' => $theme->id])}}">
                   <svg
                     width="24"
@@ -111,7 +111,7 @@
                   </svg>
                   </a>
                 </button>              
-                <button class="btn-action">
+                <button class="btn-action" name="actionDel">
                   <a href="javascript:;" class="delete" rel="{{ $theme->id }}">
                   <svg
                     width="24"

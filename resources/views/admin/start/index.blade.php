@@ -12,7 +12,7 @@
     </div>
     <div class="services-block">
       <div class="services-box">
-        <div class="search-block">
+        {{-- <div class="search-block">
           <div class="search-box">
             <input type="text" class="input-search" placeholder="Search"/>
             <button class="btn-search">
@@ -41,7 +41,7 @@
             </button>
             <p class="lable-add">Add item</p>
           </div>
-        </div>
+        </div> --}}
       </div>
     </div>
   </section>

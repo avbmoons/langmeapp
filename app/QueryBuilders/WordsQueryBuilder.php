@@ -32,5 +32,4 @@ final class WordsQueryBuilder extends QueryBuilder
     {
         return $this->model->paginate($quantity);
     }
-
 }

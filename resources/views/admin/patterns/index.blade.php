@@ -77,7 +77,7 @@
           <td>{{ $pattern->updated_at }}</td>
           <td>
             <div class="actions">              
-                <button class="btn-action">
+                <button class="btn-action show" name="actionShow">
                   <a href="">
                   <svg
                     width="24"
@@ -93,7 +93,7 @@
                   </svg>
                   </a>
                 </button>              
-                 <button class="btn-action">
+                 <button class="btn-action" name="actionEdit">
                   <a href="{{ route('admin.patterns.edit', ['pattern' => $pattern->id])}}">
                   <svg
                     width="24"
@@ -109,7 +109,7 @@
                   </svg>
                   </a>
                 </button>              
-                <button class="btn-action">
+                <button class="btn-action" name="actionDel">
                   <a href="javascript:;" class="delete" rel="{{ $pattern->id }}">
                   <svg
                     width="24"

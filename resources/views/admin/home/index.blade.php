@@ -84,8 +84,8 @@
           <td>12.02.2023 21:03.54</td>
           <td>
             <div class="actions">
-              <a href="">
-                <button class="btn-action">
+                <button class="btn-action show" name="actionShow">
+                  <a href="">
                   <svg
                     width="24"
                     height="24"
@@ -98,10 +98,10 @@
                       fill="#1B1357"
                     />
                   </svg>
+                  </a>
                 </button>
-              </a>
-              <a href="">
-                <button class="btn-action">
+                <button class="btn-action" name="actionEdit">
+                  <a href="">
                   <svg
                     width="24"
                     height="24"
@@ -114,10 +114,10 @@
                       fill="#1B1357"
                     />
                   </svg>
+                  </a>
                 </button>
-              </a>
-              <a href="" class="delete">
-                <button class="btn-action">
+                <button class="btn-action" name="actionDel">
+                  <a href="" class="delete">
                   <svg
                     width="24"
                     height="24"
@@ -132,8 +132,8 @@
                       fill="#1B1357"
                     />
                   </svg>
+                  </a>
                 </button>
-              </a>
             </div>
           </td>
         </tr>

@@ -289,21 +289,52 @@ body {
               }
             }
           }
-          .chart-block {
+          .chart-rows-block {
             margin: 0 auto;
-            margin-top: 20px;
-            margin-right: 5vw;
-            width: 90%; // 70vw;  // 90%;
-            height: 70%;
+            width: 100%;
+            height: 90%;    // 74%;
             @include flex-vertical();
-            border: 1px solid $admin-color-grey;
-            .chart-box {
-              margin: 0 auto;
-              padding: 10px;
-              width: 100%;
-              height: auto;
-              @include flex-horizontal();
-              justify-content: flex-start
+            justify-content: space-around;
+            overflow-y: auto;
+            //border: 1px solid green;
+            .chart-mini-row {
+                margin: 0 auto;
+                width: 100%;
+                height: 38%;
+                @include flex-horizontal();
+                justify-content: space-between;
+                //border: 1px solid violet;
+                .chart-mini {
+                    margin: 0 auto;
+                    //padding: 20px;
+                    width: 23%; // 30%;
+                    height: 100%;
+                    position: relative;
+                    border:  1px solid blue;
+                    #testChart2, #testChart3, #testChart4, #testChart1 {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100% !important;
+                        height: 100% !important;
+                    }
+                }
+            }
+            .chart-one-row {
+                margin: 0 auto;
+                width: 98%; // 100%;
+                height: 58%;
+                position: relative;
+                @include flex-horizontal();
+                justify-content: space-around;
+                border: 2px solid violet;
+                #testChart {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100% !important;
+                    height: 100% !important;
+                }
             }
           }
         }

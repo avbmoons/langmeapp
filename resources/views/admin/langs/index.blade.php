@@ -85,7 +85,7 @@
           <td>{{ $lang->updated_at }}</td>
           <td>
             <div class="actions">              
-                <button class="btn-action">
+                <button class="btn-action show" name="actionShow">
                   <a href="">
                   <svg
                     width="24"
@@ -101,7 +101,7 @@
                   </svg>
                   </a>
                 </button>              
-                 <button class="btn-action">
+                 <button class="btn-action" name="actionEdit">
                   <a href="{{ route('admin.langs.edit', ['lang' => $lang->id])}}">
                   <svg
                     width="24"
@@ -117,7 +117,7 @@
                   </svg>
                   </a>
                 </button>              
-                <button class="btn-action">
+                <button class="btn-action" name="actionDel">
                   <a href="javascript:;" class="delete" rel="{{ $lang->id }}">
                     <svg
                       width="24"

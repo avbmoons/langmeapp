@@ -35,4 +35,9 @@ class Mode extends Model
     {
         return DB::table($this->table)->find($id);
     }
+
+    public function getModeByStatus($status): mixed
+    {
+        return DB::table($this->table)->find($status);
+    }
 }
