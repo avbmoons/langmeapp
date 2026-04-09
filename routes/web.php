@@ -11,6 +11,11 @@ use App\Http\Controllers\Admin\ThemesController as AdminThemesController;
 use App\Http\Controllers\Admin\WordsController as AdminWordsController;
 use App\Http\Controllers\Admin\UsersController as AdminUsersController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\TaskChoiceController;
+use App\Http\Controllers\TaskPlainController;
+use App\Http\Controllers\TaskLangController;
+use App\Http\Controllers\TaskMixController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,4 +50,8 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], static function() {
 Route::group(['prefix' => ''], static function() {
     Route::get('/home', [HomeController::class, 'index'])
     ->name('home');
+    Route::get('/taskChoice', [TaskChoiceController::class, 'index'])->name('taskChoice');
+    Route::get('/taskPlain', [TaskPlainController::class, 'index'])->name('taskPlain');
+    Route::get('/taskLang', [TaskLangController::class, 'index'])->name('taskLang');
+    Route::get('/taskMix', [TaskMixController::class, 'index'])->name('taskMix');
 });

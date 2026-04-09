@@ -16,10 +16,11 @@ $footer-height: 7vh; //10vh;
 $main-width: $block-width;
 $min-main-height: 100vh - $header-height - $footer-height;
 
-$color-accent: #d91a60; //rgb(217,26,96)
+$color-accent: #ff4500; //rgb(255, 69, 0);  // #d91a60; //rgb(217,26,96)
 $color-accent-light: #fccfe0; //rgb(252,207,224)
 $color-blick: #f5a836; //rgb(245,168,54)
 $color-blick-light: #f7d5a1; //rgb(247,213,161)
+$color-blick-dark: #f58318; //rgb(245, 131, 24)
 $color-blick-light-lang: #fff2de; //rgb(255,242,222)
 $color-light: #fcfcfc; //rgb(252,252,252)
 $color-grey: #dae6e8; //rgb(218,230,232)
@@ -33,12 +34,32 @@ $color-lang-dark: #d7dbdb; //rgb(215,219,219)
 $color-right: #c2fceb; //rgb(194,252,235)
 $color-right-dark: #ade0d1; //rgb(173,224,209)
 
+$color-chart-yellow: #FCF9C2; //rgb(252, 249,194)
+$color-chart-orange: #FCCFC2; //rgb(252, 207, 194)
+$color-chart-green: #C2FCEB;  //rgb(194, 252, 235)
+$color-chart-violet: #D4C2FC; //rgb(212, 194, 252)
+$color-chart-green-middle: #75A798; //rgb(117, 167, 152)
+$color-chart-brown: #7D7942; //rgb(125, 121, 66)
+$color-chart-brown-dark-dark: #533821; //rgb(83, 56, 33)
+$color-chart-red: #D1001C;  //rgb(209, 0, 28)
+$color-chart-black: #03102B;  //rgb(3, 16, 43)
+$color-chart-blue: #1D39A4; //rgb(29, 57, 164)
+$color-chart-brown-light: #A7A475;  //rgb(167,164,117)
+$color-chart-brown-middle: #A78075; //rgb(167, 128, 117)
+$color-chart-violet-middle: #8475A7;  //rgb(132, 117, 167)
+$color-chart-green-dark: #427D6B; //rgb(66, 125, 107)
+$color-chart-brown-dark: #524F1E; //rgb(82, 79, 30)
+$color-chart-red-dark: #C24D67; //rgb(194, 77, 103)
+$color-chart-blue-dark: #0c3387;  //rgb(12, 51, 135)
+$color-chart-blue-light: #4B74B3; //rgb(75, 116, 179)
+
 $maket-width: 1440px;
 $viewport-width: var(--viewport-width);
 
 @font-face {
   font-family: Roboto;
-  src: url(../../assets/fonts/Roboto.ttf);
+  //src: url(../../assets/fonts/Roboto.ttf);
+  src: url(/public/assets/fonts/Roboto.ttf);
 }
 
 @font-face {

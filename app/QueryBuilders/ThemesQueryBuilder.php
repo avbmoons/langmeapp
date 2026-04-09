@@ -28,6 +28,11 @@ final class ThemesQueryBuilder extends QueryBuilder
         return Theme::query()->where('status', $status)->get();
     }
 
+    public function getThemesActive():Collection
+    {
+        return Theme::query()->where('status', 'active')->get();
+    }
+
     public function getThemesWithPagination(int $quantity = 10): LengthAwarePaginator
     {
         return $this->model->paginate($quantity);

@@ -1,0 +1,130 @@
+  @use 'sass:math';
+
+//@import '../varsfront/varsfront.scss';
+@import '../../varsfront/varsfront.scss';
+
+@font-face {
+  font-family: Roboto;
+  //src: url(../../../public/assets/fonts/Roboto.ttf);
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+  
+  .tutor-cover {
+    margin: 0;
+    width: $site-width;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    @include flex-vertical();
+    background-color: rgba(15, 26, 28, 0.5); // $color-dark;
+    display: none;
+    .tutor {
+      margin: 0 auto;
+      width: $block-width;  
+      height: $min-main-height; 
+      @include flex-vertical();
+      background-color: $color-light; 
+      border-radius: 5px;
+      box-shadow: -20px 20px 10px 0px rgba(0,0,0,0.3);//
+      border-left: 3px solid orangered;
+      border-bottom: 5px solid orangered;
+      .tutor-main {
+        margin: 0 auto;
+        width: 90%;  
+        height: 90%;  
+        @include flex-vertical();
+        background-color: $color-lang-dark;
+        border-radius: 5px;
+        box-shadow: -10px 10px 10px 0px rgba(0,0,0,0.3),
+                    10px 10px 10px 0px rgba(0,0,0,0.3);//
+        .tutor-img {
+          height: 100%;
+          width: auto;
+          object-fit: contain;
+        }
+      }
+      .tutor-footer {
+        margin: 0 auto;
+        width: 90%;
+        height: 10%; 
+        @include flex-vertical();
+        .tutor-footer-box {
+          margin: 0 auto;
+          width: 100%;
+          height: 100%;
+          @include flex-horizontal();
+          justify-content: space-between;        
+          .tutor-logo {
+            margin: auto;
+            margin-left: 3%;
+            display: none;
+          }
+          .tutor-close {
+            margin: auto;
+            margin-right: 3%;
+            height: 70%;
+            width: auto;
+            @include text-font(1.94vw, 400, 1.94vw, 0);
+            color: $color-dark; 
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+          }
+          .tutor-close:hover {
+            color: $color-accent;
+          }
+          #tutorSkip {
+            margin-right: 0;
+            width: 15%; // 20%; ////
+            @include text-font(1.67vw, 500, 1.67vw, 0);
+            //border: 1px solid green;
+          }
+          #tutorPrev, #tutorNext {
+            width: 5%;  // 10%;
+          }          
+          .control-panels {
+            margin: auto;
+            height: 50%;
+            width: 80%; // auto;
+            @include flex-horizontal();
+            justify-content: space-between;
+
+            .dot-step {
+              height: auto; // 100%;
+              //width: auto;
+              svg {
+                //height: 100%;  // 2.5vw;  // 100%;
+                width: 2.5vw;
+                height: auto;
+              }
+            }
+            // .dot-step:hover {
+            //   // .dot-circle {
+            //   //   .dots {
+            //   //     fill: $color-blick;
+            //   //   }
+            //   // }
+            //   svg circle {
+            //     fill: $color-blick;
+            //   }
+            // }
+            .dot-step .dot-circle .dots:hover {
+              fill: $color-blick;
+            }
+          }
+        }
+      }
+    }
+  }

@@ -1,0 +1,155 @@
+@use 'sass:math';
+
+@import '../../varsfront/varsfront.scss';
+
+@font-face {
+  font-family: Roboto;
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+@mixin frontfooter($font-family) { 
+.footer-front {
+    margin: 0 auto;
+    width: $footer-width;
+    height: $footer-height;
+    @include flex-horizontal();
+    background-color: $color-lang-light; // $color-grey;
+    .footer-left-front {
+      margin: 0 auto;
+      width: 0.5 * ($site-width - $block-width);
+      height: 100%;
+      @include flex-vertical();
+      .footer-left-block-front {
+        margin: 0 auto; 
+        width: 100%;
+        height: 100%; 
+        @include flex-horizontal();
+        align-items: center;
+        .logo-footer-front {
+          margin: 0 auto;
+          margin-right: 8%;
+          height: 50%;  // 100%; // 50%;
+          width: auto;
+          align-items: center;
+        }
+      }
+    }
+    .footer-center-front {
+      margin: 0 auto;
+      width: $block-width;
+      height: 100%;
+      @include flex-vertical();
+      background-color: $color-blick-dark;
+      clip-path: polygon(24% 0%, 100% 0%, 100% 100%, 0% 100%);
+      .footer-center-block-front {
+        margin: 0 auto;
+        width: 100%;
+        height: fit-content; 
+        @include flex-horizontal();
+        justify-content: space-between;
+        .menu-front {
+          margin: 0 auto;
+          width: 60%; // 70%; 
+          height: 100%; 
+          @include flex-horizontal();
+          justify-content: flex-end;
+          align-items: center;
+          .menu-item-front {
+            margin: auto 0; 
+            margin-right: 4%;
+            width: fit-content;
+            height: fit-content;
+            border: none;
+            background: none;
+            @include text-font(1.11vw, 300, 1.11vw, 0); //16px; 
+            cursor: pointer;
+            .btn-link-menu {
+              text-decoration: none;
+              @include text-font(1.11vw, 300, 1.11vw, 0); //16px;
+              color: $color-dark;
+            }
+          }
+          .menu-item-front:hover {
+            color: $color-light;  // $color-accent;
+            font-weight: 500;
+            .btn-link-menu {
+              color: $color-light;  // $color-accent;
+            }
+          }
+          .future .btn-link-menu {
+            color: grey;
+          }
+          .future .btn-link-menu:hover {
+            color: $color-grey-hover;
+          }
+        }
+        .copyright-front {
+          margin: 0 auto;
+          margin-left: 26%;
+          width: 40%; // 30%; 
+          height: 100%; 
+          @include text-font(0.83vw, 300, 0.83vw, 0); //12px
+          align-items: center;
+          text-align: left;
+        }
+      }
+    }
+    .footer-right-front {
+      margin: 0 auto;
+      width: 0.5 * ($site-width - $block-width);
+      height: 100%;
+      @include flex-vertical();
+      background-color: $color-blick-dark;
+      .footer-right-block-front {
+        margin: 0 auto; 
+        width: 100%;
+        height: 100%; 
+        @include flex-horizontal();
+        align-items: center;
+        .menu-front {
+          margin: 0 auto;
+          width: 100%; 
+          height: 100%; 
+          @include flex-horizontal();
+          justify-content: flex-start;
+          align-items: center;
+          .menu-item-front {
+            margin: 0; 
+            margin-left: 8%;
+            width: fit-content;
+            height: fit-content;
+            border: none;
+            background: none;
+            @include text-font(16px, 300, 16px, 0);
+            cursor: pointer;
+            align-items: center;
+            // img {
+            //   margin: 0 auto;
+            //   height: 16px;
+            //   width: auto;
+            //   align-items: end;
+            // }
+          }
+          .menu-item-front:hover {
+            color: $color-light;  // $color-accent;
+            font-weight: 500;
+          }
+          .menu-item-front:hover path {
+            fill: $color-light; // $color-accent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include frontfooter(Roboto);

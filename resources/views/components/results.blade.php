@@ -1,6 +1,6 @@
-<div class="results-cover" id="resultsModal" style="display: flex;">
-  <div class="results">
-    <div class="results-header">
+<div class="results-front-cover" id="resultsModal" >
+  <div class="results-front-modal">
+    <div class="results-front-header">
       <img src="{{ Vite::asset('resources/images/images/logo-front-modal-light.png')}}" alt="logo">
       <a href="">
         <button id="resultsClose" onclick="closeModalResults()">
@@ -8,7 +8,7 @@
         </button>
       </a>
     </div>
-    <div class="results-main" id="resultsMain">
+    <div class="results-front-main" id="resultsMain">
       <div class="results-mode">
         <div class="results-totals title">
           <p class="totals-title">Choice mode:</p>
@@ -62,7 +62,7 @@
         </div>
       </div>
     </div>
-    <div class="results-button">
+    <div class="results-front-button">
       <a href="">
         <button class="btn-ok" onclick="closeModalResults()">OK</button>
       </a>

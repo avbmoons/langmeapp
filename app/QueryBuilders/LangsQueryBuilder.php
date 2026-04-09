@@ -28,6 +28,11 @@ final class LangsQueryBuilder extends QueryBuilder
         return Lang::query()->where('status', $status)->get();
     }
 
+    public function getLangsActive():Collection
+    {
+        return Lang::query()->where('status', 'active')->get();
+    }
+
     public function getLangsWithPagination(int $quantity = 10): LengthAwarePaginator
     {
         return $this->model->paginate($quantity);

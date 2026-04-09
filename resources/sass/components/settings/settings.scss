@@ -1,0 +1,301 @@
+@use 'sass:math';
+
+//@import '../varsfront/varsfront.scss';
+@import '../../varsfront/varsfront.scss';
+
+@font-face {
+  font-family: Roboto;
+  //src: url(../../../public/assets/fonts/Roboto.ttf);
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+  
+  .modal-settings {
+    margin: 0;
+    width: $site-width;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    @include flex-vertical();
+    background-color: rgba(15, 26, 28, 0.5); 
+    border-radius: 5px;
+    display: none;
+    .info {
+      margin: 0 auto;
+      width: 45%;
+      height: 100vh - $header-height - $footer-height; 
+      @include flex-vertical();
+      justify-content: space-between;
+      background-color: rgba(252, 252, 252, 1); 
+      border-radius: 5px;
+      box-shadow: -20px 20px 10px 0px rgba(0,0,0,0.3);//
+      border-left: 3px solid orangered;
+      border-bottom: 5px solid orangered;
+      overflow-y: auto;
+      .info-header {
+        margin: 0 auto;
+        margin-top: 3%; 
+        width: 100%;
+        height: fit-content;
+        @include flex-horizontal();
+        justify-content: space-between;
+        img {
+          margin-left: 3%;
+        }
+        button {
+          margin-right: 3%;
+          background: none;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+        .modal-title {
+          @include text-font(1.25vw, 500, 1.25vw, 0); //18px; 
+          color: $color-dark;
+          align-self: center;
+          text-align: center;
+        }
+      }
+      .info-main {
+        margin: 0 auto;
+        width: 90%; 
+        height: fit-content;
+        @include flex-vertical();
+        text-align: center;
+        .combo-block {
+          margin: 0 auto;
+          margin-bottom: 2%;
+          width: 100%;
+          height: auto;
+          @include flex-horizontal();
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          .combo-label {
+            width: 34%;
+            @include text-font(1.25vw, 300, 1.25vw, 0); //18px; 
+            text-align: left;
+            align-self: center;
+          }
+          .mode {
+            width: 14%;
+          }
+          .choice {
+            width: 20%;
+          }
+          .combo-input {
+            margin-left: 10px;
+            padding: 5px;
+            width: 60%;
+            @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+            color: $color-dark;
+            border: 1px solid $color-grey-dark;
+            border-radius: 5px;
+          }
+          .combo-input::placeholder {
+            padding: 10px 5px 10px 10px;
+            color: $color-grey-dark;
+            font-style: italic;
+            @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+          }
+          .combo-button {
+            margin-left: 1%;
+            padding: 5px;
+            width: fit-content; // 6%; // 5.2%;
+            @include text-font(1.11vw, 300, 1.11vw, 0); //16px; 
+            text-align: center;
+            background-color: $color-grey;
+            border-radius: 5px;
+            border: none;
+            outline: none;
+          }
+          .combo-button:hover {
+            background-color: $color-blick;
+          }
+          .mode-button {
+            margin-left: 2%; 
+            width: 18%; 
+            label {
+              @include text-font(1.11vw, 300, 1.11vw, 0); //16px; 
+              color: red;
+              text-align: center;
+            }
+          }
+          .mode-button-label {
+            @include text-font(1.11vw, 300, 1.11vw, 0); //16px; 
+            text-align: center;
+            align-self: center;
+          }
+          .mode-button:hover {
+            background-color: $color-blick;
+          }
+          .combo-text {
+            margin-left: 10px;
+            padding: 5px;
+            width: 96%;
+            @include text-font(1.11vw, 300, 1.11vw, 0); //16px; 
+            color: $color-dark;
+          }
+          .combo-text::placeholder {
+            padding: 10px 5px 10px 10px;
+            color: $color-grey-dark;
+            font-style: italic;
+            @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+          }
+          .combo-list {
+            margin: auto; 
+            padding: 10px;
+            width: 100%; 
+            height: auto;
+            max-height: 0.5 * (100vh - $header-height - $footer-height);
+            @include flex-vertical();
+            justify-content: space-between;
+            overflow-y: auto;
+            display: none;
+            background-color: $color-light; 
+            border: 2px solid $color-grey;
+            position: absolute;
+            top: 100%;
+            z-index: 99;
+            .combo-list-item {
+              margin-bottom: 2%;
+              width: auto; 
+              @include flex-horizontal();
+              align-items: center;
+              .combo-list-input {
+                padding: 5px;
+                @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+                color: $color-dark;
+                border: 1px solid $color-grey-dark;
+                border-radius: 5px;
+                img {
+                  height: 100%;
+                  width: auto;
+                }
+              }
+              .btn-choose {
+                margin-left: -10px;
+                padding: 10px 20px;
+                height: 100%;
+                @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+                background-color: $color-grey;
+                border: none;
+                border-radius: 5px;
+              }
+              .btn-choose:hover {
+                background-color: $color-blick; 
+              }
+              label {
+                margin-left: 10px;
+                width: 70%;
+                @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+                text-align: left;
+              }
+              .search {
+                margin-right: 20px;
+                width: 70%;
+                visibility: hidden;
+              }
+            }
+            #allThemesCombo {
+              display: none;
+            }
+            .combo-list-choice {
+              margin: auto;
+              padding: 10px;
+              width: 100%;
+              height: auto;
+              @include flex-vertical();
+              justify-content: space-between;
+              display: none;
+              background-color: $color-light;
+            }
+          }
+          #modeChoice {
+            margin-right: 4%;
+            width: 80%; 
+            height: 100%;
+            @include flex-horizontal();
+            justify-content: space-between;
+            align-self: center;
+          }
+          .user-choice {
+            margin-left: 10px;
+            padding: 5px;
+            width: 80%; 
+            height: auto;
+            border: 1px solid $color-grey-dark; 
+            border-radius: 5px;
+            @include flex-vertical();
+            justify-content: space-between;
+            align-self: center;
+            .user-choice-result {
+              margin: 0 auto;
+              padding: 5px 0;
+              width: 100%;
+              height: fit-content;
+              @include flex-horizontal();
+              justify-content: flex-start;
+              align-items: center;
+              .result-label {
+                width: 20%;
+                @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+                align-self: flex-start;
+                text-align: left;
+              }
+              .result-field {
+                padding: 0 5px;
+                width: 80%;
+                height: auto;
+                font-family: Roboto;
+                @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+                @include flex-vertical();
+                align-items: center;
+                align-content: center;
+                text-align: left;
+                border: none;
+                outline: none;
+                background-color: $color-light;
+                resize: none;
+              }
+            }
+          }
+        }
+        #userChoiceBlock {
+          margin-top: 4%;
+        }
+      }
+      .info-button {
+        margin: 0 auto;
+        margin-bottom: 7%;
+        width: 100%;
+        height: 14%; 
+        @include flex-horizontal();
+        .btn-go {
+          padding: 0 60px;
+          width: fit-content; // 40%; 
+          height: 100%;
+          text-align: center;
+          @include text-font(1.53vw, 300, 1.53vw, 0); //22px; 
+          background-color: $color-grey;
+          border-radius: 5px;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+        .btn-go:hover {
+          background-color: $color-blick; 
+        }
+      }
+    }
+  }

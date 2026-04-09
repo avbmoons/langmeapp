@@ -45,6 +45,7 @@ class Lang extends Model
     {
         return DB::table($this->table)->find($id);
     }
+
 }
 
 

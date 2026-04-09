@@ -1,0 +1,284 @@
+    main {
+      margin: 0 auto;
+      width: $site-width;
+      min-height: $min-main-height;
+      @include flex-horizontal();
+      .main-left {
+        margin: auto;
+        width: 0.5 * ($site-width - $block-width);
+        height: $min-main-height;
+        @include flex-vertical();
+        justify-content: flex-start;
+        .btn-tutor-block {
+          margin: 0 auto;
+          margin-top: 10%;
+          width: 100%;
+          height: 10%;
+          @include flex-vertical();
+          .btn-tutor {
+            margin: 0 auto;
+            width: 50%;
+            height: 100%;
+            padding: 5px;
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            img {
+              height: auto; 
+              width: 100%;  
+            }
+          }
+          .btn-tutor:hover {
+            svg path {
+              fill: orangered;
+            }
+          }
+        }
+      }
+      .main-center {
+        margin: auto;
+        width: $block-width;
+        height: $min-main-height;
+        @include flex-vertical();
+        .settings {
+          margin: 0 auto;
+          margin-top: 2%; 
+          width: 100%;
+          height: 10%;
+          @include flex-horizontal();
+          justify-content: space-between;
+          .set-get {
+            margin: 0; 
+            width: 24%; 
+            height: 100%;
+            @include flex-horizontal();
+            align-items: center;
+            background-color: $color-lang-light;  
+            border-radius: 5px;
+            @include text-font(1.39vw, 400, 1.39vw, 0); //20px;
+            color: $color-dark;
+            cursor: pointer;
+            border: 2px solid $color-grey;            
+            .mode-check {
+              visibility: hidden;
+            }
+          }
+          #setButton {
+            box-shadow: -10px -10px 10px 0px rgba(0,0,0,0.2);//
+            border-top: 3px solid orangered;
+            border-left: 3px solid orangered;
+            border-right: none;
+            border-bottom: none;
+            border-radius: 5px;
+          }
+          #getButton {
+            box-shadow: 10px -10px 10px 0px rgba(0,0,0,0.2);//
+            border-top: 3px solid orangered;
+            border-right: 3px solid orangered;
+            border-radius: 5px;
+          }
+          .set-get:hover {
+            background-color: $color-blick-dark;
+            color: $color-light;  
+            border: 2px solid $color-blick;
+            svg path {
+              fill: $color-light; 
+              stroke: $color-light; 
+            }
+          }
+          .get:hover {
+            svg path {
+              fill: none;
+              stroke: $color-light; 
+            }
+          }
+        }
+        .modes {
+          margin: auto;
+          width: 100%;  
+          height: 55%;
+          @include flex-horizontal();
+          justify-content: space-between;
+          flex-wrap: wrap;
+          border-radius: 5px;
+          .mode-item {
+            margin: auto 0;
+            width: 24%; 
+            height: 100%;  
+            @include flex-vertical();
+            justify-content: space-between;
+            border-bottom: 5px solid orangered;
+            border-radius: 5px;
+            .mode-item-btn {
+              margin: auto;
+              width: 100%;
+              height: 100%;
+              align-items: center;
+              background-color: $color-grey;
+              cursor: pointer;
+              border: none; 
+              outline: none;
+              border-radius: 5px;
+              @include flex-vertical();
+              box-shadow: -10px 20px 10px 0px rgba(0,0,0,0.2);
+              .mode-btn-title {
+                margin: auto;
+                width: 100%;
+                height: 70%;
+                background-color: $color-lang-light;
+                border-radius: 5px;
+                @include flex-vertical();
+                .title {
+                  width: 100%;
+                  margin-bottom: 2.2%; 
+                  @include text-font(2.22vw, 400, 2.22vw, 10%); //32px; 
+                  color: $color-dark;
+                  align-items: center;
+                }
+                .mini {
+                  @include text-font(1.39vw, 400, 1.39vw, 5%); //20px; 
+                }
+              }
+              .mode-btn-info {
+                margin: auto;
+                width: 100%;
+                height: 30%;
+                background-color: $color-light;
+                border-radius: 5px;
+                @include flex-horizontal();
+                .info {
+                  margin: auto;
+                  width: 80%;
+                  @include text-font(1.11vw, 400, 1.11vw, 0); //16px; 
+                  color: $color-dark;
+                  text-align: center;
+                }
+              }
+              .mode-btn-title:hover {
+                background-color: orange;
+                .title {
+                  color: $color-light;
+                }                
+              }
+              .mode-btn-info:hover {
+                background-color: $color-blick;
+                .info{
+                  color: $color-light;
+                }                
+              }
+            }
+            .mode-item-btn:hover {
+              border: 2px solid $color-blick;
+              background-color: orange; 
+            }
+            #modeItemPlain, #modeItemChoice {
+              box-shadow: -10px 20px 10px 0px rgba(0,0,0,0.2);
+              border-left: 3px solid orangered;
+            }
+            #modeItemMix {
+              border-right: 3px solid orangered;
+              box-shadow: 10px 20px 10px 0px rgba(0,0,0,0.2);
+            }
+            #modeItemLang, #modeItemChoice {
+              box-shadow: -10px 20px 10px 0px rgba(0,0,0,0.2),
+                           10px 20px 10px 0px rgba(0,0,0,0.2);
+            }
+            #modeItemLang {
+              border-right: 3px solid orangered;
+            }
+          }
+          .mode-item:hover {
+            .mode-item-btn {
+              .mode-btn-title {
+                background-color: $color-blick-dark;
+                .title {
+                  color: $color-light;
+                }
+              }
+              .mode-btn-info {
+                background-color: $color-blick;
+                .info {
+                  color: $color-light;
+                }
+              }
+            }
+          }
+        }
+        .results {
+          margin: 0 auto;
+          margin-bottom: 2%; 
+          width: 100%;
+          height: 10%;
+          @include flex-horizontal();
+          justify-content: space-between;
+          .set-get {
+            margin: 0; 
+            width:  24%;  
+            height: 100%;
+            @include flex-horizontal();
+            align-items: center;
+            background-color: $color-lang-light;
+            @include text-font(1.39vw, 400, 1.39vw, 0); //20px;
+            color: $color-dark;
+            cursor: pointer;
+            box-shadow: -10px 10px 10px 0px rgba(0,0,0,0.2);//
+            border-bottom: 3px solid orangered;
+            border-left: 3px solid orangered;
+            border-top: none;
+            border-right: none;
+            outline: none;
+            border-radius: 5px;
+          }
+          .set-get:hover {
+            background-color: $color-blick-dark;
+            color: $color-light;  
+            svg path {
+              fill: $color-light; 
+            }
+          }
+          .totals {
+            margin: 0; 
+            width: 49.5%;  
+            height: 100%;
+            @include flex-vertical();
+            background-color: $color-lang-light;  
+            border-radius: 5px;
+            border-bottom: 3px solid orangered;
+            border-right: 3px solid orangered;
+            box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.2),
+                        -10px 10px 10px 0px rgba(0,0,0,0.2);////
+            .totals-block {
+              margin: 0; 
+              @include flex-horizontal();
+              justify-content: space-between;
+              .total-item {
+                margin: auto;
+                @include flex-horizontal();
+                justify-content: space-between;
+                align-items: center;
+                p {
+                  @include text-font(1.53vw, 400, 1.53vw, 0); //22px; 
+                  margin-left: 2.3%;
+                }
+              }
+              .neutral {
+                display: none;
+              }
+            }
+          }
+          .totals:hover {
+            background-color: $color-blick-dark;            
+            color: $color-light;  
+            svg g path {
+              fill: $color-light; 
+            }
+          }
+        }
+      }
+      .main-right {
+        margin: auto;
+        width: 0.5 * ($site-width - $block-width);
+        height: $min-main-height;
+      }
+    }

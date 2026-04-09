@@ -31,18 +31,50 @@ body {
         justify-content: flex-end; 
         .header-left-block-front {
           margin: 0 auto; 
-          padding-bottom: 1vh;
+          //padding-bottom: 1vh;
           width: 100%;
           height: 100%; 
           @include flex-horizontal();
           align-items: end;
-          .logo-front {
+          background-color: $color-blick;
+          .logo-front-block {
             margin: 0 auto;
-            margin-right: 8%;
-            height: 80%;
+            width: 100%;
+            height: 100%;
+            @include flex-vertical();
+            //border: 1px solid red;
+            .logo-front {
+            margin: 0 auto;
+            //margin-right: 8%;
+            height: 70%;  // 80%;
             width: auto;
             align-items: end;
+            //border: 1px solid green;
+            
+            rect {
+              fill: $color-blick;
+            }
+            .color-dark:hover {
+              fill: $color-light;
+              cursor: pointer;
+            }
           }
+          }
+          // .logo-front {
+          //   margin: 0 auto;
+          //   margin-right: 8%;
+          //   height: 80%;
+          //   width: auto;
+          //   align-items: end;
+            
+          //   rect {
+          //     fill: $color-blick;
+          //   }
+          //   .color-dark:hover {
+          //     fill: $color-light;
+          //     cursor: pointer;
+          //   }
+          // }
         }
       }
       .header-center-front {
@@ -50,7 +82,9 @@ body {
         width: $block-width;
         height: 100%;
         @include flex-vertical();
-        justify-content: flex-end;
+        background-color: $color-blick;
+        clip-path: polygon(0% 0%, 100% 0%, 76% 100%, 0% 100%);
+        //justify-content: flex-end;
         .header-center-block-front {
           margin: 0 auto;
           width: 100%;
@@ -82,11 +116,11 @@ body {
               }
             }
             .menu-item-front:hover {
-              color: $color-accent;
+              color: $color-light; // $color-accent;
               font-weight: 500;
               .btn-link-menu {
                 text-decoration: none;
-                color: $color-accent;
+                color: $color-light;  // $color-accent;
               }
             }
             .future .btn-link-menu {
@@ -99,7 +133,7 @@ body {
           .service-time {
             margin: 0 auto;
             padding-bottom: 1vh; // 2%;
-            margin-right: 1.39vw;
+            margin-right: 24%;  // 1.39vw;
             width: 30%; 
             height: 100%; 
             @include flex-vertical();
@@ -107,6 +141,7 @@ body {
             @include text-font(0.97vw, 300, 0.97vw, 0); //14px
             align-items: end;
             text-align: right;
+            z-index: 999;
           }
         }
       }
@@ -115,7 +150,7 @@ body {
         width: 0.5 * ($site-width - $block-width);
         height: 100%;
         @include flex-vertical();
-        justify-content: flex-end;
+        //justify-content: flex-end;
         .header-right-block-front {
           margin: 0 auto; 
           width: 100%;
@@ -129,9 +164,10 @@ body {
             height: 100%; 
             @include flex-horizontal();
             justify-content: flex-start;
-            align-items: end;
+            //align-items: end;
+            //border: 1px solid black;
             .menu-item-front {
-              margin: 0; 
+              margin: auto; // 0; 
               margin-left: 40px;  // 8%;
               width: fit-content;
               height: fit-content;
@@ -142,6 +178,7 @@ body {
               @include text-font(1.11vw, 300, 1.11vw, 0); //16px
               cursor: pointer;
               align-items: end;
+              //border: 1px solid red;
               .btn-link-menu {
                 text-decoration: none;
                 @include text-font(1.11vw, 300, 1.11vw, 0); //16px
@@ -164,16 +201,18 @@ body {
               fill: $color-accent;
             }
             .combo-block-front {
-              margin: 0; 
+              margin: auto; // 0; 
               width: fit-content; 
               height: auto;
               @include flex-vertical();
               position: relative;
+              //border: 1px solid red;
+              //align-items: center;
               #appLangEng,
               #appLangRus,
               #appLangEngChoice {
                 margin-left: 20px;  // 40%; // 20px;
-                margin-top: 15%;
+                //margin-top: 15%;
                 opacity: 1;
                 border: none;
                 outline: none;
@@ -183,8 +222,8 @@ body {
                 width: 100%;
                 height: auto;
                 @include flex-vertical();
-                border: 2px solid $color-grey;
-                background-color: $color-grey;
+                //border: 2px solid $color-grey;
+                //background-color: $color-grey;
                 opacity: 1;
                 position: absolute;
                 top: -100%;

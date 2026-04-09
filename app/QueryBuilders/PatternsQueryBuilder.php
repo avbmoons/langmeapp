@@ -28,6 +28,11 @@ final class PatternsQueryBuilder extends QueryBuilder
         return Pattern::query()->where('status', $status)->get();
     }
 
+    public function getPatternsActive():Collection
+    {
+        return Pattern::query()->where('status', 'active')->get();
+    }
+
     public function getPatternsWithPagination(int $quantity = 10): LengthAwarePaginator
     {
         return $this->model->paginate($quantity);

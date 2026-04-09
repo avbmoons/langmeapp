@@ -855,6 +855,9 @@ body {
   margin-right: 10px;
   height: 70%;
 }
+.wrapper .top main .main-block .admin-content .table-block table tbody tr td .show {
+  display: none;
+}
 .wrapper .top main .main-block .admin-content .table-block table tbody tr .descriptions {
   max-width: 20vw;
   line-height: normal;

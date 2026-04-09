@@ -10,13 +10,19 @@
         <p>&copy; 2025-2026 Elena Belkina. All right reserved</p>
       </div>
       <menu-front class="menu-front">        
-        <button class="menu-item-front footer">
+        <button class="menu-item-front footer" id="menuFooterHome">
           <a class="btn-link-menu" href="{{ route('home')}}">Home</a>
-        </button>                
-        <button class="menu-item-front future">
+        </button>
+        <button class="menu-item-front footer" id="menuFooterTask">
+          <a class="btn-link-menu" href="{{ route('taskChoice')}}">Task</a>
+        </button>              
+        <button class="menu-item-front future" id="menuFooterGuide">
           <a class="btn-link-menu" href="">Guide</a>
+        </button>
+        <button class="menu-item-front future" id="menuFooterResults">
+          <a class="btn-link-menu" href="">Results</a>
         </button>        
-        <button class="menu-item-front future">
+        <button class="menu-item-front future" id="menuFooterAbout">
           <a class="btn-link-menu" href="">About</a>
         </button>        
       </menu-front>

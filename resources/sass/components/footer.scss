@@ -37,7 +37,7 @@ body {
         .logo-footer-front {
           margin: 0 auto;
           margin-right: 8%;
-          height: 50%;
+          height: 50%;  // 100%; // 50%;
           width: auto;
           align-items: center;
         }
@@ -48,6 +48,8 @@ body {
       width: $block-width;
       height: 100%;
       @include flex-vertical();
+      background-color: $color-blick-dark;
+      clip-path: polygon(24% 0%, 100% 0%, 100% 100%, 0% 100%);
       .footer-center-block-front {
         margin: 0 auto;
         width: 100%;
@@ -56,7 +58,7 @@ body {
         justify-content: space-between;
         .menu-front {
           margin: 0 auto;
-          width: 70%; 
+          width: 60%; // 70%; 
           height: 100%; 
           @include flex-horizontal();
           justify-content: flex-end;
@@ -77,10 +79,10 @@ body {
             }
           }
           .menu-item-front:hover {
-            color: $color-accent;
+            color: $color-light;  // $color-accent;
             font-weight: 500;
             .btn-link-menu {
-              color: $color-accent;
+              color: $color-light;  // $color-accent;
             }
           }
           .future .btn-link-menu {
@@ -92,9 +94,10 @@ body {
         }
         .copyright-front {
           margin: 0 auto;
-          width: 30%; 
+          margin-left: 26%;
+          width: 40%; // 30%; 
           height: 100%; 
-          @include text-font(0.97vw, 300, 0.97vw, 0); //14px
+          @include text-font(0.83vw, 300, 0.83vw, 0); //12px
           align-items: center;
           text-align: left;
         }
@@ -105,6 +108,7 @@ body {
       width: 0.5 * ($site-width - $block-width);
       height: 100%;
       @include flex-vertical();
+      background-color: $color-blick-dark;
       .footer-right-block-front {
         margin: 0 auto; 
         width: 100%;
@@ -136,11 +140,11 @@ body {
             // }
           }
           .menu-item-front:hover {
-            color: $color-accent;
+            color: $color-light;  // $color-accent;
             font-weight: 500;
           }
           .menu-item-front:hover path {
-            fill: $color-accent;
+            fill: $color-light; // $color-accent;
           }
         }
       }

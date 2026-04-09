@@ -1,8 +1,10 @@
 @use "sass:math";
 
 @import "../varsfront/varsfront.scss";
-@import '../components/header.scss';
-@import '../components/footer.scss';
+//@import '../components/header.scss';
+@import '../components/header/header.scss';
+//@import '../components/footer.scss';
+@import '../components/footer/footer.scss';
 
 * {
   margin: 0;
@@ -352,7 +354,35 @@ body {
         margin: auto;
         width: 0.5 * ($site-width - $block-width);
         height: $min-main-height;
+        @include flex-vertical();
+        justify-content: flex-start;
         //border: 1px solid green;
+        .btn-tutor-block {
+          margin: 0 auto;
+          margin-top: 10%;
+          width: 100%;
+          height: 10%;
+          @include flex-vertical();
+          .btn-tutor {
+            margin: 0 auto;
+            width: 50%;
+            height: 100%;
+            padding: 5px;
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            img {
+              height: auto; 
+              width: 100%;  
+            }
+          }
+          .btn-tutor:hover {
+            svg path {
+              fill: orangered;
+            }
+          }
+        }
       }
       .main-center-front {
         margin: auto;
@@ -371,14 +401,14 @@ body {
           .set-get-front {
             margin: 0; // auto;
             //margin-left: 40px;
-            width: 30%;
+            width: 24%; // 30%;
             height: 100%;
             @include flex-horizontal();
             align-items: center;
-            background-color: $color-grey;
-            background: none;
+            background-color: $color-lang-light;  // $color-grey;
+            //background: none;
             border-radius: 5px;
-            @include text-font(1.25vw, 400, 1.25vw, 0); //18px; 16px
+            @include text-font(1.39vw, 400, 1.39vw, 0); //20px; 16px
             color: $color-dark;
             cursor: pointer;
             //border: none;
@@ -393,38 +423,56 @@ body {
               visibility: hidden;
             }
           }
+          #setButton {
+            box-shadow: -10px -10px 10px 0px rgba(0,0,0,0.2);//
+            border-top: 3px solid orangered;
+            border-left: 3px solid orangered;
+            border-right: none;
+            border-bottom: none;
+            border-radius: 5px;
+          }
+          #getButton {
+            box-shadow: 10px -10px 10px 0px rgba(0,0,0,0.2);//
+            border-top: 3px solid orangered;
+            border-right: 3px solid orangered;
+            border-radius: 5px;
+          }
           .set-get-front:hover {
-            color: $color-accent;
+            background-color: $color-blick-dark;
+            color: $color-light;  // $color-accent;
             border: 2px solid $color-blick;
             svg path {
-              fill: $color-accent;
-              stroke: $color-accent;
+              fill: $color-light; // $color-accent;
+              stroke: $color-light; // $color-accent;
             }
             .btn-link-set-get {
-              color: $color-accent;
+              color: $color-light;  // $color-accent;
             }
             //background-color: $color-grey-dark;
           }
           .get:hover {
             svg path {
               fill: none;
-              stroke: $color-accent;
+              stroke: $color-light; // $color-accent;
             }
           }
         }
         .modes-front {
           margin: auto;
-          width: 65%;
+          width: 100%;  // 65%;
           height: 55%;
           @include flex-horizontal();
+          justify-content: space-between;
           flex-wrap: wrap;
           //border: 1px solid violet;
           .mode-item-front {
-            margin: auto;
-            width: 48%;
-            height: 48%;
+            margin: auto 0;
+            width: 24%; // 48%;
+            height: 100%; // 48%;
             @include flex-vertical();
             justify-content: space-between;
+            border-bottom: 5px solid orangered;
+            border-radius: 5px;
             //border: 1px solid blue;
             .mode-item-btn {
               margin: auto;
@@ -433,51 +481,135 @@ body {
               align-items: center;
               background-color: $color-grey;
               cursor: pointer;
-              border: 2px solid $color-grey-dark; // grey;
+              //border: 2px solid $color-grey-dark; // grey;
+              border: none;
+              outline: none;
               border-radius: 5px;
+              @include flex-vertical();
+              box-shadow: -10px 20px 10px 0px rgba(0,0,0,0.2);
               .btn-link-mode-item {
-                text-decoration: none;
+                width: 100%;
+                height: 100%;
+                text-decoration: none;              
+                .mode-btn-title {
+                  margin: auto;
+                  width: 100%;
+                  height: 70%;
+                  background-color: $color-lang-light;
+                  border-radius: 5px;
+                  @include flex-vertical();
+                  .title {
+                    width: 100%;
+                    margin-bottom: 2.2%; 
+                    @include text-font(2.22vw, 400, 2.22vw, 10%); //32px; 
+                    color: $color-dark;
+                    align-items: center;
+                  }
+                  .mini {
+                    @include text-font(1.39vw, 400, 1.39vw, 5%); //20px; 
+                  }
+                }
+                .mode-btn-info {
+                  margin: auto;
+                  width: 100%;
+                  height: 30%;
+                  background-color: $color-light;
+                  border-radius: 5px;
+                  @include flex-horizontal();
+                  .info {
+                    margin: auto;
+                    width: 80%;
+                    @include text-font(1.11vw, 400, 1.11vw, 0); //16px; 
+                    color: $color-dark;
+                    text-align: center;
+                  }
+                }
+                .mode-btn-title:hover {
+                  background-color: orange;
+                  .title {
+                    color: $color-light;
+                  }                
+                }
+                .mode-btn-info:hover {
+                  background-color: $color-blick;
+                  .info{
+                    color: $color-light;
+                  }                
+                }
               }
-              .title {
-                margin-bottom: 2.2%; // 10px;
-                @include text-font(1.25vw, 400, 1.25vw, 0); //18px; 16px;
-                color: $color-dark;
-              }
-              .info {
-                margin-top: 4.4%;
-                //width: 80%;
-                @include text-font(1.11vw, 400, 1.11vw, 0); //16px; 14px;
-                color: $color-dark;
-                text-align: center;
-              }
+              // .title {
+              //   margin-bottom: 2.2%; // 10px;
+              //   @include text-font(1.25vw, 400, 1.25vw, 0); //18px; 16px;
+              //   color: $color-dark;
+              // }
+              // .info {
+              //   margin-top: 4.4%;
+              //   //width: 80%;
+              //   @include text-font(1.11vw, 400, 1.11vw, 0); //16px; 14px;
+              //   color: $color-dark;
+              //   text-align: center;
+              // }
             }
             .mode-item-btn:hover {
               border: 2px solid $color-blick;
-              background-color: $color-grey-dark;
+              background-color: orange; // $color-grey-dark;
             }
-            #modeItemChoice {
-              background-color: $color-right;
-            }
-            #modeItemChoice:hover {
-              background-color: $color-right-dark;
-            }
-            #modeItemPlain {
-              background-color: $color-right;
-            }
-            #modeItemPlain:hover {
-              background-color: $color-right-dark;
+            #modeItemPlain, #modeItemChoice {
+              box-shadow: -10px 20px 10px 0px rgba(0,0,0,0.2);
+              border-left: 3px solid orangered;
             }
             #modeItemMix {
-              background-color: $color-right;
+              border-right: 3px solid orangered;
+              box-shadow: 10px 20px 10px 0px rgba(0,0,0,0.2);
             }
-            #modeItemMix:hover {
-              background-color: $color-right-dark;
+            #modeItemLang, #modeItemChoice {
+              box-shadow: -10px 20px 10px 0px rgba(0,0,0,0.2),
+                           10px 20px 10px 0px rgba(0,0,0,0.2);
             }
             #modeItemLang {
-              background-color: $color-right;
+              border-right: 3px solid orangered;
             }
-            #modeItemLang:hover {
-              background-color: $color-right-dark;
+            // #modeItemChoice {
+            //   background-color: $color-right;
+            // }
+            // #modeItemChoice:hover {
+            //   background-color: $color-right-dark;
+            // }
+            // #modeItemPlain {
+            //   background-color: $color-right;
+            // }
+            // #modeItemPlain:hover {
+            //   background-color: $color-right-dark;
+            // }
+            // #modeItemMix {
+            //   background-color: $color-right;
+            // }
+            // #modeItemMix:hover {
+            //   background-color: $color-right-dark;
+            // }
+            // #modeItemLang {
+            //   background-color: $color-right;
+            // }
+            // #modeItemLang:hover {
+            //   background-color: $color-right-dark;
+            // }
+          }
+          .mode-item-front:hover {
+            .mode-item-btn {
+              .btn-link-mode-item {              
+                .mode-btn-title {
+                  background-color: $color-blick-dark;
+                  .title {
+                    color: $color-light;
+                  }
+                }
+                .mode-btn-info {
+                  background-color: $color-blick;
+                  .info {
+                    color: $color-light;
+                  }
+                }
+              }
             }
           }
         }
@@ -491,17 +623,29 @@ body {
           //border: 1px solid green;
           .set-get-front {
             margin: 0; 
-            width: 30%;
+            width: 24%; // 30%;
             height: 100%;
             @include flex-horizontal();
             align-items: center;
-            background: none;
-            @include text-font(1.25vw, 400, 1.25vw, 0); //18px; 
+            //background: none;
+            background-color: $color-lang-light;
+            @include text-font(1.39vw, 400, 1.39vw, 0); //20px; 
             color: $color-dark;
             cursor: pointer;
-            border: 2px solid $color-grey;
+            box-shadow: -10px 10px 10px 0px rgba(0,0,0,0.2);//
+            border-bottom: 3px solid orangered;
+            border-left: 3px solid orangered;
+            border-top: none;
+            border-right: none;
+            outline: none;
+            //border: 2px solid $color-grey;
             border-radius: 5px;
+            //align-items: center;
             .btn-link-set-get {
+              margin: auto;
+              width:fit-content;  // 100%;
+              height:fit-content; // 100%;
+              //@include flex-vertical();
               text-decoration: none;
               @include text-font(1.25vw, 400, 1.25vw, 0); //18px;  
               color: $color-dark;
@@ -509,26 +653,33 @@ body {
             }
           }
           .set-get-front:hover {
-            border: 2px solid $color-blick;
-            color: $color-accent;
+            background-color: $color-blick-dark;
+            //border: 2px solid $color-blick;
+            color: $color-light;  // $color-accent;
             .btn-link-set-get {
-              color: $color-accent;
+              color: $color-light;  // $color-accent;
             }
             svg path {
-              fill: $color-accent;
+              fill: $color-light; // $color-accent;
             }
             //background-color: $color-grey-dark;
           }
           .totals-front {
             margin: 0; // auto;
             //margin-left: 1,5%;  // 20px;
-            width: 45%;
+            width: 49.5%; // 45%;
             height: 100%;
             @include flex-vertical();
-            //background-color: $color-grey;
-            background: none;
-            border: 2px solid $color-grey;
+            background-color: $color-lang-light;  
             border-radius: 5px;
+            border-bottom: 3px solid orangered;
+            border-right: 3px solid orangered;
+            box-shadow: 10px 10px 10px 0px rgba(0,0,0,0.2),
+                        -10px 10px 10px 0px rgba(0,0,0,0.2);////
+            //background-color: $color-grey;
+            //background: none;
+            //border: 2px solid $color-grey;
+            //border-radius: 5px;
             //border: 1px solid grey;
             .totals-block-front {
               margin: 0; // auto;
@@ -540,7 +691,7 @@ body {
                 justify-content: space-between;
                 align-items: center;
                 p {
-                  @include text-font(1.25vw, 400, 1.25vw, 0); //18px;  16px;
+                  @include text-font(1.53vw, 400, 1.53vw, 0); //22px;  16px;
                   margin-left: 2.3%;
                 }
               }
@@ -550,10 +701,11 @@ body {
             }
           }
           .totals-front:hover {
-            border: 2px solid $color-blick;
-            color: $color-accent;
+            background-color: $color-blick-dark;
+            //border: 2px solid $color-blick;
+            color: $color-light;  // $color-accent;
             svg g path {
-              fill: $color-accent;
+              fill: $color-light; // $color-accent;
             }
           }
         }

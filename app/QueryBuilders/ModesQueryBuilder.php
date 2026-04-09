@@ -28,6 +28,11 @@ final class ModesQueryBuilder extends QueryBuilder
         return Mode::query()->where('status', $status)->get();
     }
 
+    public function getModesActive():Collection
+    {
+        return Mode::query()->where('status', 'active')->get();
+    }
+
     public function getModesWithPagination(int $quantity = 10): LengthAwarePaginator
     {
         return $this->model->paginate($quantity);

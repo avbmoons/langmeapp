@@ -40,4 +40,5 @@ class Mode extends Model
     {
         return DB::table($this->table)->find($status);
     }
+
 }

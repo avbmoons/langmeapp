@@ -42,4 +42,5 @@ class Theme extends Model
     {
         return DB::table($this->table)->find($id);
     }
+  
 }

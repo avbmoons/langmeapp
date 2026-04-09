@@ -1,0 +1,139 @@
+@font-face {
+  font-family: Roboto;
+  src: url(/public/assets/fonts/Roboto.ttf);
+}
+@font-face {
+  font-family: NotoSansArmenian;
+  src: url(../../assets/fonts/NotoSansArmenian-VariableFont_wdthwght.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+.tutor-cover {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgba(15, 26, 28, 0.5);
+  display: none;
+}
+.tutor-cover .tutor {
+  margin: 0 auto;
+  width: 70%;
+  height: 83vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #fcfcfc;
+  border-radius: 5px;
+  box-shadow: -20px 20px 10px 0px rgba(0, 0, 0, 0.3);
+  border-left: 3px solid orangered;
+  border-bottom: 5px solid orangered;
+}
+.tutor-cover .tutor .tutor-main {
+  margin: 0 auto;
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #d7dbdb;
+  border-radius: 5px;
+  box-shadow: -10px 10px 10px 0px rgba(0, 0, 0, 0.3), 10px 10px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.tutor-cover .tutor .tutor-main .tutor-img {
+  height: 100%;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.tutor-cover .tutor .tutor-footer {
+  margin: 0 auto;
+  width: 90%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box .tutor-logo {
+  margin: auto;
+  margin-left: 3%;
+  display: none;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box .tutor-close {
+  margin: auto;
+  margin-right: 3%;
+  height: 70%;
+  width: auto;
+  font-size: 1.94vw;
+  font-weight: 400;
+  line-height: 1.94vw;
+  letter-spacing: 0;
+  color: #0f1a1c;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box .tutor-close:hover {
+  color: #ff4500;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip {
+  margin-right: 0;
+  width: 15%;
+  font-size: 1.67vw;
+  font-weight: 500;
+  line-height: 1.67vw;
+  letter-spacing: 0;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorPrev, .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorNext {
+  width: 5%;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box .control-panels {
+  margin: auto;
+  height: 50%;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box .control-panels .dot-step {
+  height: auto;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box .control-panels .dot-step svg {
+  width: 2.5vw;
+  height: auto;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box .control-panels .dot-step .dot-circle .dots:hover {
+  fill: #f5a836;
+}/*# sourceMappingURL=tutors.css.map */
