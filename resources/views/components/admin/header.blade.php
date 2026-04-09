@@ -14,7 +14,7 @@
           <a href="" class="menu-item">Guide</a>
         </div>
         <div class="menu-item-box">
-          <a href="" class="menu-item">About</a>
+          <a href="{{ route('about') }}" class="menu-item">About</a>
         </div>
       </div>
     </div>
@@ -24,7 +24,7 @@
           <p id="currentTime"></p>
         </div>
         <a href="{{ route('home') }}">
-          <button class="service-button" onclick="location.href='../../pages/home.html'">Sign Out</button>
+          <button class="service-button">Sign Out</button>
         </a>
       </div>
     </div>

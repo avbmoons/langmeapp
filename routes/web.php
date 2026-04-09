@@ -15,6 +15,7 @@ use App\Http\Controllers\TaskChoiceController;
 use App\Http\Controllers\TaskPlainController;
 use App\Http\Controllers\TaskLangController;
 use App\Http\Controllers\TaskMixController;
+use App\Http\Controllers\AboutController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -54,4 +55,5 @@ Route::group(['prefix' => ''], static function() {
     Route::get('/taskPlain', [TaskPlainController::class, 'index'])->name('taskPlain');
     Route::get('/taskLang', [TaskLangController::class, 'index'])->name('taskLang');
     Route::get('/taskMix', [TaskMixController::class, 'index'])->name('taskMix');
+    Route::get('/about', [AboutController::class, 'index'])->name('about');
 });

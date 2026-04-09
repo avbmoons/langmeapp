@@ -1,0 +1,65 @@
+@use "sass:list";
+
+//@import "../vars/vars.scss";
+@import "../varsfront/varsfront.scss";
+
+@mixin chartjs {
+    .chart-rows-block {
+        margin: 0 auto;
+        margin-top: 40px;
+        width: 100%;
+        height: 80%;    
+        @include flex-vertical();
+        justify-content: space-between; 
+        overflow-y: auto;
+        .chart-title-block {
+            margin: 0 auto;
+            width: 100%;
+            height: 10%;
+            .charts-title {
+                padding: 20px 0px;
+                @include text-font(1.67vw, 400, 1.67vw, 0);
+                color: $color-dark;
+            }
+        }
+        .chart-mini-row {
+            margin: 0 auto;
+            width: 100%;
+            height: 38%;
+            @include flex-horizontal();
+            justify-content: space-between;
+            .chart-mini {
+                margin: 0 auto;
+                width: 23%; 
+                height: 100%;
+                position: relative;
+                border:  1px solid blue;
+                border-radius: 5px;
+                #testChart2, #testChart3, #testChart4, #testChart1 {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+            }
+        }
+        .chart-one-row {
+            margin: 0 auto;
+            width: 98%; 
+            height: 52%;    
+            position: relative;
+            @include flex-horizontal();
+            justify-content: space-around;
+            border: 2px solid violet;
+            border-radius: 5px;
+            #testChart {
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100% !important;
+                height: 100% !important;
+            }
+        }
+    }
+}

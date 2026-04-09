@@ -35,8 +35,8 @@
         <button class="menu-item-front future" id="menuHeaderResults">
           <a class="btn-link-menu" href="">Results</a>
         </button>        
-        <button class="menu-item-front future" id="menuHeaderAbout">
-          <a class="btn-link-menu" href="">About</a>
+        <button class="menu-item-front header" id="menuHeaderAbout">
+          <a class="btn-link-menu" href="{{ route('about') }}">About</a>
         </button>                
       </menu-front>
       <div class="service-time">

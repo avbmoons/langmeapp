@@ -22,8 +22,8 @@
         <button class="menu-item-front future" id="menuFooterResults">
           <a class="btn-link-menu" href="">Results</a>
         </button>        
-        <button class="menu-item-front future" id="menuFooterAbout">
-          <a class="btn-link-menu" href="">About</a>
+        <button class="menu-item-front footer" id="menuFooterAbout">
+          <a class="btn-link-menu" href="{{ route('about') }}">About</a>
         </button>        
       </menu-front>
     </div>

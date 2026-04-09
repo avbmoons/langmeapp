@@ -126,7 +126,7 @@
 @endsection
 
 @push('js')
-    <script defer src="{{ asset('js/charts.js')}}"></script>
+    {{-- <script defer src="{{ asset('js/charts.js')}}"></script> --}}
 @endpush
 
 
