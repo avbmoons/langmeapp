@@ -161,7 +161,7 @@ class ItemOptionCompMix {
         return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}OptionWord" style="display: none;">${this.translation}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}OptionSpell" style="font-size: 1.25vw;">${this.spell_eng}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}OptionSpell" style="font-size: 1.25vw;">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}OptionRadio" checked data-isright="true">
@@ -194,7 +194,7 @@ class ItemOption1CompMix {
         return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option1">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option1Word" style="display: none;">${this.translation}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option1Spell" style="font-size: 1.25vw;">${this.spell_eng}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option1Spell" style="font-size: 1.25vw;">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option1Radio" data-isright="false">
@@ -227,7 +227,7 @@ class ItemOption2CompMix {
         return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option2">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option2Word" style="display: none;">${this.translation}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option2Spell" style="font-size: 1.25vw;">${this.spell_eng}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option2Spell" style="font-size: 1.25vw;">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option2Radio" data-isright="false">
@@ -260,7 +260,7 @@ class ItemOption3CompMix {
         return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option3">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option3Word" style="display: none;">${this.translation}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option3Spell" style="font-size: 1.25vw;">${this.spell_eng}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option3Spell" style="font-size: 1.25vw;">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option3Radio" data-isright="false">

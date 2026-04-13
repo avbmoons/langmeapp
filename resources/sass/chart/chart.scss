@@ -8,12 +8,13 @@
         margin: 0 auto;
         margin-top: 40px;
         width: 100%;
-        height: 80%;    
+        height: 78%;    // 80%;    
         @include flex-vertical();
         justify-content: space-between; 
         overflow-y: auto;
         .chart-title-block {
             margin: 0 auto;
+            padding-top: 1%;
             width: 100%;
             height: 10%;
             .charts-title {
@@ -24,6 +25,7 @@
         }
         .chart-mini-row {
             margin: 0 auto;
+            margin-bottom: 1%;  // 0.97vw;
             width: 100%;
             height: 38%;
             @include flex-horizontal();
@@ -46,6 +48,7 @@
         }
         .chart-one-row {
             margin: 0 auto;
+            margin-bottom: 1%;  // 0.97vw;
             width: 98%; 
             height: 52%;    
             position: relative;

@@ -113,10 +113,9 @@
             />
     </div>
     <div class="tutor-footer">
-            <div class="tutor-footer-box">            
-              {{-- <img class="tutor-logo" src="../assets/icons/png/logo-2-3-new2.png" alt="logo"/> --}}
-              <button class="tutor-close" id="tutorPrev" title="Previous" onclick="sideSlide(-1)">&#9668;</button>
-              <div class="control-panels">
+      <div class="tutor-footer-box">            
+        <button class="tutor-close" id="tutorPrev" title="Previous" onclick="sideSlide(-1)">&#9668;</button>
+        <div class="control-panels">
                 <a class="dot-step" href="#" name="dot-step-1" title="Wellcome" onclick="btnSlide(1)">
                 <svg class="dot-circle" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle class="dots" cx="18" cy="18" r="18" fill="#DAE6E8"/>
@@ -197,10 +196,10 @@
                 <circle class="dots" cx="18" cy="18" r="18" fill="#DAE6E8"/>
                 </svg>
                 </a>
-              </div>
-              <button class="tutor-close" id="tutorNext" title="Next" onclick="sideSlide(1)">&#9658;</button>
-              <button class="tutor-close" id="tutorSkip" onclick="closeTutorPages()" title="Next">Skip...</button>
-            </div>
+        </div>
+        <button class="tutor-close" id="tutorNext" title="Next" onclick="sideSlide(1)">&#9658;</button>
+        <button class="tutor-close" id="tutorSkip" title="Next"><a class="btn-link-skip" href="{{ route('home') }}">Skip...</a></button>
+      </div>
     </div>
   </div>
 </div>

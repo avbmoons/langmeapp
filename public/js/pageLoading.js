@@ -28,7 +28,7 @@ for (let i=0; i < menuHeader.length; i++) {
     }
 }
 
-menuHeader[1].style.display = 'flex';   //// for testing
+//menuHeader[1].style.display = 'flex';   //// for testing
 
 for (let i=0; i < menuFooter.length; i++) {
     if (i === 0 || i === 2 || i === 4) {
@@ -44,40 +44,29 @@ if (urlName == 'about.html') {
 }
 ///////////
 
-function getTask() {
-    let modeChoice = localStorage.getItem('modeChoice').trim();
-    //let pageName;
-    switch(modeChoice) {
-        case 'Plain':
-            window.location.href = "../pages/taskPlain.html";
-            break;
-        case 'Choice':
-            window.location.href = "../pages/taskChoice.html";
-            break;
-        case 'Lang':
-            window.location.href = "../pages/taskLang.html";
-            break;
-        case 'Mix':
-            window.location.href = "../pages/taskMix.html";
-            break;
-    }
-}
-
 function getTaskPage() {
     let modeChoice = resultMode.value.trim();
-    console.log(modeChoice);
-    let pageName = window.location.pathname.substring(thisUrl.lastIndexOf('/')+1);
+    // console.log("resultMode setting = " + modeChoice);
+    // let pageName = window.location.pathname.substring(thisUrl.lastIndexOf('/')+1);
+    // console.log("pageName = " + pageName);
     
-    if (pageName == 'home.html') {
-        window.location.href = "../pages/home.html";
-    } else if (modeChoice == "Plain") {
-        window.location.href = "../pages/taskPlain.html";
-    } else if (modeChoice == "Choice") {
-        window.location.href = "../pages/taskChoice.html";
-    }  else if (modeChoice == "Lang")      {
-        window.location.href = "../pages/taskLang.html";
-    } else {
-        window.location.href = "../pages/taskMix.html";
-    }
+    // if (pageName.indexOf('home')) {    //} == 'home.html') {
+    //     window.location.href =  "{{ route('home') }}" ;   // "../pages/home.html";
+    // } else {
+        switch(modeChoice) {
+            case "Plain":
+                window.location.href = "{{ route('taskPlain') }}";
+                break;
+            case "Choice":
+                window.location.href = "{{ route('taskChoice') }}";
+                break;
+            case "Lang":
+                window.location.href = "{{ route('taskLang') }}";
+                break;
+            case "Mix":
+                window.location.href = "{{ route('taskMix') }}";
+                break;
+        }
+    //}
 }
 

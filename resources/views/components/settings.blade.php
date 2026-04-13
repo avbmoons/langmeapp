@@ -76,7 +76,8 @@
             </div>
           </div>
           <div class="info-button">
-            <button type="button" class="btn-go" onclick="submitTaskSettings()">Confirm</button>
+            <button type="button" class="btn-go" id="btnSubmitTaskSettings" >Confirm</button>
           </div>
         </div>
       </form>
+

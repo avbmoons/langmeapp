@@ -90,6 +90,14 @@ body {
             width: 15%; // 20%; ////
             @include text-font(1.67vw, 500, 1.67vw, 0);
             //border: 1px solid green;
+            .btn-link-skip {
+              text-decoration: none;
+              @include text-font(1.67vw, 500, 1.67vw, 0);
+              color: $color-dark;
+            }
+            .btn-link-skip:hover {
+              color: $color-accent;
+            }
           }
           #tutorPrev, #tutorNext {
             width: 5%;  // 10%;

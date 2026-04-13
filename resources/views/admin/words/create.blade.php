@@ -24,7 +24,7 @@
       </div>
       <div class="input-box admin" name="themes-box">
         <label class="input-lable" for="theme_ids">Theme</label>
-        <select class="input-text" name="theme_ids[]" id="theme_ids" @error('theme_ids[]') is-invalid @enderror multiple>
+        <select class="input-text combo-box" name="theme_ids[]" id="theme_ids" @error('theme_ids[]') is-invalid @enderror multiple>
           <option value="0">--Select theme--</option>
           @foreach ($themes as $theme)
             <option @if ((int) old('theme_id') === $theme->id) selected @endif value="{{ $theme->id }}">{{ $theme->title }}</option>

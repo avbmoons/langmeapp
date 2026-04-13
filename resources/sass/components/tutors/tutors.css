@@ -115,6 +115,17 @@ body {
   line-height: 1.67vw;
   letter-spacing: 0;
 }
+.tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip .btn-link-skip {
+  text-decoration: none;
+  font-size: 1.67vw;
+  font-weight: 500;
+  line-height: 1.67vw;
+  letter-spacing: 0;
+  color: #0f1a1c;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip .btn-link-skip:hover {
+  color: #ff4500;
+}
 .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorPrev, .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorNext {
   width: 5%;
 }

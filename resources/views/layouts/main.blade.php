@@ -37,9 +37,9 @@
       <x-results></x-results>
       <x-footer></x-footer>
     </div>
-    <x-tutors></x-tutors>
-    
+    <x-tutors></x-tutors>    
     
     @stack('js')
+
   </body>
 </html>

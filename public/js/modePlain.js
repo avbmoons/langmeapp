@@ -160,7 +160,7 @@ class ItemOptionCompPlain {
         return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option" style="height: 60%;">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}OptionWord">${this.translation}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}OptionSpell">${this.spell_eng}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}OptionSpell">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                     </div>
                     <div class="option-radio-block" style="display: none;">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}OptionRadio" checked data-isright="true">
@@ -193,7 +193,7 @@ class ItemOption1CompPlain {
         return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option1" style="display: none;">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option1Word">${this.translation}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option1Spell">${this.spell_eng}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option1Spell">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                     </div>
                     <div class="option-radio-block" style="display: none;">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option1Radio" data-isright="false">
@@ -226,7 +226,7 @@ class ItemOption2CompPlain {
         return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option2" style="display: none;">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option2Word">${this.translation}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option2Spell">${this.spell_eng}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option2Spell">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                     </div>
                     <div class="option-radio-block" style="display: none;">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option2Radio" data-isright="false">

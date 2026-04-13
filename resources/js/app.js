@@ -4,12 +4,14 @@ import '../css/app.css';
 import './timenow';
 //import './homeLoading'; //
 //import './pageLoading'; //
+//import '../../public/js/pageLoading';
 //import './listLangs'; //
 //import './listThemes';  //
 //import './listModes'; //
 //import './showModals';  //
+//import '../../public/js/showModals';
 //import './task';  //
-//import './modeChoice';  //
+//import '../../public/js/modeChoice';
 //import './pagination';  //
 import './tutor'; //
 

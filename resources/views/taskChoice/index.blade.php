@@ -74,7 +74,7 @@
         <button class="btn-link" id="nextBtn">&#9658;&nbsp;Next</button>
       </div>
       <div class="navi-buttons">
-        <button class="btn-link" id="exitChoice" title="Save totals!"><a href="{{ route('home') }}">Exit&nbsp;
+        <button class="btn-link" id="exitChoice" title="Save totals!"><a class="btn-link" href="{{ route('home') }}">Exit&nbsp;
           <!-- icon-exit.png" -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path
@@ -170,6 +170,56 @@
 @endsection
 
 @push('js')    
+    <script>
+      function getTask() {
+        let modeChoice = localStorage.getItem('modeChoice').trim();
+        //let pageName;
+        switch(modeChoice) {
+          case 'Plain':
+            window.location.href = "{{ route('taskPlain')}}"; 
+            break;
+          case 'Choice':
+            window.location.href = "{{ route('taskChoice')}}"; 
+            break;
+          case 'Lang':
+            window.location.href = "{{ route('taskLang')}}";   
+            break;
+          case 'Mix':
+            window.location.href = "{{ route('taskMix')}}";   
+            break;
+        }
+      }
+
+      let btnSubmitTaskSettings = document.getElementById('btnSubmitTaskSettings');
+
+      btnSubmitTaskSettings.addEventListener('click', function() {
+        let strPrimLang = document.getElementById("resultPrim").value;
+        console.log(strPrimLang);
+        localStorage.setItem("primLang", strPrimLang);
+
+        let strCompLangsN = document.getElementById("resultComp").value;
+        let strCompLangs = strCompLangsN.replace(/\n/g, "");
+        console.log(strCompLangs);
+        localStorage.setItem("compLangs", strCompLangs);
+
+        let strThemesN = document.getElementById("resultThemes").value;
+        let strThemes = strThemesN.replace(/\n/g, "");
+        console.log(strThemes);
+        localStorage.setItem("themesLangs", strThemes);
+
+        let strModeChoice = document.getElementById("resultMode").value;
+        console.log(strModeChoice);
+        localStorage.setItem("modeChoice", strModeChoice);
+
+        if (window.location.href.includes('home')) {    
+          window.location.href =  "{{ route('home') }}" ;   
+        } else {
+          getTask();
+
+        }
+      }); 
+    </script>
+
     {{-- <script defer src="{{ asset('js/homeLoading.js')}}"></script> --}}
     <script defer src="{{ asset('js/pageLoading.js')}}"></script>    
     <script defer src="{{ asset('js/showModals.js')}}"></script>
@@ -196,5 +246,6 @@
       let _patternFin = @json($patternFin);
       let _patternLav = @json($patternLav);
     </script>
+
     {{-- @vite(['resources/js/tutor.js']) --}}
 @endpush

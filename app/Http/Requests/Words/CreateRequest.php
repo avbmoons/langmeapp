@@ -27,7 +27,7 @@ class CreateRequest extends FormRequest
             'theme_ids' => ['required', 'array'],
             'theme_ids.*' => ['exists:themes,id'],
             'code' => ['integer'],
-            'title' => ['required', 'string', 'min:3', 'max:50'],
+            'title' => ['required', 'string', 'max:50'],
             'status' => ['required', new Enum (Status::class)],
         ];
     }

@@ -138,6 +138,9 @@
   outline: none;
   box-sizing: border-box;
 }
+.admin-content .form-input .input-box .combo-box {
+  height: 80px;
+}
 .admin-content .form-input .input-box .input-text:focus {
   border: 2px solid #abbee6;
 }

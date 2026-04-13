@@ -2368,7 +2368,6 @@ body {
 }
 .footer-front .footer-left-front .footer-left-block-front .logo-footer-front {
   margin: 0 auto;
-  margin-right: 8%;
   height: 50%;
   width: auto;
   align-items: center;
@@ -2812,7 +2811,7 @@ body {
   margin: 0 auto;
   width: 50%;
   height: 100%;
-  padding: 5px;
+  padding: 5px 0;
   background: none;
   border: none;
   outline: none;
@@ -2824,6 +2823,10 @@ body {
 }
 .wrapper-front .top-front main-front .main-left-front .btn-tutor-block .btn-tutor:hover svg path {
   fill: orangered;
+}
+.wrapper-front .top-front main-front .main-left-front .tutor-about {
+  margin-top: 0;
+  height: 20%;
 }
 .wrapper-front .top-front main-front .main-center-front {
   margin: auto;
@@ -2843,6 +2846,7 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
+  position: relative;
 }
 .wrapper-front .top-front main-front .main-center-front .settings-front .set-get-front {
   margin: 0;
@@ -3053,6 +3057,7 @@ body {
   justify-content: center;
   box-sizing: border-box;
   align-items: center;
+  text-align: center;
   background-color: #f2f7f7;
   font-size: 1.39vw;
   font-weight: 400;
@@ -3069,7 +3074,7 @@ body {
   border-radius: 5px;
 }
 .wrapper-front .top-front main-front .main-center-front .results-front .set-get-front .btn-link-set-get {
-  margin: auto;
+  margin: 0 auto;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
@@ -3081,6 +3086,7 @@ body {
   letter-spacing: 0;
   color: #0f1a1c;
   align-items: center;
+  border: 1px solid green;
 }
 .wrapper-front .top-front main-front .main-center-front .results-front .set-get-front:hover {
   background-color: #f58318;
@@ -3172,7 +3178,6 @@ body {
 }
 .wrapper-front .footer-front .footer-left-front .footer-left-block-front .logo-footer-front {
   margin: 0 auto;
-  margin-right: 8%;
   height: 50%;
   width: auto;
   align-items: center;
@@ -3642,7 +3647,6 @@ body {
 }
 .footer-front .footer-left-front .footer-left-block-front .logo-footer-front {
   margin: 0 auto;
-  margin-right: 8%;
   height: 50%;
   width: auto;
   align-items: center;
@@ -3779,6 +3783,14 @@ body {
   fill: #fcfcfc;
 }
 
+@font-face {
+  font-family: Roboto;
+  src: url(/public/assets/fonts/Roboto.ttf);
+}
+@font-face {
+  font-family: NotoSansArmenian;
+  src: url(../../assets/fonts/NotoSansArmenian-VariableFont_wdthwght.ttf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -3796,6 +3808,7 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  justify-content: space-between;
 }
 .main-center-front .task-info {
   margin: 0 auto;
@@ -3948,7 +3961,7 @@ body {
   color: #f5a836;
 }
 .main-center-front .task-info .info-content-block-about {
-  margin: 0 auto;
+  margin: auto;
   width: 90%;
   height: -moz-fit-content;
   height: fit-content;
@@ -3959,8 +3972,9 @@ body {
 }
 .main-center-front .task-info .info-content-block-about .task-description-about {
   margin: 0 auto;
+  padding-top: 0.97vw;
   width: 96%;
-  height: 40%;
+  height: 38%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3969,17 +3983,18 @@ body {
 }
 .main-center-front .task-info .info-content-block-about .task-description-about .info-content {
   margin-bottom: 0.69vw;
-  font-size: 0.97vw;
+  font-size: 1.25vw;
   font-weight: 300;
-  line-height: 0.97vw;
+  line-height: 1.25vw;
   letter-spacing: 0;
   color: #0f1a1c;
   text-align: left;
 }
 .main-center-front .task-info .info-content-block-about .task-description-about .then {
-  font-size: 0.97vw;
+  margin-bottom: 0;
+  font-size: 1.25vw;
   font-weight: 400;
-  line-height: 0.97vw;
+  line-height: 1.25vw;
   letter-spacing: 0;
 }
 .main-center-front .task-info .info-service-block {
@@ -4012,6 +4027,10 @@ body {
 .main-center-front .task-info .info-service-block #changeModeBtn {
   display: none;
 }
+.main-center-front .info-about {
+  margin-bottom: 1%;
+  height: 20%;
+}
 .main-center-front .task-settings {
   margin: 0 auto;
   margin-top: 0.5%;
@@ -4021,7 +4040,6 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
-  border: 1px solid green;
   display: none;
 }
 .main-center-front .task-settings .counter {
@@ -4075,7 +4093,7 @@ body {
   margin: 0 auto;
   margin-top: 40px;
   width: 100%;
-  height: 80%;
+  height: 78%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -4085,6 +4103,7 @@ body {
 }
 .main-center-front .chart-rows-block .chart-title-block {
   margin: 0 auto;
+  padding-top: 1%;
   width: 100%;
   height: 10%;
 }
@@ -4098,6 +4117,7 @@ body {
 }
 .main-center-front .chart-rows-block .chart-mini-row {
   margin: 0 auto;
+  margin-bottom: 1%;
   width: 100%;
   height: 38%;
   display: flex;
@@ -4122,6 +4142,7 @@ body {
 }
 .main-center-front .chart-rows-block .chart-one-row {
   margin: 0 auto;
+  margin-bottom: 1%;
   width: 98%;
   height: 52%;
   position: relative;
@@ -4138,6 +4159,9 @@ body {
   top: 0;
   width: 100% !important;
   height: 100% !important;
+}
+.main-center-front .charts-about {
+  margin-top: 0;
 }
 .main-center-front .task-mode-block {
   margin: 0 auto;
@@ -4236,6 +4260,7 @@ body {
 .main-center-front .task-mode-block .task-mode .item-card .item-option-lang .option-word-block .option-spell,
 .main-center-front .task-mode-block .task-mode .item-card-base .item-option .option-word-block .option-spell,
 .main-center-front .task-mode-block .task-mode .item-card-base .item-option-lang .option-word-block .option-spell {
+  margin-top: 0.69vw;
   font-size: 0.97vw;
   font-weight: 300;
   line-height: 0.97vw;
@@ -4994,6 +5019,128 @@ body {
   font-family: Roboto;
 }
 
+.index-cover {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgba(15, 26, 28, 0.5);
+}
+.index-cover .info {
+  margin: 0 auto;
+  width: 45%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background-color: #fcfcfc;
+  border-radius: 5px;
+  box-shadow: -20px 20px 10px 0px rgba(0, 0, 0, 0.3);
+  border-left: 3px solid orangered;
+  border-bottom: 5px solid orangered;
+}
+.index-cover .info .info-header {
+  margin: 0 auto;
+  margin-top: 3%;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.index-cover .info .info-header img {
+  margin-left: 3%;
+}
+.index-cover .info .info-header button {
+  margin-right: 3%;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.index-cover .info .info-main {
+  margin: 0 auto;
+  width: 70%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 1.11vw;
+  font-weight: 300;
+  line-height: 1.39vw;
+  letter-spacing: 0;
+  text-align: center;
+}
+.index-cover .info .info-main p {
+  margin-bottom: 1.8%;
+}
+.index-cover .info .info-main .terve {
+  font-size: 1.39vw;
+  font-weight: 500;
+  line-height: 1.39vw;
+  letter-spacing: 0;
+}
+.index-cover .info .info-button {
+  margin: 0 auto;
+  margin-bottom: 7%;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.index-cover .info .info-button .btn-go {
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.53vw;
+  font-weight: 300;
+  line-height: 1.53vw;
+  letter-spacing: 0;
+  background-color: #dae6e8;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.index-cover .info .info-button .btn-go:hover {
+  background-color: #f5a836;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(/public/assets/fonts/Roboto.ttf);
+}
+@font-face {
+  font-family: NotoSansArmenian;
+  src: url(../../assets/fonts/NotoSansArmenian-VariableFont_wdthwght.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
 .tutor-cover {
   margin: 0;
   width: 100%;
@@ -5515,6 +5662,97 @@ body {
 }
 .modal-settings .info .info-button .btn-go:hover {
   background-color: #f5a836;
+}
+
+@font-face {
+  font-family: Roboto;
+  src: url(/public/assets/fonts/Roboto.ttf);
+}
+@font-face {
+  font-family: NotoSansArmenian;
+  src: url(../../assets/fonts/NotoSansArmenian-VariableFont_wdthwght.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+.settings-block {
+  margin: 0 auto;
+  padding: 0.69vw 1.39vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 40vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+  box-shadow: -0.15vw -0.15vw 0.15vw 0.15vw rgba(0, 0, 0, 0.05), 0.15vw 0 0.15vw 0.15vw rgba(0, 0, 0, 0.05);
+}
+.settings-block .settings-title {
+  margin: 0 auto;
+  width: 96%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.settings-block .sett-langs {
+  margin: 0 auto;
+  margin-top: 0.25vw;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.settings-block .sett-langs .sett-content {
+  font-size: 0.83vw;
+  font-weight: 300;
+  line-height: 0.83vw;
+  letter-spacing: 0;
+  color: grey;
+  text-align: left;
+}
+.settings-block .sett-langs .sett-content:hover {
+  color: #f5a836;
+}
+.settings-block .sett-themes {
+  margin: 0 auto;
+  margin-top: 0.1vw;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.settings-block .sett-themes .sett-content {
+  font-size: 0.83vw;
+  font-weight: 300;
+  line-height: 0.83vw;
+  letter-spacing: 0;
+  color: grey;
+  text-align: left;
+}
+.settings-block .sett-themes .sett-content:hover {
+  color: #f5a836;
 }
 
 @font-face {
@@ -6152,6 +6390,9 @@ body {
   border-radius: 3px;
   outline: none;
   box-sizing: border-box;
+}
+.admin-content .form-input .input-box .combo-box {
+  height: 80px;
 }
 .admin-content .form-input .input-box .input-text:focus {
   border: 2px solid #abbee6;

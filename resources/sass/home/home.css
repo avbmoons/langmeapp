@@ -323,7 +323,6 @@ body {
 }
 .footer-front .footer-left-front .footer-left-block-front .logo-footer-front {
   margin: 0 auto;
-  margin-right: 8%;
   height: 50%;
   width: auto;
   align-items: center;
@@ -767,7 +766,7 @@ body {
   margin: 0 auto;
   width: 50%;
   height: 100%;
-  padding: 5px;
+  padding: 5px 0;
   background: none;
   border: none;
   outline: none;
@@ -779,6 +778,10 @@ body {
 }
 .wrapper-front .top-front main-front .main-left-front .btn-tutor-block .btn-tutor:hover svg path {
   fill: orangered;
+}
+.wrapper-front .top-front main-front .main-left-front .tutor-about {
+  margin-top: 0;
+  height: 20%;
 }
 .wrapper-front .top-front main-front .main-center-front {
   margin: auto;
@@ -798,6 +801,7 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
+  position: relative;
 }
 .wrapper-front .top-front main-front .main-center-front .settings-front .set-get-front {
   margin: 0;
@@ -1008,6 +1012,7 @@ body {
   justify-content: center;
   box-sizing: border-box;
   align-items: center;
+  text-align: center;
   background-color: #f2f7f7;
   font-size: 1.39vw;
   font-weight: 400;
@@ -1024,7 +1029,7 @@ body {
   border-radius: 5px;
 }
 .wrapper-front .top-front main-front .main-center-front .results-front .set-get-front .btn-link-set-get {
-  margin: auto;
+  margin: 0 auto;
   width: -moz-fit-content;
   width: fit-content;
   height: -moz-fit-content;
@@ -1036,6 +1041,7 @@ body {
   letter-spacing: 0;
   color: #0f1a1c;
   align-items: center;
+  border: 1px solid green;
 }
 .wrapper-front .top-front main-front .main-center-front .results-front .set-get-front:hover {
   background-color: #f58318;
@@ -1127,7 +1133,6 @@ body {
 }
 .wrapper-front .footer-front .footer-left-front .footer-left-block-front .logo-footer-front {
   margin: 0 auto;
-  margin-right: 8%;
   height: 50%;
   width: auto;
   align-items: center;

@@ -275,7 +275,7 @@ function submitTaskSettings() {
   localStorage.setItem("modeChoice", strModeChoice);
 
   //getTaskPage();
-  closeModalSettings();
+//  closeModalSettings();
 }
 
 function getFirstWord(str) {

@@ -113,6 +113,9 @@
                 outline: none;
                 box-sizing: border-box;
               }
+              .combo-box {
+                height: 2*$input-height;
+              }
               .input-text:focus {
                 border: 2px solid $color-main;
               }

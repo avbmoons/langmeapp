@@ -39,7 +39,8 @@
           </svg>
           <a class="btn-link-set-get" href="#">&nbsp;Set Task</a>          
       </button>
-      {{-- <button class="set-get-front get" id="getButton" onclick="getTask()">
+      <x-settings-resume></x-settings-resume>
+      <button class="set-get-front get" id="getButton" >
           <!-- icon-arrow-next.svg" -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -50,8 +51,8 @@
             />
           </svg>
           <a class="btn-link-set-get" href="">&nbsp;Get Task</a>          
-      </button> --}}
-      <button class="set-get-front get" id="getButton" onclick="{{ route('taskChoice')}}">
+      </button> 
+      {{--<button class="set-get-front get" id="getButton" onclick="{{ route('taskChoice')}}">
           <!-- icon-arrow-next.svg" -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -62,7 +63,7 @@
             />
           </svg>
           <a class="btn-link-set-get" href="">&nbsp;Get Task</a>          
-      </button>
+      </button>--}}
     </div>
     <div class="modes-front">
       <div class="mode-item-front plain">
@@ -129,16 +130,16 @@
     </div>
     <div class="results-front">
       <button class="set-get-front" id="resultsButton" onclick="openModalResults()">
-        <a class="btn-link-set-get" href="">
+        {{-- <a class="btn-link-set-get" href=""> --}}
           <!-- icon-finish-flag.svg" -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M3.75 3V21H5.25V15H20.25V3H3.75ZM5.25 4.5H7.5V6.75H9.75V4.5H12V6.75H14.25V4.5H16.5V6.75H18.75V9H16.5V11.25H18.75V13.5H16.5V11.25H14.25V13.5H12V11.25H9.75V13.5H7.5V11.25H5.25V9H7.5V6.75H5.25V4.5ZM7.5 9V11.25H9.75V9H7.5ZM9.75 9H12V6.75H9.75V9ZM12 9V11.25H14.25V9H12ZM14.25 9H16.5V6.75H14.25V9Z"
                 fill="#0F1A1C"
               />
-          </svg>
-          Results
-        </a>
+          </svg>          
+        {{-- </a> --}}
+        Results
       </button>
       <div class="totals-front">
         <div class="totals-block-front">
@@ -213,6 +214,168 @@
 @endsection
 
 @push('js')
+    <script>
+      // here function getTask()
+      let modeChoice = localStorage.getItem('modeChoice').trim();
+      console.log("modeChoice from localStorage = " + modeChoice);
+      let getTaskButton = document.getElementById('getButton');
+
+      getTaskButton.addEventListener('click', function() {
+        getTask(modeChoice);
+        // switch(modeChoice) {
+        //   case 'Plain':
+        //     window.location.href = "{{ route('taskPlain')}}"; 
+        //     break;
+        //   case 'Choice':
+        //     window.location.href = "{{ route('taskChoice')}}"; 
+        //     break;
+        //   case 'Lang':
+        //     window.location.href = "{{ route('taskLang')}}";   
+        //     break;
+        //   case 'Mix':
+        //     window.location.href = "{{ route('taskMix')}}";   
+        //     break;
+        // }
+      });
+      function getTask(modeChoice) {
+        //let modeChoice = localStorage.getItem('modeChoice').trim();
+        //let pageName;
+        switch(modeChoice) {
+          case 'Plain':
+            window.location.href = "{{ route('taskPlain')}}"; 
+            break;
+          case 'Choice':
+            window.location.href = "{{ route('taskChoice')}}"; 
+            break;
+          case 'Lang':
+            window.location.href = "{{ route('taskLang')}}";   
+            break;
+          case 'Mix':
+            window.location.href = "{{ route('taskMix')}}";   
+            break;
+        }
+      }
+    </script>
+
+    <script>
+      function getSettingsExist() {
+        let existMode = localStorage.getItem('modeChoice');
+        let existPrimLang = localStorage.getItem('primLang');
+        //console.log("existPrimLang = " + existPrimLang);
+        let existCompLangs = localStorage.getItem('compLangs').split(',');
+        //console.log("existCompLangs = " + existCompLangs);
+        let existThemes = localStorage.getItem('themesLangs').split(',');
+        let settingsMode = document.getElementById('settingsMode');
+        let settingsPrimLang = document.getElementById('settingsPrimLang');
+        let settingsCompLangs = document.getElementById('settingsCompLangs');
+        let settingsThemes = document.getElementById('settingsThemes');
+
+        settingsMode.textContent = existMode;
+        settingsPrimLang.textContent = existPrimLang;
+        settingsCompLangs.textContent = existCompLangs;
+        settingsThemes.textContent = existThemes;
+      }
+      getSettingsExist();
+    </script>
+
+  <script>
+    // function getTaskPage() {
+    //   let modeChoice = resultMode.value.trim();
+    //   console.log("resultMode setting = " + modeChoice);
+    //   let pageName = window.location.pathname.substring(thisUrl.lastIndexOf('/')+1);
+    //   console.log("pageName = " + pageName);
+    
+    //   if (pageName.indexOf('home')) {    //} == 'home.html') {
+    //     window.location.href =  "{{ route('home') }}" ;   // "../pages/home.html";
+    //   } else {
+    //     switch(modeChoice) {
+    //         case "Plain":
+    //             window.location.href = "{{ route('taskPlain') }}";
+    //             break;
+    //         case "Choice":
+    //             window.location.href = "{{ route('taskChoice') }}";
+    //             break;
+    //         case "Lang":
+    //             window.location.href = "{{ route('taskLang') }}";
+    //             break;
+    //         case "Mix":
+    //             window.location.href = "{{ route('taskMix') }}";
+    //             break;
+    //     }
+    //   }
+    // }
+
+    // function submitTaskSettings() {
+
+    //   let strPrimLang = document.getElementById("resultPrim").value;
+    //   console.log(strPrimLang);
+    //   localStorage.setItem("primLang", strPrimLang);
+
+    //   let strCompLangsN = document.getElementById("resultComp").value;
+    //   let strCompLangs = strCompLangsN.replace(/\n/g, "");
+    //   console.log(strCompLangs);
+    //   localStorage.setItem("compLangs", strCompLangs);
+
+    //   let strThemesN = document.getElementById("resultThemes").value;
+    //   let strThemes = strThemesN.replace(/\n/g, "");
+    //   console.log(strThemes);
+    //   localStorage.setItem("themesLangs", strThemes);
+
+    //   let strModeChoice = document.getElementById("resultMode").value;
+    //   console.log(strModeChoice);
+    //   localStorage.setItem("modeChoice", strModeChoice);
+    // }
+
+    //here function submitTaskSettings() with getTaskPage()
+
+    let btnSubmitTaskSettings = document.getElementById('btnSubmitTaskSettings');
+    //console.log("btnSubmitTaskSettings = " + btnSubmitTaskSettings.className);
+    btnSubmitTaskSettings.addEventListener('click', function() {
+      let strPrimLang = document.getElementById("resultPrim").value;
+      console.log(strPrimLang);
+      localStorage.setItem("primLang", strPrimLang);
+
+      let strCompLangsN = document.getElementById("resultComp").value;
+      let strCompLangs = strCompLangsN.replace(/\n/g, "");
+      console.log(strCompLangs);
+      localStorage.setItem("compLangs", strCompLangs);
+
+      let strThemesN = document.getElementById("resultThemes").value;
+      let strThemes = strThemesN.replace(/\n/g, "");
+      console.log(strThemes);
+      localStorage.setItem("themesLangs", strThemes);
+
+      let strModeChoice = document.getElementById("resultMode").value;
+      console.log(strModeChoice);
+      localStorage.setItem("modeChoice", strModeChoice);
+
+      //window.location.href = "{{ route('about') }}";
+      //console.log("urlName = " + urlName);
+      if (window.location.href.includes('home')) {    
+        window.location.href =  "{{ route('home') }}" ;   
+      } else {
+        //submitTaskSettings();
+        getTask();
+        // switch(strModeChoice) {
+        //     case "Plain":
+        //         window.location.href = "{{ route('taskPlain') }}";
+        //         break;
+        //     case "Choice":
+        //         window.location.href = "{{ route('taskChoice') }}";
+        //         break;
+        //     case "Lang":
+        //         window.location.href = "{{ route('taskLang') }}";
+        //         break;
+        //     case "Mix":
+        //         window.location.href = "{{ route('taskMix') }}";
+        //         break;
+        // }
+      }
+
+    });    
+
+  </script>
+
     <script defer src="{{ asset('js/listLangs.js')}}"></script>
     <script defer src="{{ asset('js/listModes.js')}}"></script>
     <script defer src="{{ asset('js/listThemes.js')}}"></script>
@@ -223,10 +386,9 @@
 
     <script>
       let langs = @json($langs);
-      //console.log(langs);
       let themes = @json($themes);
       let modes = @json($modes);
     </script>
-    {{-- @vite(['resources/js/tutor.js']) --}}
+
 @endpush
 

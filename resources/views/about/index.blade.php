@@ -3,9 +3,11 @@
 @section('title', 'About')
 @section('content')
 
-<div class="main-left-front"></div>
+<div class="main-left-front">
+  <x-tutors-button></x-tutors-button>
+</div>
 <div class="main-center-front">
-    <div class="task-info">
+    <div class="task-info info-about">
       <div class="info-title-block">
         <p class="info-title">About project</p>
       </div>
@@ -13,11 +15,11 @@
         <div class="task-description-about">
           <p class="info-content">Using langMe, you can solve the issue of several languages mixing if you trying to speak ones. Practice not to confuse words and phrases on different languages.</p>
           <p class="info-content">Now we have the basic words and phrases for you on Russian, English, Armenian, Greek, Finnish and Latvian, and a few tasks so that they don't get mixed up in your practice.</p>
-          <p class="info-content then">And then, it's just interesting for everyone!</p>
+          <p class="info-content then">And then, it's just interesting and useful!</p>
         </div>
       </div>
     </div>
-    <div class="chart-rows-block">
+    <div class="chart-rows-block charts-about">
       <div class="charts-title-block">
         <p class="charts-title">What we have now:</p>
       </div>
@@ -44,6 +46,8 @@
 @endsection
 
 @push('js')
+    <script defer src="{{ asset('js/tutor.js')}}"></script>
+
     <script>
       //for chart Modes
       const modesCh = @json($modesCh);

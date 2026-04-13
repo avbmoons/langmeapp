@@ -179,7 +179,11 @@
       </a>
     </div>
     <div class="sidebar-menu-box" id="menuTasks">
-      <svg
+      <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 3H4C2.9 3 2 3.9 2 5V19C2 20.1 2.9 21 4 21H20C21.1 21 22 20.1 22 19V5C22 3.9 21.1 3 20 3ZM4 19V5H20V19H4Z" fill="#1B1357"/>
+        <path d="M13 8.00004H18V10H13V8.00004ZM8.00004 8.59004L6.96004 7.54004L5.54004 8.96004L8.00004 11.41L11.46 7.96004L10.04 6.54004L8.00004 8.59004ZM13 14H18V16H13V14ZM8.00004 14.59L6.96004 13.54L5.54004 14.96L8.00004 17.41L11.46 13.96L10.04 12.54L8.00004 14.59Z" fill="#1B1357"/>
+      </svg>
+      {{-- <svg
         class="menu-icon"
         width="24"
         height="24"
@@ -192,7 +196,7 @@
           d="M5 22H19C20.103 22 21 21.103 21 20V11C21 9.897 20.103 9 19 9H15V11H19V20H5V11H9V9H5C3.897 9 3 9.897 3 11V20C3 21.103 3.897 22 5 22Z"
           fill="#1B1357"
         />
-      </svg>
+      </svg> --}}
       <a href="{{ route('admin.tasks.index') }}">
         <button class="bth-menu-item @if(request()->routeIs('admin.tasks.index')) active @endif" id="btnMenuTasks">Tasks</button>
       </a>
@@ -230,6 +234,15 @@
       </svg>
       <a href="{{ route('admin.users.index') }}">
         <button class="bth-menu-item @if(request()->routeIs('admin.users.index')) active @endif" id="btnMenuUsers">Users</button>
+      </a>
+    </div>
+    <div class="sidebar-menu-box" id="menuImport">
+      <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3V15M12 15L8 11M12 15L16 11" stroke="#1B1357" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 5H4C3.46957 5 2.96086 5.21071 2.58579 5.58579C2.21071 5.96086 2 6.46957 2 7V17C2 17.5304 2.21071 18.0391 2.58579 18.4142C2.96086 18.7893 3.46957 19 4 19H20C20.5304 19 21.0391 18.7893 21.4142 18.4142C21.7893 18.0391 22 17.5304 22 17V7C22 6.46957 21.7893 5.96086 21.4142 5.58579C21.0391 5.21071 20.5304 5 20 5H16" stroke="#1B1357" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <a href="{{ route('admin.importlogs.index') }}">
+        <button class="bth-menu-item @if(request()->routeIs('admin.importlogs.index')) active @endif" id="btnMenuImportLogs">Import</button>
       </a>
     </div>                
   </div>

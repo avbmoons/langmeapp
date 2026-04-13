@@ -131,7 +131,7 @@ class ItemHeadingCompLang {
     }
     render() {
         return `<div class="item-heading-lang">
-                    <p class="heading-text" id="item${this.word_id}Comp${this.lang_id}Heading" style="font-size: 1.39vw;">${this.spell_eng}</p>
+                    <p class="heading-text" id="item${this.word_id}Comp${this.lang_id}Heading" style="font-size: 1.39vw;">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                 </div>`;
     }
 }

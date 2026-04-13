@@ -1,0 +1,89 @@
+@font-face {
+  font-family: Roboto;
+  src: url(/public/assets/fonts/Roboto.ttf);
+}
+@font-face {
+  font-family: NotoSansArmenian;
+  src: url(../../assets/fonts/NotoSansArmenian-VariableFont_wdthwght.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+.settings-block {
+  margin: 0 auto;
+  padding: 0.69vw 1.39vw;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 40vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.settings-block .settings-title {
+  margin: 0 auto;
+  width: 96%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.settings-block .sett-langs {
+  margin: 0 auto;
+  margin-top: 0.1vw;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+.settings-block .sett-langs .sett-content {
+  font-size: 0.83vw;
+  font-weight: 300;
+  line-height: 0.83vw;
+  letter-spacing: 0;
+  color: grey;
+  text-align: left;
+}
+.settings-block .sett-langs .sett-content:hover {
+  color: #f5a836;
+}
+.settings-block .sett-themes {
+  margin: 0 auto;
+  margin-top: 0.1vw;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  cursor: pointer;
+}
+.settings-block .sett-themes .sett-content {
+  font-size: 0.83vw;
+  font-weight: 300;
+  line-height: 0.83vw;
+  letter-spacing: 0;
+  color: grey;
+  text-align: left;
+}
+.settings-block .sett-themes .sett-content:hover {
+  color: #f5a836;
+}/*# sourceMappingURL=settings-resume.css.map */

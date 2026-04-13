@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\QueryBuilders\ImportLogsQueryBuilder;
 use App\QueryBuilders\LangsQueryBuilder;
 use App\QueryBuilders\LexiconsQueryBuilder;
 use App\QueryBuilders\ModesQueryBuilder;
@@ -27,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(QueryBuilder::class, PatternsQueryBuilder::class);
         $this->app->bind(QueryBuilder::class, LexiconsQueryBuilder::class);
         $this->app->bind(QueryBuilder::class, TasksQueryBuilder::class);
+        $this->app->bind(QueryBuilder::class, ImportLogsQueryBuilder::class);
     }
 
     /**

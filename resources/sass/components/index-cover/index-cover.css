@@ -1,0 +1,121 @@
+@font-face {
+  font-family: Roboto;
+  src: url(/public/assets/fonts/Roboto.ttf);
+}
+@font-face {
+  font-family: NotoSansArmenian;
+  src: url(../../assets/fonts/NotoSansArmenian-VariableFont_wdthwght.ttf);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+
+.index-cover {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgba(15, 26, 28, 0.7);
+}
+.index-cover .wellcome {
+  margin: 0 auto;
+  width: 45%;
+  height: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  background-color: #fcfcfc;
+  border-radius: 5px;
+  box-shadow: -20px 20px 10px 0px rgba(0, 0, 0, 0.3);
+  border-left: 3px solid orangered;
+  border-bottom: 5px solid orangered;
+}
+.index-cover .wellcome .wellcome-header {
+  margin: 0 auto;
+  margin-top: 3%;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+.index-cover .wellcome .wellcome-header img {
+  margin-left: 3%;
+}
+.index-cover .wellcome .wellcome-header button {
+  margin-right: 3%;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.index-cover .wellcome .wellcome-main {
+  margin: 0 auto;
+  width: 70%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 1.11vw;
+  font-weight: 300;
+  line-height: 1.39vw;
+  letter-spacing: 0;
+  text-align: center;
+}
+.index-cover .wellcome .wellcome-main p {
+  margin-bottom: 1.8%;
+}
+.index-cover .wellcome .wellcome-main .terve {
+  font-size: 1.39vw;
+  font-weight: 500;
+  line-height: 1.39vw;
+  letter-spacing: 0;
+}
+.index-cover .wellcome .wellcome-button {
+  margin: 0 auto;
+  margin-bottom: 7%;
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.index-cover .wellcome .wellcome-button .btn-go {
+  width: 40%;
+  height: 100%;
+  text-align: center;
+  font-size: 1.53vw;
+  font-weight: 300;
+  line-height: 1.53vw;
+  letter-spacing: 0;
+  background-color: #dae6e8;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.index-cover .wellcome .wellcome-button .btn-go:hover {
+  background-color: #f5a836;
+}/*# sourceMappingURL=index-cover.css.map */

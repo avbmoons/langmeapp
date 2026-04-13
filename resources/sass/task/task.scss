@@ -5,6 +5,7 @@
 @import '../components/header/header.scss';
 //@import '../components/footer.scss';
 @import '../components/footer/footer.scss';
+@import '../chart/chart.scss';
 
 * {
   margin: 0;
@@ -20,6 +21,7 @@ body {
         width: $block-width;
         height: $min-main-height;
         @include flex-vertical();
+        justify-content: space-between;
         .task-info {
           margin: 0 auto;
           margin-bottom: 1.39vw;  
@@ -28,6 +30,7 @@ body {
           @include flex-horizontal();
           justify-content: space-between;
           position: relative;
+          //border: 1px solid green;
           .info-title-block {
             margin: 0; 
             width: 20%; 
@@ -125,24 +128,26 @@ body {
             }
           }
           .info-content-block-about {
-            margin: 0 auto;
+            margin: auto;
             width: 90%;
             height: fit-content;
             @include flex-vertical();
             .task-description-about {
               margin: 0 auto;
+              padding-top: 0.97vw;
               width: 96%;
-              height: 40%; 
+              height: 38%;  // 40%; 
               @include flex-vertical();
               justify-content: flex-start;
               .info-content {
                 margin-bottom: 0.69vw;
-                @include text-font(0.97vw, 300, 0.97vw, 0); //16px
+                @include text-font(1.25vw, 300, 1.25vw, 0); //18px
                 color: $color-dark;
                 text-align: left;                
               }
               .then {
-                @include text-font(0.97vw, 400, 0.97vw, 0);
+                margin-bottom: 0;
+                @include text-font(1.25vw, 400, 1.25vw, 0);
               }
             }
           }
@@ -171,6 +176,10 @@ body {
             }
           }
         }
+        .info-about {
+          margin-bottom:1%; // 0;
+          height: 20%;
+        }
         .task-settings {
           margin: 0 auto;
           margin-top: 0.5%; 
@@ -178,7 +187,7 @@ body {
           height: 4%; 
           @include flex-horizontal();
           justify-content: space-between;
-          border: 1px solid green;
+          //border: 1px solid green;
           display: none;
           .counter {
             margin: auto;
@@ -218,6 +227,10 @@ body {
           }
         }
         @include chartjs();
+        .charts-about {
+          margin-top: 0;
+          //border: 1px solid blue;
+        }
         .task-mode-block {
           margin: 0 auto;
           width: 100%;
@@ -273,6 +286,7 @@ body {
                     text-align: center;
                   }
                   .option-spell {
+                    margin-top: 0.69vw;
                     @include text-font(0.97vw, 300, 0.97vw, 0); //14px
                     color: $color-dark;
                     text-align: center;

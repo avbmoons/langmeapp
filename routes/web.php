@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\TasksController as AdminTasksController;
 use App\Http\Controllers\Admin\ThemesController as AdminThemesController;
 use App\Http\Controllers\Admin\WordsController as AdminWordsController;
 use App\Http\Controllers\Admin\UsersController as AdminUsersController;
+use App\Http\Controllers\Admin\ImportLogsController as AdminImportLogsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TaskChoiceController;
 use App\Http\Controllers\TaskPlainController;
@@ -31,7 +32,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::group(['prefix' => 'admin', 'as' => 'admin.'], static function() {
@@ -46,6 +47,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], static function() {
     Route::resource('themes', AdminThemesController::class);
     Route::resource('words', AdminWordsController::class);
     Route::resource('users', AdminUsersController::class);
+    Route::resource('importlogs', AdminImportLogsController::class);
 });
 
 Route::group(['prefix' => ''], static function() {
