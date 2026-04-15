@@ -1,0 +1,17 @@
+{
+  "public/assets/fonts/Roboto.ttf": {
+    "file": "assets/Roboto-BVEQUB9G.ttf",
+    "src": "public/assets/fonts/Roboto.ttf"
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-DQ8o9b2q.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  },
+  "resources/sass/app.scss": {
+    "file": "assets/app-DfTbeOfy.css",
+    "src": "resources/sass/app.scss",
+    "isEntry": true
+  }
+}
