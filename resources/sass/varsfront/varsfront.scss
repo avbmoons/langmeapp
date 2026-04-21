@@ -87,6 +87,51 @@ $viewport-width: var(--viewport-width);
   letter-spacing: $letter-spacing;
 }
 
-@mixin text-size($maket-width, $viewport-width, $font-size) {
-  font-size: list.slash($viewport-width * $font-size, $maket-width);
+// @mixin text-size($maket-width, $viewport-width, $font-size) {
+//   font-size: list.slash($viewport-width * $font-size, $maket-width);
+// }
+
+@mixin media-mobile {
+  @media only screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin media-desk {
+  @media only screen and (min-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin media-phone {
+  @media only screen and (max-width: 376px) {
+    @content;
+  }
+}
+
+@mixin media-smart {
+  @media only screen and (min-width: 377px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-tablet {
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-text($font-phone, $font-smart, $font-tablet) {
+  @include  media-phone {
+    font-size: $font-phone;
+    line-height: $font-phone;
+  };
+  @include  media-smart {
+    font-size: $font-smart;
+    line-height: $font-smart;
+  };
+  @include  media-tablet {
+    font-size: $font-tablet;
+    line-height: $font-tablet;
+  };
 }

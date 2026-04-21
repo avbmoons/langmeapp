@@ -47,6 +47,26 @@ body {
   box-shadow: -20px 20px 10px 0px rgba(0, 0, 0, 0.3);
   border-left: 3px solid orangered;
   border-bottom: 5px solid orangered;
+  position: relative;
+}
+@media only screen and (max-width: 1023px) {
+  .tutor-cover .tutor {
+    width: 90%;
+    height: 89vh;
+  }
+}
+.tutor-cover .tutor .btn-close {
+  position: absolute;
+  top: 10px;
+  right: 5%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
 }
 .tutor-cover .tutor .tutor-main {
   margin: 0 auto;
@@ -98,6 +118,26 @@ body {
   font-weight: 400;
   line-height: 1.94vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .tutor-cover .tutor .tutor-footer .tutor-footer-box .tutor-close {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .tutor-cover .tutor .tutor-footer .tutor-footer-box .tutor-close {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .tutor-cover .tutor .tutor-footer .tutor-footer-box .tutor-close {
+    font-size: 28px;
+    line-height: 28px;
+  }
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box .tutor-close {
   color: #0f1a1c;
   background: none;
   border: none;
@@ -107,6 +147,14 @@ body {
 .tutor-cover .tutor .tutor-footer .tutor-footer-box .tutor-close:hover {
   color: #ff4500;
 }
+.tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorPrev {
+  margin-right: 2%;
+  width: 5%;
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorNext {
+  margin-left: 2%;
+  width: 5%;
+}
 .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip {
   margin-right: 0;
   width: 15%;
@@ -115,19 +163,54 @@ body {
   line-height: 1.67vw;
   letter-spacing: 0;
 }
+@media only screen and (max-width: 376px) {
+  .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
 .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip .btn-link-skip {
   text-decoration: none;
   font-size: 1.67vw;
   font-weight: 500;
   line-height: 1.67vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip .btn-link-skip {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip .btn-link-skip {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip .btn-link-skip {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+.tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip .btn-link-skip {
   color: #0f1a1c;
 }
 .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorSkip .btn-link-skip:hover {
   color: #ff4500;
-}
-.tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorPrev, .tutor-cover .tutor .tutor-footer .tutor-footer-box #tutorNext {
-  width: 5%;
 }
 .tutor-cover .tutor .tutor-footer .tutor-footer-box .control-panels {
   margin: auto;
@@ -140,9 +223,14 @@ body {
 }
 .tutor-cover .tutor .tutor-footer .tutor-footer-box .control-panels .dot-step {
   height: auto;
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .tutor-cover .tutor .tutor-footer .tutor-footer-box .control-panels .dot-step svg {
-  width: 2.5vw;
+  width: 100%;
   height: auto;
 }
 .tutor-cover .tutor .tutor-footer .tutor-footer-box .control-panels .dot-step .dot-circle .dots:hover {

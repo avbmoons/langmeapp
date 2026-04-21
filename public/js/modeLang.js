@@ -29,7 +29,7 @@ class ItemHeadingPrimLang {
     }
     render() {
         return `<div class="item-heading" style="background-color: #f7d5a1;">
-                    <p class="heading-text" id="item${this.word_id}HeadingBase" style="font-size: 1.39vw;">${this.translation}</p>
+                    <p class="heading-text" id="item${this.word_id}HeadingBase" >${this.translation}</p>
                 </div>`;
     }
 }
@@ -56,7 +56,7 @@ class ItemOptionPrimLang {
     }
     render() {
         return `<div class="item-option base" style="background-color: #f2f7f7;">
-                    <p class="item-word base" id="item${this.word_id}WordBase" style="font-size: 1.25vw; font-weight: 300; background-color: #f2f7f7;">${this.langName}</p>
+                    <p class="item-word base" id="item${this.word_id}WordBase" style="background-color: #f2f7f7;">${this.langName}</p>
                 </div>`;
     }
 }
@@ -131,7 +131,7 @@ class ItemHeadingCompLang {
     }
     render() {
         return `<div class="item-heading-lang">
-                    <p class="heading-text" id="item${this.word_id}Comp${this.lang_id}Heading" style="font-size: 1.39vw;">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
+                    <p class="heading-text" id="item${this.word_id}Comp${this.lang_id}Heading" >&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                 </div>`;
     }
 }
@@ -160,7 +160,7 @@ class ItemOptionCompLang {
         return `<div class="item-option-lang" id="item${this.word_id}Comp${this.lang_id}Option">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}OptionWord" style="display: none;">${this.langName}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}OptionSpell" style="font-size: 1.25vw;">${this.langName}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}OptionSpell" >${this.langName}</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}OptionRadio" checked data-isright="true">
@@ -193,7 +193,7 @@ class ItemOption1CompLang {
         return `<div class="item-option-lang" id="item${this.word_id}Comp${this.lang_id}Option1">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option1Word" style="display: none;">${this.langName}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option1Spell" style="font-size: 1.25vw;">${this.langName}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option1Spell" >${this.langName}</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option1Radio" data-isright="false">
@@ -226,7 +226,7 @@ class ItemOption2CompLang {
         return `<div class="item-option-lang" id="item${this.word_id}Comp${this.lang_id}Option2">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option2Word" style="display: none;">${this.langName}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option2Spell" style="font-size: 1.25vw;">${this.langName}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option2Spell" >${this.langName}</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option2Radio" data-isright="false">
@@ -259,10 +259,43 @@ class ItemOption3CompLang {
         return `<div class="item-option-lang" id="item${this.word_id}Comp${this.lang_id}Option3">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option3Word" style="display: none;">${this.langName}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option3Spell" style="font-size: 1.25vw;">${this.langName}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option3Spell" >${this.langName}</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option3Radio" data-isright="false">
+                    </div>                                    
+                </div>`;
+    }
+}
+
+class ItemOption4CompLang {
+    constructor (
+        id,
+        theme_id,
+        word_id,
+        lang_id,
+        langName,
+        translation,
+        spell_base,
+        spell_eng,
+    ) {
+        this.id = id;
+        this.theme_id = theme_id;
+        this.word_id = word_id;
+        this.lang_id = lang_id;
+        this.langName = langName;
+        this.translation = translation;
+        this.spell_base = spell_base;
+        this.spell_eng = spell_eng;
+    }
+    render() {
+        return `<div class="item-option-lang" id="item${this.word_id}Comp${this.lang_id}Option4">
+                    <div class="option-word-block">
+                        <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option4Word" style="display: none;">${this.langName}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option4Spell" >${this.langName}</p>
+                    </div>
+                    <div class="option-radio-block">
+                        <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option4Radio" data-isright="false">
                     </div>                                    
                 </div>`;
     }
@@ -277,6 +310,7 @@ class CardCompLang {
         this.itemOption1CompLang = new ItemOption1CompLang();
         this.itemOption2CompLang = new ItemOption2CompLang();
         this.itemOption3CompLang = new ItemOption3CompLang();
+        this.itemOption4CompLang = new ItemOption4CompLang();
     }
     fetchCardCompLang(i, j) {
         this.ctaskRows = taskRows[i][j];
@@ -294,6 +328,7 @@ class CardCompLang {
         let itemOptionCompLangV1Html = '';
         let itemOptionCompLangV2Html = '';
         let itemOptionCompLangV3Html = '';
+        let itemOptionCompLangV4Html = '';
 
         let itemHeadingCompLang = new ItemHeadingCompLang(
             this.ctaskRows.id,
@@ -322,6 +357,7 @@ class CardCompLang {
         let itemOptionCompLangV1;
         let itemOptionCompLangV2;
         let itemOptionCompLangV3;
+        let itemOptionCompLangV4;
         let cardOptions = [];
 
         switch (arrSelectedCompLangs.length) {
@@ -412,6 +448,63 @@ class CardCompLang {
                 cardOptions[2] = itemOptionCompLangV2Html;//
                 cardOptions[3] = itemOptionCompLangV3Html;//
                 break;
+            case 5:
+                itemOptionCompLangV1 = new ItemOption1CompLang(
+                    this.ccompOptionsLang[0].id,
+                    this.ccompOptionsLang[0].theme_id,
+                    this.ccompOptionsLang[0].word_id,
+                    this.ccompOptionsLang[0].lang_id,
+                    this.ccompOptionsLang[0].langName,
+                    this.ccompOptionsLang[0].translation,
+                    this.ccompOptionsLang[0].spell_base,
+                    this.ccompOptionsLang[0].spell_eng,
+                );
+
+                itemOptionCompLangV2 = new ItemOption2CompLang(
+                    this.ccompOptionsLang[1].id,
+                    this.ccompOptionsLang[1].theme_id,
+                    this.ccompOptionsLang[1].word_id,
+                    this.ccompOptionsLang[1].lang_id,
+                    this.ccompOptionsLang[1].langName,
+                    this.ccompOptionsLang[1].translation,
+                    this.ccompOptionsLang[1].spell_base,
+                    this.ccompOptionsLang[1].spell_eng,
+                );
+
+                itemOptionCompLangV3 = new ItemOption3CompLang(
+                    this.ccompOptionsLang[2].id,
+                    this.ccompOptionsLang[2].theme_id,
+                    this.ccompOptionsLang[2].word_id,
+                    this.ccompOptionsLang[2].lang_id,
+                    this.ccompOptionsLang[2].langName,
+                    this.ccompOptionsLang[2].translation,
+                    this.ccompOptionsLang[2].spell_base,
+                    this.ccompOptionsLang[2].spell_eng,
+                );
+
+                itemOptionCompLangV4 = new ItemOption4CompLang(
+                    this.ccompOptionsLang[3].id,
+                    this.ccompOptionsLang[3].theme_id,
+                    this.ccompOptionsLang[3].word_id,
+                    this.ccompOptionsLang[3].lang_id,
+                    this.ccompOptionsLang[3].langName,
+                    this.ccompOptionsLang[3].translation,
+                    this.ccompOptionsLang[3].spell_base,
+                    this.ccompOptionsLang[3].spell_eng,
+                );
+                this.ctaskRows = itemOptionCompLangV1;//
+                this.ctaskRows = itemOptionCompLangV2;//
+                this.ctaskRows = itemOptionCompLangV3;//
+                this.ctaskRows = itemOptionCompLangV4;//
+                itemOptionCompLangV1Html = itemOptionCompLangV1.render();//
+                itemOptionCompLangV2Html = itemOptionCompLangV2.render();//
+                itemOptionCompLangV3Html = itemOptionCompLangV3.render();//
+                itemOptionCompLangV4Html = itemOptionCompLangV4.render();//
+                cardOptions[1] = itemOptionCompLangV1Html;//
+                cardOptions[2] = itemOptionCompLangV2Html;//
+                cardOptions[3] = itemOptionCompLangV3Html;//
+                cardOptions[4] = itemOptionCompLangV4Html;//
+                break;
         }
 
 
@@ -440,6 +533,9 @@ class CardCompLang {
             case 4:
                 itemCompLangHtml = itemHeadingCompLangHtml + cardOptionsRand[0] + cardOptionsRand[1] + cardOptionsRand[2] + cardOptionsRand[3];
                 break;
+            case 5:
+                itemCompLangHtml = itemHeadingCompLangHtml + cardOptionsRand[0] + cardOptionsRand[1] + cardOptionsRand[2] + cardOptionsRand[3] + cardOptionsRand[4];
+                break;
         }
 
         document.querySelector("#item"+`${i}`+"Comp"+`${j}`).innerHTML = itemCompLangHtml;
@@ -449,6 +545,9 @@ class CardCompLang {
 //  elements for results:
 let resultEnjoy = document.getElementById("enjoy");
 let resultWorry = document.getElementById("worry");
+
+let resultEnjoy2 = document.getElementById("enjoy2");
+let resultWorry2 = document.getElementById("worry2");
 
 let valueEnjoy = resultEnjoy.textContent;
 let valueWorry = resultWorry.textContent;
@@ -539,8 +638,10 @@ function getOptionsLang(themeId, langId, wordId) {
     let option1;
     let option2;
     let option3;
+    let option4;
     let newCompWordsTheme;
-    let otherNewCompWordsTheme;   
+    let otherNewCompWordsTheme;
+    let anotherNewCompWordsTheme;   
 
     switch (arrSelectedCompLangs.length) {
         case 2:
@@ -563,6 +664,20 @@ function getOptionsLang(themeId, langId, wordId) {
             option2.isRight = false;
             option3.isRight = false;
             compOptionsLang.push(option1, option2, option3);
+            break;
+        case 5:
+            option1 = randEl(compWordsTheme);
+            newCompWordsTheme = compWordsTheme.filter(item => item !== option1);
+            option2 = randEl(newCompWordsTheme);
+            otherNewCompWordsTheme = compWordsTheme.filter(item => item !== option1 && item !== option2);
+            option3 = randEl(otherNewCompWordsTheme);
+            anotherNewCompWordsTheme = compWordsTheme.filter(item => item !== option1 && item !== option2 && item !== option3);
+            option4 = randEl(anotherNewCompWordsTheme);
+            option1.isRight = false;
+            option2.isRight = false;
+            option3.isRight = false;
+            option4.isRight = false;
+            compOptionsLang.push(option1, option2, option3, option4);
             break;
     }
 
@@ -653,11 +768,13 @@ function pageRowsCompLangDom(firstIndex, lastIndex) {
                             cardItemOptions[n].style.backgroundColor = "#fccfe0";
                             valueWorry++;
                             resultWorry.textContent = valueWorry;
+                            resultWorry2.textContent = valueWorry;
 
                         } else {
                             cardItemOptions[n].style.backgroundColor = "#c2fceb";
                             valueEnjoy++;
                             resultEnjoy.textContent = valueEnjoy;
+                            resultEnjoy2.textContent = valueEnjoy;
                         }
                     });
                 }

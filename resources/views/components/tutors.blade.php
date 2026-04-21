@@ -1,5 +1,8 @@
 <div class="tutor-cover" id="tutorCover">
   <div class="tutor">
+    <button type="button" class="btn-close" >
+      <a class="btn-link-skip" id="tutorCloseLink" href=""><img src="{{ Vite::asset('resources/images/icons/icon-close.png')}}" alt="close" /></a>
+    </button>
     <div class="tutor-main" name="step-1">
             <img
               class="tutor-img"
@@ -198,8 +201,10 @@
                 </a>
         </div>
         <button class="tutor-close" id="tutorNext" title="Next" onclick="sideSlide(1)">&#9658;</button>
-        <button class="tutor-close" id="tutorSkip" title="Next"><a class="btn-link-skip" href="{{ route('home') }}">Skip...</a></button>
+        <button class="tutor-close" id="tutorSkip" title="Next" ><a class="btn-link-skip" id="tutorSkipLink" href="">Skip...</a></button>
+        {{-- <button class="tutor-close" id="tutorSkip" title="Next"><a class="btn-link-skip" href="{{ route('home') }}">Skip...</a></button> --}}
       </div>
     </div>
   </div>
 </div>
+

@@ -29,7 +29,7 @@ class ItemHeadingPrim {
     }
     render() {
         return `<div class="item-heading">
-                    <p class="heading-text" id="item${this.word_id}HeadingBase" style="font-size: 1.39vw;">${this.langName}</p>
+                    <p class="heading-text" id="item${this.word_id}HeadingBase" >${this.langName}</p>
                 </div>`;
     }
 }
@@ -56,7 +56,7 @@ class ItemOptionPrim {
     }
     render() {
         return `<div class="item-option base">
-                    <p class="item-word base" id="item${this.word_id}WordBase" style="font-size: 1.25vw;">${this.translation}</p>
+                    <p class="item-word base" id="item${this.word_id}WordBase" >${this.translation}</p>
                 </div>`;
     }
 }
@@ -132,7 +132,7 @@ class ItemHeadingComp {
     }
     render() {
         return `<div class="item-heading">
-                    <p class="heading-text" id="item${this.word_id}Comp${this.lang_id}Heading" style="font-size: 1.39vw;">${this.langName}</p>
+                    <p class="heading-text" id="item${this.word_id}Comp${this.lang_id}Heading" >${this.langName}</p>
                 </div>`;
     }
 }
@@ -161,7 +161,7 @@ class ItemOptionCompMix {
         return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}OptionWord" style="display: none;">${this.translation}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}OptionSpell" style="font-size: 1.25vw;">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}OptionSpell" >&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}OptionRadio" checked data-isright="true">
@@ -194,7 +194,7 @@ class ItemOption1CompMix {
         return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option1">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option1Word" style="display: none;">${this.translation}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option1Spell" style="font-size: 1.25vw;">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option1Spell" >&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option1Radio" data-isright="false">
@@ -227,7 +227,7 @@ class ItemOption2CompMix {
         return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option2">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option2Word" style="display: none;">${this.translation}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option2Spell" style="font-size: 1.25vw;">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option2Spell" >&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option2Radio" data-isright="false">
@@ -260,10 +260,43 @@ class ItemOption3CompMix {
         return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option3">
                     <div class="option-word-block">
                         <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option3Word" style="display: none;">${this.translation}</p>
-                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option3Spell" style="font-size: 1.25vw;">&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option3Spell" >&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
                     </div>
                     <div class="option-radio-block">
                         <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option3Radio" data-isright="false">
+                    </div>                                    
+                </div>`;
+    }
+}
+
+class ItemOption4CompMix {
+    constructor (
+        id,
+        theme_id,
+        word_id,
+        lang_id,
+        langName,
+        translation,
+        spell_base,
+        spell_eng,
+    ) {
+        this.id = id;
+        this.theme_id = theme_id;
+        this.word_id = word_id;
+        this.lang_id = lang_id;
+        this.langName = langName;
+        this.translation = translation;
+        this.spell_base = spell_base;
+        this.spell_eng = spell_eng;
+    }
+    render() {
+        return `<div class="item-option" id="item${this.word_id}Comp${this.lang_id}Option4">
+                    <div class="option-word-block">
+                        <p class="option-word" id="item${this.word_id}Comp${this.lang_id}Option4Word" style="display: none;">${this.translation}</p>
+                        <p class="option-spell" id="item${this.word_id}Comp${this.lang_id}Option4Spell" >&#91;&nbsp;${this.spell_eng}&nbsp;&#93;</p>
+                    </div>
+                    <div class="option-radio-block">
+                        <input class="option-radio" name="item${this.word_id}Comp${this.lang_id}" type="radio" id="item${this.word_id}Comp${this.lang_id}Option4Radio" data-isright="false">
                     </div>                                    
                 </div>`;
     }
@@ -279,6 +312,7 @@ class CardCompMix {
         this.itemOption1CompMix = new ItemOption1CompMix();//
         this.itemOption2CompMix = new ItemOption2CompMix();//
         this.itemOption3CompMix = new ItemOption3CompMix();//
+        this.itemOption4CompMix = new ItemOption4CompMix();//
     }
     fetchCardCompMix(i, j) {
         this.ctaskRows = taskRows[i][j];
@@ -296,6 +330,7 @@ class CardCompMix {
         let itemOptionCompMixV1Html = '';
         let itemOptionCompMixV2Html = '';
         let itemOptionCompMixV3Html = '';
+        let itemOptionCompMixV4Html = '';
 
         let itemHeadingComp = new ItemHeadingComp(
             this.ctaskRows.id,
@@ -319,10 +354,11 @@ class CardCompMix {
             this.ctaskRows.spell_eng,
         ); 
 
-        // + three versions
+        // + four versions
         let itemOptionCompMixV1;
         let itemOptionCompMixV2;
         let itemOptionCompMixV3;
+        let itemOptionCompMixV4;
         let cardOptions = [];
 
         switch (arrSelectedCompLangs.length) {
@@ -413,6 +449,63 @@ class CardCompMix {
                 cardOptions[2] = itemOptionCompMixV2Html;//
                 cardOptions[3] = itemOptionCompMixV3Html;//
                 break;
+            case 5:
+                itemOptionCompMixV1 = new ItemOption1CompMix(
+                    this.ccompOptionsMix[0].id,
+                    this.ccompOptionsMix[0].theme_id,
+                    this.ccompOptionsMix[0].word_id,
+                    this.ccompOptionsMix[0].lang_id,
+                    this.ccompOptionsMix[0].langName,
+                    this.ccompOptionsMix[0].translation,
+                    this.ccompOptionsMix[0].spell_base,
+                    this.ccompOptionsMix[0].spell_eng,
+                );
+
+                itemOptionCompMixV2 = new ItemOption2CompMix(
+                    this.ccompOptionsMix[1].id,
+                    this.ccompOptionsMix[1].theme_id,
+                    this.ccompOptionsMix[1].word_id,
+                    this.ccompOptionsMix[1].lang_id,
+                    this.ccompOptionsMix[1].langName,
+                    this.ccompOptionsMix[1].translation,
+                    this.ccompOptionsMix[1].spell_base,
+                    this.ccompOptionsMix[1].spell_eng,
+                );
+
+                itemOptionCompMixV3 = new ItemOption3CompMix(
+                    this.ccompOptionsMix[2].id,
+                    this.ccompOptionsMix[2].theme_id,
+                    this.ccompOptionsMix[2].word_id,
+                    this.ccompOptionsMix[2].lang_id,
+                    this.ccompOptionsMix[2].langName,
+                    this.ccompOptionsMix[2].translation,
+                    this.ccompOptionsMix[2].spell_base,
+                    this.ccompOptionsMix[2].spell_eng,
+                );
+
+                itemOptionCompMixV4 = new ItemOption4CompMix(
+                    this.ccompOptionsMix[3].id,
+                    this.ccompOptionsMix[3].theme_id,
+                    this.ccompOptionsMix[3].word_id,
+                    this.ccompOptionsMix[3].lang_id,
+                    this.ccompOptionsMix[3].langName,
+                    this.ccompOptionsMix[3].translation,
+                    this.ccompOptionsMix[3].spell_base,
+                    this.ccompOptionsMix[3].spell_eng,
+                );
+                this.ctaskRows = itemOptionCompMixV1;//
+                this.ctaskRows = itemOptionCompMixV2;//
+                this.ctaskRows = itemOptionCompMixV3;//
+                this.ctaskRows = itemOptionCompMixV4;//
+                itemOptionCompMixV1Html = itemOptionCompMixV1.render();//
+                itemOptionCompMixV2Html = itemOptionCompMixV2.render();//
+                itemOptionCompMixV3Html = itemOptionCompMixV3.render();//
+                itemOptionCompMixV4Html = itemOptionCompMixV4.render();//
+                cardOptions[1] = itemOptionCompMixV1Html;//
+                cardOptions[2] = itemOptionCompMixV2Html;//
+                cardOptions[3] = itemOptionCompMixV3Html;//
+                cardOptions[4] = itemOptionCompMixV4Html;//
+                break;
         }
 
         this.ctaskRows = itemHeadingComp;
@@ -440,6 +533,9 @@ class CardCompMix {
             case 4:
                 itemCompMixHtml = itemHeadingCompHtml + cardOptionsRand[0] + cardOptionsRand[1] + cardOptionsRand[2] + cardOptionsRand[3];
                 break;
+            case 5:
+                itemCompMixHtml = itemHeadingCompHtml + cardOptionsRand[0] + cardOptionsRand[1] + cardOptionsRand[2] + cardOptionsRand[3] + cardOptionsRand[4];
+                break;
         }
 
         document.querySelector("#item"+`${i}`+"Comp"+`${j}`).innerHTML = itemCompMixHtml;
@@ -449,6 +545,9 @@ class CardCompMix {
 //  elements for results:
 let resultEnjoy = document.getElementById("enjoy");
 let resultWorry = document.getElementById("worry");
+
+let resultEnjoy2 = document.getElementById("enjoy2");
+let resultWorry2 = document.getElementById("worry2");
 
 let valueEnjoy = resultEnjoy.textContent;
 let valueWorry = resultWorry.textContent;
@@ -542,6 +641,7 @@ function getOptionsMix(themeId, langId, wordId) {
     let option1;
     let option2;
     let option3;
+    let option4;
     let newCompWordsTheme;
     let otherNewCompWordsTheme;
 
@@ -566,6 +666,20 @@ function getOptionsMix(themeId, langId, wordId) {
             option2.isRight = false;
             option3.isRight = false;
             compOptionsMix.push(option1, option2, option3);
+            break;
+        case 5:
+            option1 = randEl(compWordsTheme);
+            newCompWordsTheme = compWordsTheme.filter(item => item !== option1);
+            option2 = randEl(newCompWordsTheme);
+            otherNewCompWordsTheme = compWordsTheme.filter(item => item !== option1 && item !== option2);
+            option3 = randEl(otherNewCompWordsTheme);
+            anotherNewCompWordsTheme = compWordsTheme.filter(item => item !== option1 && item !== option2 && item !== option3);
+            option4 = randEl(anotherNewCompWordsTheme);
+            option1.isRight = false;
+            option2.isRight = false;
+            option3.isRight = false;
+            option4.isRight = false;
+            compOptionsMix.push(option1, option2, option3, option4);
             break;
     }
    
@@ -658,11 +772,13 @@ function pageRowsCompMixDom(firstIndex, lastIndex) {
                             cardItemOptions[n].style.backgroundColor = "#fccfe0";
                             valueWorry++;
                             resultWorry.textContent = valueWorry;
+                            resultWorry2.textContent = valueWorry;
 
                         } else {
                             cardItemOptions[n].style.backgroundColor = "#c2fceb";
                             valueEnjoy++;
                             resultEnjoy.textContent = valueEnjoy;
+                            resultEnjoy2.textContent = valueEnjoy;
                         }
                     });
                 }

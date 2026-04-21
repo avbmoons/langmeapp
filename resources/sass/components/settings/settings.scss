@@ -42,6 +42,10 @@ body {
       border-left: 3px solid orangered;
       border-bottom: 5px solid orangered;
       overflow-y: auto;
+      @include media-mobile() {
+        width: 90%;
+        height: 100vh - 7vh - 4vh;
+      }
       .info-header {
         margin: 0 auto;
         margin-top: 3%; 
@@ -60,7 +64,8 @@ body {
           cursor: pointer;
         }
         .modal-title {
-          @include text-font(1.25vw, 500, 1.25vw, 0); //18px; 
+          @include text-font(1.25vw, 500, 1.25vw, 0); //18px;
+          @include media-text(14px, 16px, 18px) ;
           color: $color-dark;
           align-self: center;
           text-align: center;
@@ -83,7 +88,8 @@ body {
           position: relative;
           .combo-label {
             width: 34%;
-            @include text-font(1.25vw, 300, 1.25vw, 0); //18px; 
+            @include text-font(1.25vw, 300, 1.25vw, 0); //18px;
+            @include media-text(14px, 16px, 18px) ; 
             text-align: left;
             align-self: center;
           }
@@ -98,6 +104,7 @@ body {
             padding: 5px;
             width: 60%;
             @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+            @include media-text(12px, 14px, 14px) ;
             color: $color-dark;
             border: 1px solid $color-grey-dark;
             border-radius: 5px;
@@ -107,12 +114,14 @@ body {
             color: $color-grey-dark;
             font-style: italic;
             @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+            @include media-text(12px, 14px, 14px) ;
           }
           .combo-button {
             margin-left: 1%;
             padding: 5px;
             width: fit-content; // 6%; // 5.2%;
-            @include text-font(1.11vw, 300, 1.11vw, 0); //16px; 
+            @include text-font(1.11vw, 300, 1.11vw, 0); //16px;
+            @include media-text(14px, 14px, 16px) ; 
             text-align: center;
             background-color: $color-grey;
             border-radius: 5px;
@@ -126,13 +135,15 @@ body {
             margin-left: 2%; 
             width: 18%; 
             label {
-              @include text-font(1.11vw, 300, 1.11vw, 0); //16px; 
+              @include text-font(1.11vw, 300, 1.11vw, 0); //16px;
+              @include media-text(12px, 14px, 16px) ; 
               color: red;
               text-align: center;
             }
           }
           .mode-button-label {
             @include text-font(1.11vw, 300, 1.11vw, 0); //16px; 
+            @include media-text(12px, 14px, 16px) ;
             text-align: center;
             align-self: center;
           }
@@ -144,13 +155,15 @@ body {
             padding: 5px;
             width: 96%;
             @include text-font(1.11vw, 300, 1.11vw, 0); //16px; 
+            @include media-text(14px, 14px, 16px) ;
             color: $color-dark;
           }
           .combo-text::placeholder {
             padding: 10px 5px 10px 10px;
             color: $color-grey-dark;
             font-style: italic;
-            @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+            @include text-font(0.97vw, 300, 0.97vw, 0); //14px;
+            @include media-text(12px, 14px, 14px) ; 
           }
           .combo-list {
             margin: auto; 
@@ -167,6 +180,9 @@ body {
             position: absolute;
             top: 100%;
             z-index: 99;
+            @include media-mobile {
+              max-height: 0.5 * (100vh - 7vh - 4vh);
+            }
             .combo-list-item {
               margin-bottom: 2%;
               width: auto; 
@@ -174,7 +190,8 @@ body {
               align-items: center;
               .combo-list-input {
                 padding: 5px;
-                @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+                @include text-font(0.97vw, 300, 0.97vw, 0); //14px;
+                @include media-text(12px, 14px, 14px) ; 
                 color: $color-dark;
                 border: 1px solid $color-grey-dark;
                 border-radius: 5px;
@@ -187,7 +204,8 @@ body {
                 margin-left: -10px;
                 padding: 10px 20px;
                 height: 100%;
-                @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+                @include text-font(0.97vw, 300, 0.97vw, 0); //14px;
+                @include media-text(12px, 14px, 14px) ; 
                 background-color: $color-grey;
                 border: none;
                 border-radius: 5px;
@@ -199,6 +217,7 @@ body {
                 margin-left: 10px;
                 width: 70%;
                 @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+                @include media-text(12px, 14px, 14px) ;
                 text-align: left;
               }
               .search {
@@ -250,6 +269,7 @@ body {
               .result-label {
                 width: 20%;
                 @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+                @include media-text(12px, 14px, 14px) ;
                 align-self: flex-start;
                 text-align: left;
               }
@@ -259,6 +279,7 @@ body {
                 height: auto;
                 font-family: Roboto;
                 @include text-font(0.97vw, 300, 0.97vw, 0); //14px; 
+                @include media-text(12px, 14px, 14px) ;
                 @include flex-vertical();
                 align-items: center;
                 align-content: center;
@@ -287,6 +308,7 @@ body {
           height: 100%;
           text-align: center;
           @include text-font(1.53vw, 300, 1.53vw, 0); //22px; 
+          @include media-text(18px, 20px, 22px) ;
           background-color: $color-grey;
           border-radius: 5px;
           border: none;

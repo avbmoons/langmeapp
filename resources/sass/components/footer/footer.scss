@@ -23,9 +23,15 @@ body {
     height: $footer-height;
     @include flex-horizontal();
     background-color: $color-lang-light; // $color-grey;
+    @include media-mobile() {
+      height: 4vh;
+    }
     .footer-left-front {
       margin: 0 auto;
       width: 0.5 * ($site-width - $block-width);
+      @include media-mobile() {
+        width: 5%;
+      }
       height: 100%;
       @include flex-vertical();
       .footer-left-block-front {
@@ -43,12 +49,18 @@ body {
           width: auto;
           align-items: center;
           //border: 1px solid green;
+          @include media-mobile() {
+            display: none;
+          }
         }
       }
     }
     .footer-center-front {
       margin: 0 auto;
       width: $block-width;
+      @include media-mobile() {
+        width: 90%;
+      }
       height: 100%;
       @include flex-vertical();
       background-color: $color-blick-dark;
@@ -66,6 +78,10 @@ body {
           @include flex-horizontal();
           justify-content: flex-end;
           align-items: center;
+          @include media-mobile() {
+            width: 40%;
+            justify-content: center;
+          }
           .menu-item-front {
             margin: auto 0; 
             margin-right: 4%;
@@ -78,6 +94,7 @@ body {
             .btn-link-menu {
               text-decoration: none;
               @include text-font(1.11vw, 300, 1.11vw, 0); //16px;
+              @include media-text(12px, 14px, 16px);
               color: $color-dark;
             }
           }
@@ -101,14 +118,56 @@ body {
           width: 40%; // 30%; 
           height: 100%; 
           @include text-font(0.83vw, 300, 0.83vw, 0); //12px
+          @include media-text(8px, 10px, 12px);
           align-items: center;
           text-align: left;
+          @include flex-vertical();
+          @include media-mobile() {
+            width: 30%;
+            margin-left: 20%;
+          }
+        }
+        #menuSocials {
+          margin: 0 auto;
+          width: 30%; // 100%; 
+          height: 100%; 
+          @include flex-horizontal();
+          justify-content: flex-end;  // flex-start;
+          align-items: center;
+          display: none;
+          @include media-mobile() {
+            display: flex;
+          }
+          .menu-item-front {
+            margin: 0; 
+            margin-left: 8%;
+            width: fit-content;
+            height: fit-content;
+            border: none;
+            background: none;
+            @include text-font(16px, 300, 16px, 0);
+            cursor: pointer;
+            align-items: center;
+          }
+          .menu-item-front:hover {
+            color: $color-light;  // $color-accent;
+            font-weight: 500;
+          }
+          .menu-item-front:hover path {
+            fill: $color-light; // $color-accent;
+          }
+          #btnTelegram, #btnWhatsapp {
+            display: none;
+          }
         }
       }
     }
     .footer-right-front {
       margin: 0 auto;
       width: 0.5 * ($site-width - $block-width);
+      @include media-mobile() {
+        width: 5%;
+      }
       height: 100%;
       @include flex-vertical();
       background-color: $color-blick-dark;
@@ -125,6 +184,9 @@ body {
           @include flex-horizontal();
           justify-content: flex-start;
           align-items: center;
+          @include media-mobile(){
+            display: none;
+          }
           .menu-item-front {
             margin: 0; 
             margin-left: 8%;
@@ -135,12 +197,6 @@ body {
             @include text-font(16px, 300, 16px, 0);
             cursor: pointer;
             align-items: center;
-            // img {
-            //   margin: 0 auto;
-            //   height: 16px;
-            //   width: auto;
-            //   align-items: end;
-            // }
           }
           .menu-item-front:hover {
             color: $color-light;  // $color-accent;
@@ -148,6 +204,9 @@ body {
           }
           .menu-item-front:hover path {
             fill: $color-light; // $color-accent;
+          }
+          #btnTelegram, #btnWhatsapp {
+            display: none;
           }
         }
       }

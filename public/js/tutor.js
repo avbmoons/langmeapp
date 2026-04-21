@@ -106,3 +106,29 @@ const openTutorPages = () => {
   tutorCover.style.display = 'flex';
   showSlideManual(indexValue);
 };
+
+function getThisPage() {
+   let pageUrl = window.location.pathname.substring(thisUrl.lastIndexOf('/')+1);
+    console.log("pageUrl = " + pageUrl);
+
+    switch (pageUrl) {         
+        case "home":
+            window.location.href = "{{ route('home') }}";
+            break;
+        case "taskChoice":
+            window.location.href = "{{ route('taskChoice') }}";
+            break;
+        case "taskLang":
+            window.location.href = "{{ route('taskLang') }}";
+            break;
+        case "taskMix":
+            window.location.href = "{{ route('taskMix') }}";
+            break;
+        case "taskPlain":
+            window.location.href = "{{ route('taskPlain') }}";
+            break;
+        case "about":
+            window.location.href = "{{ route('about') }}";
+            break;
+    } 
+}

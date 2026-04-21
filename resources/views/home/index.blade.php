@@ -52,18 +52,6 @@
           </svg>
           <a class="btn-link-set-get" href="">&nbsp;Get Task</a>          
       </button> 
-      {{--<button class="set-get-front get" id="getButton" onclick="{{ route('taskChoice')}}">
-          <!-- icon-arrow-next.svg" -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="M21 12L12.75 4.125V8.625C4.85484 8.625 3 14.2861 3 19.875C5.27859 16.9575 7.29375 15.375 12.75 15.375V19.875L21 12Z"
-              stroke="#0F1A1C"
-              stroke-width="1.5"
-              stroke-linejoin="round"
-            />
-          </svg>
-          <a class="btn-link-set-get" href="">&nbsp;Get Task</a>          
-      </button>--}}
     </div>
     <div class="modes-front">
       <div class="mode-item-front plain">
@@ -279,52 +267,6 @@
     </script>
 
   <script>
-    // function getTaskPage() {
-    //   let modeChoice = resultMode.value.trim();
-    //   console.log("resultMode setting = " + modeChoice);
-    //   let pageName = window.location.pathname.substring(thisUrl.lastIndexOf('/')+1);
-    //   console.log("pageName = " + pageName);
-    
-    //   if (pageName.indexOf('home')) {    //} == 'home.html') {
-    //     window.location.href =  "{{ route('home') }}" ;   // "../pages/home.html";
-    //   } else {
-    //     switch(modeChoice) {
-    //         case "Plain":
-    //             window.location.href = "{{ route('taskPlain') }}";
-    //             break;
-    //         case "Choice":
-    //             window.location.href = "{{ route('taskChoice') }}";
-    //             break;
-    //         case "Lang":
-    //             window.location.href = "{{ route('taskLang') }}";
-    //             break;
-    //         case "Mix":
-    //             window.location.href = "{{ route('taskMix') }}";
-    //             break;
-    //     }
-    //   }
-    // }
-
-    // function submitTaskSettings() {
-
-    //   let strPrimLang = document.getElementById("resultPrim").value;
-    //   console.log(strPrimLang);
-    //   localStorage.setItem("primLang", strPrimLang);
-
-    //   let strCompLangsN = document.getElementById("resultComp").value;
-    //   let strCompLangs = strCompLangsN.replace(/\n/g, "");
-    //   console.log(strCompLangs);
-    //   localStorage.setItem("compLangs", strCompLangs);
-
-    //   let strThemesN = document.getElementById("resultThemes").value;
-    //   let strThemes = strThemesN.replace(/\n/g, "");
-    //   console.log(strThemes);
-    //   localStorage.setItem("themesLangs", strThemes);
-
-    //   let strModeChoice = document.getElementById("resultMode").value;
-    //   console.log(strModeChoice);
-    //   localStorage.setItem("modeChoice", strModeChoice);
-    // }
 
     //here function submitTaskSettings() with getTaskPage()
 
@@ -388,6 +330,20 @@
       let langs = @json($langs);
       let themes = @json($themes);
       let modes = @json($modes);
+    </script>
+
+    {{-- close tutors --}}
+    <script defer>
+      let tutorClose = document.getElementById("tutorClose");
+      let tutorSkip = document.getElementById("tutorSkip");
+
+      tutorClose.addEventListener('click', function(event) {
+        tutorClose.onclick = closeTutorPages();
+      })
+
+      tutorSkip.addEventListener('click', function(event) {
+        tutorSkip.onclick = closeTutorPages();
+      })
     </script>
 
 @endpush

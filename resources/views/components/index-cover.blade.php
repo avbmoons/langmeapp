@@ -2,7 +2,7 @@
   <div class="wellcome">
     <div class="wellcome-header">
       <img src="{{ Vite::asset('resources/images/images/logo-front-modal-light.png')}}" alt="logo" />
-      <button onclick="window.location.href='pages/home.html'">
+      <button type="button">
         <a href="{{ route('home') }}">
           <img src="{{ Vite::asset('resources/images/icons/icon-close.png')}}" alt="close" />
         </a>

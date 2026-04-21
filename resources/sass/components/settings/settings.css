@@ -51,6 +51,12 @@ body {
   border-bottom: 5px solid orangered;
   overflow-y: auto;
 }
+@media only screen and (max-width: 1023px) {
+  .modal-settings .info {
+    width: 90%;
+    height: 89vh;
+  }
+}
 .modal-settings .info .info-header {
   margin: 0 auto;
   margin-top: 3%;
@@ -77,6 +83,26 @@ body {
   font-weight: 500;
   line-height: 1.25vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-header .modal-title {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-header .modal-title {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-header .modal-title {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+.modal-settings .info .info-header .modal-title {
   color: #0f1a1c;
   align-self: center;
   text-align: center;
@@ -110,6 +136,26 @@ body {
   font-weight: 300;
   line-height: 1.25vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .combo-label {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .combo-label {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .combo-label {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+.modal-settings .info .info-main .combo-block .combo-label {
   text-align: left;
   align-self: center;
 }
@@ -127,6 +173,26 @@ body {
   font-weight: 300;
   line-height: 0.97vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .combo-input {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .combo-input {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .combo-input {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.modal-settings .info .info-main .combo-block .combo-input {
   color: #0f1a1c;
   border: 1px solid #c2cacc;
   border-radius: 5px;
@@ -149,6 +215,36 @@ body {
   line-height: 0.97vw;
   letter-spacing: 0;
 }
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .combo-input::-moz-placeholder {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .modal-settings .info .info-main .combo-block .combo-input::placeholder {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .combo-input::-moz-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .modal-settings .info .info-main .combo-block .combo-input::placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .combo-input::-moz-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .modal-settings .info .info-main .combo-block .combo-input::placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
 .modal-settings .info .info-main .combo-block .combo-button {
   margin-left: 1%;
   padding: 5px;
@@ -158,6 +254,26 @@ body {
   font-weight: 300;
   line-height: 1.11vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .combo-button {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .combo-button {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .combo-button {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.modal-settings .info .info-main .combo-block .combo-button {
   text-align: center;
   background-color: #dae6e8;
   border-radius: 5px;
@@ -176,6 +292,26 @@ body {
   font-weight: 300;
   line-height: 1.11vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .mode-button label {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .mode-button label {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .mode-button label {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.modal-settings .info .info-main .combo-block .mode-button label {
   color: red;
   text-align: center;
 }
@@ -184,6 +320,26 @@ body {
   font-weight: 300;
   line-height: 1.11vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .mode-button-label {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .mode-button-label {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .mode-button-label {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.modal-settings .info .info-main .combo-block .mode-button-label {
   text-align: center;
   align-self: center;
 }
@@ -198,6 +354,26 @@ body {
   font-weight: 300;
   line-height: 1.11vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .combo-text {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .combo-text {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .combo-text {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.modal-settings .info .info-main .combo-block .combo-text {
   color: #0f1a1c;
 }
 .modal-settings .info .info-main .combo-block .combo-text::-moz-placeholder {
@@ -218,6 +394,36 @@ body {
   line-height: 0.97vw;
   letter-spacing: 0;
 }
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .combo-text::-moz-placeholder {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  .modal-settings .info .info-main .combo-block .combo-text::placeholder {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .combo-text::-moz-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .modal-settings .info .info-main .combo-block .combo-text::placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .combo-text::-moz-placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .modal-settings .info .info-main .combo-block .combo-text::placeholder {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
 .modal-settings .info .info-main .combo-block .combo-list {
   margin: auto;
   padding: 10px;
@@ -237,6 +443,11 @@ body {
   top: 100%;
   z-index: 99;
 }
+@media only screen and (max-width: 1023px) {
+  .modal-settings .info .info-main .combo-block .combo-list {
+    max-height: 44.5vh;
+  }
+}
 .modal-settings .info .info-main .combo-block .combo-list .combo-list-item {
   margin-bottom: 2%;
   width: auto;
@@ -251,6 +462,26 @@ body {
   font-weight: 300;
   line-height: 0.97vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .combo-list .combo-list-item .combo-list-input {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .combo-list .combo-list-item .combo-list-input {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .combo-list .combo-list-item .combo-list-input {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.modal-settings .info .info-main .combo-block .combo-list .combo-list-item .combo-list-input {
   color: #0f1a1c;
   border: 1px solid #c2cacc;
   border-radius: 5px;
@@ -267,6 +498,26 @@ body {
   font-weight: 300;
   line-height: 0.97vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .combo-list .combo-list-item .btn-choose {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .combo-list .combo-list-item .btn-choose {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .combo-list .combo-list-item .btn-choose {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.modal-settings .info .info-main .combo-block .combo-list .combo-list-item .btn-choose {
   background-color: #dae6e8;
   border: none;
   border-radius: 5px;
@@ -281,6 +532,26 @@ body {
   font-weight: 300;
   line-height: 0.97vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .combo-list .combo-list-item label {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .combo-list .combo-list-item label {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .combo-list .combo-list-item label {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.modal-settings .info .info-main .combo-block .combo-list .combo-list-item label {
   text-align: left;
 }
 .modal-settings .info .info-main .combo-block .combo-list .combo-list-item .search {
@@ -346,6 +617,26 @@ body {
   font-weight: 300;
   line-height: 0.97vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .user-choice .user-choice-result .result-label {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .user-choice .user-choice-result .result-label {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .user-choice .user-choice-result .result-label {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.modal-settings .info .info-main .combo-block .user-choice .user-choice-result .result-label {
   align-self: flex-start;
   text-align: left;
 }
@@ -358,6 +649,26 @@ body {
   font-weight: 300;
   line-height: 0.97vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-main .combo-block .user-choice .user-choice-result .result-field {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-main .combo-block .user-choice .user-choice-result .result-field {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-main .combo-block .user-choice .user-choice-result .result-field {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.modal-settings .info .info-main .combo-block .user-choice .user-choice-result .result-field {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -392,6 +703,26 @@ body {
   font-weight: 300;
   line-height: 1.53vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .modal-settings .info .info-button .btn-go {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .modal-settings .info .info-button .btn-go {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .modal-settings .info .info-button .btn-go {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+.modal-settings .info .info-button .btn-go {
   background-color: #dae6e8;
   border-radius: 5px;
   border: none;

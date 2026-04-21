@@ -484,9 +484,17 @@ function getTaskSettings(){
         let taskCompLangs = document.getElementById('taskCompLangs');
         let taskThemes = document.getElementById('taskThemes');
 
+        let taskPrimLang2 = document.getElementById('taskPrimLang2');
+        let taskCompLangs2 = document.getElementById('taskCompLangs2');
+        let taskThemes2 = document.getElementById('taskThemes2');
+
         taskPrimLang.textContent = strSelectedPrimLang;
         taskCompLangs.textContent = arrSelectedCompLangs;
         taskThemes.textContent = arrSelectedThemes;
+
+        taskPrimLang2.textContent = strSelectedPrimLang;
+        taskCompLangs2.textContent = arrSelectedCompLangs;
+        taskThemes2.textContent = arrSelectedThemes;
     } else {
         console.log('No task');
     }

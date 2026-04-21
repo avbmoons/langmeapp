@@ -39,6 +39,22 @@ body {
       box-shadow: -20px 20px 10px 0px rgba(0,0,0,0.3);//
       border-left: 3px solid orangered;
       border-bottom: 5px solid orangered;
+      position: relative;
+      @include media-mobile() {
+        width: 90%;
+        height: 100vh - 7vh - 4vh;
+      }
+      .btn-close {
+        position: absolute;
+        top: 10px;
+        right: 5%; // 20px;
+        width: fit-content;
+        height: fit-content;
+        border: none;
+        outline: none;
+        background: none;
+        cursor: pointer;
+      }
       .tutor-main {
         margin: 0 auto;
         width: 90%;  
@@ -75,7 +91,8 @@ body {
             margin-right: 3%;
             height: 70%;
             width: auto;
-            @include text-font(1.94vw, 400, 1.94vw, 0);
+            @include text-font(1.94vw, 400, 1.94vw, 0); // 28px
+            @include media-text(16px, 20px, 28px);
             color: $color-dark; 
             background: none;
             border: none;
@@ -85,23 +102,33 @@ body {
           .tutor-close:hover {
             color: $color-accent;
           }
+          #tutorPrev {
+            margin-right: 2%;
+            width: 5%;  ////
+          }
+          #tutorNext {
+            margin-left: 2%;
+            width: 5%;  ////
+          }
           #tutorSkip {
             margin-right: 0;
             width: 15%; // 20%; ////
-            @include text-font(1.67vw, 500, 1.67vw, 0);
+            @include text-font(1.67vw, 500, 1.67vw, 0); //24px
+            @include media-text(14px, 18px, 24px);
             //border: 1px solid green;
             .btn-link-skip {
               text-decoration: none;
               @include text-font(1.67vw, 500, 1.67vw, 0);
+              @include media-text(14px, 18px, 24px);
               color: $color-dark;
             }
             .btn-link-skip:hover {
               color: $color-accent;
             }
           }
-          #tutorPrev, #tutorNext {
-            width: 5%;  // 10%;
-          }          
+          // #tutorPrev, #tutorNext {
+          //   width: 5%;  // 10%;
+          // }          
           .control-panels {
             margin: auto;
             height: 50%;
@@ -111,23 +138,14 @@ body {
 
             .dot-step {
               height: auto; // 100%;
-              //width: auto;
+              width: 5%;  // auto;
+              @include flex-vertical();
               svg {
                 //height: 100%;  // 2.5vw;  // 100%;
-                width: 2.5vw;
+                width: 100%;  // 2.5vw;
                 height: auto;
               }
             }
-            // .dot-step:hover {
-            //   // .dot-circle {
-            //   //   .dots {
-            //   //     fill: $color-blick;
-            //   //   }
-            //   // }
-            //   svg circle {
-            //     fill: $color-blick;
-            //   }
-            // }
             .dot-step .dot-circle .dots:hover {
               fill: $color-blick;
             }

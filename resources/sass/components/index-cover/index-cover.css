@@ -48,6 +48,12 @@ body {
   border-left: 3px solid orangered;
   border-bottom: 5px solid orangered;
 }
+@media only screen and (max-width: 1023px) {
+  .index-cover .wellcome {
+    width: 90%;
+    height: 65%;
+  }
+}
 .index-cover .wellcome .wellcome-header {
   margin: 0 auto;
   margin-top: 3%;
@@ -82,16 +88,55 @@ body {
   font-weight: 300;
   line-height: 1.39vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .index-cover .wellcome .wellcome-main {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .index-cover .wellcome .wellcome-main {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .index-cover .wellcome .wellcome-main {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+.index-cover .wellcome .wellcome-main {
   text-align: center;
 }
 .index-cover .wellcome .wellcome-main p {
   margin-bottom: 1.8%;
 }
 .index-cover .wellcome .wellcome-main .terve {
+  margin-bottom: 20px;
   font-size: 1.39vw;
   font-weight: 500;
   line-height: 1.39vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .index-cover .wellcome .wellcome-main .terve {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .index-cover .wellcome .wellcome-main .terve {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .index-cover .wellcome .wellcome-main .terve {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 .index-cover .wellcome .wellcome-button {
   margin: 0 auto;
@@ -104,12 +149,36 @@ body {
 }
 .index-cover .wellcome .wellcome-button .btn-go {
   width: 40%;
-  height: 100%;
+  padding: 30px 0;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
   font-size: 1.53vw;
   font-weight: 300;
   line-height: 1.53vw;
   letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .index-cover .wellcome .wellcome-button .btn-go {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .index-cover .wellcome .wellcome-button .btn-go {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .index-cover .wellcome .wellcome-button .btn-go {
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+.index-cover .wellcome .wellcome-button .btn-go {
   background-color: #dae6e8;
   border-radius: 5px;
   border: none;

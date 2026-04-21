@@ -40,6 +40,10 @@ body {
       box-shadow: -20px 20px 10px 0px rgba(0,0,0,0.3);//
       border-left: 3px solid orangered;
       border-bottom: 5px solid orangered;
+      @include media-mobile {
+        width: 90%;
+        height: 65%;
+      }
       .results-front-header {
         margin: 0 auto;
         margin-top: 3%; 
@@ -49,7 +53,8 @@ body {
         justify-content: space-between;
         //border: 1px solid red;
         .results-title {
-          @include text-font(1.25vw, 500, 1.25vw, 0); //18px; 
+          @include text-font(1.25vw, 500, 1.25vw, 0); //18px;
+          @include media-text(14px, 16px, 18px);
           color: $color-dark;
           align-self: center;
           text-align: center;
@@ -94,19 +99,23 @@ body {
             @include flex-horizontal();
             align-items: center;
             .totals-title {
-              @include text-font(1.25vw, 400, 1.25vw, 0);
+              @include text-font(1.25vw, 400, 1.25vw, 0); // 18px
+              @include media-text(14px, 16px, 18px);
               color: $color-dark;
             }
             .totals-text {
-              @include text-font(1.11vw, 300, 1.11vw, 0);
+              @include text-font(1.11vw, 300, 1.11vw, 0); // 16px
+              @include media-text(12px, 14px, 16px);
               color: $color-dark;
             }
             .grand-title {
-              @include text-font(1.39vw, 400, 1.39vw, 0);
+              @include text-font(1.39vw, 400, 1.39vw, 0); // 20px
+              @include media-text(16px, 18px, 20px);
               color: $color-dark;
             }
             .grand-text {
-              @include text-font(1.25vw, 400, 1.25vw, 0);
+              @include text-font(1.25vw, 400, 1.25vw, 0); // 18px
+              @include media-text(14px, 16px, 18px);
               color: $color-dark;
             }
           }
@@ -128,6 +137,7 @@ body {
           height: 100%;
           text-align: center;
           @include text-font(1.39vw, 300, 1.39vw, 0); //20px
+          @include media-text(16px, 18px, 20px);
           background-color: $color-grey;
           border: none;
           border-radius: 5px;

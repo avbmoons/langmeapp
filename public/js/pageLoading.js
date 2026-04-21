@@ -46,13 +46,6 @@ if (urlName == 'about.html') {
 
 function getTaskPage() {
     let modeChoice = resultMode.value.trim();
-    // console.log("resultMode setting = " + modeChoice);
-    // let pageName = window.location.pathname.substring(thisUrl.lastIndexOf('/')+1);
-    // console.log("pageName = " + pageName);
-    
-    // if (pageName.indexOf('home')) {    //} == 'home.html') {
-    //     window.location.href =  "{{ route('home') }}" ;   // "../pages/home.html";
-    // } else {
         switch(modeChoice) {
             case "Plain":
                 window.location.href = "{{ route('taskPlain') }}";
@@ -67,6 +60,31 @@ function getTaskPage() {
                 window.location.href = "{{ route('taskMix') }}";
                 break;
         }
-    //}
 }
+
+// function getThisPage() {
+//    let pageUrl = window.location.pathname.substring(thisUrl.lastIndexOf('/')+1);
+//     console.log("pageUrl = " + pageUrl);
+
+//     switch (pageUrl) {            
+//         case "home":
+//             window.location.href = "{{ route('home') }}";
+//         case "taskChoice":
+//             window.location.href = "{{ route('taskChoice') }}";
+//             break;
+//         case "taskLang":
+//             window.location.href = "{{ route('taskLang') }}";
+//             break;
+//         case "taskMix":
+//             window.location.href = "{{ route('taskMix') }}";
+//             break;
+//         case "taskPlain":
+//             window.location.href = "{{ route('taskPlain') }}";
+//             break;
+//         default:
+//             window.location.href = "{{ route('home') }}";
+//     } 
+// }
+
+
 

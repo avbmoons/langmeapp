@@ -17,7 +17,7 @@ class ThemeItem {
     render() {
         return `<div class="combo-list-item" name="theme${this.id}">
                     <input class="combo-list-input" type="checkbox" id="theme${this.id}" name="themeList" value="${this.title}" data-id=${this.id}>
-                    <label for="compRu">${this.title}</label>
+                    <label for="theme${this.id}">${this.title}</label>
                 </div>`;
     }
 }

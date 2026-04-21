@@ -6,7 +6,7 @@
 <div class="main-left-front">
   <x-tutors-button></x-tutors-button>
 </div>
-<div class="main-center-front">
+<div class="main-center-front-task">
     <div class="task-info info-about">
       <div class="info-title-block">
         <p class="info-title">About project</p>
@@ -221,5 +221,42 @@
       console.log(themesWordsStr);
 
     </script>
-    {{-- <script defer src="{{ asset('js/chartsFront.js')}}"></script> --}}
+
+    {{-- close tutors --}}
+    <script defer>
+      let tutorClose = document.getElementById("tutorClose");
+      let tutorSkip = document.getElementById("tutorSkip");
+
+      tutorClose.addEventListener('click', function(event) {
+        tutorClose.onclick = closeTutorPages();
+      })
+
+      tutorSkip.addEventListener('click', function(event) {
+        tutorSkip.onclick = closeTutorPages();
+      })
+    </script>
+
+    {{-- get task --}}
+    <script>
+      let menuHeaderTaskLink = document.getElementById("menuHeaderTaskLink");
+      let userModeChoice = localStorage.getItem('modeChoice').trim();
+
+      menuHeaderTaskLink.addEventListener('click', function(event) {
+        switch(userModeChoice) {
+            case "Plain":
+                menuHeaderTaskLink.href = "{{ route('taskPlain') }}";
+                break;
+            case "Choice":
+                menuHeaderTaskLink.href = "{{ route('taskChoice') }}";
+                break;
+            case "Lang":
+                menuHeaderTaskLink.href = "{{ route('taskLang') }}";
+                break;
+            case "Mix":
+                menuHeaderTaskLink.href = "{{ route('taskMix') }}";
+                break;
+          }
+      })      
+    </script>
+    
 @endpush

@@ -205,4 +205,48 @@
       let themes = @json($themes);
       let modes = @json($modes);
     </script> --}}
+  <script defer>
+    let tutorCloseLink = document.getElementById("tutorCloseLink");
+    let tutorSkipLink = document.getElementById("tutorSkipLink");
+
+    tutorCloseLink.addEventListener('click', function(event) {
+      tutorCloseLink.href = "{{ route('home') }}";//
+    }) 
+
+    tutorSkipLink.addEventListener('click', function(event) {
+      tutorSkipLink.href = "{{ route('home') }}";
+    })
+    
+  </script>
+
+<script>
+    function getThisPage() {
+   let pageUrl = window.location.pathname.substring(thisUrl.lastIndexOf('/')+1);
+    console.log("pageUrl = " + pageUrl);
+
+    switch (pageUrl) {    
+        case "/":
+            window.location.href = "{{ route('home') }}";
+            break;        
+        case "home":
+            window.location.href = "{{ route('home') }}";
+            break;
+        case "taskChoice":
+            window.location.href = "{{ route('taskChoice') }}";
+            break;
+        case "taskLang":
+            window.location.href = "{{ route('taskLang') }}";
+            break;
+        case "taskMix":
+            window.location.href = "{{ route('taskMix') }}";
+            break;
+        case "taskPlain":
+            window.location.href = "{{ route('taskPlain') }}";
+            break;
+        // default:
+        //     window.location.href = "{{ route('home') }}";
+        //     break;
+    } 
+  }
+</script>
 @endpush

@@ -7,18 +7,29 @@ import './timenow';
 //import '../../public/js/pageLoading';
 //import './listLangs'; //
 //import './listThemes';  //
+//import '../../public/js/listThemes';
 //import './listModes'; //
 //import './showModals';  //
 //import '../../public/js/showModals';
 //import './task';  //
-//import '../../public/js/modeChoice';
+//import './modeChoice';
+//import './modeLang';
+//import './modeMix';
+//import './modePlain';
 //import './pagination';  //
-import './tutor'; //
+//import '../../public/js/pagination';
+//import '../../public/js/paginationLang';
+//import './tutor'; //
 
 import Chart from 'chart.js/auto';
 window.Chart = Chart;
 
 import './chart.umd';
+//import './chart.umd.js.map';
 import './chartjs-plugin-datalabels.min';
+//import './charts';
+//import './charts';
+//import '/resources/js/charts';
 import './charts';
+//import './chartsFront';
 

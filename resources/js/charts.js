@@ -71,13 +71,19 @@ new Chart(ctx, {
                     autoSkip: false,
                     maxRotation: 45,
                     minRotation: 0,
+                    font: {
+                        size: 10,
+                    }
                 }
             },
             y: {
                 beginAtZero: true,
                 ticks: {
                     maxRotation: 45,
-                    minRotation: 0, //45,                    
+                    minRotation: 0, //45,
+                    font: {
+                        size: 10,
+                    }                    
                 }
             }
         },
@@ -88,9 +94,9 @@ new Chart(ctx, {
             title: {
                 display: true,
                 text: 'Words by Themes',
-                color: 'rgba(83, 56, 33, 1)',
+                color: 'rgba(12, 51, 135, 1)',
                 font: {
-                    size: 14,
+                    size: 12,
                     weight: 'bold',
                     family: 'Roboto',
                 },
@@ -152,6 +158,9 @@ new Chart(ctx2, {
                     autoSkip: false,
                     maxRotation: 45,
                     minRotation: 0,
+                    font: {
+                        size: 10,
+                    }
                 }
             },
             y: {
@@ -165,6 +174,9 @@ new Chart(ctx2, {
                         //return value;
                         return '';     
                     },
+                    font: {
+                        size: 10,
+                    },
                     maxRotation: 45,
                     minRotation: 0, //45,                    
                 }
@@ -177,9 +189,9 @@ new Chart(ctx2, {
             title: {
                 display: true,
                 text: 'Modes',
-                color: 'rgba(83, 56, 33, 1)',
+                color: 'rgba(12, 51, 135, 1)',
                 font: {
-                    size: 14,
+                    size: 12,
                     weight: 'bold',
                     family: 'Roboto',
                 },
@@ -234,6 +246,9 @@ new Chart(ctx3, {
                     autoSkip: false,
                     maxRotation: 45,
                     minRotation: 0,
+                    font: {
+                        size: 10,
+                    }
                 }
             },
             y: {
@@ -250,7 +265,7 @@ new Chart(ctx3, {
                     // maxRotation: 45,
                     // minRotation: 0, //45,                    
                     font: {
-                        size: 12,
+                        size: 10,
                     }
                 }
             }
@@ -262,9 +277,9 @@ new Chart(ctx3, {
             title: {
                 display: true,
                 text: 'Langs',
-                color: 'rgba(83, 56, 33, 1)',
+                color: 'rgba(12, 51, 135, 1)',
                 font: {
-                    size: 14,
+                    size: 12,
                     weight: 'bold',
                     family: 'Roboto',
                 },
@@ -320,6 +335,7 @@ new Chart(ctx4, {
                 color: '#000',
                 font: {
                     weight: 'normal',
+                    size: 10,
                 },
                 anchor: 'right',    // 'end',
                 align: 'left',   // 'start',
@@ -340,7 +356,7 @@ new Chart(ctx4, {
                 text: 'Words',
                 color: 'rgba(12, 51, 135, 1)',
                 font: {
-                    size: 14,
+                    size: 12,
                     weight: 'bold',
                     family: 'Roboto',
                 },
@@ -399,6 +415,7 @@ new Chart(ctx1, {
                 color: '#000',
                 font: {
                     weight: 'normal',
+                    size: 10,
                 },
                 anchor: 'left',    // 'left',    // 'end',
                 align: 'right',  // 'right',   // 'start',
@@ -419,7 +436,7 @@ new Chart(ctx1, {
                 text: 'Themes',
                 color: 'rgba(12, 51, 135, 1)',
                 font: {
-                    size: 14,
+                    size: 12,
                     weight: 'bold',
                     family: 'Roboto',
                 },

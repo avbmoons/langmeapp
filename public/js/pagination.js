@@ -1,10 +1,35 @@
 const products = taskRowsTest;
 
+let productContainer;
+let productCount;
+
+let pageUrl = window.location.pathname.substring(thisUrl.lastIndexOf('/')+1);
+console.log("pageUrl = " + pageUrl);
+
+switch (pageUrl) {
+    case "taskChoice":
+        productContainer = document.querySelector('#taskModeChoice');
+        productCount = 2;
+        break;
+    case "taskLang":
+        productContainer = document.querySelector('#taskModeLang');
+        productCount = 2;
+        break;
+    case "taskMix":
+        productContainer = document.querySelector('#taskModeMix');
+        productCount = 2;
+        break;
+    case "taskPlain":
+        productContainer = document.querySelector('#taskModePlain');
+        productCount = 5;
+        break;
+}
+
 const paginate = (products) => {
-    let productCount = 2;   // 7;   // num products on each page
+    //let productCount = 2;   // 7;   // num products on each page
     let currentPage = 1;    // current page
 
-    const productContainer = document.querySelector('#taskModeChoice');   // product list
+    //const productContainer = document.querySelector('#taskModeChoice');   // product list
     const pagination = document.querySelector('.navi-buttons');  //container for pagination
     const btnPrevPagination = document.querySelector('#prevBtn');
     const btnNextPagination = document.querySelector('#nextBtn');
@@ -25,7 +50,22 @@ const paginate = (products) => {
         const productsOnPage = products.slice(firstProductIndex, lastProductIndex);
         console.log('productsOnPage: ', productsOnPage);
 
-        pageRowsCompChoiceDom(firstProductIndex, lastProductIndex);
+        switch (pageUrl) {
+            case "taskChoice":
+                pageRowsCompChoiceDom(firstProductIndex, lastProductIndex);;
+                break;
+            case "taskLang":
+                pageRowsCompLangDom(firstProductIndex, lastProductIndex);;
+                break;
+            case "taskMix":
+                pageRowsCompMixDom(firstProductIndex, lastProductIndex);;
+                break;
+            case "taskPlain":
+                pageRowsCompPlainDom(firstProductIndex, lastProductIndex);;
+                break;
+        }
+
+        //pageRowsCompChoiceDom(firstProductIndex, lastProductIndex);
     };
 
     // function for render pages
@@ -78,13 +118,15 @@ const paginate = (products) => {
         });
     };
 
+    //let pageLimit = 8;  // page limit to ellipsis
+
     // function for too long pagination hide to ...
     const managePagination = (pagesCount) => {
         const container = document.querySelector('.pagination-list');
         const links = container.querySelectorAll('li');
         const totalPages = pagesCount;
         
-        if (totalPages > 8) {
+        if (totalPages > 4) {
             for (let i=1; i < links.length -1; i++) {
                 links[i].style.display = 'none';
             }
@@ -97,7 +139,7 @@ const paginate = (products) => {
             }
             ellipsis.style.display = '';
             // show first and last parts
-            for (let j=1; j < 8; j++) {
+            for (let j=1; j < 4; j++) {
                 links[j].style.display = '';
             }
             links[links.length - 1].style.display = '';

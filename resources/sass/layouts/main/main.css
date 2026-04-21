@@ -739,25 +739,47 @@ body {
   margin: 0 auto;
   width: 100%;
   min-height: 83vh;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper-front .top-front main-front {
+    min-height: 89vh;
+    height: auto;
+  }
+}
+.wrapper-front .top-front main-front {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  overflow-y: auto;
 }
-.wrapper-front .top-front main-front .main-left {
+.wrapper-front .top-front main-front .main-left-front {
   margin: auto;
   width: 15%;
   height: 83vh;
 }
-.wrapper-front .top-front main-front .main-center {
-  margin: auto;
+@media only screen and (max-width: 1023px) {
+  .wrapper-front .top-front main-front .main-left-front {
+    width: 5%;
+    min-height: 89vh;
+  }
+}
+.wrapper-front .top-front main-front .main-center-front {
+  margin: 0 auto;
   width: 70%;
   height: 83vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  overflow-y: auto;
 }
-.wrapper-front .top-front main-front .main-center .settings {
+@media only screen and (max-width: 1023px) {
+  .wrapper-front .top-front main-front .main-center-front {
+    width: 90%;
+    min-height: 89vh;
+  }
+}
+.wrapper-front .top-front main-front .main-center-front .settings {
   margin: 0 auto;
   margin-top: 2%;
   width: 100%;
@@ -767,7 +789,7 @@ body {
   box-sizing: border-box;
   justify-content: space-between;
 }
-.wrapper-front .top-front main-front .main-center .settings .set-get {
+.wrapper-front .top-front main-front .main-center-front .settings .set-get {
   margin: 0;
   width: 30%;
   height: 100%;
@@ -786,22 +808,22 @@ body {
   cursor: pointer;
   border: 2px solid #dae6e8;
 }
-.wrapper-front .top-front main-front .main-center .settings .set-get .mode-check {
+.wrapper-front .top-front main-front .main-center-front .settings .set-get .mode-check {
   visibility: hidden;
 }
-.wrapper-front .top-front main-front .main-center .settings .set-get:hover {
+.wrapper-front .top-front main-front .main-center-front .settings .set-get:hover {
   color: #ff4500;
   border: 2px solid #f5a836;
 }
-.wrapper-front .top-front main-front .main-center .settings .set-get:hover svg path {
+.wrapper-front .top-front main-front .main-center-front .settings .set-get:hover svg path {
   fill: #ff4500;
   stroke: #ff4500;
 }
-.wrapper-front .top-front main-front .main-center .settings .get:hover svg path {
+.wrapper-front .top-front main-front .main-center-front .settings .get:hover svg path {
   fill: none;
   stroke: #ff4500;
 }
-.wrapper-front .top-front main-front .main-center .modes {
+.wrapper-front .top-front main-front .main-center-front .modes {
   margin: auto;
   width: 65%;
   height: 55%;
@@ -810,7 +832,7 @@ body {
   box-sizing: border-box;
   flex-wrap: wrap;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item {
   margin: auto;
   width: 48%;
   height: 48%;
@@ -820,7 +842,7 @@ body {
   box-sizing: border-box;
   justify-content: space-between;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item .mode-item-btn {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item .mode-item-btn {
   margin: auto;
   width: 100%;
   height: 100%;
@@ -830,7 +852,7 @@ body {
   border: 2px solid #c2cacc;
   border-radius: 5px;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item .mode-item-btn .title {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item .mode-item-btn .title {
   margin-bottom: 2.2%;
   font-size: 1.25vw;
   font-weight: 400;
@@ -838,7 +860,7 @@ body {
   letter-spacing: 0;
   color: #0f1a1c;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item .mode-item-btn .info {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item .mode-item-btn .info {
   margin-top: 4.4%;
   font-size: 1.11vw;
   font-weight: 400;
@@ -847,35 +869,35 @@ body {
   color: #0f1a1c;
   text-align: center;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item .mode-item-btn:hover {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item .mode-item-btn:hover {
   border: 2px solid #f5a836;
   background-color: #c2cacc;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item #modeItemChoice {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item #modeItemChoice {
   background-color: #c2fceb;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item #modeItemChoice:hover {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item #modeItemChoice:hover {
   background-color: #ade0d1;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item #modeItemPlain {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item #modeItemPlain {
   background-color: #c2fceb;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item #modeItemPlain:hover {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item #modeItemPlain:hover {
   background-color: #ade0d1;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item #modeItemMix {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item #modeItemMix {
   background-color: #c2fceb;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item #modeItemMix:hover {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item #modeItemMix:hover {
   background-color: #ade0d1;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item #modeItemLang {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item #modeItemLang {
   background-color: #c2fceb;
 }
-.wrapper-front .top-front main-front .main-center .modes .mode-item #modeItemLang:hover {
+.wrapper-front .top-front main-front .main-center-front .modes .mode-item #modeItemLang:hover {
   background-color: #ade0d1;
 }
-.wrapper-front .top-front main-front .main-center .results {
+.wrapper-front .top-front main-front .main-center-front .results {
   margin: 0 auto;
   margin-bottom: 2%;
   width: 100%;
@@ -885,7 +907,7 @@ body {
   box-sizing: border-box;
   justify-content: space-between;
 }
-.wrapper-front .top-front main-front .main-center .results .set-get {
+.wrapper-front .top-front main-front .main-center-front .results .set-get {
   margin: 0;
   width: 30%;
   height: 100%;
@@ -903,14 +925,14 @@ body {
   border: 2px solid #dae6e8;
   border-radius: 5px;
 }
-.wrapper-front .top-front main-front .main-center .results .set-get:hover {
+.wrapper-front .top-front main-front .main-center-front .results .set-get:hover {
   border: 2px solid #f5a836;
   color: #ff4500;
 }
-.wrapper-front .top-front main-front .main-center .results .set-get:hover svg path {
+.wrapper-front .top-front main-front .main-center-front .results .set-get:hover svg path {
   fill: #ff4500;
 }
-.wrapper-front .top-front main-front .main-center .results .totals {
+.wrapper-front .top-front main-front .main-center-front .results .totals {
   margin: 0;
   width: 45%;
   height: 100%;
@@ -922,14 +944,14 @@ body {
   border: 2px solid #dae6e8;
   border-radius: 5px;
 }
-.wrapper-front .top-front main-front .main-center .results .totals .totals-block {
+.wrapper-front .top-front main-front .main-center-front .results .totals .totals-block {
   margin: 0;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
 }
-.wrapper-front .top-front main-front .main-center .results .totals .totals-block .total-item {
+.wrapper-front .top-front main-front .main-center-front .results .totals .totals-block .total-item {
   margin: auto;
   display: flex;
   justify-content: center;
@@ -937,27 +959,33 @@ body {
   justify-content: space-between;
   align-items: center;
 }
-.wrapper-front .top-front main-front .main-center .results .totals .totals-block .total-item p {
+.wrapper-front .top-front main-front .main-center-front .results .totals .totals-block .total-item p {
   font-size: 1.25vw;
   font-weight: 400;
   line-height: 1.25vw;
   letter-spacing: 0;
   margin-left: 2.3%;
 }
-.wrapper-front .top-front main-front .main-center .results .totals .totals-block .neutral {
+.wrapper-front .top-front main-front .main-center-front .results .totals .totals-block .neutral {
   display: none;
 }
-.wrapper-front .top-front main-front .main-center .results .totals:hover {
+.wrapper-front .top-front main-front .main-center-front .results .totals:hover {
   border: 2px solid #f5a836;
   color: #ff4500;
 }
-.wrapper-front .top-front main-front .main-center .results .totals:hover svg g path {
+.wrapper-front .top-front main-front .main-center-front .results .totals:hover svg g path {
   fill: #ff4500;
 }
-.wrapper-front .top-front main-front .main-right {
+.wrapper-front .top-front main-front .main-right-front {
   margin: auto;
   width: 15%;
   height: 83vh;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper-front .top-front main-front .main-right-front {
+    width: 5%;
+    min-height: 89vh;
+  }
 }
 .wrapper-front .footer-front {
   margin: 0 auto;
