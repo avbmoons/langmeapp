@@ -1,0 +1,220 @@
+@use 'sass:math';
+
+//@import '../varsfront/varsfront.scss';
+//@import '../varsfront/varsfront.scss';
+@import '../varsfront/varsfront.scss';
+
+@font-face {
+  font-family: Roboto;
+  src: url(../../../../public/assets/fonts/Roboto.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Roboto;
+}
+      
+.main-left-front {
+  margin: auto;
+  width: 0.5 * ($site-width - $block-width);
+  height: $min-main-height;
+  @include media-mobile() {
+  width: 5%;
+  height: 100vh - 7vh - 4vh;
+  }
+  @include flex-vertical();
+  justify-content: flex-start;
+  //border: 1px solid green;
+}
+.main-center-front {
+  margin: auto;
+  width: $block-width;
+  height: $min-main-height;
+  @include flex-vertical();
+  overflow-y: auto;
+  @include media-mobile() {
+  width: 90%;
+  min-height: 100vh - 7vh - 4vh;
+  }                      
+  .title-block-auth {
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 20%;
+    @include flex-vertical();
+    .title-box-auth {
+      margin: 0 auto;
+      width: auto;
+      height: fit-content;
+      @include flex-horizontal();
+      //border: 1px solid green;
+      .title-auth {
+        @include text-font(28px, 400, 28px, 0);
+        color: $color-dark;
+      }
+      .terve-auth {
+        padding: 10px;
+        width: auto;  // 55%;
+        @include text-font(1.39vw, 300, 1.39vw, 0);
+        @include media-text(14px, 16px, 18px);
+        text-align: center;
+      }
+    }
+    .text-auth {
+      padding: 20px;
+      @include flex-vertical();
+      //border: 1px solid green;
+    }
+  }
+  .form-input-auth {
+    margin: 0 auto;
+    margin-bottom: 40px;  // 90px;
+    width: 60%;
+    height: auto; // 75%;  // 70%;
+    //border: 2px solid grey;
+    border-radius: 5px;
+    box-shadow: -20px 20px 10px 0px rgba(0,0,0,0.3),
+                20px 20px 10px 0px rgba(0,0,0,0.3);
+    border-left: 3px solid orangered;
+    border-bottom: 5px solid orangered;
+    border-top: 1px solid $color-grey;
+    @include flex-vertical();
+    justify-content: space-between; // space-around;
+    background-color: $color-light;
+    @include media-mobile() {
+      width: 90%;
+      height: 65%;
+    }
+    .input-box-auth {
+      margin: 0 auto;
+      margin-bottom: 20px;
+      width: 80%;
+      height: auto;
+      @include flex-vertical();
+      justify-content: space-between;
+      //border: 1px solid green;
+      .input-lable-auth {
+        margin: 0 auto;
+        width: 100%;
+        //margin-bottom: 10px;  // $input-lable-marginb;
+        @include text-font(1.39vw, 300, 1.39vw, 0);   // 20px
+        @include media-text(16px, 18px, 20px);
+        color: $color-dark;
+      }
+      .input-text-auth {
+        margin: 0 auto;
+        margin-top: 10px; // 10px;
+        //padding-left: 10px;
+        padding: 10px;
+        //margin-bottom: $input-marginb;
+        width: 100%;  // $input-width;
+        height: fit-content;  // 30px;
+        @include text-font(1.11vw, 300, 1.11vw, 0); // 16px
+        @include media-text(12px, 14px, 16px);
+        color: $color-dark;
+        border: 1px solid $color-grey;
+        border-radius: 5px;
+        outline: none;
+      }
+      .input-text-auth:focus {
+        border: 2px solid $color-blick;
+      }
+      .link-page-auth {
+        margin: 0 auto;
+        margin-top: 40px;
+        width: 100%;
+        @include text-font(2.4vh, 300, 2.4vh, 0);
+        text-decoration: none;
+        text-align: left;
+        color: $color-grey-link;
+      }
+      .link-page-auth:hover {
+        text-decoration: underline;
+        color: orangered;
+      }
+      .btn-form-auth {
+        margin: 0 auto;
+        margin-left: 0;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 30px 0;
+        width: 40%; // 80px;
+        //height: 40px;
+        @include text-font(1.53vw, 300, 1.53vw, 0); //22px;
+        @include media-text(18px, 20px, 22px);
+        color: $color-dark;
+        background-color: $color-grey;
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      .btn-form-auth:hover {
+        background-color: $color-blick;
+        color: $color-dark;
+      }
+      .link-btn {
+        margin-top: 40px;
+        width: 100%;
+        background: none;
+        text-align: center;
+        color: $color-grey-link;
+        text-decoration: underline;
+      }
+      .link-btn:hover {
+        color: orangered;
+        text-decoration: underline;
+        background: none;
+      }
+      .exit-btn {
+        margin: 0 auto;
+        margin-bottom: 40px;
+        width: 60%;
+        @include media-mobile {
+          background-color: $color-blick;
+        }
+      }
+    }
+    .first {
+      margin-top: 40px;
+    }
+   
+    .first-row {
+      margin-top: 40px;
+      
+    }    
+  }
+    .single-btn {
+      margin: 0 auto;
+      //margin-bottom: 40px;
+      width: 80%;
+      height: auto;
+      border-top: none;
+      border-bottom: none;
+      border-left: none;
+      box-shadow: none;
+      outline: none;
+      @include flex-vertical();
+      justify-content: space-between; // space-around;
+      background-color: $color-light;
+      @include media-mobile() {
+        width: 90%;
+        height: 65%;
+      }
+    } 
+}
+.main-right-front {
+  margin: auto;
+  width: 0.5 * ($site-width - $block-width);
+  height: $min-main-height;
+  @include media-mobile() {
+  width: 5%;
+  height: 100vh - 7vh - 4vh;
+  }
+  //border: 1px solid green;
+}

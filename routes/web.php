@@ -17,7 +17,7 @@ use App\Http\Controllers\TaskPlainController;
 use App\Http\Controllers\TaskLangController;
 use App\Http\Controllers\TaskMixController;
 use App\Http\Controllers\AboutController;
-
+use App\Http\Controllers\DraftAuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -59,3 +59,5 @@ Route::group(['prefix' => ''], static function() {
     Route::get('/taskMix', [TaskMixController::class, 'index'])->name('taskMix');
     Route::get('/about', [AboutController::class, 'index'])->name('about');
 });
+
+Route::get('/draftAuth', [DraftAuthController::class, 'index'])->name('draftAuth');
