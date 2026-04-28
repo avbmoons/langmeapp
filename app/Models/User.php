@@ -51,4 +51,9 @@ class User extends Authenticatable
     {
         return $this->hasMany(ImportLog::class);
     }
+    
+    public function isAdmin()
+    {
+        return $this->is_admin->value == 'admin';
+    }
 }

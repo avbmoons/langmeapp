@@ -7,6 +7,12 @@ services:
         image: 'mailhog/mailhog:latest'
         ports:
             - '5578:8025'
+    mailpit:
+        image: 'axllent/mailpit:latest'
+        ports:
+            - '1026:1025' # SMTP server
+            - '8026:8025' # Web UI
+        restart: always
 
     redis:
         image: 'redis:alpine'
@@ -16,6 +22,7 @@ services:
         working_dir: /app
         volumes:
             - db_data:/var/lib/mysql    # привязка тома к данным mysql      # '.:/app'
+        #restart: always
         environment:
             - MYSQL_ROOT_PASSWORD=avb
             - MYSQL_DATABASE=langme2

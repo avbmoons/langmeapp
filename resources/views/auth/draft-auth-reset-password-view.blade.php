@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'reset-password')
+@section('title', 'Draft-auth view')
 @section('content')
 <div class="main-left-front"></div>
 <div class="main-center-front">
@@ -21,11 +21,13 @@
   @endif
   <form method="POST" action="{{ route('password.update') }}" class="form-input-auth">
     @csrf
-    <input type="hidden" name="token" value="{{ $request->route('token') }}">
+    {{-- <input type="hidden" name="token" value="{{ $request->route('token') }}"> --}}
+    <input type="hidden" name="token" >
 
     <div class="input-box-auth first">
       <label class="input-lable-auth">E-mail</label>            
-      <input type="email" class="input-text-auth" name="email" value="{{ $request->email }}">              
+      {{-- <input type="email" class="input-text-auth" name="email" value="{{ $request->email }}">  --}}
+      <input type="email" class="input-text-auth" name="email" >             
     </div>
     <div class="input-box-auth">
       <label class="input-lable-auth">New password</label>            

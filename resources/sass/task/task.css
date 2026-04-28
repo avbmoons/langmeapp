@@ -319,9 +319,6 @@ body {
   color: #0f1a1c;
   align-items: center;
 }
-.header-front .header-center-front .header-center-block-front #menuServices #btnAdmin {
-  visibility: hidden;
-}
 .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front:hover {
   color: #ff4500;
   font-weight: 500;
@@ -1159,9 +1156,6 @@ body {
 .wrapper-front .top-front .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front .btn-link-menu {
   color: #0f1a1c;
   align-items: center;
-}
-.wrapper-front .top-front .header-front .header-center-front .header-center-block-front #menuServices #btnAdmin {
-  visibility: hidden;
 }
 .wrapper-front .top-front .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front:hover {
   color: #ff4500;

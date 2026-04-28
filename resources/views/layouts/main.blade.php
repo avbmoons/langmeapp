@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>@yield('title') | langMe</title>
+    
     {{-- <style type="text/css">
       @font-face {
         font-family: 'Roboto';

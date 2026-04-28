@@ -5,9 +5,6 @@ const indexCover = document.getElementById('indexCover');
 const slides = document.querySelector('.tutor');
 
 const slider = document.querySelectorAll('.tutor-main');
-
-console.log("slider.length = " + slider.length);
-
 const dots = document.querySelectorAll('.dot-step');
 
 const btnPrev = document.getElementById('tutorPrev');
@@ -20,8 +17,7 @@ let currentSlide = 0;
 const openTutor = () => {
   indexCover.style.display = 'none';
   tutorCover.style.display = 'flex';
-  //showSlides();
-  showSlideManual();
+  showSlides();
 };
 
 const closeTutorPages = () => {
@@ -49,7 +45,6 @@ function showSlides() {
   if (tutorCoverDisplay == 'flex') {
     setTimeout(showSlides, 3000); //
   }
-  
 }
 
 function showSlidesPages() {
@@ -116,10 +111,10 @@ function getThisPage() {
    let pageUrl = window.location.pathname.substring(thisUrl.lastIndexOf('/')+1);
     console.log("pageUrl = " + pageUrl);
 
-    switch (pageUrl) {   
+    switch (pageUrl) {         
         case "/":
             window.location.href = "{{ route('home') }}";
-            break;      
+            break;
         case "home":
             window.location.href = "{{ route('home') }}";
             break;

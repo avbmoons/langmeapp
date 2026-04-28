@@ -23,30 +23,39 @@ body {
   width: 0.5 * ($site-width - $block-width);
   height: $min-main-height;
   @include media-mobile() {
-  width: 5%;
-  height: 100vh - 7vh - 4vh;
+    width: 5%;
+    height: 100vh - 7vh - 4vh;
   }
   @include flex-vertical();
-  justify-content: flex-start;
+    justify-content: flex-start;
   //border: 1px solid green;
 }
 .main-center-front {
-  margin: auto;
+  margin: 0 auto;
   width: $block-width;
   height: $min-main-height;
   @include flex-vertical();
   overflow-y: auto;
   @include media-mobile() {
-  width: 90%;
-  min-height: 100vh - 7vh - 4vh;
+    width: 90%;
+    min-height: 100vh - 7vh - 4vh;
+    //height: auto;
   }                      
   .title-block-auth {
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: auto; // 0 auto;
+    //margin-top: 20px;
+    //margin-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%;
-    height: 20%;
+    height: 7vh;  // 20%;
     @include flex-vertical();
+    //border: 1px solid green;
+    @include media-mobile() {
+      margin-top: 20px;
+      //min-height: 20%;
+      height: 100%; // auto;
+    }
     .title-box-auth {
       margin: 0 auto;
       width: auto;
@@ -54,8 +63,15 @@ body {
       @include flex-horizontal();
       //border: 1px solid green;
       .title-auth {
-        @include text-font(28px, 400, 28px, 0);
+        //margin-top: 10px;
+        padding: 20px;  // 10px;  
+        @include text-font(1.94vw, 400, 1.94vw, 0); // 28px
+        @include media-text(18px, 20px, 26px);
         color: $color-dark;
+        @include media-mobile() {
+          //margin-top: 20px;
+          padding: 0;
+        }
       }
       .terve-auth {
         padding: 10px;
@@ -71,11 +87,18 @@ body {
       //border: 1px solid green;
     }
   }
-  .form-input-auth {
+  .single-title-block {
     margin: 0 auto;
-    margin-bottom: 40px;  // 90px;
+    height: auto;
+    @include media-mobile() {
+      height: 35vh;
+    }
+  }
+  .form-input-auth {
+    margin: 0 auto 20px;  // 0 auto;
+    //margin-bottom: 40px;  // 90px;
     width: 60%;
-    height: auto; // 75%;  // 70%;
+    height: 100vh - $header-height - $footer-height - 7vh;  // auto; // 75%;  // 70%;
     //border: 2px solid grey;
     border-radius: 5px;
     box-shadow: -20px 20px 10px 0px rgba(0,0,0,0.3),
@@ -84,15 +107,16 @@ body {
     border-bottom: 5px solid orangered;
     border-top: 1px solid $color-grey;
     @include flex-vertical();
-    justify-content: space-between; // space-around;
+    justify-content: space-around;  // space-between; // space-around;
     background-color: $color-light;
     @include media-mobile() {
       width: 90%;
-      height: 65%;
+      //height: auto; // 65%;
+      min-height: 100vh - 7vh - 4vh - 7vh;  //
     }
     .input-box-auth {
       margin: 0 auto;
-      margin-bottom: 20px;
+      //margin-bottom: 20px;
       width: 80%;
       height: auto;
       @include flex-vertical();
@@ -103,7 +127,7 @@ body {
         width: 100%;
         //margin-bottom: 10px;  // $input-lable-marginb;
         @include text-font(1.39vw, 300, 1.39vw, 0);   // 20px
-        @include media-text(16px, 18px, 20px);
+        @include media-text(14px, 16px, 18px);
         color: $color-dark;
       }
       .input-text-auth {
@@ -115,20 +139,33 @@ body {
         width: 100%;  // $input-width;
         height: fit-content;  // 30px;
         @include text-font(1.11vw, 300, 1.11vw, 0); // 16px
-        @include media-text(12px, 14px, 16px);
+        @include media-text(10px, 12px, 14px);
         color: $color-dark;
         border: 1px solid $color-grey;
         border-radius: 5px;
         outline: none;
+        @include media-mobile() {
+          margin-top: 5px;
+          padding: 5px;
+        }
       }
       .input-text-auth:focus {
         border: 2px solid $color-blick;
       }
+      .check-box {
+        margin-left: 0;
+        margin-top: 20px;
+        width: fit-content;
+        @include media-mobile() {
+          margin-top: 10px;
+        }
+      }
       .link-page-auth {
         margin: 0 auto;
-        margin-top: 40px;
+        //margin-top:30px;  // 40px;
         width: 100%;
-        @include text-font(2.4vh, 300, 2.4vh, 0);
+        @include text-font(1.39vw, 300, 1.39vw, 0);
+        @include media-text(14px, 16px, 18px);
         text-decoration: none;
         text-align: left;
         color: $color-grey-link;
@@ -140,11 +177,12 @@ body {
       .btn-form-auth {
         margin: 0 auto;
         margin-left: 0;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 30px 0;
-        width: 40%; // 80px;
+        //margin-top: 20px;
+        //margin-bottom: 20px;
+        padding: 30px 60px; // 0;
+        width: auto;  // 40%; // 80px;
         //height: 40px;
+        @include flex-horizontal();
         @include text-font(1.53vw, 300, 1.53vw, 0); //22px;
         @include media-text(18px, 20px, 22px);
         color: $color-dark;
@@ -153,13 +191,17 @@ body {
         outline: none;
         border-radius: 5px;
         cursor: pointer;
+        @include media-mobile() {
+          margin-bottom: 10px;
+          padding: 20px 60px;
+        }
       }
       .btn-form-auth:hover {
         background-color: $color-blick;
         color: $color-dark;
       }
       .link-btn {
-        margin-top: 40px;
+        //margin-top: 40px;
         width: 100%;
         background: none;
         text-align: center;
@@ -173,40 +215,65 @@ body {
       }
       .exit-btn {
         margin: 0 auto;
-        margin-bottom: 40px;
+        //margin-bottom: 40px;
         width: 60%;
+        text-align: center;
         @include media-mobile {
           background-color: $color-blick;
         }
       }
     }
     .first {
-      margin-top: 40px;
+      margin-top: 0;  // 40px;
     }
    
     .first-row {
       margin-top: 40px;
       
-    }    
-  }
+    }  
     .single-btn {
       margin: 0 auto;
-      //margin-bottom: 40px;
+      margin-bottom: 0; // 40px;
       width: 80%;
-      height: auto;
+      min-height: 15vh;
+      height: 15vh; // inherit;  // auto;
+      //min-height: 50%;
       border-top: none;
       border-bottom: none;
       border-left: none;
       box-shadow: none;
       outline: none;
       @include flex-vertical();
-      justify-content: space-between; // space-around;
+      //justify-content: space-between; // space-around;
       background-color: $color-light;
+      //border: 1px solid blue;
       @include media-mobile() {
         width: 90%;
-        height: 65%;
+        height: 15vh;  // 65%;
       }
     } 
+  }
+  .single-btn-block {
+    margin: 0 auto 0;
+    //margin-bottom: 0; // 40px;
+    width: 80%;
+    //max-height: 55vh; // auto;
+    height: fit-content;  // 45%;
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
+    box-shadow: none;
+    outline: none;
+    @include flex-vertical();
+    justify-content: space-around;  // space-between; // space-around;
+    background-color: $color-light;
+    //border:  1px solid green;
+    @include media-mobile() {
+      width: 90%;
+      min-height: 30vh;
+      height: 30vh; // 65%;
+    }
+  } 
 }
 .main-right-front {
   margin: auto;

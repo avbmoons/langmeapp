@@ -311,7 +311,7 @@ body {
   color: #0f1a1c;
   align-items: center;
 }
-.header-front .header-center-front .header-center-block-front #menuServices #btnAdmin {
+.header-front .header-center-front .header-center-block-front #menuServices #btnAdminMobile {
   visibility: hidden;
 }
 .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front:hover {
