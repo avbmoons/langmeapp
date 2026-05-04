@@ -453,7 +453,43 @@ body {
           width: 5%;
           height: 100vh - 7vh - 4vh;
         }
+        @include flex-vertical();
+        justify-content: flex-start;
         //border: 1px solid green;
+        .btn-email-block {
+          margin: 0 auto;
+          margin-top: 10%;
+          width: 100%;
+          height: 10%;  //10%;
+          @include flex-vertical();
+          //border: 1px solid green;
+          @include media-mobile() {
+            display: none;
+          }
+          .btn-email {
+            margin: 0 auto;
+            width: 50%;
+            height: 100%;
+            padding: 5px 0;
+            background: none;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            img {
+              height: auto; 
+              width: 100%;  
+            }
+          }
+          .btn-email:hover {
+            svg path {
+              fill: orangered;
+            }
+          }
+        }
+        .email-about {
+          margin-top: 0;
+          height: 20%;
+        }
       }
     }
   }

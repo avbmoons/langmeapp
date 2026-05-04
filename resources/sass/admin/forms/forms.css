@@ -154,6 +154,7 @@
   min-height: 80px;
   padding-top: 10px;
   line-height: normal;
+  overflow-y: auto;
 }
 .admin-content .form-input .input-box .link-page {
   margin: 0 auto;
@@ -207,7 +208,7 @@
 }
 .admin-content .form-input .input-box .cancel:hover {
   color: #6423b0;
-  background-color: #ffffff;
+  background-color: #e9e7e0;
   border: 1px solid #2799b0;
 }
 .admin-content .form-input .input-box .input-group {

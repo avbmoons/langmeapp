@@ -33,6 +33,7 @@
       <button type="submit" class="btn-form-auth exit-btn">Exit</button>
     </div> 
   </form>
+  <a href="{{ route('social.auth.redirect', ['driver' => 'github']) }}"><strong>Enter with GitHub</strong></a>
   </div>
 
   

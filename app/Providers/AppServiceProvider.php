@@ -12,6 +12,8 @@ use App\QueryBuilders\TasksQueryBuilder;
 use App\QueryBuilders\ThemesQueryBuilder;
 use App\QueryBuilders\UsersQueryBuilder;
 use App\QueryBuilders\WordsQueryBuilder;
+use App\Services\Contracts\Social;
+use App\Services\SocialService;
 use Illuminate\Pagination\Paginator as Paginator;
 use Illuminate\Support\ServiceProvider;
 
@@ -31,6 +33,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(QueryBuilder::class, TasksQueryBuilder::class);
         $this->app->bind(QueryBuilder::class, ImportLogsQueryBuilder::class);
         $this->app->bind(QueryBuilder::class, UsersQueryBuilder::class);
+        // Services
+        $this->app->bind(Social::class, SocialService::class);
     }
 
     /**

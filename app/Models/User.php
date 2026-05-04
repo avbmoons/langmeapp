@@ -47,6 +47,15 @@ class User extends Authenticatable
         'is_admin' => UserRole::class,    // 'boolean',
     ];
 
+    protected $datas = [
+        'last_login_at',
+    ];
+
+    public function mailsFromUsers()
+    {
+        return $this->hasMany(Mail::class);
+    }
+
     public function importLogsFromUsers()
     {
         return $this->hasMany(ImportLog::class);

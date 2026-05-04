@@ -130,7 +130,6 @@ header .header-block .services-box .services .service-time p {
 }
 header .header-block .services-box .services .service-button {
   font-family: Roboto;
-  margin-right: 5vw;
   max-width: 50%;
   padding: 1vh 2.4vw;
   font-size: 18px;
@@ -143,6 +142,9 @@ header .header-block .services-box .services .service-button {
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 header .header-block .services-box .services .service-button:hover {
   border-color: #9de7f5;
@@ -453,7 +455,6 @@ body {
 }
 .wrapper .top header .header-block .services-box .services .service-button {
   font-family: Roboto;
-  margin-right: 5vw;
   max-width: 50%;
   padding: 1vh 2.4vw;
   font-size: 18px;
@@ -466,6 +467,9 @@ body {
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .wrapper .top header .header-block .services-box .services .service-button:hover {
   border-color: #9de7f5;

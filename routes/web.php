@@ -11,6 +11,7 @@ use App\Http\Controllers\Admin\ThemesController as AdminThemesController;
 use App\Http\Controllers\Admin\WordsController as AdminWordsController;
 use App\Http\Controllers\Admin\UsersController as AdminUsersController;
 use App\Http\Controllers\Admin\ImportLogsController as AdminImportLogsController;
+use App\Http\Controllers\Admin\MailsController as AdminMailsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TaskChoiceController;
 use App\Http\Controllers\TaskPlainController;
@@ -18,6 +19,8 @@ use App\Http\Controllers\TaskLangController;
 use App\Http\Controllers\TaskMixController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\DraftAuthController;
+use App\Http\Controllers\MailController;
+use App\Http\Controllers\SocialiteProvidersController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -48,6 +51,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], static function() {
     Route::resource('words', AdminWordsController::class);
     Route::resource('users', AdminUsersController::class);
     Route::resource('importlogs', AdminImportLogsController::class);
+    Route::resource('mails', AdminMailsController::class);
 });
 
 Route::group(['prefix' => ''], static function() {
@@ -58,6 +62,16 @@ Route::group(['prefix' => ''], static function() {
     Route::get('/taskLang', [TaskLangController::class, 'index'])->name('taskLang');
     Route::get('/taskMix', [TaskMixController::class, 'index'])->name('taskMix');
     Route::get('/about', [AboutController::class, 'index'])->name('about');
+    Route::resource('/mail', MailController::class)->names([
+        'create' => 'mail.create',
+        'store' => 'mail.store',
+    ]);
+});
+
+Route::group(['middleware' => 'guest'], function() {
+//Route::group(function() {
+    Route::get('/login/redirect/{driver}', [SocialiteProvidersController::class, 'redirect'])->where('driver', '\w+')->name('social.auth.redirect');
+    Route::get('/login/callback/{driver}', [SocialiteProvidersController::class, 'callback'])->where('driver', '\w+');
 });
 
 Route::get('/draftAuth', [DraftAuthController::class, 'index'])->name('draftAuth');

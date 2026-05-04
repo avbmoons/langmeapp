@@ -23,6 +23,11 @@ final class UsersQueryBuilder extends QueryBuilder
         return $this->model->get();
     }
 
+    public function getUserById(int $id): Collection
+    {
+        return User::query()->where('id', $id)->get();
+    }
+
     // public function getUsersByIsAdmin(string $isAdmin): Collection
     // {
     //     return User::query()->where('is_admin', $isAdmin)->get();

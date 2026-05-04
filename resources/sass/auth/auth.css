@@ -264,6 +264,9 @@ body {
 .main-center-front .form-input-auth .input-box-auth .input-text-auth:focus {
   border: 2px solid #f5a836;
 }
+.main-center-front .form-input-auth .input-box-auth .readonly {
+  background-color: #f2f7f7;
+}
 .main-center-front .form-input-auth .input-box-auth .check-box {
   margin-left: 0;
   margin-top: 20px;
@@ -386,6 +389,19 @@ body {
 }
 .main-center-front .form-input-auth .first-row {
   margin-top: 40px;
+}
+.main-center-front .form-input-auth .area {
+  min-height: 20vh;
+  padding-top: 10px;
+  line-height: normal;
+  overflow-y: auto;
+}
+.main-center-front .form-input-auth .mail-buttons {
+  flex-direction: row;
+}
+.main-center-front .form-input-auth .mail-buttons .btn-form-auth {
+  margin-right: 0;
+  width: 40%;
 }
 .main-center-front .form-input-auth .single-btn {
   margin: 0 auto;

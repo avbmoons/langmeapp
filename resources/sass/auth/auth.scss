@@ -152,6 +152,9 @@ body {
       .input-text-auth:focus {
         border: 2px solid $color-blick;
       }
+      .readonly {
+        background-color: $color-lang-light;
+      }
       .check-box {
         margin-left: 0;
         margin-top: 20px;
@@ -225,12 +228,26 @@ body {
     }
     .first {
       margin-top: 0;  // 40px;
-    }
-   
+    }  
     .first-row {
       margin-top: 40px;
       
-    }  
+    }
+    .area {
+      min-height: 20vh;
+      //max-height: 25%;  // 25vh;
+      padding-top: 10px;
+      line-height: normal;
+      overflow-y: auto;
+    } 
+    .mail-buttons {
+      flex-direction: row;
+      //border: 1px solid green;
+      .btn-form-auth {
+        margin-right: 0;
+        width: 40%;
+      }
+    } 
     .single-btn {
       margin: 0 auto;
       margin-bottom: 0; // 40px;

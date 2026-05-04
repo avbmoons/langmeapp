@@ -1305,7 +1305,6 @@ header .header-block .services-box .services .service-time p {
 }
 header .header-block .services-box .services .service-button {
   font-family: Roboto;
-  margin-right: 5vw;
   max-width: 50%;
   padding: 1vh 2.4vw;
   font-size: 18px;
@@ -1318,6 +1317,9 @@ header .header-block .services-box .services .service-button {
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 header .header-block .services-box .services .service-button:hover {
   border-color: #9de7f5;
@@ -1628,7 +1630,6 @@ body {
 }
 .wrapper .top header .header-block .services-box .services .service-button {
   font-family: Roboto;
-  margin-right: 5vw;
   max-width: 50%;
   padding: 1vh 2.4vw;
   font-size: 18px;
@@ -1641,6 +1642,9 @@ body {
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .wrapper .top header .header-block .services-box .services .service-button:hover {
   border-color: #9de7f5;
@@ -2337,6 +2341,9 @@ body {
 .main-center-front .form-input-auth .input-box-auth .input-text-auth:focus {
   border: 2px solid #f5a836;
 }
+.main-center-front .form-input-auth .input-box-auth .readonly {
+  background-color: #f2f7f7;
+}
 .main-center-front .form-input-auth .input-box-auth .check-box {
   margin-left: 0;
   margin-top: 20px;
@@ -2459,6 +2466,16 @@ body {
 }
 .main-center-front .form-input-auth .first-row {
   margin-top: 40px;
+}
+.main-center-front .form-input-auth .area {
+  min-height: 25vh;
+  padding-top: 10px;
+  line-height: normal;
+}
+.main-center-front .form-input-auth .mail-buttons {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .main-center-front .form-input-auth .single-btn {
   margin: 0 auto;
@@ -2840,6 +2857,9 @@ body {
 .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front .btn-link-menu {
   color: #0f1a1c;
   align-items: center;
+}
+.header-front .header-center-front .header-center-block-front #menuServices #btnAdminMobile {
+  visibility: hidden;
 }
 .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front:hover {
   color: #ff4500;
@@ -3670,6 +3690,9 @@ body {
 .wrapper-front .top-front .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front .btn-link-menu {
   color: #0f1a1c;
   align-items: center;
+}
+.wrapper-front .top-front .header-front .header-center-front .header-center-block-front #menuServices #btnAdminMobile {
+  visibility: hidden;
 }
 .wrapper-front .top-front .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front:hover {
   color: #ff4500;
@@ -4420,6 +4443,49 @@ body {
     height: 89vh;
   }
 }
+.wrapper-front .top-front main-front .main-right-front {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+.wrapper-front .top-front main-front .main-right-front .btn-email-block {
+  margin: 0 auto;
+  margin-top: 10%;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper-front .top-front main-front .main-right-front .btn-email-block {
+    display: none;
+  }
+}
+.wrapper-front .top-front main-front .main-right-front .btn-email-block .btn-email {
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  padding: 5px 0;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.wrapper-front .top-front main-front .main-right-front .btn-email-block .btn-email img {
+  height: auto;
+  width: 100%;
+}
+.wrapper-front .top-front main-front .main-right-front .btn-email-block .btn-email:hover svg path {
+  fill: orangered;
+}
+.wrapper-front .top-front main-front .main-right-front .email-about {
+  margin-top: 0;
+  height: 20%;
+}
 .wrapper-front .footer-front {
   margin: 0 auto;
   width: 100%;
@@ -5050,6 +5116,9 @@ body {
 .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front .btn-link-menu {
   color: #0f1a1c;
   align-items: center;
+}
+.header-front .header-center-front .header-center-block-front #menuServices #btnAdminMobile {
+  visibility: hidden;
 }
 .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front:hover {
   color: #ff4500;
@@ -5888,6 +5957,9 @@ body {
 .wrapper-front .top-front .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front .btn-link-menu {
   color: #0f1a1c;
   align-items: center;
+}
+.wrapper-front .top-front .header-front .header-center-front .header-center-block-front #menuServices #btnAdminMobile {
+  visibility: hidden;
 }
 .wrapper-front .top-front .header-front .header-center-front .header-center-block-front #menuServices .menu-item-front:hover {
   color: #ff4500;
@@ -10029,7 +10101,6 @@ header .header-block .services-box .services .service-time p {
 }
 header .header-block .services-box .services .service-button {
   font-family: Roboto;
-  margin-right: 5vw;
   max-width: 50%;
   padding: 1vh 2.4vw;
   font-size: 18px;
@@ -10042,6 +10113,9 @@ header .header-block .services-box .services .service-button {
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 header .header-block .services-box .services .service-button:hover {
   border-color: #9de7f5;
@@ -10604,7 +10678,6 @@ header .header-block .services-box .services .service-time p {
 }
 header .header-block .services-box .services .service-button {
   font-family: Roboto;
-  margin-right: 5vw;
   max-width: 50%;
   padding: 1vh 2.4vw;
   font-size: 18px;
@@ -10617,6 +10690,9 @@ header .header-block .services-box .services .service-button {
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 header .header-block .services-box .services .service-button:hover {
   border-color: #9de7f5;
@@ -10927,7 +11003,6 @@ body {
 }
 .wrapper .top header .header-block .services-box .services .service-button {
   font-family: Roboto;
-  margin-right: 5vw;
   max-width: 50%;
   padding: 1vh 2.4vw;
   font-size: 18px;
@@ -10940,6 +11015,9 @@ body {
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .wrapper .top header .header-block .services-box .services .service-button:hover {
   border-color: #9de7f5;
@@ -11527,7 +11605,6 @@ header .header-block .services-box .services .service-time p {
 }
 header .header-block .services-box .services .service-button {
   font-family: Roboto;
-  margin-right: 5vw;
   max-width: 50%;
   padding: 1vh 2.4vw;
   font-size: 18px;
@@ -11540,6 +11617,9 @@ header .header-block .services-box .services .service-button {
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 header .header-block .services-box .services .service-button:hover {
   border-color: #9de7f5;
@@ -11850,7 +11930,6 @@ body {
 }
 .wrapper .top header .header-block .services-box .services .service-button {
   font-family: Roboto;
-  margin-right: 5vw;
   max-width: 50%;
   padding: 1vh 2.4vw;
   font-size: 18px;
@@ -11863,6 +11942,9 @@ body {
   border-radius: 3px;
   outline: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .wrapper .top header .header-block .services-box .services .service-button:hover {
   border-color: #9de7f5;

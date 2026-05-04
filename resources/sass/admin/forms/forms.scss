@@ -113,6 +113,9 @@
                 outline: none;
                 box-sizing: border-box;
               }
+              // .readonly {
+              //   background-color: $color-grey-light;
+              // }
               .combo-box {
                 height: 2*$input-height;
               }
@@ -129,6 +132,7 @@
                 min-height: 2*$input-height;
                 padding-top: 10px;
                 line-height: normal;
+                overflow-y: auto;
               }
               .link-page {
                 margin: 0 auto;
@@ -174,7 +178,7 @@
               }
               .cancel:hover {
                 color: $admin-color-accent;
-                background-color: $color-basic-white;
+                background-color: $color-grey-light;
                 border: 1px solid $admin-color-accent-light;
               }
             .input-group {
