@@ -256,7 +256,7 @@ body {
 .sidebar .sidebar-menu-block {
   margin: 0 auto;
   margin-left: 23%;
-  width: 65%;
+  width: 75%;
   height: auto;
   overflow-y: auto;
   display: flex;
@@ -534,7 +534,7 @@ body {
 .wrapper .top main .main-block .sidebar .sidebar-menu-block {
   margin: 0 auto;
   margin-left: 23%;
-  width: 65%;
+  width: 75%;
   height: auto;
   overflow-y: auto;
   display: flex;

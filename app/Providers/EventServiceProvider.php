@@ -4,6 +4,7 @@ namespace App\Providers;
 
 //use App\Events\LoginEvent;
 use App\Listeners\LastLoginUpdateListener;
+use App\Listeners\SendWelcomeNotification;
 use Illuminate\Auth\Events\Login;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Auth\Listeners\SendEmailVerificationNotification;
@@ -20,6 +21,7 @@ class EventServiceProvider extends ServiceProvider
     protected $listen = [
         Registered::class => [
             SendEmailVerificationNotification::class,
+            SendWelcomeNotification::class,
         ],
         Login::class => [
             LastLoginUpdateListener::class,

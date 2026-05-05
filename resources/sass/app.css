@@ -1431,7 +1431,7 @@ body {
 .sidebar .sidebar-menu-block {
   margin: 0 auto;
   margin-left: 23%;
-  width: 65%;
+  width: 75%;
   height: auto;
   overflow-y: auto;
   display: flex;
@@ -1709,7 +1709,7 @@ body {
 .wrapper .top main .main-block .sidebar .sidebar-menu-block {
   margin: 0 auto;
   margin-left: 23%;
-  width: 65%;
+  width: 75%;
   height: auto;
   overflow-y: auto;
   display: flex;
@@ -2468,14 +2468,17 @@ body {
   margin-top: 40px;
 }
 .main-center-front .form-input-auth .area {
-  min-height: 25vh;
+  min-height: 20vh;
   padding-top: 10px;
   line-height: normal;
+  overflow-y: auto;
 }
 .main-center-front .form-input-auth .mail-buttons {
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
+  flex-direction: row;
+}
+.main-center-front .form-input-auth .mail-buttons .btn-form-auth {
+  margin-right: 0;
+  width: 40%;
 }
 .main-center-front .form-input-auth .single-btn {
   margin: 0 auto;
@@ -10227,7 +10230,7 @@ body {
 .sidebar .sidebar-menu-block {
   margin: 0 auto;
   margin-left: 23%;
-  width: 65%;
+  width: 75%;
   height: auto;
   overflow-y: auto;
   display: flex;
@@ -10436,6 +10439,7 @@ body {
   min-height: 80px;
   padding-top: 10px;
   line-height: normal;
+  overflow-y: auto;
 }
 .admin-content .form-input .input-box .link-page {
   margin: 0 auto;
@@ -10489,7 +10493,7 @@ body {
 }
 .admin-content .form-input .input-box .cancel:hover {
   color: #6423b0;
-  background-color: #ffffff;
+  background-color: #e9e7e0;
   border: 1px solid #2799b0;
 }
 .admin-content .form-input .input-box .input-group {
@@ -10804,7 +10808,7 @@ body {
 .sidebar .sidebar-menu-block {
   margin: 0 auto;
   margin-left: 23%;
-  width: 65%;
+  width: 75%;
   height: auto;
   overflow-y: auto;
   display: flex;
@@ -11082,7 +11086,7 @@ body {
 .wrapper .top main .main-block .sidebar .sidebar-menu-block {
   margin: 0 auto;
   margin-left: 23%;
-  width: 65%;
+  width: 75%;
   height: auto;
   overflow-y: auto;
   display: flex;
@@ -11731,7 +11735,7 @@ body {
 .sidebar .sidebar-menu-block {
   margin: 0 auto;
   margin-left: 23%;
-  width: 65%;
+  width: 75%;
   height: auto;
   overflow-y: auto;
   display: flex;
@@ -12009,7 +12013,7 @@ body {
 .wrapper .top main .main-block .sidebar .sidebar-menu-block {
   margin: 0 auto;
   margin-left: 23%;
-  width: 65%;
+  width: 75%;
   height: auto;
   overflow-y: auto;
   display: flex;

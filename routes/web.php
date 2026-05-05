@@ -12,6 +12,8 @@ use App\Http\Controllers\Admin\WordsController as AdminWordsController;
 use App\Http\Controllers\Admin\UsersController as AdminUsersController;
 use App\Http\Controllers\Admin\ImportLogsController as AdminImportLogsController;
 use App\Http\Controllers\Admin\MailsController as AdminMailsController;
+//use App\Http\Controllers\Admin\NotificationController as AdminNotificationController;
+use App\Http\Controllers\Admin\NotificationsController as AdminNotificationsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TaskChoiceController;
 use App\Http\Controllers\TaskPlainController;
@@ -52,6 +54,9 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], static function() {
     Route::resource('users', AdminUsersController::class);
     Route::resource('importlogs', AdminImportLogsController::class);
     Route::resource('mails', AdminMailsController::class);
+    //Route::get('/notifications', [AdminNotificationController::class, 'index'])->name('notifications.index');
+    //Route::post('/notifications/{id}/read', [AdminNotificationController::class, 'markAsRead'])->name('notifications.read');
+    Route::resource('notifications', AdminNotificationsController::class);
 });
 
 Route::group(['prefix' => ''], static function() {
