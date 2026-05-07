@@ -138,6 +138,37 @@
   outline: none;
   box-sizing: border-box;
 }
+.admin-content .form-input .input-box .file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.admin-content .form-input .input-box .file-label {
+  margin: 0 auto;
+  display: inline-block;
+  width: 25%;
+  height: 60px;
+  background-color: #e9e7e0;
+  border: 1px solid #cac9c2;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
+}
+.admin-content .form-input .input-box .file-label:hover {
+  color: white;
+  background-color: #1b1357;
+}
+.admin-content .form-input .input-box .file-name {
+  width: 65%;
+  margin-left: 10px;
+  color: orange;
+  align-content: center;
+}
 .admin-content .form-input .input-box .combo-box {
   height: 80px;
 }
@@ -211,23 +242,35 @@
   background-color: #e9e7e0;
   border: 1px solid #2799b0;
 }
-.admin-content .form-input .input-box .input-group {
+.admin-content .form-input .input-box .close-back {
+  margin-right: 0;
+  margin-left: 0;
+  color: #1b1357;
+  background-color: #ffffff;
+  border: 1px solid #1b1357;
+  font-weight: 400;
+}
+.admin-content .form-input .input-box .close-back:hover {
+  color: #ffffff;
+  background-color: #1b1357;
+}
+.admin-content .form-input .input-group {
   width: 100%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
 }
-.admin-content .form-input .input-box .input-group .half {
+.admin-content .form-input .input-group .half {
   margin-left: 0;
   margin-right: 0;
   width: 50%;
 }
-.admin-content .form-input .input-box .input-group .half .file {
+.admin-content .form-input .input-group .half .file {
   padding-left: 0;
   border: none;
 }
-.admin-content .form-input .input-box .input-group .half .file::file-selector-button {
+.admin-content .form-input .input-group .half .file::file-selector-button {
   margin-right: 20px;
   margin-left: 0;
   padding: 0 20px;
@@ -239,27 +282,47 @@
   color: #fdfcf4;
   height: 100%;
 }
-.admin-content .form-input .input-box .input-group .half .file::file-selector-button:hover {
+.admin-content .form-input .input-group .half .file::file-selector-button:hover {
   background-color: #abbee6;
   border-color: #abbee6;
   color: #1b1357;
 }
-.admin-content .form-input .input-box .input-group .mini {
+.admin-content .form-input .input-group .mini {
   margin-right: 0;
   margin-left: 0;
   width: 30%;
 }
-.admin-content .form-input .input-box .input-group .edit {
+.admin-content .form-input .input-group .edit {
   width: 20%;
 }
-.admin-content .form-input .input-box .input-group .dates {
+.admin-content .form-input .input-group .dates {
   background-color: #e9e7e0;
+}
+.admin-content .form-input .import-buttons {
+  margin: 0 auto;
+  width: 90%;
 }
 .admin-content .form-input .first {
   margin-top: 40px;
 }
 .admin-content .form-input .admin {
   margin-top: 20px;
+}
+.admin-content .form-input .show {
+  margin: 0 auto;
+  width: 90%;
+}
+.admin-content .form-input .file-button {
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 0;
+  border: 1px solid #cac9c2;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-direction: row;
 }
 .admin-content .admin {
   margin-top: 0;

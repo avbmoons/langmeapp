@@ -27,9 +27,60 @@ final class ImportLogsQueryBuilder extends QueryBuilder
   {
     return ImportLog::query()->where('status', $status)->get();
   }
+  
+  // public function filter(array $filters): self
+  // {
+  //   // return $this
+  //   //         ->when($filters['filename'] ?? null, function ($query, $filename) {
+  //   //           $query->where('filename', 'like', "%{$filename}%");
+  //   //         })
+  //   //         ->when($filters['status'] ?? null, function ($query, $status) {
+  //   //           $query->where('status', 'like', "%{$status}%");
+  //   //         })
+  //   //         ->when($filters['message'] ?? null, function ($query, $message) {
+  //   //           $query->where('message', 'like', "%{$message}%");
+  //   //         });
+  //   // return $this->when($filters['search'] ?? null, function ($query, $search) {
+  //   //   $query->where(function ($g) use ($search) {
+  //   //     $g->where('filename', 'like', "%{$search}%")
+  //   //       ->orWhere('message', 'like', "%{$search}%")
+  //   //       ->orWhere('tablename', 'like', "%{$search}%");
+  //   //   });
+  //   // });
+  // }
 
-  public function getImportLogsWithPagination(int $quantity = 10):LengthAwarePaginator
+  public function getImportLogsWithPagination():LengthAwarePaginator
   {
-    return $this->model->paginate($quantity);
+    $search = request()->query('search');
+
+    return ImportLog::query()
+        ->when($search, function ($q) use ($search) {
+          $q->where(function($inner) use ($search) {
+            $inner->where('filename', 'LIKE', "%{$search}%")
+                  ->orWhere('id', $search);
+          });
+        })
+        ->orderBy('id', 'desc')
+        ->paginate(10)
+        ->withQueryString();
   }
+
+  //   public function getImportLogsWithPagination(?string $search = null):LengthAwarePaginator
+  // {
+  //   $query = ImportLog::query();
+
+  //   if ($search) {
+  //     $query->where(function($q) use ($search) {
+  //       $q->where('filename', 'LIKE', "%{$search}%")
+  //       ->orWhere('id', $search);
+  //     });
+  //   }
+  //   return $query->orderBy('id', 'desc')->paginate(10)->withQueryString();
+  // }
+
+  // public function getImportLogsWithPagination(int $quantity = 10):LengthAwarePaginator
+  // {
+  //   return $this->model->paginate($quantity);
+  // }
+  
 }

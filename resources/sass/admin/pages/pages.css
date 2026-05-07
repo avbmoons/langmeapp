@@ -705,6 +705,16 @@ body {
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box .search-block .search-box .btn-search:hover {
   background-color: #2799b0;
 }
+.wrapper .top main .main-block .admin-content .head-block .services-block .services-box .search-block .search-box .link {
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #cac9c2;
+  align-content: center;
+}
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box .add-block {
   margin: 0 auto;
   width: 15vw;

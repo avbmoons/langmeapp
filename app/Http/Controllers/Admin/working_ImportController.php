@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\LazyCollection;
 
-class ImportController extends Controller
+class working_ImportController extends Controller
 {
     // public function upload(Request $request)
     public function import(Request $request)
@@ -120,7 +120,7 @@ class ImportController extends Controller
             'message' => "Success: $successCount, Errors: $errorCount. " . implode('; ', $errors),   //  $message,
         ]);
         ////
-        return \redirect()->route('admin.importlogs.index')
+        return \redirect()->route('admin.importlogs.create')
                 ->with('last_import_id', $log->id)
                 ->with('success', 'Import completed. Rows processed: ' . ($successCount + $errorCount)); //  ->with('success', 'Import completed');
 

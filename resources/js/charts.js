@@ -1,3 +1,7 @@
+//document.addEventListener("DOMContentLoaded", () => {
+
+//});
+
 // test data
 let statusesCh = ['1', '2', '3', '4'];
 let statusesStr = ['Draft', 'Active', 'Blocked', 'Close'];
@@ -456,3 +460,5 @@ new Chart(ctx1, {
         },
     },
 });
+
+//});

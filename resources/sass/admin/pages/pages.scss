@@ -137,6 +137,14 @@ body {
                     .btn-search:hover {
                       background-color: $admin-color-accent-light;
                     }
+                    .link {
+                      margin: 0 10px;
+                      //margin-left: 10px;
+                      text-decoration: none;
+                      @include text-font(20px, 300, 20px, 0);
+                      color: $admin-color-grey;
+                      align-content: center;
+                    }
                   }
                 }
                 .add-block {

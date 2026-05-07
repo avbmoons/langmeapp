@@ -20,6 +20,7 @@ use App\Http\Controllers\TaskPlainController;
 use App\Http\Controllers\TaskLangController;
 use App\Http\Controllers\TaskMixController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\Admin\ImportController;
 use App\Http\Controllers\DraftAuthController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\SocialiteProvidersController;
@@ -57,6 +58,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], static function() {
     //Route::get('/notifications', [AdminNotificationController::class, 'index'])->name('notifications.index');
     //Route::post('/notifications/{id}/read', [AdminNotificationController::class, 'markAsRead'])->name('notifications.read');
     Route::resource('notifications', AdminNotificationsController::class);
+    Route::post('/import', [ImportController::class, 'import'])->name('import.csv');
 });
 
 Route::group(['prefix' => ''], static function() {
@@ -78,5 +80,8 @@ Route::group(['middleware' => 'guest'], function() {
     Route::get('/login/redirect/{driver}', [SocialiteProvidersController::class, 'redirect'])->where('driver', '\w+')->name('social.auth.redirect');
     Route::get('/login/callback/{driver}', [SocialiteProvidersController::class, 'callback'])->where('driver', '\w+');
 });
+
+//Route::post('/import', [ImportController::class, 'import'])->name('import.csv');
+//Route::get('/import', function () { return view('import'); });
 
 Route::get('/draftAuth', [DraftAuthController::class, 'index'])->name('draftAuth');

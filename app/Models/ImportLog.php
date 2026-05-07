@@ -17,16 +17,26 @@ class ImportLog extends Model
         'id',
         'filename',
         'tablename',
-        'rows_processes',
+        'rows_processed',
         'status',
         'message',
         'user_id',
+        'processed_ids',
+    ];
+
+    protected $casts = [
+        'processed_ids' => 'json',     //  'array',
     ];
 
     public function users()
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
+
+    // public function importDraftsFromModes()
+    // {
+    //     return $this->hasMany(ImportDraft::class);
+    // }
 
     public function getImportLogs():Collection
     {
