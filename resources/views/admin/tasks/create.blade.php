@@ -70,6 +70,15 @@
               @endforeach              
             </select>
           </div>
+          <div class="input-box mini" name="user-box">
+            <label for="user_id" class="input-lable">User</label>            
+            <select class="input-text" name="user_id" id="user_id">
+              <option value="0">--Select user--</option>
+              @foreach ($users as $user)
+                 <option @if(old('user_id') === $user->id) selected @endif value="{{ $user->id }}">{{ $user->name }}</option> 
+              @endforeach              
+            </select>
+          </div>
         </div>
       </div>
       <div class="input-box" name="btns-box">

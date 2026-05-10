@@ -56,10 +56,13 @@
           <th class="th-id">#ID</th>          
           <th>Mode</th>
           <th>Langs</th>
+          <th>langs_ids</th>
           <th>Themes</th>
+          <th>themes_ids</th>
           <th>Enjoy score</th>
           <th>Normal score</th>
           <th>Worry score</th>
+          <th>User ID</th>
           <th class="th-status">Status</th>
           <th class="th-fixed">Updated</th>
           <th class="th-fixed">Actions</th>
@@ -71,10 +74,34 @@
           <td>{{ $task->id }}</td>
           <td>{{ $task->modes->title }}</td>
           <td>{{ $task->langs->map(fn($item) => $item->title)->implode(", ") }}</td>
+          <td>
+            @if (!empty($task->langs_ids) && is_array($task->langs_ids))
+              @foreach ($task->langs_ids as $id)
+                <span class="badge badge-info">
+                  {{ $langs[$id] ?? 'Lang #' . $id }}
+                </span>                  
+              @endforeach
+            @else
+                <span class="text-muted">No themes</span>                
+            @endif
+          </td>
           <td>{{ $task->themes->map(fn($item) => $item->title)->implode(", ") }}</td>
+          <td>
+            @if (!empty($task->themes_ids) && is_array($task->themes_ids))
+              @foreach ($task->themes_ids as $id)
+                <span class="badge badge-info">
+                  {{ $themes[$id] ?? 'Theme #' . $id }}
+                </span>                  
+              @endforeach
+            @else
+                <span class="text-muted">No themes</span>                
+            @endif
+          </td>
           <td>{{ $task->num_enjoy }}</td>
           <td>{{ $task->num_normal }}</td>
           <td>{{ $task->num_worry }}</td>
+          <td>{{ optional($task->users)->name }}</td>
+          {{-- <td>{{ $task->user_id}}</td> --}}
           <td>
             <div class="statuses">
               <p>{{ $task->status }}</p>

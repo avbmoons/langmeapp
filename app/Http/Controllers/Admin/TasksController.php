@@ -6,11 +6,15 @@ use App\Enums\Status;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Tasks\CreateRequest;
 use App\Http\Requests\Tasks\EditRequest;
+use App\Models\Lang;
 use App\Models\Task;
+use App\Models\Theme;
+use App\Models\User;
 use App\QueryBuilders\LangsQueryBuilder;
 use App\QueryBuilders\ModesQueryBuilder;
 use App\QueryBuilders\TasksQueryBuilder;
 use App\QueryBuilders\ThemesQueryBuilder;
+use App\QueryBuilders\UsersQueryBuilder;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -20,23 +24,31 @@ class TasksController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(TasksQueryBuilder $tasksQueryBuilder): View
+    public function index(TasksQueryBuilder $tasksQueryBuilder, ThemesQueryBuilder $themesQueryBuilder, LangsQueryBuilder $langsQueryBuilder): View
     {
+        $themes = Theme::pluck('title', 'id');  // $themesQueryBuilder->getAll();
+        $langs = Lang::pluck('title', 'id');    // $langsQueryBuilder->getAll();
+        $users = User::pluck('name', 'id');
+
         return view('admin.tasks.index', [
             'tasksList' => $tasksQueryBuilder->getTasksWithPagination(),    // getAll(),
+            'themes' => $themes,
+            'langs' => $langs,
+            'users' => $users,
         ]);
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create(ThemesQueryBuilder $themesQueryBuilder, LangsQueryBuilder $langsQueryBuilder, ModesQueryBuilder $modesQueryBuilder): View
+    public function create(ThemesQueryBuilder $themesQueryBuilder, LangsQueryBuilder $langsQueryBuilder, ModesQueryBuilder $modesQueryBuilder, UsersQueryBuilder $usersQueryBuilder): View
     {
         return \view('admin.tasks.create', [
             'modes' => $modesQueryBuilder->getAll(),
             'themes' => $themesQueryBuilder->getAll(),
             'langs' => $langsQueryBuilder->getAll(),
             'statuses' => Status::all(),
+            'users' => $usersQueryBuilder->getAll(),
         ]);
     }
 
@@ -47,9 +59,15 @@ class TasksController extends Controller
     {
         $task = Task::create($request->validated());
 
+        //Task::query()->update([])
+
         if ($task) {
             $task->langs()->attach($request->getLangIds());
             $task->themes()->attach($request->getThemeIds());
+            //$task->user_id->$request->collect();
+            $task->themes_ids = $request->input('theme_ids');
+            $task->langs_ids = $request->input('lang_ids');
+            $task->save();
             return \redirect()->route('admin.tasks.index')->with('success', 'Task already saved');
         }
         return \back()->with('error', 'Not saved');
@@ -66,7 +84,7 @@ class TasksController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Task $task, ModesQueryBuilder $modesQueryBuilder, LangsQueryBuilder $langsQueryBuilder, ThemesQueryBuilder $themesQueryBuilder): View
+    public function edit(Task $task, ModesQueryBuilder $modesQueryBuilder, LangsQueryBuilder $langsQueryBuilder, ThemesQueryBuilder $themesQueryBuilder, UsersQueryBuilder $usersQueryBuilder): View
     {
         return \view('admin.tasks.edit', [
             'task' => $task,
@@ -74,6 +92,7 @@ class TasksController extends Controller
             'langs' => $langsQueryBuilder->getAll(),
             'themes' => $themesQueryBuilder->getAll(),
             'statuses' => Status::all(),
+            'users' => $usersQueryBuilder->getAll(),
         ]);
     }
 

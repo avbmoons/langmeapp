@@ -525,3 +525,97 @@ function pageRowsCompPlainDom(firstIndex, lastIndex) {
     }
 }
 
+// let btnSubmitTask = document.getElementById('btnSubmitTask');
+// btnSubmitTask.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     submitTask();
+// })
+
+
+// function submitTask() {
+//     //let btnSubmitTask = document.getElementById('btnSubmitTask');
+//     btnSubmitTask.addEventListener('click', function(event) {
+
+//       event.preventDefault();
+
+//       // get mode.title -> string    
+//       let infoTitle = document.getElementById('infoTitle').textContent;
+//       let currentMode = infoTitle.split(' ')[0].trim();
+
+//       // get langs_ids -> string->array
+//       let currentPrimLang = localStorage.getItem('primLang').split('-')[0].trim();
+
+//       let strCompLangs = localStorage.getItem('compLangs'); 
+//       let currentCompLangs = strCompLangs.split(',');
+//       let currentLangs = [currentPrimLang, ... currentCompLangs];
+
+//       // get themes_ids -> string->array
+//       let strThemes = localStorage.getItem('themesLangs');  
+//       let currentThemes = strThemes.split(',');
+
+//       // get results -> #enjoy, #neutral, #worry
+//       let resEnjoy;
+//         if (document.getElementById('enjoy')) {
+//           resEnjoy = document.getElementById('enjoy').textContent;
+//         } else {
+//           resEnjoy = 0;
+//         }      
+//       console.log("result enjoy = " + resEnjoy);
+
+//       let resNeutral;
+//         if (document.getElementById('neutral')) {
+//           resNeutral = document.getElementById('neutral').textContent;
+//         } else {
+//           resNeutral = 0;
+//         }      
+//       console.log("result neutral = " + resNeutral);
+
+//       let resWorry;
+//         if (document.getElementById('worry')) {
+//           resWorry = document.getElementById('worry').textContent;
+//         } else {
+//           resWorry = 0;
+//         }      
+//       console.log("result worry = " + resWorry);
+
+//       let sentMode = currentMode; 
+//       sentLangs = currentLangs; 
+//       sentThemes = currentThemes; 
+//       let sentEnjoy = parseInt(resEnjoy);
+//       let sentNeutral = parseInt(resNeutral);
+//       let sentWorry = parseInt(resWorry);
+      
+//       let dataToSend = {
+//         dataMode: sentMode,
+//         dataLangs: sentLangs,
+//         dataThemes: sentThemes,
+//         dataEnjoy: sentEnjoy,
+//         dataNeutral: sentNeutral,
+//         dataWorry: sentWorry,        
+//       };
+
+//       console.log( 'Ready to send = ' + dataToSend);
+//       console.log(dataToSend);
+
+//       let urlData = "save-task";
+
+//       fetch(urlData, {
+//         method: 'POST',
+//         headers: {
+//           'Content-type': 'application/json',
+//           'Accept': 'application/json',
+//           'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content
+//         },
+//         body: JSON.stringify({dataToSend})
+//       })
+//       .then(res => res.json())
+//       .then(data => {
+//         alert("Save success");
+//         window.location.href = "{{ route('home' )}}";
+//       })
+//       //
+//       .catch(error => console.error("Error", error));
+
+//     });
+// }
+

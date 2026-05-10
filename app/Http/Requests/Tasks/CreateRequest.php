@@ -34,6 +34,10 @@ class CreateRequest extends FormRequest
             'num_normal' => ['nullable', 'integer'],
             'num_worry' => ['nullable', 'integer'],
             'status' => ['required', new Enum (Status::class)],
+            'user_id' => ['nullable', 'integer'],
+            'user_id' => ['exists:users,id'],
+            'langs_ids' => ['nullable', 'array'],
+            'themes_ids' => ['nullable', 'array'],
         ];
     }
 
@@ -45,6 +49,11 @@ class CreateRequest extends FormRequest
         return (array) $this->validated('lang_ids');
     }
 
+    public function getUserId(): int
+    {
+        return $this->validated('user_id');
+    }
+
     public function attributes(): array{
         return [
             'mode_id' => 'Mode',
@@ -53,7 +62,10 @@ class CreateRequest extends FormRequest
             'num_enjoy' => 'Score enjoy',
             'num_normal' => 'Score normal',
             'num_worry' => 'Score worry',
-            'status' => 'Status',          
+            'status' => 'Status',    
+            'user_id' => 'User',
+            'langs_ids' => 'Langs Ids',
+            'themes_ids' => 'Themes Ids',
         ];
     }
 

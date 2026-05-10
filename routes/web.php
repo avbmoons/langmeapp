@@ -24,6 +24,7 @@ use App\Http\Controllers\Admin\ImportController;
 use App\Http\Controllers\DraftAuthController;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\SocialiteProvidersController;
+use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -80,6 +81,8 @@ Route::group(['middleware' => 'guest'], function() {
     Route::get('/login/redirect/{driver}', [SocialiteProvidersController::class, 'redirect'])->where('driver', '\w+')->name('social.auth.redirect');
     Route::get('/login/callback/{driver}', [SocialiteProvidersController::class, 'callback'])->where('driver', '\w+');
 });
+
+Route::post('save-task', [TaskController::class, 'store'])->name('saveTask');
 
 //Route::post('/import', [ImportController::class, 'import'])->name('import.csv');
 //Route::get('/import', function () { return view('import'); });

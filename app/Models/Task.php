@@ -2,11 +2,13 @@
 
 namespace App\Models;
 
+use App\QueryBuilders\TasksQueryBuilder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Facades\DB;
+use Override;
 
 class Task extends Model
 {
@@ -20,11 +22,17 @@ class Task extends Model
         'num_normal',
         'num_worry',
         'status',
+        'user_id',
+        'langs_ids',
+        'themes_ids',
     ];
 
     protected $casts = [
         'lang_ids' => 'array',
         'theme_ids' => 'array',
+        'user_id' => 'integer',
+        'langs_ids' => 'array',
+        'themes_ids' => 'array',
     ];
 
     public function modes()
@@ -40,6 +48,11 @@ class Task extends Model
     public function themes(): BelongsToMany
     {
         return $this->belongsToMany(Theme::class, 'theme_has_tasks', 'task_id', 'theme_id', 'id', 'id');
+    }
+
+    public function users()
+    {
+        return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
     public function tasksFromThemes()
@@ -61,4 +74,19 @@ class Task extends Model
     {
         return DB::table($this->table)->find($id);
     }
+
+    // public function newEloquentBuilder($query): TasksQueryBuilder
+    // {
+    //     return new TasksQueryBuilder();
+    // }
+
+    // public function getThemesCollectionAttribute()
+    // {
+    //     return Theme::whereIn('id', $this->themes_ids ?? [])->get();
+    // }
+
+    // public function getLangsCollectionAttribute()
+    // {
+    //     return Lang::whereIn('id', $this->langs_ids ?? [])->get();
+    // }
 }

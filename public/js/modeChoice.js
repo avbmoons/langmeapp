@@ -2,8 +2,8 @@ let optionsChoice = [];
 let taskRowsOptions = [];
 let compWordsTheme = [];
 let compOptionsChoise = [];
-let totalEnjoy = [];
-let totalWorry = [];
+// let totalEnjoy = [];
+// let totalWorry = [];
 
 //Classes for Prim words for modes: Plain, Choice and Mix
 
@@ -643,17 +643,17 @@ function pageRowsCompChoiceDom(firstIndex, lastIndex) {
 
 /// Save totals by Exit button
 
-let exitChoice = document.getElementById("exitChoice");
-let totalsChoice = [];
+// let exitChoice = document.getElementById("exitChoice");
+// let totalsChoice = [];
 
-setResultsChoice();
+// setResultsChoice();
 
-function setResultsChoice() {    
-    exitChoice.addEventListener('click', () => {
-        totalsEnjoy();
-        totalsWorry();
-        totalsChoice.push(totalEnjoy, totalWorry);
-        localStorage.setItem('totalsChoice', totalsChoice);
-    });
-}
+// function setResultsChoice() {    
+//     exitChoice.addEventListener('click', () => {
+//         totalsEnjoy();
+//         totalsWorry();
+//         totalsChoice.push(totalEnjoy, totalWorry);
+//         localStorage.setItem('totalsChoice', totalsChoice);
+//     });
+// }
 

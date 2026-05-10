@@ -2,8 +2,8 @@ let optionsMix = [];//
 let taskRowsOptions = [];//
 let compWordsTheme = [];//
 let compOptionsMix = [];//
-let totalEnjoy = [];
-let totalWorry = [];
+// let totalEnjoy = [];
+// let totalWorry = [];
 
 //Classes for Prim words for modes: Plain, Choice and Mix
 
@@ -788,19 +788,19 @@ function pageRowsCompMixDom(firstIndex, lastIndex) {
     }
 }
 
-/// Save totals by Exit button
+// /// Save totals by Exit button
 
-let exitMix = document.getElementById("exitMix");
-let totalsMix = [];
+// let exitMix = document.getElementById("exitMix");
+// let totalsMix = [];
 
-setResultsMix();
+// setResultsMix();
 
-function setResultsMix() {    
-    exitMix.addEventListener('click', () => {
-        totalsEnjoy();
-        totalsWorry();
-        totalsMix.push(totalEnjoy, totalWorry);
-        localStorage.setItem('totalsMix', totalsMix);
-    });
-}
+// function setResultsMix() {    
+//     exitMix.addEventListener('click', () => {
+//         totalsEnjoy();
+//         totalsWorry();
+//         totalsMix.push(totalEnjoy, totalWorry);
+//         localStorage.setItem('totalsMix', totalsMix);
+//     });
+// }
 

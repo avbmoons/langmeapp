@@ -2,8 +2,8 @@ let optionsLang = [];
 let taskRowsOptions = [];
 let compWordsTheme = [];
 let compOptionsLang = [];
-let totalEnjoy = [];
-let totalWorry = [];
+//let totalEnjoy = [];
+//let totalWorry = [];
 
 //Classes for Prim words for modes: Plain, Choice and Mix
 
@@ -553,10 +553,12 @@ let valueEnjoy = resultEnjoy.textContent;
 let valueWorry = resultWorry.textContent;
 
 function totalsEnjoy() {
+    let totalEnjoy = [];
     totalEnjoy.push(valueEnjoy);
     return totalEnjoy;
 }
 function totalsWorry() {
+    let totalWorry = [];
     totalWorry.push(valueWorry);
     return totalWorry;
 }
@@ -784,19 +786,19 @@ function pageRowsCompLangDom(firstIndex, lastIndex) {
     }
 }
 
-/// Save totals by Exit button
+// /// Save totals by Exit button
 
-let exitLang = document.getElementById("exitLang");
-let totalsLang = [];
+// let exitLang = document.getElementById("exitLang");
+// let totalsLang = [];
 
-setResultsLang();
+// setResultsLang();
 
-function setResultsLang() {    
-    exitLang.addEventListener('click', () => {
-        totalsEnjoy();
-        totalsWorry();
-        totalsLang.push(totalEnjoy, totalWorry);
-        localStorage.setItem('totalsLang', totalsLang);
-    });
-}
+// function setResultsLang() {    
+//     exitLang.addEventListener('click', () => {
+//         totalsEnjoy();
+//         totalsWorry();
+//         totalsLang.push(totalEnjoy, totalWorry);
+//         localStorage.setItem('totalsLang', totalsLang);
+//     });
+// }
 

@@ -66,4 +66,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->is_admin->value == 'admin';
     }
+
+    public function tasksFromUsers()
+    {
+        return $this->hasMany(Task::class);
+    }
 }
