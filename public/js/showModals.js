@@ -66,6 +66,7 @@ const openModalSettings = () => {
       modeButtonPlain.checked = true;
     }
   }
+  
 };
 
 const closeModalSettings = () => {
@@ -194,7 +195,7 @@ const openThemesChoiceList = () => {
   btnOpenPrimLang.disabled = true;
   btnOpenCompLang.disabled = true;
 
-  
+
 };
 const closeThemesChoiceList = () => {
   comboThemesList.style.display = "none";
@@ -282,3 +283,62 @@ function getFirstWord(str) {
   const firstWord = str.trim().split(' ')[0];
   return firstWord;
 }
+
+//  function for theme searching in combo themes , locate on pages
+function findTheme() {
+  document.addEventListener('DOMContentLoaded', () => {
+    let inputThemes = document.getElementById('inputThemes');
+    let themeChoiceList = document.getElementById('themeChoiceList');
+
+    if (!inputThemes || !themeChoiceList) {
+      console.warn("Element for theme searching not found in DOM");
+      return;
+    }
+
+    inputThemes.addEventListener('input', (event) => {
+      let query = event.target.value.toLowerCase().trim();
+
+      let rows = themeChoiceList.querySelectorAll('.combo-list-item');
+
+      rows.forEach(row => {
+        let checkbox = row.querySelector('input[type="checkbox"]');
+        let label = row.querySelector('label');
+
+        let themeValue = checkbox ? checkbox.value.toLowerCase() : '';
+        let themeText = label ? label.innerHTML.toLowerCase() : '';
+
+        let isMatch = themeValue.includes(query) || themeText.includes(query);
+
+        if (isMatch) {
+          row.style.display = '';
+        } else {
+          row.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+// function findTheme() {
+//   let inputThemes = document.getElementById('inputThemes');
+
+//           inputThemes.addEventListener('input', (event) => {
+//             let query = event.target.value.toLowerCase().trim();
+
+//             let rows = document.querySelectorAll('#themeChoiceList .combo-list-item');
+
+//             rows.foreach(row => {
+//               let checkbox = row.querySelector('input[type="checkbox"]');
+//               let label = row.querySelector('label');
+
+//               let themeValue = checkbox ? checkbox.value.toLowerCase() : '';
+//               let themeText = label ? label.innerHtml.toLowerCase() : '';
+
+//               if (themeValue.includes(query) || themeText.includes(query)) {
+//                 row.style.display = 'flex';
+//               } else {
+//                 row.style.display = 'none';
+//               }
+//             });
+//           });
+// }

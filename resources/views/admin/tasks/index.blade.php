@@ -2,12 +2,13 @@
 
 @section('title', 'Admin.Tasks')
 
+{{-- @section('content') --}}
 @section('content')
-<div class="admin-content">
+{{-- <div class="admin-content">
   <section class="head-block">
     <div class="title-block">
       <div class="title-box">
-        <p class="title">Tasks</p>
+        <p class="title">Tests</p>
       </div>
     </div>
     <div class="services-block">
@@ -22,24 +23,88 @@
             </a>
           </div>
         </div>
+        <div class="add-block" >
+          <div class="add-box">            
+              <button class="btn-add">
+                <a href="">
+                <svg class="img-add" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.875 16.875V5.25H19.125V16.875H30.75V19.125H19.125V30.75H16.875V19.125H5.25V16.875H16.875Z" fill="#1B1357"/>
+                </svg>
+                </a>
+              </button>            
+            <p class="lable-add">Add notification</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="table-block">
+    <table>
+      <thead>
+        <tr>
+          <th class="th-id">#ID</th>          
+          <th>Mode</th>
+          <th style="width: 200px;">Langs</th>
+          <th style="width: 200px;">Themes</th>
+          <th>Enjoy score</th>
+          <th>Normal score</th>
+          <th>Worry score</th>
+          <th style="width: fit-content;">User</th>
+          <th class="th-status">Status</th>
+          <th class="th-fixed" style="max-width: 100px;">Updated</th>
+          <th class="th-fixed" style="max-width: 100px;">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="custom-pagination">
+      {{ $tasksList->links() }}
+    </div>
+
+  </section>
+</div> --}}
+<div class="admin-content">
+  {{-- <section class="head-block2">
+    <p>head-block2 here</p>
+  </section> --}}
+  <section class="head-block">
+    <div class="title-block">
+      <div class="title-box">
+        <p class="title">Tasks</p>
+      </div>
+    </div>
+    <div class="services-block">
+      <div class="services-box" >
+        <form method="GET" action="{{ route('admin.tasks.index') }}" class="search-block">
+          <div class="search-box">
+            <input type="text" name="search" class="input-search" id="searchTasks" placeholder="Record search" value="{{ request('search') }}" />  
+            <a class="btn-search link" href="{{ route('admin.tasks.index') }}">&#10006;</a>                      
+            <button type="submit" class="btn-search">
+              <img src="{{ Vite::asset('resources/images/icons/icon-Search.svg') }}" alt="search">
+            </button>
+          </div>
+        </form>
         <div class="add-block">
           <div class="add-box">            
               <button class="btn-add">
                 <a href="{{ route('admin.tasks.create') }}">
-                <svg
-                  class="img-add"
-                  width="36"
-                  height="36"
-                  viewBox="0 0 36 36"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M16.875 16.875V5.25H19.125V16.875H30.75V19.125H19.125V30.75H16.875V19.125H5.25V16.875H16.875Z"
-                    fill="#1B1357"
-                  />
+                <svg class="img-add" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.875 16.875V5.25H19.125V16.875H30.75V19.125H19.125V30.75H16.875V19.125H5.25V16.875H16.875Z" fill="#1B1357"/>
                 </svg>
                 </a>
               </button>            
@@ -55,15 +120,15 @@
         <tr>
           <th class="th-id">#ID</th>          
           <th>Mode</th>
+          {{-- <th>Langs</th> --}}
           <th>Langs</th>
-          <th>langs_ids</th>
+          {{-- <th>Themes</th> --}}
           <th>Themes</th>
-          <th>themes_ids</th>
           <th>Enjoy score</th>
           <th>Normal score</th>
           <th>Worry score</th>
-          <th>User ID</th>
-          <th class="th-status">Status</th>
+          <th>User</th>
+          <th>Status</th>
           <th class="th-fixed">Updated</th>
           <th class="th-fixed">Actions</th>
         </tr>
@@ -73,7 +138,7 @@
         <tr>
           <td>{{ $task->id }}</td>
           <td>{{ $task->modes->title }}</td>
-          <td>{{ $task->langs->map(fn($item) => $item->title)->implode(", ") }}</td>
+          {{-- <td>{{ $task->langs->map(fn($item) => $item->title)->implode(", ") }}</td> --}}
           <td>
             @if (!empty($task->langs_ids) && is_array($task->langs_ids))
               @foreach ($task->langs_ids as $id)
@@ -82,10 +147,10 @@
                 </span>                  
               @endforeach
             @else
-                <span class="text-muted">No themes</span>                
+                <span class="text-muted">No langs</span>                
             @endif
           </td>
-          <td>{{ $task->themes->map(fn($item) => $item->title)->implode(", ") }}</td>
+          {{-- <td>{{ $task->themes->map(fn($item) => $item->title)->implode(", ") }}</td> --}}
           <td>
             @if (!empty($task->themes_ids) && is_array($task->themes_ids))
               @foreach ($task->themes_ids as $id)
@@ -107,7 +172,7 @@
               <p>{{ $task->status }}</p>
             </div>
           </td>
-          <td>{{ $task->updated_at }}</td>
+          <td>{{ $task->updated_at->format('d.m.Y H:i') }}</td>
           <td>
             <div class="actions">              
                 <button class="btn-action show" name="actionShow">
@@ -148,8 +213,9 @@
 
   </section>
 </div>
-    
-@endsection
+
+@endsection    
+{{-- @endsection --}}
 
 @push('js')
     <script type="text/javascript">

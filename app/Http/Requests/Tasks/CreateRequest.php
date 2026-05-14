@@ -41,12 +41,27 @@ class CreateRequest extends FormRequest
         ];
     }
 
+    // public function getThemeIds(): array{
+    //     return (array) $this->validated('theme_ids');
+    // }
+    // public function getThemeIds(): array{
+    //     $validated = $this->validated();
+    //     return (array) ($validated['theme_ids'] ?? []);
+    // }
     public function getThemeIds(): array{
-        return (array) $this->validated('theme_ids');
+        return (array) ($this->validated()['theme_ids']);
     }
 
+    // public function getLangIds(): array{
+    //     return (array) $this->validated('lang_ids');
+    // }
+
+    // public function getLangIds(): array{
+    //     $validated = $this->validated();
+    //     return (array) ($validated['lang_ids'] ?? []);
+    // }
     public function getLangIds(): array{
-        return (array) $this->validated('lang_ids');
+        return (array) ($this->validated()['lang_ids']);
     }
 
     public function getUserId(): int

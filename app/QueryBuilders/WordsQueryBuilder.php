@@ -49,6 +49,30 @@ final class WordsQueryBuilder extends QueryBuilder
 
     public function getWordsWithPagination(int $quantity = 10): LengthAwarePaginator
     {
-        return $this->model->paginate($quantity);
+        $search = request()->query('search');
+
+        return Word::query()
+            ->with('themes')
+            ->when($search, function ($q) use ($search) {
+                $q->where(function($inner) use ($search) {
+                    $inner->where('id', $search)
+                        ->orWhere('title', 'LIKE', "%{$search}%")
+                        ->orWhere('status', 'LIKE', "%{$search}%")
+                        ->orWhere('code', 'LIKE', "%{$search}%")
+                        ->orWhereHas('themes', function($themeQuery) use ($search) {
+                            $themeQuery->where('title', 'LIKE', "%{$search}%");
+                        });
+                });
+            })
+            ->orderBy('id', 'asc') // 'desc'
+            ->paginate(10)
+            ->withQueryString();
+        
+        //$this->model->paginate($quantity);
     }
+
+    // public function getWordsWithPagination(int $quantity = 10): LengthAwarePaginator
+    // {
+    //     return $this->model->paginate($quantity);
+    // }
 }

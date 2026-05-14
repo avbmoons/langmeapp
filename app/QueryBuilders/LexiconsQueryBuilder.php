@@ -56,7 +56,35 @@ final class LexiconsQueryBuilder extends QueryBuilder
 
     public function getLexiconsWithPagination(int $quantity = 10): LengthAwarePaginator
     {
-        return $this->model->paginate($quantity);
+        $search = request()->query('search');
+
+        return Lexicon::query()
+            ->with(['patterns', 'words'])
+            ->when($search, function ($q) use ($search) {
+                $q->where(function($inner) use ($search) {
+                    $inner->where('id', $search)
+                    ->orWhere('translation', 'LIKE', "%{$search}%")
+                    ->orWhere('spell_base', 'LIKE', "%{$search}%")
+                    ->orWhere('spell_eng', 'LIKE', "%{$search}%")
+                    ->orWhere('status', 'LIKE', "%{$search}%")
+                    ->orWhereHas('patterns', function($patternQuery) use ($search) {
+                            $patternQuery->where('title', 'LIKE', "%{$search}%");
+                        })
+                    ->orWhereHas('words', function($wordQuery) use ($search) {
+                            $wordQuery->where('title', 'LIKE', "%{$search}%");
+                        });
+                });
+            })
+            ->orderBy('id', 'asc') // 'desc'
+            ->paginate(10)
+            ->withQueryString();
+        
+        //$this->model->paginate($quantity);
     }
+
+    // public function getLexiconsWithPagination(int $quantity = 10): LengthAwarePaginator
+    // {
+    //     return $this->model->paginate($quantity);
+    // }
 
 }

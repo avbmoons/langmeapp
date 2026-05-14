@@ -596,9 +596,16 @@ body {
   box-sizing: border-box;
   justify-content: space-between;
   border-bottom: 1px solid #cac9c2;
+  overflow-y: auto;
+}
+.wrapper .top main .main-block .admin-content .head-block2 {
+  width: 100%;
+  height: 280px;
+  background-color: green;
 }
 .wrapper .top main .main-block .admin-content .head-block {
   margin: 0 auto;
+  margin-top: 20px;
   width: 100%;
   height: 80px;
   display: flex;
@@ -644,7 +651,7 @@ body {
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box {
   margin: 0 auto;
   width: 100%;
-  height: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -662,7 +669,7 @@ body {
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box .search-block .search-box {
   margin: 0 auto;
   width: 100%;
-  height: inherit;
+  height: 100%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -671,6 +678,7 @@ body {
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box .search-block .search-box .input-search {
   padding-left: 10px;
   min-width: 90%;
+  height: 100%;
   font-size: 14px;
   font-weight: 300;
   line-height: 14px;
@@ -697,6 +705,8 @@ body {
   outline: none;
 }
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box .search-block .search-box .btn-search {
+  padding: 0 5px;
+  height: 100%;
   background: none;
   border: none;
   border-radius: 3px;
@@ -707,6 +717,8 @@ body {
 }
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box .search-block .search-box .link {
   margin: 0 10px;
+  padding: 0 10px;
+  height: 100%;
   text-decoration: none;
   font-size: 20px;
   font-weight: 300;
@@ -801,10 +813,12 @@ body {
   border: 1px solid #cac9c2;
 }
 .wrapper .top main .main-block .admin-content .table-block table thead tr .th-fixed {
-  width: 140px;
+  max-width: 100px;
 }
 .wrapper .top main .main-block .admin-content .table-block table thead tr .th-status {
-  width: 120px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
 }
 .wrapper .top main .main-block .admin-content .table-block table thead tr .th-id {
   width: 60px;
@@ -831,7 +845,6 @@ body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  justify-content: flex-start;
 }
 .wrapper .top main .main-block .admin-content .table-block table tbody tr td .statuses img {
   height: 16px;
@@ -849,7 +862,6 @@ body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  justify-content: flex-start;
 }
 .wrapper .top main .main-block .admin-content .table-block table tbody tr td .actions .btn-action {
   margin-right: 10px;

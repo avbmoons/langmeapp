@@ -14,6 +14,7 @@ use App\Http\Controllers\Admin\ImportLogsController as AdminImportLogsController
 use App\Http\Controllers\Admin\MailsController as AdminMailsController;
 //use App\Http\Controllers\Admin\NotificationController as AdminNotificationController;
 use App\Http\Controllers\Admin\NotificationsController as AdminNotificationsController;
+use App\Http\Controllers\Admin\TestsController as AdminTestsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TaskChoiceController;
 use App\Http\Controllers\TaskPlainController;
@@ -59,6 +60,7 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.'], static function() {
     //Route::get('/notifications', [AdminNotificationController::class, 'index'])->name('notifications.index');
     //Route::post('/notifications/{id}/read', [AdminNotificationController::class, 'markAsRead'])->name('notifications.read');
     Route::resource('notifications', AdminNotificationsController::class);
+    Route::resource('tests', AdminTestsController::class);
     Route::post('/import', [ImportController::class, 'import'])->name('import.csv');
 });
 

@@ -12,16 +12,17 @@
     </div>
     <div class="services-block">
       <div class="services-box">
-        <div class="search-block">
+        {{-- <div class="search-block"> --}}
+        <form method="GET" action="{{ route('admin.mails.index') }}" class="search-block">
           <div class="search-box">
-            <input type="text" class="input-search" placeholder="Search"/>
-            <a href="">
-              <button class="btn-search">
+            <input type="text" name="search" class="input-search" id="searchMials" placeholder="Record search" value="{{ request('search') }}"/>
+            <a class="btn-search link" href="{{ route('admin.mails.index') }}">&#10006;</a>
+              <button type="submit" class="btn-search">
                 <img src="{{ Vite::asset('resources/images/icons/icon-Search.svg') }}" alt="search">
-              </button>
-            </a>
+              </button>            
           </div>
-        </div>
+        </form>
+        {{-- </div> --}}
         <div class="add-block" style="display: none">
           <div class="add-box">            
               <button class="btn-add">
@@ -46,7 +47,7 @@
           <th>User name</th>
           <th>User e-mail</th>
           <th>Description</th>
-          <th class="th-status">Status</th>
+          <th>Status</th>
           <th class="th-fixed">Updated</th>
           <th class="th-fixed">Actions</th>
         </tr>
@@ -67,7 +68,7 @@
               <p>{{ $mail->status }}</p>
             </div>
           </td>
-          <td>{{ $mail->updated_at }}</td>
+          <td>{{ $mail->updated_at->format('d.m.Y H:i') }}</td>
           <td>
             <div class="actions">              
                 <button class="btn-action show" name="actionShow" style="display: block">

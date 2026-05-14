@@ -49,7 +49,8 @@ body {
       .main-left-front-task {
         margin: 0 auto;
         width: 0.5*($site-width - $block-width);
-        height: $min-main-height;
+        //height: $min-main-height;
+        min-height: $min-main-height;
         @include flex-vertical();
         //justify-content: space-between;
         @include media-mobile() {
@@ -132,8 +133,8 @@ body {
         margin: 0 auto;
         width: $block-width;
         //height: $min-main-height;
-        //min-height: $min-main-height;
-        height: auto;
+        min-height: $min-main-height;
+        //height: auto;
         @include flex-vertical();
         //justify-content: flex-start;  // space-between;
         overflow-y: auto;
@@ -170,7 +171,7 @@ body {
             margin: 0 auto;
             width: 60%;
             height: 100%; 
-            @include flex-vertical();
+            @include flex-vertical();            
             .task-description {
               width: 96%;
               @include flex-horizontal();
@@ -187,6 +188,7 @@ body {
             margin-top: 10px; ////
             width: 90%;
             height: fit-content;
+            //border: 1px solid red;
             @include flex-vertical();
             @include media-mobile {
               margin-top: 10px;
@@ -309,6 +311,8 @@ body {
         .info-about {
           margin-bottom:1%; // 0;
           height: 20%;
+          //min-height: 30vh;
+          //border: 1px solid green;
         }
         .task-settings {
           margin: 0 auto;
@@ -713,7 +717,8 @@ body {
       .main-right-front-task {
         margin: 0 auto;
         width: 0.5*($site-width - $block-width);
-        height: $min-main-height;
+        //height: $min-main-height;
+        min-height: $min-main-height;
         @include flex-vertical();
         @include media-mobile() {
           width: 5%;

@@ -8,7 +8,8 @@
         margin: 0 auto;
         margin-top: 40px;
         width: 100%;
-        height: 78%;    // 80%;    
+        height: 78%;    // 80%;
+        //min-height: 50vh;    
         @include flex-vertical();
         justify-content: space-between; 
         @include media-mobile {

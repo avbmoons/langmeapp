@@ -35,7 +35,30 @@ final class LangsQueryBuilder extends QueryBuilder
 
     public function getLangsWithPagination(int $quantity = 10): LengthAwarePaginator
     {
-        return $this->model->paginate($quantity);
+        $search = request()->query('search');
+
+        return Lang::query()
+            ->when($search, function ($q) use ($search) {
+                $q->where(function($inner) use ($search) {
+                    $inner->where('title', 'LIKE', "%{$search}%")
+                            ->orWhere('native', 'LIKE', "%{$search}%")
+                            ->orWhere('alias', 'LIKE', "%{$search}%")
+                            ->orWhere('status', 'LIKE', "%{$search}%")
+                            ->orWhere('position', 'LIKE', "%{$search}%")
+                            ->orWhere('code', 'LIKE', "%{$search}%")
+                            ->orWhere('id', $search);
+                });
+            })
+            ->orderBy('id', 'asc')
+            ->paginate(10)
+            ->withQueryString();
+        
+        //$this->model->paginate($quantity);
     }
+
+    // public function getLangsWithPagination(int $quantity = 10): LengthAwarePaginator
+    // {
+    //     return $this->model->paginate($quantity);
+    // }
 
 }

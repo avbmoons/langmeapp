@@ -1,3 +1,9 @@
+import Chart from 'chart.js/auto';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+
+Chart.register(ChartDataLabels);
+
+
 // test data
 let statusesCh = ['1', '2', '3', '4'];
 let statusesStr = ['Draft', 'Active', 'Blocked', 'Close'];
@@ -26,7 +32,7 @@ let statusesStr = ['Draft', 'Active', 'Blocked', 'Close'];
 //const { Chart } = require("chart.js");
 
 //let modesCh = modesCh;
-Chart.register(ChartDataLabels);
+//Chart.register(ChartDataLabels);
 
 const ctx = document.getElementById('testChart');
 const ctx2 = document.getElementById('testChart2'); // Modes

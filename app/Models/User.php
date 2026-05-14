@@ -25,6 +25,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'email',
         'password',
         'is_admin',
+        'last_login_at',
     ];
 
     /**
@@ -46,6 +47,7 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
         'is_admin' => UserRole::class,    // 'boolean',
+        'last_login_at' => 'datetime:d.m.Y H:i',
     ];
 
     protected $datas = [

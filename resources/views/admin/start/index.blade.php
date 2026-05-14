@@ -126,7 +126,8 @@
 @endsection
 
 @push('js')
-    <script>
+    {{-- for charts --}}
+    <script defer>
       //for chart Modes
       const modesCh = @json($modesCh);
       console.log(modesCh);
@@ -299,7 +300,8 @@
       console.log(themesWordsStr);
 
     </script>
-    <script src="{{ asset('js/charts.js') }}"></script>
+    {{-- <script defer src="{{ asset('js/charts.js') }}"></script> --}}
+
     {{-- <script defer src="{{ asset('js/charts.js')}}"></script> --}}
 @endpush
 

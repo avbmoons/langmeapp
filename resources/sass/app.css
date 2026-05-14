@@ -6168,7 +6168,7 @@ body {
 .wrapper-front .top-front main-front .main-left-front-task {
   margin: 0 auto;
   width: 15%;
-  height: 83vh;
+  min-height: 83vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6285,7 +6285,7 @@ body {
 .wrapper-front .top-front main-front .main-center-front-task {
   margin: 0 auto;
   width: 70%;
-  height: auto;
+  min-height: 83vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6673,6 +6673,8 @@ body {
 .wrapper-front .top-front main-front .main-center-front-task .info-about {
   margin-bottom: 1%;
   height: 20%;
+  min-height: 30vh;
+  border: 1px solid green;
 }
 .wrapper-front .top-front main-front .main-center-front-task .task-settings {
   margin: 0 auto;
@@ -6737,6 +6739,7 @@ body {
   margin-top: 40px;
   width: 100%;
   height: 78%;
+  min-height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -7529,7 +7532,7 @@ body {
 .wrapper-front .top-front main-front .main-right-front-task {
   margin: 0 auto;
   width: 15%;
-  height: 83vh;
+  min-height: 83vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -10423,6 +10426,37 @@ body {
   outline: none;
   box-sizing: border-box;
 }
+.admin-content .form-input .input-box .file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.admin-content .form-input .input-box .file-label {
+  margin: 0 auto;
+  display: inline-block;
+  width: 25%;
+  height: 60px;
+  background-color: #e9e7e0;
+  border: 1px solid #cac9c2;
+  color: black;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  align-content: center;
+}
+.admin-content .form-input .input-box .file-label:hover {
+  color: white;
+  background-color: #1b1357;
+}
+.admin-content .form-input .input-box .file-name {
+  width: 65%;
+  margin-left: 10px;
+  color: orange;
+  align-content: center;
+}
 .admin-content .form-input .input-box .combo-box {
   height: 80px;
 }
@@ -10496,23 +10530,35 @@ body {
   background-color: #e9e7e0;
   border: 1px solid #2799b0;
 }
-.admin-content .form-input .input-box .input-group {
+.admin-content .form-input .input-box .close-back {
+  margin-right: 0;
+  margin-left: 0;
+  color: #1b1357;
+  background-color: #ffffff;
+  border: 1px solid #1b1357;
+  font-weight: 400;
+}
+.admin-content .form-input .input-box .close-back:hover {
+  color: #ffffff;
+  background-color: #1b1357;
+}
+.admin-content .form-input .input-group {
   width: 100%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
 }
-.admin-content .form-input .input-box .input-group .half {
+.admin-content .form-input .input-group .half {
   margin-left: 0;
   margin-right: 0;
   width: 50%;
 }
-.admin-content .form-input .input-box .input-group .half .file {
+.admin-content .form-input .input-group .half .file {
   padding-left: 0;
   border: none;
 }
-.admin-content .form-input .input-box .input-group .half .file::file-selector-button {
+.admin-content .form-input .input-group .half .file::file-selector-button {
   margin-right: 20px;
   margin-left: 0;
   padding: 0 20px;
@@ -10524,27 +10570,47 @@ body {
   color: #fdfcf4;
   height: 100%;
 }
-.admin-content .form-input .input-box .input-group .half .file::file-selector-button:hover {
+.admin-content .form-input .input-group .half .file::file-selector-button:hover {
   background-color: #abbee6;
   border-color: #abbee6;
   color: #1b1357;
 }
-.admin-content .form-input .input-box .input-group .mini {
+.admin-content .form-input .input-group .mini {
   margin-right: 0;
   margin-left: 0;
   width: 30%;
 }
-.admin-content .form-input .input-box .input-group .edit {
+.admin-content .form-input .input-group .edit {
   width: 20%;
 }
-.admin-content .form-input .input-box .input-group .dates {
+.admin-content .form-input .input-group .dates {
   background-color: #e9e7e0;
+}
+.admin-content .form-input .import-buttons {
+  margin: 0 auto;
+  width: 90%;
 }
 .admin-content .form-input .first {
   margin-top: 40px;
 }
 .admin-content .form-input .admin {
   margin-top: 20px;
+}
+.admin-content .form-input .show {
+  margin: 0 auto;
+  width: 90%;
+}
+.admin-content .form-input .file-button {
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 0;
+  border: 1px solid #cac9c2;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  flex-direction: row;
 }
 .admin-content .admin {
   margin-top: 0;
@@ -11148,9 +11214,16 @@ body {
   box-sizing: border-box;
   justify-content: space-between;
   border-bottom: 1px solid #cac9c2;
+  overflow-y: auto;
+}
+.wrapper .top main .main-block .admin-content .head-block2 {
+  width: 100%;
+  height: 280px;
+  background-color: green;
 }
 .wrapper .top main .main-block .admin-content .head-block {
   margin: 0 auto;
+  margin-top: 20px;
   width: 100%;
   height: 80px;
   display: flex;
@@ -11196,7 +11269,7 @@ body {
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box {
   margin: 0 auto;
   width: 100%;
-  height: 50%;
+  height: 100%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -11214,7 +11287,7 @@ body {
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box .search-block .search-box {
   margin: 0 auto;
   width: 100%;
-  height: inherit;
+  height: 100%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -11223,6 +11296,7 @@ body {
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box .search-block .search-box .input-search {
   padding-left: 10px;
   min-width: 90%;
+  height: 100%;
   font-size: 14px;
   font-weight: 300;
   line-height: 14px;
@@ -11249,6 +11323,8 @@ body {
   outline: none;
 }
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box .search-block .search-box .btn-search {
+  padding: 0 5px;
+  height: 100%;
   background: none;
   border: none;
   border-radius: 3px;
@@ -11256,6 +11332,18 @@ body {
 }
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box .search-block .search-box .btn-search:hover {
   background-color: #2799b0;
+}
+.wrapper .top main .main-block .admin-content .head-block .services-block .services-box .search-block .search-box .link {
+  margin: 0 10px;
+  padding: 0 10px;
+  height: 100%;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #cac9c2;
+  align-content: center;
 }
 .wrapper .top main .main-block .admin-content .head-block .services-block .services-box .add-block {
   margin: 0 auto;
@@ -11343,10 +11431,12 @@ body {
   border: 1px solid #cac9c2;
 }
 .wrapper .top main .main-block .admin-content .table-block table thead tr .th-fixed {
-  width: 140px;
+  max-width: 100px;
 }
 .wrapper .top main .main-block .admin-content .table-block table thead tr .th-status {
-  width: 120px;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
 }
 .wrapper .top main .main-block .admin-content .table-block table thead tr .th-id {
   width: 60px;
@@ -11373,7 +11463,6 @@ body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  justify-content: flex-start;
 }
 .wrapper .top main .main-block .admin-content .table-block table tbody tr td .statuses img {
   height: 16px;
@@ -11391,7 +11480,6 @@ body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  justify-content: flex-start;
 }
 .wrapper .top main .main-block .admin-content .table-block table tbody tr td .actions .btn-action {
   margin-right: 10px;

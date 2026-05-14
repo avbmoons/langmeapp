@@ -13,7 +13,6 @@
     <div class="services-block">
       <div class="services-box">
         <form method="GET" action="{{ route('admin.importlogs.index') }}" class="search-block">
-        {{-- <div class="search-block"> --}}
           <div class="search-box">
             <input type="text" name="search" class="input-search" id="searchImportLogs" placeholder="Record search" value="{{ request('search') }}"/>  
             <a class="btn-search link" href="{{ route('admin.importlogs.index') }}">&#10006;</a>                      
@@ -21,7 +20,6 @@
               <img src="{{ Vite::asset('resources/images/icons/icon-Search.svg') }}" alt="search">
             </button>
           </div>
-        {{-- </div> --}}
         </form>
         <div class="add-block">
           <div class="add-box">            
@@ -65,7 +63,7 @@
               <p>{{ $importLog->status }}</p>
             </div>
           </td>
-          <td>{{ $importLog->updated_at }}</td>
+          <td>{{ $importLog->updated_at->format('d.m.Y H:i') }}</td>
           <td>
             <div class="actions">              
                 <button class="btn-action show" name="actionShow" style="display: block">

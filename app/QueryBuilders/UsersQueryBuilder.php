@@ -35,7 +35,28 @@ final class UsersQueryBuilder extends QueryBuilder
 
     public function getUsersWithPagination(int $quantity = 10): LengthAwarePaginator
     {
-        return $this->model->paginate($quantity);
+        $search = request()->query('search');
+
+        return User::query()
+            ->when($search, function ($q) use ($search) {
+                $q->where(function($inner) use ($search) {
+                    $inner->where('id', $search)
+                    ->orWhere('name', 'LIKE', "%{$search}%")
+                    ->orWhere('email', 'LIKE', "%{$search}%")
+                    ->orWhere('is_admin', 'LIKE', "%{$search}%")
+                    ->orWhere('last_login_at', 'LIKE', "%{$search}%");
+                });
+            })
+            ->orderBy('id', 'desc') // 'asc'
+            ->paginate(10)
+            ->withQueryString();
+        
+        //$this->model->paginate($quantity);
     }
+
+    // public function getUsersWithPagination(int $quantity = 10): LengthAwarePaginator
+    // {
+    //     return $this->model->paginate($quantity);
+    // }
 
 }

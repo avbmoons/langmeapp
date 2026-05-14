@@ -38,7 +38,7 @@
               <button type="button" class="combo-button" id="btnOpenThemes" onclick="openThemesChoiceList()">...</button>
               <div class="combo-list" id="themeChoice">
                 <div class="combo-list-item" name="themeList">
-                  <input class="combo-list-input search" id="inputThemes" type="text"/>
+                  <input class="combo-list-input search" id="inputThemes" type="search" style="visibility: visible" placeholder="Find the theme..."/>
                   <button type="button" class="btn-choose" onclick="closeThemesChoiceList()">Choose</button>
                 </div>
                 <div class="combo-list-item" name="allThemes" id="allThemesCombo">

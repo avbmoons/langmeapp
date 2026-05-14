@@ -478,5 +478,44 @@
     });
 
   </script>
+
+   {{-- find the theme in combo --}}
+   <script defer>
+    findTheme();
+
+    function findTheme() {
+        document.addEventListener('DOMContentLoaded', () => {
+          let inputThemes = document.getElementById('inputThemes');
+          let themeChoiceList = document.getElementById('themeChoiceList');
+
+          if (!inputThemes || !themeChoiceList) {
+            console.warn("Element for theme searching not found in DOM");
+            return;
+          }
+
+          inputThemes.addEventListener('input', (event) => {
+            let query = event.target.value.toLowerCase().trim();
+
+            let rows = themeChoiceList.querySelectorAll('.combo-list-item');
+
+            rows.forEach(row => {
+              let checkbox = row.querySelector('input[type="checkbox"]');
+              let label = row.querySelector('label');
+
+              let themeValue = checkbox ? checkbox.value.toLowerCase() : '';
+              let themeText = label ? label.innerHTML.toLowerCase() : '';
+
+              let isMatch = themeValue.includes(query) || themeText.includes(query);
+
+              if (isMatch) {
+                row.style.display = '';
+              } else {
+                row.style.display = 'none';
+              }
+            });
+          });
+        });
+      }
+   </script>
     
 @endpush

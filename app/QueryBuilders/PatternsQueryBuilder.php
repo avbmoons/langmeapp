@@ -35,7 +35,31 @@ final class PatternsQueryBuilder extends QueryBuilder
 
     public function getPatternsWithPagination(int $quantity = 10): LengthAwarePaginator
     {
-        return $this->model->paginate($quantity);
+        $search = request()->query('search');
+
+        return Pattern::query()
+            ->with('langs')
+            ->when($search, function ($q) use ($search) {
+                $q->where(function($inner) use ($search) {
+                    $inner->where('id', $search)
+                    ->orWhere('title', 'LIKE', "%{$search}%")
+                    ->orWhere('description', 'LIKE', "%{$search}%")
+                    ->orWhere('status', 'LIKE', "%{$search}%")
+                    ->orWhereHas('langs', function($langQuery) use ($search) {
+                            $langQuery->where('title', 'LIKE', "%{$search}%");
+                        });
+                });
+            })
+            ->orderBy('id', 'asc') // 'desc'
+            ->paginate(10)
+            ->withQueryString();
+        
+        //$this->model->paginate($quantity);
     }
+
+    // public function getPatternsWithPagination(int $quantity = 10): LengthAwarePaginator
+    // {
+    //     return $this->model->paginate($quantity);
+    // }
 
 }

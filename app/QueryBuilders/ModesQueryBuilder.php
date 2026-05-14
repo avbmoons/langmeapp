@@ -35,7 +35,28 @@ final class ModesQueryBuilder extends QueryBuilder
 
     public function getModesWithPagination(int $quantity = 10): LengthAwarePaginator
     {
-        return $this->model->paginate($quantity);
+        $search = request()->query('search');
+
+        return Mode::query()
+            ->when($search, function ($q) use ($search) {
+                $q->where(function($inner) use ($search) {
+                    $inner->where('title', 'LIKE', "%{$search}%")
+                            ->orWhere('description', 'LIKE', "%{$search}%")
+                            ->orWhere('status', 'LIKE', "%{$search}%")
+                            ->orWhere('code', 'LIKE', "%{$search}%")
+                            ->orWhere('id', $search);
+                });
+            })
+            ->orderBy('id', 'asc')
+            ->paginate(10)
+            ->withQueryString();
+        
+        //$this->model->paginate($quantity);
     }
+
+    // public function getModesWithPagination(int $quantity = 10): LengthAwarePaginator
+    // {
+    //     return $this->model->paginate($quantity);
+    // }
 
 }

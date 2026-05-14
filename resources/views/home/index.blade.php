@@ -50,7 +50,8 @@
               stroke-linejoin="round"
             />
           </svg>
-          <a class="btn-link-set-get" href="">&nbsp;Get Task</a>          
+          <span class="btn-link-set-get">&nbsp;Get Task</span>
+          {{-- <a class="btn-link-set-get" href="">&nbsp;Get Task</a>           --}}
       </button> 
     </div>
     <div class="modes-front">
@@ -355,6 +356,7 @@
     <script defer src="{{ asset('js/tutor.js')}}"></script>
     <script defer src="{{ asset('js/showModals.js')}}"></script> 
 
+    {{-- get data from db --}}
     <script>
       let langs = @json($langs);
       let themes = @json($themes);
@@ -366,13 +368,82 @@
       let tutorClose = document.getElementById("tutorClose");
       let tutorSkip = document.getElementById("tutorSkip");
 
-      tutorClose.addEventListener('click', function(event) {
+      if (tutorClose) {
+        tutorClose.addEventListener('click', function(event) {
         tutorClose.onclick = closeTutorPages();
-      })
+        });
+      }
+
+      // tutorClose.addEventListener('click', function(event) {
+      //   tutorClose.onclick = closeTutorPages();
+      // })
 
       tutorSkip.addEventListener('click', function(event) {
         tutorSkip.onclick = closeTutorPages();
       })
+    </script>
+
+    {{-- find the theme in combo --}}
+    <script defer>
+      findTheme();
+
+      function findTheme() {
+        document.addEventListener('DOMContentLoaded', () => {
+          let inputThemes = document.getElementById('inputThemes');
+          let themeChoiceList = document.getElementById('themeChoiceList');
+
+          let rows = themeChoiceList.querySelectorAll('.combo-list-item');
+
+          let selectedThemesList = localStorage.getItem("themesLangs").split(', ');
+          // console.log(selectedThemesList);
+          // console.log(selectedThemesList.length);
+
+          rows.forEach(row => {
+            let checkbox = row.querySelector('input[type="checkbox"]');
+              let label = row.querySelector('label');
+
+              let themeValue = checkbox ? checkbox.value.toLowerCase() : '';
+              let themeText = label ? label.innerHTML.toLowerCase() : '';
+
+              let themeValueInit = checkbox.value;
+              let themeTextInit = label.innerHTML;
+
+              selectedThemesList.forEach(selectedTheme => {
+                if (selectedTheme == themeValueInit || selectedTheme == themeTextInit) {
+                  checkbox.checked = true;
+                }
+              });
+          });
+
+          if (!inputThemes || !themeChoiceList) {
+            console.warn("Element for theme searching not found in DOM");
+            return;
+          }
+
+          inputThemes.addEventListener('input', (event) => {
+            let query = event.target.value.toLowerCase().trim();
+
+            let rows = themeChoiceList.querySelectorAll('.combo-list-item');
+
+            rows.forEach(row => {
+              let checkbox = row.querySelector('input[type="checkbox"]');
+              let label = row.querySelector('label');
+
+              let themeValue = checkbox ? checkbox.value.toLowerCase() : '';
+              let themeText = label ? label.innerHTML.toLowerCase() : '';
+
+              let isMatch = themeValue.includes(query) || themeText.includes(query);
+
+              if (isMatch) {
+                row.style.display = '';
+              } else {
+                row.style.display = 'none';
+              }
+            });
+          });
+        });
+      }
+
     </script>
 
 @endpush

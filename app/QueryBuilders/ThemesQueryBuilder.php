@@ -35,7 +35,29 @@ final class ThemesQueryBuilder extends QueryBuilder
 
     public function getThemesWithPagination(int $quantity = 10): LengthAwarePaginator
     {
-        return $this->model->paginate($quantity);
+        $search = request()->query('search');
+
+        return Theme::query()
+            ->when($search, function ($q) use ($search) {
+                $q->where(function($inner) use ($search) {
+                    $inner->where('title', 'LIKE', "%{$search}%")
+                            ->orWhere('title_base', 'LIKE', "%{$search}%")
+                            ->orWhere('description', 'LIKE', "%{$search}%")
+                            ->orWhere('status', 'LIKE', "%{$search}%")
+                            ->orWhere('code', 'LIKE', "%{$search}%")
+                            ->orWhere('id', $search);
+                });
+            })
+            ->orderBy('id', 'asc')
+            ->paginate(10)
+            ->withQueryString();
+        
+        //$this->model->paginate($quantity);
     }
+
+    // public function getThemesWithPagination(int $quantity = 10): LengthAwarePaginator
+    // {
+    //     return $this->model->paginate($quantity);
+    // }
 
 }

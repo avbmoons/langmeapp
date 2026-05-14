@@ -21,15 +21,20 @@ import './timenow';
 //import '../../public/js/paginationLang';
 //import './tutor'; //
 
-import Chart from 'chart.js/auto';
-window.Chart = Chart;
+////import Chart from 'chart.js/auto';////
+////window.Chart = Chart;////
 
-import './chart.umd';
+////import ChartDataLabels from 'chartjs-plugin-datalabels';////
+////Chart.register(ChartDataLabels);////
+
+////import './chart.umd';////
 //import './chart.umd.js.map';
-import './chartjs-plugin-datalabels.min';
+////import './chartjs-plugin-datalabels.min';////
 //import './charts';
 //import './charts';
 //import '/resources/js/charts';
-import './charts';
+import './charts';////
 //import './chartsFront';
+
+
 

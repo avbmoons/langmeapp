@@ -12,34 +12,23 @@
     </div>
     <div class="services-block">
       <div class="services-box">
-        <div class="search-block">
+        {{-- <div class="search-block"> --}}
+        <form method="GET" action="{{ route('admin.langs.index') }}" class="search-block">
           <div class="search-box">
-            <input type="text" class="input-search" placeholder="Search"/>
-            <a href="">
-              <button class="btn-search">
-                <img src="{{ Vite::asset('resources/images/icons/icon-Search.svg') }}" alt="search">
-              </button>
-            </a>
+            <input type="text" name="search" class="input-search" id="searchLangs" placeholder="Record search" value="{{ request('search') }}"/>
+            <a class="btn-search link" href="{{ route('admin.langs.index') }}">&#10006;</a>
+            <button type="submit" class="btn-search">
+              <img src="{{ Vite::asset('resources/images/icons/icon-Search.svg') }}" alt="search">
+            </button>            
           </div>
-        </div>
+        </form>
+        {{-- </div> --}}
         <div class="add-block">
           <div class="add-box">            
               <button class="btn-add">
                 <a href="{{ route('admin.langs.create') }}">
-                <svg
-                  class="img-add"
-                  width="36"
-                  height="36"
-                  viewBox="0 0 36 36"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M16.875 16.875V5.25H19.125V16.875H30.75V19.125H19.125V30.75H16.875V19.125H5.25V16.875H16.875Z"
-                    fill="#1B1357"
-                  />
+                <svg class="img-add" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M16.875 16.875V5.25H19.125V16.875H30.75V19.125H19.125V30.75H16.875V19.125H5.25V16.875H16.875Z" fill="#1B1357"/>
                 </svg>
                 </a>
               </button>            
@@ -82,7 +71,7 @@
               <p>{{ $lang->position }}</p>
             </div>
           </td>
-          <td>{{ $lang->updated_at }}</td>
+          <td>{{ $lang->updated_at->format('d.m.Y H:i') }}</td>
           <td>
             <div class="actions">              
                 <button class="btn-action show" name="actionShow">
