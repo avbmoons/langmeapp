@@ -84,9 +84,9 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  font-size: 1.11vw;
-  font-weight: 300;
-  line-height: 1.39vw;
+  font-size: 1.25vw;
+  font-weight: 400;
+  line-height: 1.25vw;
   letter-spacing: 0;
 }
 @media only screen and (max-width: 376px) {
@@ -103,8 +103,8 @@ body {
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .index-cover .wellcome .wellcome-main {
-    font-size: 16px;
-    line-height: 16px;
+    font-size: 18px;
+    line-height: 18px;
   }
 }
 .index-cover .wellcome .wellcome-main {
@@ -115,9 +115,9 @@ body {
 }
 .index-cover .wellcome .wellcome-main .terve {
   margin-bottom: 20px;
-  font-size: 1.39vw;
+  font-size: 1.53vw;
   font-weight: 500;
-  line-height: 1.39vw;
+  line-height: 1.53vw;
   letter-spacing: 0;
 }
 @media only screen and (max-width: 376px) {
@@ -134,6 +134,31 @@ body {
 }
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
   .index-cover .wellcome .wellcome-main .terve {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.index-cover .wellcome .wellcome-main .heading {
+  margin-bottom: 30px;
+  font-size: 1.67vw;
+  font-weight: 500;
+  line-height: 1.67vw;
+  letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .index-cover .wellcome .wellcome-main .heading {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .index-cover .wellcome .wellcome-main .heading {
+    font-size: 18px;
+    line-height: 18px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .index-cover .wellcome .wellcome-main .heading {
     font-size: 20px;
     line-height: 20px;
   }

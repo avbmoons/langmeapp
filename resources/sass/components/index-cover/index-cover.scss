@@ -66,8 +66,8 @@ body {
           width: 70%;
           height: fit-content;
           @include flex-vertical();
-          @include text-font(1.11vw, 300, 1.39vw, 0); //16px
-          @include media-text(12px, 14px, 16px);
+          @include text-font(1.25vw, 400, 1.25vw, 0); //18px
+          @include media-text(12px, 14px, 18px);
           text-align: center;
           //color: red;
           p {
@@ -75,7 +75,12 @@ body {
           }
           .terve {
             margin-bottom: 20px;
-            @include text-font(1.39vw, 500, 1.39vw, 0); //20px
+            @include text-font(1.53vw, 500, 1.53vw, 0); //22px
+            @include media-text(16px, 18px, 20px);
+          }
+          .heading {
+            margin-bottom: 30px;
+            @include text-font(1.67vw, 500, 1.67vw, 0); //22px
             @include media-text(16px, 18px, 20px);
           }
         }

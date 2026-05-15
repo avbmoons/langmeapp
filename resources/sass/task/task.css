@@ -1372,6 +1372,7 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  justify-content: flex-start;
 }
 @media only screen and (max-width: 1023px) {
   .wrapper-front .top-front main-front .main-left-front-task {
@@ -1548,6 +1549,10 @@ body {
 .wrapper-front .top-front main-front .main-center-front-task .task-info .info-title-block .info-title {
   color: #0f1a1c;
 }
+.wrapper-front .top-front main-front .main-center-front-task .task-info .about {
+  padding-top: 35px;
+  justify-content: flex-start;
+}
 .wrapper-front .top-front main-front .main-center-front-task .task-info .info-description-block {
   margin: 0 auto;
   width: 60%;
@@ -1593,14 +1598,13 @@ body {
 }
 .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about {
   margin: 0 auto;
-  margin-top: 10px;
   width: 90%;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 1023px) {
   .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about {
@@ -1611,15 +1615,42 @@ body {
 .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about .task-description-about {
   margin: 0 auto;
   width: 96%;
-  height: 40%;
+  height: 25%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  justify-content: flex-start;
+  justify-content: space-between;
+  border: 1px solid blue;
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about .task-description-about .info-title-about {
+  font-size: 1.39vw;
+  font-weight: 400;
+  line-height: 1.39vw;
+  letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about .task-description-about .info-title-about {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about .task-description-about .info-title-about {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about .task-description-about .info-title-about {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about .task-description-about .info-title-about {
+  color: #0f1a1c;
 }
 .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about .task-description-about .info-content {
-  margin-bottom: 0.69vw;
   font-size: 0.97vw;
   font-weight: 300;
   line-height: 0.97vw;
@@ -1671,6 +1702,100 @@ body {
     font-size: 14px;
     line-height: 14px;
   }
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details {
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+  background: #fff;
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background: #f9f9f9;
+  font-weight: bold;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.39vw;
+  font-weight: 500;
+  line-height: 1.39vw;
+  letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details summary {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details summary {
+    font-size: 16px;
+    line-height: 16px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details summary {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details summary {
+  color: #0f1a1c;
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details summary::-webkit-details-marker {
+  display: none;
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details summary::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  transform: rotate(45deg);
+  transition: transform 0.2s ease;
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details .content-about {
+  padding: 15px;
+  border-top: 1px solid #ddd;
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details .content-about .text-about {
+  padding: 5px 0;
+  font-size: 1.25vw;
+  font-weight: 300;
+  line-height: 1.25vw;
+  letter-spacing: 0;
+}
+@media only screen and (max-width: 376px) {
+  .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details .content-about .text-about {
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
+@media only screen and (min-width: 377px) and (max-width: 768px) {
+  .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details .content-about .text-about {
+    font-size: 12px;
+    line-height: 12px;
+  }
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+  .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details .content-about .text-about {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details .content-about .text-about {
+  color: #0f1a1c;
+  text-align: left;
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details[open] summary::after {
+  transform: rotate(-135deg);
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details:first-child {
+  margin-top: 20px;
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details:last-child {
+  margin-bottom: 20px;
 }
 .wrapper-front .top-front main-front .main-center-front-task .task-info .info-service-block {
   margin: 0;
@@ -1871,7 +1996,7 @@ body {
 }
 .wrapper-front .top-front main-front .main-center-front-task .info-about {
   margin-bottom: 1%;
-  height: 20%;
+  min-height: 50vh;
 }
 .wrapper-front .top-front main-front .main-center-front-task .task-settings {
   margin: 0 auto;
@@ -2062,7 +2187,8 @@ body {
   height: 100% !important;
 }
 .wrapper-front .top-front main-front .main-center-front-task .charts-about {
-  margin-top: 0;
+  margin-top: 20px;
+  height: 70vh;
 }
 .wrapper-front .top-front main-front .main-center-front-task .task-mode-block {
   margin: 0 auto;
@@ -2728,11 +2854,12 @@ body {
 .wrapper-front .top-front main-front .main-right-front-task {
   margin: 0 auto;
   width: 15%;
-  min-height: 83vh;
+  height: 83vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  justify-content: flex-start;
 }
 @media only screen and (max-width: 1023px) {
   .wrapper-front .top-front main-front .main-right-front-task {
