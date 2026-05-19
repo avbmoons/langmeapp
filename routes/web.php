@@ -21,6 +21,7 @@ use App\Http\Controllers\TaskPlainController;
 use App\Http\Controllers\TaskLangController;
 use App\Http\Controllers\TaskMixController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\GuideController;
 use App\Http\Controllers\Admin\ImportController;
 use App\Http\Controllers\DraftAuthController;
 use App\Http\Controllers\MailController;
@@ -72,6 +73,7 @@ Route::group(['prefix' => ''], static function() {
     Route::get('/taskLang', [TaskLangController::class, 'index'])->name('taskLang');
     Route::get('/taskMix', [TaskMixController::class, 'index'])->name('taskMix');
     Route::get('/about', [AboutController::class, 'index'])->name('about');
+    Route::get('/guide', [GuideController::class, 'index'])->name('guide');
     Route::resource('/mail', MailController::class)->names([
         'create' => 'mail.create',
         'store' => 'mail.store',

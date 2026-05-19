@@ -15,7 +15,7 @@
       <p>&#9679;&emsp;more than 1400 words,</p>
       <p style="margin-bottom: 30px;">&#9679;&emsp;4 operating modes and your results,</p>
       <p class="terve">Compare and memorize&emsp;&#128578;</p>
-      <p class="terve">And it's just interesting!</p>
+      <p class="terve" style="margin-bottom: 30px;">And it's just interesting!</p>
       {{-- <p>
         Are you trying to speak several languages and they get mixed up in
         your head? Using langMe, you can solve this issue. Practice not to

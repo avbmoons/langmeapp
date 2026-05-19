@@ -292,7 +292,7 @@
     <script defer src="{{ asset('js/task.js')}}"></script> 
     <script defer src="{{ asset('js/modeLang.js')}}"></script>
     {{-- <script defer src="{{ asset('js/paginationLang.js')}}"></script> --}}
-    <script defer src="{{ asset('js/pagination.js')}}"></script>
+    <script defer src="{{ asset('js/paginationnew.js')}}"></script>
     <script defer src="{{ asset('js/tutor.js')}}"></script>
 
     <script>

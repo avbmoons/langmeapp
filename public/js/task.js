@@ -465,7 +465,8 @@ for (let i=0; i<primWords.length; i++) {
     let wordRow = [];
     wordRow.push(primWords[i]);
     for (let j=0; j<compWords.length; j++) {
-        if (primWords[i].word_id == compWords[j].word_id) {
+        // добавлена проверка на == темы
+        if (primWords[i].word_id == compWords[j].word_id && primWords[i].theme_id == compWords[j].theme_id) {
             wordRow.push(compWords[j]);
         }
     }

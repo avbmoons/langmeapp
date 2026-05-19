@@ -224,7 +224,7 @@
     <script defer src="{{ asset('js/task.js')}}"></script> 
     <script defer src="{{ asset('js/modePlain.js')}}"></script>
     {{-- <script defer src="{{ asset('js/paginationPlain.js')}}"></script> --}}
-    <script defer src="{{ asset('js/pagination.js')}}"></script>
+    <script defer src="{{ asset('js/paginationnew.js')}}"></script>
     <script defer src="{{ asset('js/tutor.js')}}"></script>
 
     <script>

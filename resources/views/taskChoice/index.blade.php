@@ -298,7 +298,7 @@
     <script defer src="{{ asset('js/listThemes.js')}}"></script>
     <script defer src="{{ asset('js/task.js')}}"></script> 
     <script defer src="{{ asset('js/modeChoice.js')}}"></script>
-    <script defer src="{{ asset('js/pagination.js')}}"></script>
+    <script defer src="{{ asset('js/paginationnew.js')}}"></script>
     <script defer src="{{ asset('js/tutor.js')}}"></script>
 
     <script>

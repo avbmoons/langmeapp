@@ -26,7 +26,7 @@
             <p class="text-about">&#9679;&emsp;You choose the base language that you want to compare other languages with, such as your native language.</p>
             <p class="text-about">&#9679;&emsp;You choose the languages with which you want to compare the basic concepts of the base language.</p>
             <p class="text-about">&#9679;&emsp;You choose the topics of the basic concepts that interest you.</p>
-            <p class="text-about">&#9679;&emsp;Yyou choose a mode and work with the selected vocabulary.</p>
+            <p class="text-about">&#9679;&emsp;You choose a mode and work with the selected vocabulary.</p>
             <p class="text-about">&#9679;&emsp;You are viewing the results of your tasks</p>
             <p class="text-about">&#9679;&emsp;You can also save your task history if you register.</p>
           </div>
@@ -84,7 +84,8 @@
     </div>
 </div>
 <div class="main-right-front">
-  <div class="btn-email-block">
+  <x-mail-button></x-mail-button>
+  {{-- <div class="btn-email-block">
        <button type="button" class="btn-email" onclick=""> 
         <!-- mail-us.svg" -->
         <a @if (Auth::check()) 
@@ -111,7 +112,7 @@
         </svg>
         </a>
       </button>
-    </div>
+  </div> --}}
 </div>
 @endsection
 

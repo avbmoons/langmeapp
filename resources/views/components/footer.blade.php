@@ -16,10 +16,10 @@
         <button class="menu-item-front footer" id="menuFooterTask">
           <a class="btn-link-menu" href="{{ route('taskChoice')}}">Task</a>
         </button>              
-        <button class="menu-item-front future" id="menuFooterGuide">
-          <a class="btn-link-menu" href="">Guide</a>
+        <button class="menu-item-front footer" id="menuFooterGuide">
+          <a class="btn-link-menu" href="{{ route('guide') }}">Guide</a>
         </button>
-        <button class="menu-item-front future" id="menuFooterResults">
+        <button class="menu-item-front future" id="menuFooterResults" style="display: none">
           <a class="btn-link-menu" href="">Results</a>
         </button>        
         <button class="menu-item-front footer" id="menuFooterAbout">
