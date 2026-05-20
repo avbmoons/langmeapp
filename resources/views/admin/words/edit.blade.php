@@ -28,7 +28,7 @@
         <select class="input-text multiple" name="theme_ids[]" id="theme_ids" @error('theme_ids[]') is-invalid @enderror multiple>
           <option value="0">--Select theme--</option>
           @foreach ($themes as $theme)
-            <option @if (in_array($theme->id, $word->themes->pluck('id')->toArray())) selected @endif value="{{ $theme->id }}">{{ $theme->title }}</option>
+            <option @if (in_array($theme->id, $word->themes->pluck('id')->toArray())) selected @endif value="{{ $theme->id }}">{{ $theme->id }}&emsp;{{ $theme->title }}</option>
           @endforeach
         </select>
         @error('theme_ids') @enderror

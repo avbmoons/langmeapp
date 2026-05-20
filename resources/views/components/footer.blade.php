@@ -14,14 +14,19 @@
           <a class="btn-link-menu" href="{{ route('home')}}">Home</a>
         </button>
         <button class="menu-item-front footer" id="menuFooterTask">
-          <a class="btn-link-menu" href="{{ route('taskChoice')}}">Task</a>
+          <a class="btn-link-menu" id="menuFooterTaskLink" href="">Task</a>
         </button>              
         <button class="menu-item-front footer" id="menuFooterGuide">
           <a class="btn-link-menu" href="{{ route('guide') }}">Guide</a>
         </button>
         <button class="menu-item-front future" id="menuFooterResults" style="display: none">
-          <a class="btn-link-menu" href="">Results</a>
-        </button>        
+          <a class="btn-link-menu" href="">Results0</a>
+        </button>   
+        @if (Auth::check())
+          <button class="menu-item-front footer" id="menuFooterResults2">
+          <a class="btn-link-menu" href="{{ route('results') }}">Results</a>
+        </button>  
+        @endif             
         <button class="menu-item-front footer" id="menuFooterAbout">
           <a class="btn-link-menu" href="{{ route('about') }}">About</a>
         </button>        

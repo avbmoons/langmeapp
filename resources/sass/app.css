@@ -6173,7 +6173,6 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  justify-content: flex-start;
 }
 @media only screen and (max-width: 1023px) {
   .wrapper-front .top-front main-front .main-left-front-task {
@@ -6602,7 +6601,6 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
-  border: 1px solid blue;
 }
 .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details .content-about .list-guide .list-guide-block {
   width: 30%;
@@ -6612,6 +6610,13 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-around;
+}
+.wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details .content-about .guide-img {
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
 }
 .wrapper-front .top-front main-front .main-center-front-task .task-info .info-content-block-about details[open] summary::after {
   transform: rotate(-135deg);
@@ -6832,7 +6837,6 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   overflow-y: auto;
-  border: 1px solid green;
 }
 .wrapper-front .top-front main-front .main-center-front-task .task-settings {
   margin: 0 auto;
@@ -7698,7 +7702,6 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  justify-content: flex-start;
 }
 @media only screen and (max-width: 1023px) {
   .wrapper-front .top-front main-front .main-right-front-task {
@@ -10645,13 +10648,14 @@ body {
   align-content: center;
 }
 .admin-content .form-input .input-box .combo-box {
-  height: 80px;
+  height: 120px;
 }
 .admin-content .form-input .input-box .input-text:focus {
   border: 2px solid #abbee6;
 }
 .admin-content .form-input .input-box .multiple {
   height: auto;
+  min-height: 120px;
 }
 .admin-content .form-input .input-box .notread {
   background-color: #e9e7e0;

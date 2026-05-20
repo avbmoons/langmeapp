@@ -152,13 +152,14 @@
                 align-content: center;
               }
               .combo-box {
-                height: 2*$input-height;
+                height: 3*$input-height;
               }
               .input-text:focus {
                 border: 2px solid $color-main;
               }
               .multiple {
                 height: auto;
+                min-height: 3*$input-height;
               }
               .notread {
                 background-color: $color-grey-light;

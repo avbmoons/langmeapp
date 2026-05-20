@@ -170,13 +170,14 @@
   align-content: center;
 }
 .admin-content .form-input .input-box .combo-box {
-  height: 80px;
+  height: 120px;
 }
 .admin-content .form-input .input-box .input-text:focus {
   border: 2px solid #abbee6;
 }
 .admin-content .form-input .input-box .multiple {
   height: auto;
+  min-height: 120px;
 }
 .admin-content .form-input .input-box .notread {
   background-color: #e9e7e0;

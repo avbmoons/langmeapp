@@ -42,6 +42,7 @@ if (urlName == 'about.html') {
     menuHeader[1].style.display = 'block';
     menuFooter[1].style.display = 'block';
 }
+
 ///////////
 
 function getTaskPage() {

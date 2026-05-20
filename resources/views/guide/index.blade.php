@@ -167,7 +167,7 @@
             <p class="text-about"><strong>6</strong> - Your scores for the current task are counted on the right.</p>
             <p class="text-about"><strong>7</strong> - it's the button to save your results and exit the task.</p>
             <p class="text-about"><strong>IMPORTANT! - to save your results, be sure to press the 7 - "Exit" button.</strong></p>
-            <p class="text-about">If you have registered in the app and logged into the session, you will be able to view your results in the future.</p>
+            <p class="text-about">If you have registered in the app and logged into the session, you will be able to view your results in the future in the "Results" menu.</p>
             <p class="text-about">If you work with tasks without registration, then you can see your results only in the current session of working with the application.</p>
           </div>          
         </details>
@@ -183,7 +183,7 @@
             <p class="text-about"><strong>1</strong> - here you can see the results of your tasks for all the modes that you used in the current session of working with the application.</p>
             <p class="text-about"><strong>2</strong> - Your actual results are also shown here.</p>
             <p class="text-about"><strong>3</strong> - You can download your results as a file using this button.PDF</p>
-            <p class="text-about"><strong>IMPORTANT!</strong> -  If you have registered and logged into a session, you can view a list of your results for all work sessions. To do this, write to us and we will send you your results in a separate file.</p>            
+            <p class="text-about"><strong>IMPORTANT!</strong> -  If you have registered and logged into a session, you can view a list of your results for all work sessions. To do this, go to the menu "Results", there will be a list of all your tasks. You can download this list as a file.PDF</p>            
           </div>
         </details>
         <details name="faq">
@@ -213,3 +213,34 @@
 </div>
     
 @endsection
+
+@push('js')
+    {{-- get task --}}
+    <script>
+      let menuHeaderTaskLink = document.getElementById("menuHeaderTaskLink");
+      let menuFooterTaskLink = document.getElementById("menuFooterTaskLink");
+
+      let userModeChoice = localStorage.getItem('modeChoice').trim(); 
+
+      menuHeaderTaskLink.addEventListener('click', function(event) {
+        switch(userModeChoice) {
+            case "Plain":
+                menuHeaderTaskLink.href = "{{ route('taskPlain') }}";
+                menuFooterTaskLink.href = "{{ route('taskPlain') }}";
+                break;
+            case "Choice":
+                menuHeaderTaskLink.href = "{{ route('taskChoice') }}";
+                menuFooterTaskLink.href = "{{ route('taskChoice') }}";
+                break;
+            case "Lang":
+                menuHeaderTaskLink.href = "{{ route('taskLang') }}";
+                menuFooterTaskLink.href = "{{ route('taskLang') }}";
+                break;
+            case "Mix":
+                menuHeaderTaskLink.href = "{{ route('taskMix') }}";
+                menuFooterTaskLink.href = "{{ route('taskMix') }}";
+                break;
+          }
+      })      
+    </script>
+@endpush
