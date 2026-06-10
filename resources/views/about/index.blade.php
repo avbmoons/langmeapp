@@ -88,9 +88,13 @@
 </div>
 @endsection
 
+@push('page-scripts')
+  @vite(['resources/js/charts.js'])
+@endpush
+
 @push('js')
     <script defer src="{{ asset('js/tutor.js')}}"></script>
-    <script defer src="{{ asset('js/charts.js') }}"></script>
+    {{-- <script defer src="{{ asset('js/charts.js') }}"></script> --}}
 
     {{-- for charts --}}
     <script defer>  

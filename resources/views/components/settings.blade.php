@@ -49,12 +49,14 @@
               </div>
             </div>
             <div class="combo-block" id="modeButtonsBlock">
-              <label class="combo-label mode" for="modeChoice">Mode:</label>
+              {{-- <label class="combo-label mode" for="modeChoice">Mode:</label> --}}
+              <p class="combo-label mode">Mode:</p>
               <div class="combo-block-choice" id="modeChoice"></div>
               <button type="button" class="combo-button" onclick="choosedModeItemRadio('modeButton', 'resultMode')">&check;</button>
             </div>
             <div class="combo-block" id="userChoiceBlock">
-              <label class="combo-label choice" for="userChoice">Your choice:</label>
+              {{-- <label class="combo-label choice" for="userChoice">Your choice:</label> --}}
+              <p class="combo-label choice">Your choice:</p>
               <div class="user-choice" id="userChoice">
                 <div class="user-choice-result">
                   <label class="result-label" for="resultPrim">Primary: </label>

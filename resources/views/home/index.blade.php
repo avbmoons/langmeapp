@@ -232,6 +232,7 @@
 @endsection
 
 @push('js')
+    {{-- get task button --}}
     <script>
       // here function getTask()
       let modeChoice = localStorage.getItem('modeChoice').trim();
@@ -275,6 +276,7 @@
       }
     </script>
 
+    {{-- get settings exist --}}
     <script>
       function getSettingsExist() {
         let existMode = localStorage.getItem('modeChoice');
@@ -296,6 +298,7 @@
       getSettingsExist();
     </script>
 
+    {{-- submit task settings --}}
   <script>
 
     //here function submitTaskSettings() with getTaskPage()
@@ -445,6 +448,7 @@
       }
 
     </script>
+    
 
 @endpush
 

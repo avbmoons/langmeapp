@@ -141,6 +141,10 @@
     
 @endsection
 
+@push('page-scripts')
+  @vite(['resources/js/charts.js'])
+@endpush
+
 @push('js')
     <script>
       //for chart Modes
@@ -315,5 +319,5 @@
       console.log(themesWordsStr);
 
     </script>
-    <script src="{{ asset('js/charts.js') }}"></script>
+    {{-- <script src="{{ asset('js/charts.js') }}"></script> --}}
 @endpush

@@ -1,7 +1,12 @@
 //document.addEventListener("DOMContentLoaded", () => {
 
 //});
+if (window.location.pathname.includes("about") || window.location.pathname == "/admin") {
+    console.log(window.location.pathname);
+}
+
 import Chart from 'chart.js/auto';
+//import { Chart } from './chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 Chart.register(ChartDataLabels);
@@ -35,19 +40,31 @@ let statusesStr = ['Draft', 'Active', 'Blocked', 'Close'];
 
 //let modesCh = modesCh;
 //Chart.register(ChartDataLabels);
+let myChartInstance = null;
+let myChartInstance1 = null;
+let myChartInstance2 = null;
+let myChartInstance3 = null;
+let myChartInstance4 = null;
 
 const ctx = document.getElementById('testChart');
 const ctx2 = document.getElementById('testChart2'); // Modes
 const ctx3 = document.getElementById('testChart3'); // Langs
 
-const ctx4 = document.getElementById('testChart4').getContext('2d'); // Words
-const ctx1 = document.getElementById('testChart1').getContext('2d'); // Themes
+//const ctx4 = document.getElementById('testChart4').getContext('2d'); // Words
+const ctx4 = document.getElementById('testChart4')?.getContext('2d'); // Words
+//const ctx1 = document.getElementById('testChart1').getContext('2d'); // Themes
+const ctx1 = document.getElementById('testChart1')?.getContext('2d'); // Themes
 
-console.log('modesCh = ' + modesCh);
-console.log('modesStr = ' + modesStr);
+// console.log('modesCh = ' + modesCh);
+// console.log('modesStr = ' + modesStr);
 
 // chart "Words by themes"
-new Chart(ctx, {
+if (ctx) {
+    if (myChartInstance) {
+        myChartInstance.destroy();
+    }
+
+myChartInstance = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: themesCh,    // ['Plain', 'Choice', 'Lang', 'Mix', 'Memo'],
@@ -132,9 +149,15 @@ new Chart(ctx, {
         },
     }
 });
+}
 
 // chart "Modes"
-new Chart(ctx2, {
+if (ctx2) {
+    if (myChartInstance2) {
+        myChartInstance2.destroy();
+    }
+
+myChartInstance2 = new Chart(ctx2, {
     type: 'bar',
     data: {
         labels: modesCh,    // ['Plain', 'Choice', 'Lang', 'Mix', 'Memo'],
@@ -220,9 +243,15 @@ new Chart(ctx2, {
         },
     }
 });
+}
 
 // chart "Langs"
-new Chart(ctx3, {
+if (ctx3) {
+    if (myChartInstance3) {
+        myChartInstance3.destroy();
+    }
+
+myChartInstance3 = new Chart(ctx3, {
     type: 'bar',
     data: {
         labels: langsCh,    // ['Plain', 'Choice', 'Lang', 'Mix', 'Memo'],
@@ -308,9 +337,14 @@ new Chart(ctx3, {
         },      
     }
 });
+}
 
 // chart "Words"
-new Chart(ctx4, {
+if (ctx4) {
+    if (myChartInstance4) {
+        myChartInstance4.destroy();
+    }
+myChartInstance4 = new Chart(ctx4, {
     type: 'pie',
     data: {
         labels: statusesStr,    // ['Draft', 'Active', 'Blocked', 'Close'],
@@ -385,9 +419,15 @@ new Chart(ctx4, {
         },
     },
 });
+}
 
 // chart "Themes"
-new Chart(ctx1, {
+if (ctx1) {
+    if (myChartInstance1) {
+        myChartInstance1.destroy();
+    }
+
+myChartInstance1 = new Chart(ctx1, {
     type: 'pie',
     data: {
         labels: statusesStr,    // ['Draft', 'Active', 'Blocked', 'Close'],
@@ -465,5 +505,7 @@ new Chart(ctx1, {
         },
     },
 });
+}
 
 //});
+//};

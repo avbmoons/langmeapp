@@ -12,7 +12,7 @@
       <p class="terve heading">Welcome to langMe!</p>
       <p>&#9679;&emsp;6 languages,</p>
       <p>&#9679;&emsp;50 topics and concepts,</p>
-      <p>&#9679;&emsp;more than 1400 words,</p>
+      <p>&#9679;&emsp;more than 1300 words,</p>
       <p style="margin-bottom: 30px;">&#9679;&emsp;4 operating modes and your results,</p>
       <p class="terve">Compare and memorize&emsp;&#128578;</p>
       <p class="terve" style="margin-bottom: 30px;">And it's just interesting!</p>

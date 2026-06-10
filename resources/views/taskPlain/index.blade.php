@@ -54,21 +54,21 @@
     </div>
     <div class="task-settings">
       <div class="counter" id="counterWords">
-        <label class="counter-label" for="">Show</label>
+        <label class="counter-label" for="btnPrevNumWords">Show</label>
         <button class="counter-btn" id="btnPrevNumWords" onclick="minusFunction(numWordsValue)">&#9668;</button>
         <input class="counter-value" id="numWordsValue" type="text" value="2" title="2 words recomended" readonly/>
         <button class="counter-btn" id="btnNextNumWords" onclick="plusFunction(numWordsValue)">&#9658;</button>
-        <label class="counter-label" for="">words on the list</label>
+        <label class="counter-label" for="btnNextNumWords">words on the list</label>
       </div>
       <div class="counter" id="counterOptions">
-        <label class="counter-label" for="">Show</label>
+        <label class="counter-label" for="btnPrevNumOpt">Show</label>
         <button class="counter-btn" id="btnPrevNumOpt" onclick="minusFunction(numOptionsValue)">&#9668;</button>
         <input class="counter-value" id="numOptionsValue" type="text" value="3" title="3 options recomended" readonly/>
         <button class="counter-btn" id="btnNextNumOpt" onclick="plusFunction(numOptionsValue)">&#9658;</button>
-        <label class="counter-label" for="">options for each word</label>
+        <label class="counter-label" for="btnNextNumOpt">options for each word</label>
       </div>
       <div class="counter" id="radioSpell">
-        <label class="counter-label" for="">Show spelling on</label>
+        <label class="counter-label" for="spellRus">Show spelling on</label>
         <input class="counter-value" type="radio" name="spellChoice" id="spellRus" checked/>
         <label class="counter-label" for="spellRus">Rus</label>
         <input class="counter-value" type="radio" name="spellChoice" id="spellEng"/>

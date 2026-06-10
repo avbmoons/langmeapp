@@ -21,7 +21,7 @@ switch (pageUrl) {
         break;
     case "taskPlain":
         productContainer = document.querySelector('#taskModePlain');
-        productCount = 5;
+        productCount = 4;   // 5;
         break;
 }
 

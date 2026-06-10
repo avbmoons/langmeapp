@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="admin-content">
-  <section class="head-block2"></section>
+  <section class="head-block2" style="display: none"></section>
   <section class="head-block">
     <div class="title-block">
       <div class="title-box">

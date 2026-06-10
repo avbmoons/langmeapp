@@ -3,6 +3,7 @@
 @section('title', 'Start')
 
 @section('content')
+
 <div class="admin-content">
   <section class="head-block">
     <div class="title-block">
@@ -124,6 +125,10 @@
 </div>
     
 @endsection
+
+@push('page-scripts')
+  @vite(['resources/js/charts.js'])
+@endpush
 
 @push('js')
     {{-- for charts --}}

@@ -366,9 +366,12 @@
       let tutorClose = document.getElementById("tutorClose");
       let tutorSkip = document.getElementById("tutorSkip");
 
+      if (tutorClose) {      
+
       tutorClose.addEventListener('click', function(event) {
         tutorClose.onclick = closeTutorPages();
       })
+      }
 
       tutorSkip.addEventListener('click', function(event) {
         tutorSkip.onclick = closeTutorPages();

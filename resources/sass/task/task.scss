@@ -1,6 +1,7 @@
 @use "sass:math";
 
 @import "../varsfront/varsfront.scss";
+@import "../vars/vars.scss";
 //@import '../components/header.scss';
 @import '../components/header/header.scss';
 //@import '../components/footer.scss';
@@ -632,6 +633,7 @@ body {
           margin: 0 auto;
           width: 100%;
           height: 74%; 
+          //min-height: 74%;
           @include media-mobile() {
             min-height: 0.74*(100vh - 7vh - 4vh);
           }
@@ -642,6 +644,7 @@ body {
             margin: 0 auto;
             width: 100%; 
             height: 48%; 
+            //min-height: 48%;
             @include media-mobile() {
               min-height: 0.48*(100vh - 7vh - 4vh);
             }
@@ -713,6 +716,7 @@ body {
 
                 .base {
                   @include text-font(1.39vw, 400, 1.39vw, 0); //20px
+                  @include text-font(1.25vw, 400, 1.25vw, 0); //18px
                   @include media-text(12px, 14px, 16px);
                   @include media-mobile() {
                     font-weight: 300;
