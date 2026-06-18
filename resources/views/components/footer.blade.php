@@ -7,28 +7,28 @@
   <div class="footer-center-front">
     <div class="footer-center-block-front">
       <div class="copyright-front">
-        <p>&copy; 2025-2026 Elena Belkina.</p>
+        <p>&copy; 2025-2026 avbmoons.</p>
       </div>
       <menu-front class="menu-front">        
         <button class="menu-item-front footer" id="menuFooterHome">
-          <a class="btn-link-menu" href="{{ route('home')}}">Home</a>
+          <a class="btn-link-menu" href="{{ route('home')}}">{{ __('Home') }}</a>
         </button>
         <button class="menu-item-front footer" id="menuFooterTask">
-          <a class="btn-link-menu" id="menuFooterTaskLink" href="">Task</a>
+          <a class="btn-link-menu" id="menuFooterTaskLink" href="">{{ __('Task') }}</a>
         </button>              
         <button class="menu-item-front footer" id="menuFooterGuide">
-          <a class="btn-link-menu" href="{{ route('guide') }}">Guide</a>
+          <a class="btn-link-menu" href="{{ route('guide') }}">{{ __('Guide') }}</a>
         </button>
         <button class="menu-item-front future" id="menuFooterResults" style="display: none">
           <a class="btn-link-menu" href="">Results0</a>
         </button>   
         @if (Auth::check())
           <button class="menu-item-front footer" id="menuFooterResults2">
-          <a class="btn-link-menu" href="{{ route('results') }}">Results</a>
+          <a class="btn-link-menu" href="{{ route('results') }}">{{ __('Results') }}</a>
         </button>  
         @endif             
         <button class="menu-item-front footer" id="menuFooterAbout">
-          <a class="btn-link-menu" href="{{ route('about') }}">About</a>
+          <a class="btn-link-menu" href="{{ route('about') }}">{{ __('About') }}</a>
         </button>        
       </menu-front>
       <menu-front class="menu-front" id="menuSocials">

@@ -15,14 +15,14 @@
             margin-top: 20px;
             margin-right: 15vw;
             padding: 20px 0;
-            width: 60vw;    // 60%; // 100%;
+            width: 60vw;    
             height: 80px;
             @include flex-horizontal();
             justify-content: space-between;
             //border: 1px solid red;
             .title-block {
               margin: 0 auto;
-              width:100%;   // 40%; // 30vw;
+              width:100%;  
               height: 100%;
               @include flex-vertical();
               //border: 1px solid green;
@@ -34,9 +34,6 @@
                 justify-content: flex-start;
                 //border: 1px solid orange;
                 .title {
-                  //margin-left: 2vw;
-                  //padding-left: 2vw;
-                  //@include text-font(2.5vh, 300, 2.5vh, 0);
                   @include text-font(24px, 300, 24px, 0);
                   color: $admin-color-main-dark;
                 }
@@ -76,10 +73,9 @@
             margin-top: 20px;
             margin-bottom: 90px;
             margin-right: 15vw;
-            width: 60vw;    // 60%;
-            //min-height: 75%;  // 70%;
+            width: 60vw;    
             height: auto;
-            border: 1px solid $admin-color-grey;  // $color-main;
+            border: 1px solid $admin-color-grey;  
             border-radius: 5px;
             @include flex-vertical();
             justify-content: space-around;
@@ -95,7 +91,6 @@
               .input-lable {
                 margin: 0 auto;
                 width: 100%;
-                //margin-bottom: 10px;  // $input-lable-marginb;
                 @include text-font(2.4vh, 300, 2.4vh, 0);
                 color: $color-main-dark;
               }
@@ -103,8 +98,7 @@
                 margin: 0 auto;
                 margin-top: $input-lable-marginb; // 10px;
                 padding-left: 10px;
-                //margin-bottom: $input-marginb;
-                width: 100%;  // $input-width;
+                width: 100%; 
                 height: $input-height;
                 @include text-font(14px, 300, 14px, 0);
                 color: $color-black;
@@ -114,12 +108,8 @@
                 box-sizing: border-box;
               }
               .file-input {
-                width: 0.1px; // 100%;
+                width: 0.1px; 
                 height: 0.1px;
-                // padding: 20px 0;
-                // margin-bottom: 0;
-                // color: red;
-                // background-color: $color-grey-light;
                 opacity: 0;
                 overflow: hidden;
                 position: absolute;
@@ -128,8 +118,6 @@
               .file-label {
                 margin: 0 auto;
                 display: inline-block;
-                //padding: 10px 20px;
-                //padding-top: 25px;
                 width: 25%;
                 height: 60px;
                 background-color: $color-grey-light;
@@ -138,7 +126,6 @@
                 cursor: pointer;
                 border-radius: 5px;
                 text-align: center;
-                //align-items: center;
                 align-content: center;
               }
               .file-label:hover {
@@ -196,7 +183,6 @@
                 border-radius: 3px;
                 cursor: pointer;
                 @include flex-vertical();
-                //align-items: center;
                 text-decoration: none;
                 text-align: center;
               }
@@ -226,8 +212,8 @@
                 font-weight: 400;
               }
               .close-back:hover {
-                color: $color-basic-white;  // $admin-color-accent;
-                background-color: $admin-color-main-dark; // $color-grey-light;
+                color: $color-basic-white;  
+                background-color: $admin-color-main-dark; 
                 //border: 2px solid orange;
               }
             }
@@ -239,7 +225,7 @@
                 .half {
                     margin-left: 0;
                     margin-right: 0;
-                    width: 50%; // 100%;    // 60%;
+                    width: 50%; 
                     .file {
                         padding-left: 0;
                         border: none;                        
@@ -265,7 +251,7 @@
                 .mini {
                     margin-right: 0;
                     margin-left: 0;
-                    width: 30%; // 40%;        
+                    width: 30%;        
                 }
                 .edit {
                       width: 20%;
@@ -288,15 +274,13 @@
             }  
             .show {
               margin: 0 auto;
-              width: 90%; // $input-width;
+              width: 90%; 
               //border: 1px solid green;
             } 
             .file-button {
               width: 100%;
               padding: 20px 0;
               margin-bottom: 0;
-              //color: red;
-              //background-color: $color-grey-light;
               border: 1px solid $admin-color-grey;
               border-radius: 5px;
               @include flex-horizontal();

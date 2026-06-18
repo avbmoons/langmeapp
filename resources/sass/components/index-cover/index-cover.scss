@@ -1,6 +1,5 @@
 @use 'sass:math';
 
-//@import '../varsfront/varsfront.scss';
 @import '../../varsfront/varsfront.scss';
 
 @font-face {
@@ -30,8 +29,8 @@ body {
       background-color: rgba(15, 26, 28, 0.7);
       .wellcome {
         margin: 0 auto;
-        width: 45%; // $block-width;  // 45%;
-        height: 55%;  // $min-main-height; // 55%;
+        width: 45%; 
+        height: 55%;  
         @include flex-vertical();
         justify-content: space-between;
         background-color: $color-light;
@@ -45,7 +44,7 @@ body {
         }
         .wellcome-header {
           margin: 0 auto;
-          margin-top: 3%; // 20px;
+          margin-top: 3%; 
           width: 100%;
           height: fit-content;
           @include flex-horizontal();
@@ -91,8 +90,7 @@ body {
           height: 15%; 
           @include flex-horizontal();
           .btn-go {
-            width: 40%; // 30%;
-            //height: 100%;
+            width: 40%; 
             padding: 30px 0;
             text-align: center;
             @include flex-vertical();

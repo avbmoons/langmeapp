@@ -18,8 +18,6 @@ menuFooter[2] = document.getElementById('menuFooterGuide');
 menuFooter[3] = document.getElementById('menuFooterResults');
 menuFooter[4] = document.getElementById('menuFooterAbout');
 
-//console.log("menuHeader[0] = " + menuHeader[0]);
-
 for (let i=0; i < menuHeader.length; i++) {
     if (i === 0 || i === 2 || i === 4) {
         menuHeader[i].style.display = 'flex';   // 'block';
@@ -27,8 +25,6 @@ for (let i=0; i < menuHeader.length; i++) {
         menuHeader[i].style.display = 'none';
     }
 }
-
-//menuHeader[1].style.display = 'flex';   //// for testing
 
 for (let i=0; i < menuFooter.length; i++) {
     if (i === 0 || i === 2 || i === 4) {
@@ -62,30 +58,4 @@ function getTaskPage() {
                 break;
         }
 }
-
-// function getThisPage() {
-//    let pageUrl = window.location.pathname.substring(thisUrl.lastIndexOf('/')+1);
-//     console.log("pageUrl = " + pageUrl);
-
-//     switch (pageUrl) {            
-//         case "home":
-//             window.location.href = "{{ route('home') }}";
-//         case "taskChoice":
-//             window.location.href = "{{ route('taskChoice') }}";
-//             break;
-//         case "taskLang":
-//             window.location.href = "{{ route('taskLang') }}";
-//             break;
-//         case "taskMix":
-//             window.location.href = "{{ route('taskMix') }}";
-//             break;
-//         case "taskPlain":
-//             window.location.href = "{{ route('taskPlain') }}";
-//             break;
-//         default:
-//             window.location.href = "{{ route('home') }}";
-//     } 
-// }
-
-
 

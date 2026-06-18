@@ -1,6 +1,5 @@
 @use 'sass:math';
 
-//@import '../varsfront/varsfront.scss';
 @import '../../varsfront/varsfront.scss';
 
 @font-face {
@@ -38,7 +37,6 @@ body {
         justify-content: flex-end; 
         .header-left-block-front {
           margin: 0 auto; 
-          //padding-bottom: 1vh;
           width: 100%;
           height: 100%; 
           @include flex-horizontal();
@@ -53,8 +51,7 @@ body {
             //border: 1px solid red;
             .logo-front {
             margin: 0 auto;
-            //margin-right: 8%;
-            height: 70%;  // 80%;
+            height: 70%;  
             width: auto;
             align-items: end;
             //border: 1px solid green;
@@ -83,7 +80,6 @@ body {
         @include flex-vertical();
         background-color: $color-blick;
         clip-path: polygon(0% 0%, 100% 0%, 76% 100%, 0% 100%);
-        //justify-content: flex-end;
         .header-center-block-front {
           margin: 0 auto;
           width: 100%;
@@ -121,11 +117,11 @@ body {
               }
             }
             .menu-item-front:hover {
-              color: $color-light; // $color-accent;
+              color: $color-light; 
               font-weight: 500;
               .btn-link-menu {
                 text-decoration: none;
-                color: $color-light;  // $color-accent;
+                color: $color-light;  
               }
             }
             .future .btn-link-menu {
@@ -137,9 +133,8 @@ body {
           }
           .btn-tutor-block {
             margin: 0 auto;
-            //margin-top: 10%;
-            width:20%;  // 100%;
-            height: 100%; // auto; // 10%;  //10%;
+            width:20%;  
+            height: 100%; 
             @include flex-vertical();
             display: none;
             //border: 1px solid green;
@@ -149,7 +144,7 @@ body {
             .btn-tutor {
               margin: 0 auto;
               width: 50%;
-              height: auto; // 100%;
+              height: auto; 
               padding: 5px 0;
               background: none;
               border: none;
@@ -170,21 +165,17 @@ body {
           }
           #menuServices {
             margin: 0 auto;
-            //padding-left: 40%;
-            //padding-bottom: 1vh; // 2%;
-            width: 40%; // 100%; 
+            width: 40%; 
             height: 100%; 
             @include flex-horizontal();
-            //justify-content: flex-start;
             display: none;
             @include media-mobile() {
-              //width: 30%;
               display: flex;
             }
             //border: 1px solid black;
             .menu-item-front {
-              margin: auto; // 0; 
-              margin-left: 20px;  // 8%;
+              margin: auto;  
+              margin-left: 20px;  
               width: fit-content;
               height: fit-content;
               border: none;
@@ -219,29 +210,24 @@ body {
               fill: $color-accent;
             }
             .combo-block-front {
-              margin: auto; // 0; 
+              margin: auto;  
               width: fit-content; 
               height: auto;
               @include flex-vertical();
               position: relative;
-              //border: 1px solid red;
-              //align-items: center;
               #appLangEng,
               #appLangRus,
               #appLangEngChoice {
-                margin-left: 20px;  // 40%; // 20px;
-                //margin-top: 15%;
+                margin-left: 20px;  
                 opacity: 1;
                 border: none;
                 outline: none;
               }
               .combo-list-front {
-                margin: 0; // auto;
+                margin: 0; 
                 width: 100%;
                 height: auto;
                 @include flex-vertical();
-                //border: 2px solid $color-grey;
-                //background-color: $color-grey;
                 opacity: 1;
                 position: absolute;
                 top: -100%;
@@ -252,8 +238,8 @@ body {
           }
           .service-time {
             margin: 0 auto;
-            padding-bottom: 1vh; // 2%;
-            margin-right: 24%;  // 1.39vw;
+            padding-bottom: 1vh; 
+            margin-right: 24%;  
             width: 30%; 
             height: 100%; 
             @include flex-vertical();
@@ -276,7 +262,6 @@ body {
         }
         height: 100%;
         @include flex-vertical();
-        //justify-content: flex-end;
         .header-right-block-front {
           margin: 0 auto; 
           width: 100%;
@@ -285,7 +270,7 @@ body {
           align-items: end;
           .menu-front {
             margin: 0 auto;
-            padding-bottom: 1vh; // 2%;
+            padding-bottom: 1vh; 
             width: 100%; 
             height: 100%; 
             @include flex-horizontal();
@@ -295,8 +280,7 @@ body {
             }
             //border: 1px solid black;
             .menu-item-front {
-              margin: auto; // 0; 
-              //margin-left: 20px;  // 2.08vw;  // 40px;  // 8%;
+              margin: auto; 
               width: fit-content;
               height: fit-content;
               border: none;
@@ -313,9 +297,15 @@ body {
                 color: $color-dark;
                 align-items: center;
               }
+              .btn-link-menu.active {
+                color: #4f46e5; //#0c3387; // 
+                font-weight: bold;
+                text-decoration: underline;
+                pointer-events: none;
+              }
             }
             .header {
-              margin-left: 10%; // 15%;
+              margin-left: 10%; 
             }
             .menu-item-front:hover {
               color: $color-accent;
@@ -329,29 +319,25 @@ body {
               fill: $color-accent;
             }
             .combo-block-front {
-              margin: auto; // 0; 
+              margin: auto;  
               width: fit-content; 
               height: auto;
-              @include flex-vertical();
+              //@include flex-vertical();
+              @include flex-horizontal();
               position: relative;
-              //border: 1px solid red;
-              //align-items: center;
               #appLangEng,
               #appLangRus,
-              #appLangEngChoice {
-                margin-left: 20px;  // 40%; // 20px;
-                //margin-top: 15%;
+              #appLangEngChoice, #appLangRusChoice {
+                margin-left: 10px;  // 20px;  
                 opacity: 1;
                 border: none;
                 outline: none;
               }
               .combo-list-front {
-                margin: 0; // auto;
+                margin: 0; 
                 width: 100%;
                 height: auto;
                 @include flex-vertical();
-                //border: 2px solid $color-grey;
-                //background-color: $color-grey;
                 opacity: 1;
                 position: absolute;
                 top: -100%;

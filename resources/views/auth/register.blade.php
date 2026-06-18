@@ -6,7 +6,7 @@
 <div class="main-center-front">
   <div class="title-block-auth">
     <div class="title-box-auth">
-      <p class="title-auth">Registration</p>
+      <p class="title-auth">{{ __('Registration') }}</p>
     </div>
   </div>
   {{-- Errors output block --}}
@@ -22,23 +22,23 @@
   <form method="POST" action="{{ route('register') }}" class="form-input-auth">
     @csrf
     <div class="input-box-auth first">
-      <label class="input-lable-auth">Name</label>            
+      <label class="input-lable-auth">{{ __('Name') }}</label>            
       <input type="text" class="input-text-auth" name="name" value="{{ old('name') }}" required autofocus>              
     </div>
     <div class="input-box-auth">
-      <label class="input-lable-auth">E-mail</label>            
+      <label class="input-lable-auth">{{ __('E-mail') }}</label>            
       <input type="email" class="input-text-auth" name="email" value="{{ old('email') }}" required>              
     </div>
     <div class="input-box-auth">
-      <label class="input-lable-auth">Password</label>            
+      <label class="input-lable-auth">{{ __('Password') }}</label>            
       <input type="password" class="input-text-auth" name="password" required>              
     </div>
     <div class="input-box-auth">
-      <label class="input-lable-auth">Password confirmation</label>            
+      <label class="input-lable-auth">{{ __('Password confirmation') }}</label>            
       <input type="password" class="input-text-auth" name="password_confirmation" required>              
     </div>
     <div class="input-box-auth">
-      <button type="submit" class="btn-form-auth">Register</button>
+      <button type="submit" class="btn-form-auth">{{ __('Register') }}</button>
     </div> 
   </form>
 </div>
@@ -61,24 +61,11 @@
       let menuFooterTask = document.getElementById('menuFooterTask');
       let menuFooterResults = document.getElementById('menuFooterResults');
       
-      //if (thisPage.includes('login') || thisPage.includes('register')) {
-       //btnEnter.style.visibility = "hidden";
-       //btnAdmin.style.visibility = "hidden";
-       //btnEnterMobile.style.visibility = "hidden";
-       //btnAdminMobile.style.visibility = "hidden";
-
-      //  menuHeaderTask.style.visibility = 'hidden';
-      //  menuHeaderResults.style.visibility = 'hidden';
-
        menuHeaderTask.style.display = 'none';
        menuHeaderResults.style.display = 'none';
 
-      //  menuFooterTask.style.visibility = 'hidden';
-      //  menuFooterResults.style.visibility = 'hidden';
-
        menuFooterTask.style.display = 'none';
        menuFooterResults.style.display = 'none';
-      //} 
 
     </script>
 @endpush

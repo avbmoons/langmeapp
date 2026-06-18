@@ -8,12 +8,6 @@ class PrimLangItem {
         status,
         position,
     ) {
-        // this.id = id;
-        // this.langName = langName;
-        // this.langNative = langNative;
-        // this.langAlias = langAlias;
-        // this.status = status;
-        // this.position = position;
 
         this.id = id;
         this.code = code; //
@@ -85,7 +79,6 @@ class PrimLangList {
         this.clangs = [];
     }
     fetchPrimLang() {
-        //this.clangs = langs.filter(item => item.status == 1);
         this.clangs = langs;    //langs.filter(item => item.status == 'active');
     }
     render() {
@@ -111,7 +104,6 @@ class CompLangList {
         this.clangs = [];
     }
     fetchCompLang() {
-        //this.clangs = langs.filter(item => item.status == 1);
         this.clangs = langs.filter(item => item.status == 'active');
     }
     render() {

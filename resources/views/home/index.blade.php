@@ -37,7 +37,7 @@
                   fill="#0F1A1C"
               />
           </svg>
-          <a class="btn-link-set-get" href="#">&nbsp;Set Task</a>          
+          <a class="btn-link-set-get" href="#">&nbsp;{{ __('Set Task')}}</a>          
       </button>
       <x-settings-resume></x-settings-resume>
       <button class="set-get-front get" id="getButton" >
@@ -50,7 +50,7 @@
               stroke-linejoin="round"
             />
           </svg>
-          <span class="btn-link-set-get">&nbsp;Get Task</span>
+          <span class="btn-link-set-get">&nbsp;{{ __('Get Task')}}</span>
           {{-- <a class="btn-link-set-get" href="">&nbsp;Get Task</a>           --}}
       </button> 
     </div>
@@ -59,12 +59,12 @@
         <button class="mode-item-btn" id="modeItemPlain">
           <a class="btn-link-mode-item" href="{{ route('taskPlain') }}">
             <div class="mode-btn-title">
-              <p class="title">PLAIN</p>
-              <p class="title mini">mode</p>
+              <p class="title">{{ __('PLAIN') }}</p>
+              <p class="title mini">{{ __('mode') }}</p>
             </div>
             <div class="mode-btn-info">
               <p class="info">
-                Plain visualization of words by themes on selected languages
+                {{ __('Plain visualization of words by themes on selected languages') }}
               </p>
             </div>
           </a>
@@ -74,12 +74,12 @@
         <button class="mode-item-btn" id="modeItemChoice">
           <a class="btn-link-mode-item" href="{{ route('taskChoice')}}">
             <div class="mode-btn-title">
-              <p class="title">CHOICE</p>
-              <p class="title mini">mode</p>
+              <p class="title">{{ __('CHOICE') }}</p>
+              <p class="title mini">{{ __('mode') }}</p>
             </div>
             <div class="mode-btn-info">
               <p class="info">
-                Choosing the right translation for each selected languages
+                {{ __('Choosing the right translation for each selected languages') }}
               </p>
             </div>
           </a>  
@@ -89,12 +89,12 @@
         <button class="mode-item-btn" id="modeItemLang">
           <a class="btn-link-mode-item" href="{{ route('taskLang') }}">
             <div class="mode-btn-title">
-              <p class="title">LANG</p>
-              <p class="title mini">mode</p>
+              <p class="title">{{ __('LANG') }}</p>
+              <p class="title mini">{{ __('mode') }}</p>
             </div>
             <div class="mode-btn-info">
               <p class="info">
-                Choosing the right language for spelling translation
+                {{ __('Choosing the right language for spelling translation') }}
               </p>
             </div>
           </a>
@@ -104,13 +104,12 @@
         <button class="mode-item-btn" id="modeItemMix">
           <a class="btn-link-mode-item" href="{{ route('taskMix') }}">
             <div class="mode-btn-title">
-              <p class="title">MIX</p>
-              <p class="title mini">mode</p>
+              <p class="title">{{ __('MIX') }}</p>
+              <p class="title mini">{{ __('mode') }}</p>
             </div>
             <div class="mode-btn-info">
               <p class="info">
-                Choosing the correct spelling translation for a given
-              language
+                {{ __('Choosing the correct spelling translation for a given language') }}
               </p>
             </div>
           </a>
@@ -128,12 +127,12 @@
               />
           </svg>          
         {{-- </a> --}}
-        Results
+        {{ __('Results') }}
       </button>
       <div class="totals-front">
         <div class="totals-block-front">
           <div class="total-item-front title">
-            <p>Totals:</p>
+            <p>{{ __('Totals') }}:</p>
           </div>
           <div class="total-item-front enjoy">
             <!-- emoji-smile-regular.svg" -->

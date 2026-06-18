@@ -51,14 +51,8 @@ final class LangsQueryBuilder extends QueryBuilder
             })
             ->orderBy('id', 'asc')
             ->paginate(10)
-            ->withQueryString();
-        
-        //$this->model->paginate($quantity);
-    }
+            ->withQueryString();        
 
-    // public function getLangsWithPagination(int $quantity = 10): LengthAwarePaginator
-    // {
-    //     return $this->model->paginate($quantity);
-    // }
+    }
 
 }

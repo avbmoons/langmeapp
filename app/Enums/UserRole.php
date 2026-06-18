@@ -17,13 +17,6 @@ enum UserRole: string
     ];
   }
 
-  // public function label(): string
-  // {
-  //   return match($this) {
-  //     self::ADMIN => 'admin',
-  //     self::GUEST => 'guest',
-  //   };
-  // }
 }
 
 

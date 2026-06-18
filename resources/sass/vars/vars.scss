@@ -1,24 +1,20 @@
 @use 'sass:math';
 
 $site-width: 100%;
-//$block-width: 80vw;
+
 $admin-form-width: 50vw;
 $admin-sidebar-width: 20vw;
-$admin-table-width: 80vw; // 100vw - ($admin-sidebar-width); // 70vw;
+$admin-table-width: 80vw; 
 $admin-block-width: 90vw;
 $admn-sidebar-marginl: 23%;
 $admin-table-marginr: 7%;
-$admin-sidebar-menu-width: 75%; // 65%;
+$admin-sidebar-menu-width: 75%; 
 
 $admin-min-site-height: 100vh;
-//$header-height: 20vh;
 $admin-header-height: 10vh;
 $admin-header-block-height: 60%;
 $admin-footer-height: 6vh;
-//$footer-height: 10vh;
-//$min-main-height: 100vh - $header-height; // 80vh;
-$admin-min-main-height: 100vh - ($admin-header-height); // 90vh
-//$page-title-height: 10vh;
+$admin-min-main-height: 100vh - ($admin-header-height); 
 
 $input-width: 90%;
 $input-height: 40px;
@@ -32,9 +28,6 @@ $form-btn-height: 1.5* $input-height;
 $color-main: #abbee6; //rgb(171, 190, 230)
 $color-main-dark: #370c80; //rgb(55, 12, 128)
 $color-main-light: #656dc4; //rgb(101, 109, 196)
-// $color-accent: #eb5a84; //rgb(235, 90, 132)
-// $color-accent-dark: #c340a1; //rgb(195, 64, 161)
-// $color-accent-light: #cba6eb; //rgb(203, 166, 235)
 
 $color-white: #fdfcf4; //rgb(253, 252, 244)
 $color-grey-light: #e9e7e0; //rgb(233, 231, 224)

@@ -15,31 +15,6 @@ Chart.register(ChartDataLabels);
 let statusesCh = ['1', '2', '3', '4'];
 let statusesStr = ['Draft', 'Active', 'Blocked', 'Close'];
 
-//let modesCh = ['Plain', 'Choice', 'Lang', 'Mix', 'Memo'];
-// const modesCh = json($modesCh);
-// console.log('modesCh = ' + modesCh);
-//let modesStr = ['2', '2', '2', '2', '1'];
-
-//let langsCh = ['Rus', 'Eng', 'Arm', 'Gre', 'Fin', 'Lav', 'Srb'];
-//let langsStr = ['2', '2', '2', '2', '2', '2', '1'];
-
-// let sumWordsDraft = 3;
-// let sumWordsActive = 97;
-// let sumWordsBlocked = 0;
-// let sumWordsClose = 0;
-
-// let sumThemesDraft = 88;
-// let sumThemesActive = 13;
-// let sumThemesBlocked = 0;
-// let sumThemesClose = 0;
-
-//let themesCh = ['Pronouns', 'Numbers', 'Colors', 'World sides', 'Seasons', 'Months', 'Weekdays', 'Sizes', 'Directions', 'Time', 'Personal data'];
-//let themesWordsStr = ['0', '18', '16', '5', '5', '14', '8', '0', '0', '0', '7'];
-
-//const { Chart } = require("chart.js");
-
-//let modesCh = modesCh;
-//Chart.register(ChartDataLabels);
 let myChartInstance = null;
 let myChartInstance1 = null;
 let myChartInstance2 = null;
@@ -50,13 +25,8 @@ const ctx = document.getElementById('testChart');
 const ctx2 = document.getElementById('testChart2'); // Modes
 const ctx3 = document.getElementById('testChart3'); // Langs
 
-//const ctx4 = document.getElementById('testChart4').getContext('2d'); // Words
 const ctx4 = document.getElementById('testChart4')?.getContext('2d'); // Words
-//const ctx1 = document.getElementById('testChart1').getContext('2d'); // Themes
 const ctx1 = document.getElementById('testChart1')?.getContext('2d'); // Themes
-
-// console.log('modesCh = ' + modesCh);
-// console.log('modesStr = ' + modesStr);
 
 // chart "Words by themes"
 if (ctx) {
@@ -349,7 +319,7 @@ myChartInstance4 = new Chart(ctx4, {
     data: {
         labels: statusesStr,    // ['Draft', 'Active', 'Blocked', 'Close'],
         datasets: [{
-            data: [sumWordsDraft, sumWordsActive, sumWordsBlocked, sumWordsClose],  // [300, 50, 100, 70],   // [sumWordsDraftStr, sumWordsActiveStr, sumWordsBlockedStr, sumWordsCloseStr],  // [300, 50, 100],
+            data: [sumWordsDraft, sumWordsActive, sumWordsBlocked, sumWordsClose],  // [300, 50, 100, 70],   
             backgroundColor: [
                 'rgba(252, 207, 194, 0.7)',
                 'rgba(29, 57, 164, 0.7)',
@@ -432,7 +402,7 @@ myChartInstance1 = new Chart(ctx1, {
     data: {
         labels: statusesStr,    // ['Draft', 'Active', 'Blocked', 'Close'],
         datasets: [{
-            data: [sumThemesDraft, sumThemesActive, sumThemesBlocked, sumThemesClose],  // [300, 50, 100, 70],   // [sumWordsDraftStr, sumWordsActiveStr, sumWordsBlockedStr, sumWordsCloseStr],  // [300, 50, 100],
+            data: [sumThemesDraft, sumThemesActive, sumThemesBlocked, sumThemesClose],  // [300, 50, 100, 70],   
             backgroundColor: [
                 'rgba(252, 207, 194, 0.7)',
                 'rgba(29, 57, 164, 0.7)',
@@ -507,5 +477,3 @@ myChartInstance1 = new Chart(ctx1, {
 });
 }
 
-//});
-//};

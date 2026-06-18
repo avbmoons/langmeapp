@@ -2,21 +2,19 @@ let optionsLang = [];
 let taskRowsOptions = [];
 let compWordsTheme = [];
 let compOptionsLang = [];
-//let totalEnjoy = [];
-//let totalWorry = [];
 
 //Classes for Prim words for modes: Plain, Choice and Mix
 
 class ItemHeadingPrimLang {
     constructor (
         id,
-        theme_id,   //idTheme,
-        word_id,    //idWord,
-        lang_id,    //idLang,
+        theme_id,   
+        word_id,    
+        lang_id,    
         langName,
-        translation,    //wordName,
-        spell_base, //spellBase,
-        spell_eng,  //spellEng,
+        translation,    
+        spell_base, 
+        spell_eng,  
     ) {
         this.id = id;
         this.theme_id = theme_id;
@@ -351,7 +349,7 @@ class CardCompLang {
             this.ctaskRows.spell_base,
             this.ctaskRows.spell_eng,
         ); 
-        console.log("itemOptionCompLang.constructor.name = " + itemOptionCompLang.constructor.name);
+        //console.log("itemOptionCompLang.constructor.name = " + itemOptionCompLang.constructor.name);
 
         // + three versions
         let itemOptionCompLangV1;
@@ -584,10 +582,10 @@ for (let i=0; i<taskRows.length; i++) {
     optionsLang.push(optionsLangTheme);
 }
 
-console.log("Options Lang : ");
-console.log(optionsLang);
+//console.log("Options Lang : ");
+//console.log(optionsLang);
 
-console.log("Random option Lang: ");
+//console.log("Random option Lang: ");
 
 //Function get element from array by random index
 function randEl(array) {
@@ -620,8 +618,8 @@ for (let i=0; i < taskRows.length; i++) {
     taskRowsOptions.push(taskRows[i]);
 }
 
-console.log("Task rows options :");
-console.log(taskRowsOptions);
+//console.log("Task rows options :");
+//console.log(taskRowsOptions);
 
 //Function get random comp options from comp words array by theme and lang
 
@@ -689,7 +687,7 @@ function getOptionsLang(themeId, langId, wordId) {
 //Function for Rows counter
 let rowsList = document.getElementsByClassName("task-mode");
 let rowsNum = rowsList.length;
-console.log("Rows num = " + rowsNum);
+//console.log("Rows num = " + rowsNum);
 
 ////Function for  any rows render
 
@@ -702,9 +700,9 @@ for (let m=0; m <= arrNum; m++) {
     taskRowsTest[m] = taskRows[m];
 }
 
-console.log("array Task rows test for render: ");
-console.log(taskRowsTest);
-console.log("taskRowsTest length : " + taskRowsTest.length);
+//console.log("array Task rows test for render: ");
+//console.log(taskRowsTest);
+//console.log("taskRowsTest length : " + taskRowsTest.length);
 
 //rowsCompChoiceDom();
 
@@ -785,20 +783,4 @@ function pageRowsCompLangDom(firstIndex, lastIndex) {
         }
     }
 }
-
-// /// Save totals by Exit button
-
-// let exitLang = document.getElementById("exitLang");
-// let totalsLang = [];
-
-// setResultsLang();
-
-// function setResultsLang() {    
-//     exitLang.addEventListener('click', () => {
-//         totalsEnjoy();
-//         totalsWorry();
-//         totalsLang.push(totalEnjoy, totalWorry);
-//         localStorage.setItem('totalsLang', totalsLang);
-//     });
-// }
 

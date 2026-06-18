@@ -23,10 +23,10 @@ class ResultsController extends Controller
         $themes = Theme::pluck('title', 'id'); 
         $langs = Lang::pluck('title', 'id');    
         $users = User::pluck('name', 'id');
-        $tasksList = Task::where('user_id', Auth::id())->get(); //->paginate(5);
+        $tasksList = Task::where('user_id', Auth::id())->get(); 
 
         return view('results.index', [
-            'tasksList' => $tasksList,  // $tasksQueryBuilder->getTasksWithPagination(),
+            'tasksList' => $tasksList, 
             'themes' => $themes,
             'langs' => $langs,
             'users' => $users,

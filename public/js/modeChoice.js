@@ -2,21 +2,19 @@ let optionsChoice = [];
 let taskRowsOptions = [];
 let compWordsTheme = [];
 let compOptionsChoise = [];
-// let totalEnjoy = [];
-// let totalWorry = [];
 
 //Classes for Prim words for modes: Plain, Choice and Mix
 
 class ItemHeadingPrim {
     constructor (
         id,
-        theme_id,   //idTheme,
-        word_id,    //idWord,
-        lang_id,    //idLang,
+        theme_id,   
+        word_id,    
+        lang_id,    
         langName,
-        translation,  //wordName,
-        spell_base, //spellBase,
-        spell_eng,  //spellEng,
+        translation,  
+        spell_base, 
+        spell_eng,  
     ) {
         this.id = id;
         this.theme_id = theme_id;
@@ -37,13 +35,13 @@ class ItemHeadingPrim {
 class ItemOptionPrim {
     constructor (
         id,
-        theme_id,   //idTheme,
-        word_id,    //idWord,
-        lang_id,    //idLang,
+        theme_id,   
+        word_id,    
+        lang_id,    
         langName,
-        translation,    //wordName,
-        spell_base, //spellBase,
-        spell_eng,  //spellEng,
+        translation,    
+        spell_base, 
+        spell_eng,  
     ) {
         this.id = id;
         this.theme_id = theme_id;
@@ -112,11 +110,11 @@ class CardPrim {
 class ItemHeadingComp {
     constructor (
         id,
-        theme_id,   //idTheme,
-        word_id,    //idWord,
-        lang_id,    //idLang,
+        theme_id,   
+        word_id,    
+        lang_id,    
         langName,
-        translation,    //wordName,
+        translation,    
         spell_base,
         spell_eng,
     ) {
@@ -139,13 +137,13 @@ class ItemHeadingComp {
 class ItemOptionCompChoice {
     constructor (
         id,
-        theme_id,   //idTheme,
-        word_id,    //idWord,
-        lang_id,    //idLang,
+        theme_id,   
+        word_id,    
+        lang_id,    
         langName,
-        translation,    //wordName,
-        spell_base, //spellBase,
-        spell_eng,  //spellEng,
+        translation,    
+        spell_base, 
+        spell_eng,  
     ) {
         this.id = id;
         this.theme_id = theme_id;
@@ -206,10 +204,10 @@ class ItemOption2CompChoice {
     constructor (
         id,
         theme_id,
-        word_id,    //idWord,
-        lang_id,    //idLang,
+        word_id,    
+        lang_id,    
         langName,
-        translation,    //wordName,
+        translation,    
         spell_base,
         spell_eng,
     ) {
@@ -248,9 +246,9 @@ class CardCompChoice {
         this.ctaskRows = taskRows[i][j];
     }
     fetchCompOptionsChoice(i, j) {
-        this.cTheme = taskRows[i][j].theme_id;  //idTheme;
-        this.cLang = taskRows[i][j].lang_id;    //idLang;
-        this.cWord = taskRows[i][j].word_id;    //idWord;
+        this.cTheme = taskRows[i][j].theme_id;  
+        this.cLang = taskRows[i][j].lang_id;    
+        this.cWord = taskRows[i][j].word_id;    
         getOptionsChoice(this.cTheme, this.cLang, this.cWord);
         this.ccompOptionsChoice = compOptionsChoise;
     }    
@@ -262,13 +260,13 @@ class CardCompChoice {
 
         let itemHeadingComp = new ItemHeadingComp(
             this.ctaskRows.id,
-            this.ctaskRows.theme_id,    //idTheme,
-            this.ctaskRows.word_id, //idWord,
-            this.ctaskRows.lang_id, //idLang,
+            this.ctaskRows.theme_id,   
+            this.ctaskRows.word_id, 
+            this.ctaskRows.lang_id, 
             this.ctaskRows.langName,
-            this.ctaskRows.translation, //wordName,
-            this.ctaskRows.spell_base,  //spellBase,
-            this.ctaskRows.spell_eng,   //spellEng,
+            this.ctaskRows.translation, 
+            this.ctaskRows.spell_base,  
+            this.ctaskRows.spell_eng,   
         );
         
         let itemOptionCompChoice = new ItemOptionCompChoice(
@@ -335,7 +333,7 @@ let resultWorry = document.getElementById("worry");
 let resultEnjoy2 = document.getElementById("enjoy2");
 let resultWorry2 = document.getElementById("worry2");
 
-console.log("resultEnjoy2 = " + resultEnjoy2.textContent);
+//console.log("resultEnjoy2 = " + resultEnjoy2.textContent);
 
 let valueEnjoy = resultEnjoy.textContent;
 let valueWorry = resultWorry.textContent;
@@ -355,9 +353,9 @@ for (let i=0; i<taskRows.length; i++) {
     let optionsChoiceTheme = [];
 
     for (let j=0; j<taskRows[i].length; j++) {
-        let thisTheme = taskRows[i][j].theme_id;    //idTheme;
-        let thisWord = taskRows[i][j].word_id;  //idWord;
-        let thisLang = taskRows[i][j].lang_id;  //idLang;
+        let thisTheme = taskRows[i][j].theme_id;    
+        let thisWord = taskRows[i][j].word_id;  
+        let thisLang = taskRows[i][j].lang_id;  
         let optionsChoiceThemeLang = [];    
         for (let k=0; k<compWords.length; k++) {
             if (compWords[k].theme_id == thisTheme && compWords[k].word_id !== thisWord && compWords[k].lang_id == thisLang) {
@@ -370,16 +368,16 @@ for (let i=0; i<taskRows.length; i++) {
     optionsChoice.push(optionsChoiceTheme);
 }
 
-console.log("Options Choice : ");
-console.log(optionsChoice);
+//console.log("Options Choice : ");
+//console.log(optionsChoice);
 
-console.log("Random option Choice: ");
+//console.log("Random option Choice: ");
 
 //Function for test row render
 
 function cardCompChoiceDom() {
     for (let j=0; j<taskRows[0].length; j++) {
-        let wordNum = taskRows[0][j].word_id;   //idWord;
+        let wordNum = taskRows[0][j].word_id;   
         compOptionsChoise = [];
     if (taskRows[0][j].lang_id == selectedPrimLang[0].id) {
            const cardPrimHtml = new CardPrim();
@@ -426,7 +424,7 @@ function cardCompChoiceDom() {
 //Function get element from array by random index
 function randEl(array) {
     const randIndex = Math.floor(Math.random() * array.length);
-    return array[randIndex];    // randElement;
+    return array[randIndex];    
 }
 
 function randArr(array) {
@@ -441,11 +439,11 @@ function randArr(array) {
 //Define task rows with options array for mode Choice
 
 for (let i=0; i < taskRows.length; i++) {
-    let rowTheme = taskRows[i][0].theme_id; //idTheme;
-    let rowWord = taskRows[i][0].word_id;   //idWord;
+    let rowTheme = taskRows[i][0].theme_id; 
+    let rowWord = taskRows[i][0].word_id;   
    
     for (let j=0; j < taskRows[i].length; j++) {
-        let optionLang = taskRows[i][j].lang_id;    //idLang;
+        let optionLang = taskRows[i][j].lang_id;   
         let optionsChoice = [];
 
         optionsChoice[j] = taskRows[i][j];
@@ -485,7 +483,7 @@ function getOptionsChoice(themeId, langId, wordId) {
 //Function for Rows counter
 let rowsList = document.getElementsByClassName("task-mode");
 let rowsNum = rowsList.length;
-console.log("Rows num = " + rowsNum);
+//console.log("Rows num = " + rowsNum);
 
 ////Function for  any rows render
 
@@ -498,9 +496,9 @@ for (let m=0; m <= arrNum; m++) {
     taskRowsTest[m] = taskRows[m];
 }
 
-console.log("array Task rows test for render: ");
-console.log(taskRowsTest);
-console.log("taskRowsTest length : " + taskRowsTest.length);
+// console.log("array Task rows test for render: ");
+// console.log(taskRowsTest);
+// console.log("taskRowsTest length : " + taskRowsTest.length);
 
 function createRow(index) {
     let rowsBlock = document.getElementById("taskModeChoice");
@@ -515,7 +513,7 @@ function rowsCompChoiceDom() {
     for (let i=0; i < (arrNum+1); i++) {
 
         for (let j=0; j<taskRowsTest[i].length; j++) {
-            let wordNum = taskRowsTest[i][j].word_id;   //idWord;
+            let wordNum = taskRowsTest[i][j].word_id;   
             compOptionsChoise = [];
         if (taskRowsTest[i][j].lang_id == selectedPrimLang[0].id) {
             createRow(i);
@@ -577,7 +575,7 @@ function rowsCompChoiceDom() {
 function pageRowsCompChoiceDom(firstIndex, lastIndex) {
     for (let i=firstIndex; i < (lastIndex); i++) {
         for (let j=0; j<taskRowsTest[i].length; j++) {
-            let wordNum = taskRowsTest[i][j].word_id;   //idWord;
+            let wordNum = taskRowsTest[i][j].word_id;   
             compOptionsChoise = [];
         if (taskRowsTest[i][j].lang_id == selectedPrimLang[0].id) {
             createRow(i);
@@ -640,20 +638,4 @@ function pageRowsCompChoiceDom(firstIndex, lastIndex) {
         }
     }
 }
-
-/// Save totals by Exit button
-
-// let exitChoice = document.getElementById("exitChoice");
-// let totalsChoice = [];
-
-// setResultsChoice();
-
-// function setResultsChoice() {    
-//     exitChoice.addEventListener('click', () => {
-//         totalsEnjoy();
-//         totalsWorry();
-//         totalsChoice.push(totalEnjoy, totalWorry);
-//         localStorage.setItem('totalsChoice', totalsChoice);
-//     });
-// }
 

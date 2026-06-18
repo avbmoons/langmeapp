@@ -250,7 +250,7 @@ body {
 .footer-front .footer-center-front .footer-center-block-front #menuSocials .menu-item-front:hover path {
   fill: #fcfcfc;
 }
-.footer-front .footer-center-front .footer-center-block-front #menuSocials #btnTelegram, .footer-front .footer-center-front .footer-center-block-front #menuSocials #btnWhatsapp {
+.footer-front .footer-center-front .footer-center-block-front #menuSocials #btnTelegram, .footer-front .footer-center-front .footer-center-block-front #menuSocials #btnWhatsapp, .footer-front .footer-center-front .footer-center-block-front #menuSocials #btnGithub {
   display: none;
 }
 .footer-front .footer-right-front {
@@ -317,6 +317,6 @@ body {
 .footer-front .footer-right-front .footer-right-block-front .menu-front .menu-item-front:hover path {
   fill: #fcfcfc;
 }
-.footer-front .footer-right-front .footer-right-block-front .menu-front #btnTelegram, .footer-front .footer-right-front .footer-right-block-front .menu-front #btnWhatsapp {
+.footer-front .footer-right-front .footer-right-block-front .menu-front #btnTelegram, .footer-front .footer-right-front .footer-right-block-front .menu-front #btnWhatsapp, .footer-front .footer-right-front .footer-right-block-front .menu-front #btnGithub {
   display: none;
 }/*# sourceMappingURL=footer.css.map */

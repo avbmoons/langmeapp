@@ -15,7 +15,6 @@
 
     @stack('page-scripts')
 
-     {{-- <script defer src="{{ asset('resources/js/timenow.js') }}"></script> --}}
   </head>
   <body>
     <div class="wrapper">

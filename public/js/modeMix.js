@@ -2,21 +2,19 @@ let optionsMix = [];//
 let taskRowsOptions = [];//
 let compWordsTheme = [];//
 let compOptionsMix = [];//
-// let totalEnjoy = [];
-// let totalWorry = [];
 
 //Classes for Prim words for modes: Plain, Choice and Mix
 
 class ItemHeadingPrim {
     constructor (
         id,
-        theme_id,   //idTheme,
-        word_id,    //idWord,
-        lang_id,    //idLang,
+        theme_id,   
+        word_id,   
+        lang_id,    
         langName,
-        translation,    //wordName,
-        spell_base, //spellBase,
-        spell_eng,  //spellEng,
+        translation,    
+        spell_base, 
+        spell_eng,  
     ) {
         this.id = id;
         this.theme_id = theme_id;
@@ -584,10 +582,10 @@ for (let i=0; i<taskRows.length; i++) {
     optionsMix.push(optionsMixTheme);
 }
 
-console.log("Options Mix : ");
-console.log(optionsMix);
+//console.log("Options Mix : ");
+//console.log(optionsMix);
 
-console.log("Random option Mix: ");
+//console.log("Random option Mix: ");
 
 //Function get element from array by random index
 function randEl(array) {
@@ -621,8 +619,8 @@ for (let i=0; i < taskRows.length; i++) {
     taskRowsOptions.push(taskRows[i]);
 }
 
-console.log("Task rows options :");
-console.log(taskRowsOptions);
+//console.log("Task rows options :");
+//console.log(taskRowsOptions);
 
 //Function get random comp options from comp words array by theme and lang
 
@@ -688,12 +686,12 @@ function getOptionsMix(themeId, langId, wordId) {
 
 // //Example for get random comp options
 
-console.log(compOptionsMix);
+//console.log(compOptionsMix);
 
 //Function for Rows counter
 let rowsList = document.getElementsByClassName("task-mode");
 let rowsNum = rowsList.length;
-console.log("Rows num = " + rowsNum);
+//console.log("Rows num = " + rowsNum);
 
 ////Function for  any rows render
 
@@ -706,9 +704,9 @@ for (let m=0; m <= arrNum; m++) {
     taskRowsTest[m] = taskRows[m];
 }
 
-console.log("array Task rows test for render: ");
-console.log(taskRowsTest);
-console.log("taskRowsTest length : " + taskRowsTest.length);
+// console.log("array Task rows test for render: ");
+// console.log(taskRowsTest);
+// console.log("taskRowsTest length : " + taskRowsTest.length);
 
 function createRow(index) {
     let rowsBlock = document.getElementById("taskModeMix");
@@ -787,20 +785,4 @@ function pageRowsCompMixDom(firstIndex, lastIndex) {
         }
     }
 }
-
-// /// Save totals by Exit button
-
-// let exitMix = document.getElementById("exitMix");
-// let totalsMix = [];
-
-// setResultsMix();
-
-// function setResultsMix() {    
-//     exitMix.addEventListener('click', () => {
-//         totalsEnjoy();
-//         totalsWorry();
-//         totalsMix.push(totalEnjoy, totalWorry);
-//         localStorage.setItem('totalsMix', totalsMix);
-//     });
-// }
 

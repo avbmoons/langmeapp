@@ -23,7 +23,6 @@ class ModeList {
         this.cmodes = [];
     }
     fetchMode() {
-        //this.cmodes = modes.filter(item => item.status == 1);
         this.cmodes = modes;    // modes.filter(item => item.status == 'active');
     }
     render() {

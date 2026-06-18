@@ -23,18 +23,18 @@
   <div class="main-center-front-task">
     <div class="task-info">
       <div class="info-title-block">
-        <p class="info-title" id="infoTitle">Lang mode</p>
+        <p class="info-title" id="infoTitle">{{ __('Lang mode') }}</p>
       </div>
       <div class="info-description-block">
         <div class="task-description">
           <div class="task-description">
-            <p class="info-content" id="taskDescription">Choosing the right language for spelling translation</p>
+            <p class="info-content" id="taskDescription">{{ __('Choosing the right language for spelling translation') }}</p>
           </div>
         </div>
       </div>      
       <div class="info-service-block">
         <button class="btn-link" id="changeModeBtn">Change mode</button>
-        <button class="btn-link" onclick="openModalSettings()">Change settings</button>
+        <button class="btn-link" onclick="openModalSettings()">{{ __('Change settings') }}</button>
       </div>
     </div>
     <div class="info-content-block-mobile">
@@ -85,13 +85,13 @@
     </div>
     <div class="task-navi">
       <div class="navi-buttons" id="naviButtons">
-        <button class="btn-link" id="prevBtn">Previous&nbsp;&#9668;</button>
+        <button class="btn-link" id="prevBtn">{{ __('Previous') }}&nbsp;&#9668;</button>
         <ul class="pagination-list">
         </ul>
-        <button class="btn-link" id="nextBtn">&#9658;&nbsp;Next</button>
+        <button class="btn-link" id="nextBtn">&#9658;&nbsp;{{ __('Next') }}</button>
       </div>
       <div class="navi-buttons">
-        <button type="button" class="btn-link" id="exitLang">Exit&nbsp;
+        <button type="button" class="btn-link" id="exitLang">{{ __('Exit') }}&nbsp;
           <!-- icon-exit.png" -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd"                      d="M15.9899 7.823C16.061 7.75467 16.1448 7.701 16.2365 7.66507C16.3283 7.62914 16.4263 7.61165 16.5248 7.6136C16.6233 7.61555 16.7205 7.6369 16.8108 7.67644C16.9011 7.71597 16.9827 7.77291 17.051 7.844L20.5409 11.481C20.6748 11.6206 20.7495 11.8066 20.7495 12C20.7495 12.1934 20.6748 12.3794 20.5409 12.519L17.051 16.156C16.9827 16.227 16.9012 16.284 16.811 16.3235C16.7207 16.363 16.6236 16.3844 16.5252 16.3864C16.4267 16.3884 16.3288 16.371 16.237 16.3351C16.1453 16.2993 16.0615 16.2457 15.9904 16.1775C15.9194 16.1093 15.8625 16.0277 15.823 15.9375C15.7834 15.8473 15.7621 15.7502 15.7601 15.6517C15.7581 15.5532 15.7755 15.4553 15.8113 15.3636C15.8472 15.2718 15.9007 15.188 15.9689 15.117L18.2399 12.75H11.2729C11.074 12.75 10.8833 12.671 10.7426 12.5303C10.602 12.3897 10.5229 12.1989 10.5229 12C10.5229 11.8011 10.602 11.6103 10.7426 11.4697C10.8833 11.329 11.074 11.25 11.2729 11.25H18.2409L15.9689 8.883C15.8314 8.73948 15.7564 8.54721 15.7605 8.34845C15.7647 8.14968 15.8475 7.96069 15.9909 7.823"
@@ -384,17 +384,8 @@
       
       totalEnjoy.push(valueEnjoy);
       totalWorry.push(valueWorry);
-      //totalsEnjoy();
-      //console.log("totalEnjoy = " +totalEnjoy);
-      //totalsWorry();
-      //console.log("totalWorry = " +totalWorry);
-      //console.log("totalsLang[] = "+ totalsLang);
 
-      //totalsLang = [totalEnjoy, totalWorry];
       totalsLang.push(totalEnjoy, totalWorry);
-      // console.log("клик сработал");
-      // console.trace();        
-      // console.log(totalsLang);
     
       localStorage.setItem('totalsLang', totalsLang);
 

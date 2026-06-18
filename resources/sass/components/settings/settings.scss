@@ -1,11 +1,9 @@
 @use 'sass:math';
 
-//@import '../varsfront/varsfront.scss';
 @import '../../varsfront/varsfront.scss';
 
 @font-face {
   font-family: Roboto;
-  //src: url(../../../public/assets/fonts/Roboto.ttf);
   src: url(../../../../public/assets/fonts/Roboto.ttf);
 }
 
@@ -300,11 +298,11 @@ body {
         margin: 0 auto;
         margin-bottom: 7%;
         width: 100%;
-        height: auto; // 14%; 
+        height: auto;  
         @include flex-horizontal();
         .btn-go {
-          padding: 30px 60px; // 0 60px;
-          width: fit-content; // 40%; 
+          padding: 30px 60px; 
+          width: fit-content;  
           height: 100%;
           text-align: center;
           @include text-font(1.53vw, 300, 1.53vw, 0); //22px; 

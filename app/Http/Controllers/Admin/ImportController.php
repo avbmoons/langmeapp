@@ -11,15 +11,9 @@ use Illuminate\Support\LazyCollection;
 
 class ImportController extends Controller
 {
-    // public function upload(Request $request)
     public function import(Request $request)
     {
-        // $request->validate([
-        //     'csv_file' => 'required|file|mimes:csv,txt',
-        // ]);        
-        //dd(auth()->id());
-
-        $files = $request->allFiles();  //$file = file('csv_file');
+        $files = $request->allFiles(); 
 
         if (empty($files)) {
             return back()->with('error', 'No files');
@@ -37,20 +31,13 @@ class ImportController extends Controller
 
         // get meta-data before the cycle
         $targetTable = (new ImportDraft())->getTable(); // get table name
-        $userId = auth()->id();  // Auth::id();   // get user id
+        $userId = auth()->id();  // get user id
 
         $fileStream = fopen($file->getRealPath(), 'r');
         $firstLine = fgets($fileStream);
         $separator = (substr_count($firstLine, ';') > substr_count($firstLine, ',')) ? ';':',';
         rewind($fileStream);
         fgetcsv($fileStream, 0, $separator);   // heading missing
-
-        //$rowNumber = 1;
-        
-        //$firstLine = fgets($fileStream);
-        //$separator = (substr_count($firstLine, ';') > substr_count($firstLine, ',')) ? ';':',';
-
-        //rewind($fileStream);
 
         // Counters for total log
         $successCount = 0;
@@ -61,26 +48,10 @@ class ImportController extends Controller
             while (($row = fgetcsv($fileStream, 0, $separator)) !== false) {
                 yield $row;
             }
-        })->each(function ($row) use (&$successCount, &$errorCount, &$errors) {   // use ($errorCount, $errors, &$rowNumber, $fileName, $successCount, $targetTable, $userId) {
-            // if (empty($row) || !isset($row[0])) {
-            //     return;
-            // }
-            // $rowNumber++;
-            if (empty($row) || count($row) < 2) return;
-
-            // if (count($row) < 9) {
-            //     if (str_contains($row[0], ';')) {
-            //         $row = str_getcsv($row[0], ';');
-            //     }
-
-            //     if (count($row) < 9) {
-            //         $this->logResult($userId, $targetTable, $fileName, $rowNumber, 'error', 'Error count collumns ' . count($row));
-            //         return;
-            //     }
-            // }
+        })->each(function ($row) use (&$successCount, &$errorCount, &$errors) {   
+            if (empty($row) || count($row) < 2) return;            
 
             try {
-                // import logic
                 ImportDraft::updateOrCreate([
                     'id' => $row[0],
                     'pattern_id' => $row[1],
@@ -93,8 +64,6 @@ class ImportController extends Controller
 
                 $successCount++;
 
-                // // write the success log
-                // $this->logResult($userId, $targetTable, $fileName, $rowNumber, 'success');
             } catch (\Exception $e) {
 
                 $errorCount++;
@@ -103,8 +72,6 @@ class ImportController extends Controller
                     $errors[] = "String " . ($successCount + $errorCount +1) . ": " . $e->getMessage();
                 }
 
-                // // write the error log
-                // $this->logResult($userId, $targetTable, $fileName, $rowNumber, 'error', $e->getMessage());
             }
         });
 
@@ -115,37 +82,15 @@ class ImportController extends Controller
             'user_id' => $userId,
             'tablename' => $targetTable,
             'filename' => $fileName,
-            'rows_processed' => $successCount + $errorCount, // $row,
-            'status' => ($errorCount === 0) ? 'success' : 'error',    //  $status,
-            'message' => "Success: $successCount, Errors: $errorCount. " . implode('; ', $errors),   //  $message,
+            'rows_processed' => $successCount + $errorCount, 
+            'status' => ($errorCount === 0) ? 'success' : 'error',   
+            'message' => "Success: $successCount, Errors: $errorCount. " . implode('; ', $errors),   
         ]);
         ////
         return \redirect()->route('admin.importlogs.index')
                 ->with('last_import_id', $log->id)
-                ->with('success', 'Import completed. Rows processed: ' . ($successCount + $errorCount)); //  ->with('success', 'Import completed');
-
-        // $log = ImportLog::create([
-        //     'filename' => $filename,
-        //     'status' => 'pending',
-        //     'user_id' => auth()->id(),
-        // ]);
-
-        // try {
-        //     // csv parsing logic
-        //     $rowCount = 0;
-        //     $this->importCsv($file);
-
-        //     $log->update([
-        //         'status' => 'success',
-        //         'rows_processed' => $rowCount,
-        //         'message' => 'Import finished with success',
-        //     ]);
-        // } catch (\Exception $e) {
-        //     $log->update([
-        //         'status' => 'error',
-        //         'message' => $e->getMessage()
-        //     ]);
-        // }
+                ->with('success', 'Import completed. Rows processed: ' . ($successCount + $errorCount)); 
+        
     }
 
     public function logResult($userId, $tableName, $fileName, $row, $status, $message = null)

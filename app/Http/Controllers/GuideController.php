@@ -17,7 +17,7 @@ class GuideController extends Controller
     {
         return view('guide.index', [
             'langsList' => $langsQueryBuilder->getLangsActive(),
-            'themesList' => $themesQueryBuilder->getAll(),   //getThemesActive(),
+            'themesList' => $themesQueryBuilder->getAll(), 
             'modesList' => $modesQueryBuilder->getModesActive(),
         ]);
     }

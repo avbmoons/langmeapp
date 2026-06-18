@@ -21,8 +21,4 @@ class ImportDraft extends Model
         'status',
     ];
 
-    // public function importLogs()
-    // {
-    //     return $this->belongsTo(ImportLog::class, 'importLog_id', 'id');
-    // }
 }

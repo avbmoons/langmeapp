@@ -1,9 +1,7 @@
 @use "sass:math";
 
 @import "../varsfront/varsfront.scss";
-//@import '../components/header.scss';
 @import '../components/header/header.scss';
-//@import '../components/footer.scss';
 @import '../components/footer/footer.scss';
 
 * {
@@ -58,7 +56,7 @@ body {
           margin: 0 auto;
           margin-top: 10%;
           width: 100%;
-          height: 10%;  //10%;
+          height: 10%;  
           @include flex-vertical();
           //border: 1px solid green;
           @include media-mobile() {
@@ -102,7 +100,7 @@ body {
         //border: 1px solid green;
         .settings-front {
           margin: 0 auto;
-          margin-top: 2%; // 4%; //40px;
+          margin-top: 2%; 
           width: 100%;
           height: 10%;
           @include flex-horizontal();
@@ -110,12 +108,12 @@ body {
           position: relative;
           //border: 1px solid green;
           .set-get-front {
-            margin: 0; // auto;
-            width: 24%; // 30%;
+            margin: 0; 
+            width: 24%; 
             height: 100%;
             @include flex-horizontal();
             align-items: center;
-            background-color: $color-lang-light;  // $color-grey;
+            background-color: $color-lang-light;  
             border-radius: 5px;
             @include text-font(1.39vw, 400, 1.39vw, 0); //20px; 16px
             color: $color-dark;
@@ -174,27 +172,26 @@ body {
           }
           .set-get-front:hover {
             background-color: $color-blick-dark;
-            color: $color-light;  // $color-accent;
+            color: $color-light;  
             border: 2px solid $color-blick;
             svg path {
-              fill: $color-light; // $color-accent;
-              stroke: $color-light; // $color-accent;
+              fill: $color-light; 
+              stroke: $color-light; 
             }
             .btn-link-set-get {
-              color: $color-light;  // $color-accent;
+              color: $color-light;  
             }
-            //background-color: $color-grey-dark;
           }
           .get:hover {
             svg path {
               fill: none;
-              stroke: $color-light; // $color-accent;
+              stroke: $color-light; 
             }
           }
         }
         .modes-front {
           margin: auto;
-          width: 100%;  // 65%;
+          width: 100%;  
           height: 55%;
           @include media-mobile() {
             height: 65%;
@@ -205,8 +202,8 @@ body {
           //border: 1px solid violet;
           .mode-item-front {
             margin: auto 0;
-            width: 24%; // 48%;
-            height: 100%; // 48%;
+            width: 24%; 
+            height: 100%; 
             @include flex-vertical();
             justify-content: space-between;
             border-bottom: 5px solid orangered;
@@ -224,7 +221,7 @@ body {
               align-items: center;
               background-color: $color-grey;
               cursor: pointer;
-              //border: 2px solid $color-grey-dark; // grey;
+              //border: 2px solid $color-grey-dark; 
               border: none;
               outline: none;
               border-radius: 5px;
@@ -286,7 +283,7 @@ body {
             }
             .mode-item-btn:hover {
               border: 2px solid $color-blick;
-              background-color: orange; // $color-grey-dark;
+              background-color: orange; 
             }
             #modeItemPlain, #modeItemChoice {
               box-shadow: -10px 20px 10px 0px rgba(0,0,0,0.2);
@@ -331,15 +328,15 @@ body {
         }
         .results-front {
           margin: 0 auto;
-          margin-bottom: 2%; // 4%; //40px;
+          margin-bottom: 2%; 
           width: 100%;
           height: 10%;
           @include flex-horizontal();
           justify-content: space-between;
           //border: 1px solid green;
           .set-get-front {
-            margin: 0;  // 0 auto; 
-            width: 24%; // 30%;
+            margin: 0;   
+            width: 24%; 
             height: 100%;
             @include flex-horizontal();
             align-items: center;
@@ -376,9 +373,8 @@ body {
             }
             .btn-link-set-get {
               margin: 0 auto;
-              width:fit-content;  // 100%;
-              height:fit-content; // 100%;
-              //@include flex-vertical();
+              width:fit-content;  
+              height:fit-content; 
               text-decoration: none;
               @include text-font(1.25vw, 400, 1.25vw, 0); //18px;  
               color: $color-dark;
@@ -388,19 +384,17 @@ body {
           }
           .set-get-front:hover {
             background-color: $color-blick-dark;
-            //border: 2px solid $color-blick;
-            color: $color-light;  // $color-accent;
+            color: $color-light; 
             .btn-link-set-get {
-              color: $color-light;  // $color-accent;
+              color: $color-light;  
             }
             svg path {
-              fill: $color-light; // $color-accent;
+              fill: $color-light; 
             }
-            //background-color: $color-grey-dark;
           }
           .totals-front {
-            margin: 0; // auto;
-            width: 49.5%; // 45%;
+            margin: 0; 
+            width: 49.5%; 
             height: 100%;
             @include flex-vertical();
             background-color: $color-lang-light;  
@@ -416,7 +410,7 @@ body {
               border-right: none;
             }
             .totals-block-front {
-              margin: 0; // auto;
+              margin: 0; 
               @include flex-horizontal();
               justify-content: space-between;
               .total-item-front {
@@ -437,10 +431,9 @@ body {
           }
           .totals-front:hover {
             background-color: $color-blick-dark;
-            //border: 2px solid $color-blick;
-            color: $color-light;  // $color-accent;
+            color: $color-light;  
             svg g path {
-              fill: $color-light; // $color-accent;
+              fill: $color-light; 
             }
           }
         }
@@ -460,7 +453,7 @@ body {
           margin: 0 auto;
           margin-top: 10%;
           width: 100%;
-          height: 10%;  //10%;
+          height: 10%;  
           @include flex-vertical();
           //border: 1px solid green;
           @include media-mobile() {

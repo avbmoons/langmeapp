@@ -22,7 +22,7 @@ body {
     width: $footer-width;
     height: $footer-height;
     @include flex-horizontal();
-    background-color: $color-lang-light; // $color-grey;
+    background-color: $color-lang-light; 
     @include media-mobile() {
       height: 4vh;
     }
@@ -39,13 +39,11 @@ body {
         width: 100%;
         height: 100%; 
         @include flex-horizontal();
-        //justify-content: center;
         align-items: center;
         //border: 1px solid blue;
         .logo-footer-front {
           margin: 0 auto;
-          //margin-right: 8%;
-          height: 50%;  // 100%; // 50%;
+          height: 50%; 
           width: auto;
           align-items: center;
           //border: 1px solid green;
@@ -73,7 +71,7 @@ body {
         justify-content: space-between;
         .menu-front {
           margin: 0 auto;
-          width: 60%; // 70%; 
+          width: 60%; 
           height: 100%; 
           @include flex-horizontal();
           justify-content: flex-end;
@@ -99,10 +97,10 @@ body {
             }
           }
           .menu-item-front:hover {
-            color: $color-light;  // $color-accent;
+            color: $color-light;  
             font-weight: 500;
             .btn-link-menu {
-              color: $color-light;  // $color-accent;
+              color: $color-light;  
             }
           }
           .future .btn-link-menu {
@@ -132,7 +130,7 @@ body {
           width: 30%; // 100%; 
           height: 100%; 
           @include flex-horizontal();
-          justify-content: flex-end;  // flex-start;
+          justify-content: flex-end;  
           align-items: center;
           display: none;
           @include media-mobile() {
@@ -150,13 +148,13 @@ body {
             align-items: center;
           }
           .menu-item-front:hover {
-            color: $color-light;  // $color-accent;
+            color: $color-light;  
             font-weight: 500;
           }
           .menu-item-front:hover path {
-            fill: $color-light; // $color-accent;
+            fill: $color-light; 
           }
-          #btnTelegram, #btnWhatsapp {
+          #btnTelegram, #btnWhatsapp, #btnGithub {
             display: none;
           }
         }
@@ -199,13 +197,13 @@ body {
             align-items: center;
           }
           .menu-item-front:hover {
-            color: $color-light;  // $color-accent;
+            color: $color-light; 
             font-weight: 500;
           }
           .menu-item-front:hover path {
-            fill: $color-light; // $color-accent;
+            fill: $color-light; 
           }
-          #btnTelegram, #btnWhatsapp {
+          #btnTelegram, #btnWhatsapp, #btnGithub {
             display: none;
           }
         }

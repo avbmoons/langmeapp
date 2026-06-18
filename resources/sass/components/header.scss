@@ -31,7 +31,6 @@ body {
         justify-content: flex-end; 
         .header-left-block-front {
           margin: 0 auto; 
-          //padding-bottom: 1vh;
           width: 100%;
           height: 100%; 
           @include flex-horizontal();
@@ -45,8 +44,7 @@ body {
             //border: 1px solid red;
             .logo-front {
             margin: 0 auto;
-            //margin-right: 8%;
-            height: 70%;  // 80%;
+            height: 70%;  
             width: auto;
             align-items: end;
             //border: 1px solid green;
@@ -60,21 +58,6 @@ body {
             }
           }
           }
-          // .logo-front {
-          //   margin: 0 auto;
-          //   margin-right: 8%;
-          //   height: 80%;
-          //   width: auto;
-          //   align-items: end;
-            
-          //   rect {
-          //     fill: $color-blick;
-          //   }
-          //   .color-dark:hover {
-          //     fill: $color-light;
-          //     cursor: pointer;
-          //   }
-          // }
         }
       }
       .header-center-front {
@@ -84,7 +67,6 @@ body {
         @include flex-vertical();
         background-color: $color-blick;
         clip-path: polygon(0% 0%, 100% 0%, 76% 100%, 0% 100%);
-        //justify-content: flex-end;
         .header-center-block-front {
           margin: 0 auto;
           width: 100%;
@@ -116,11 +98,11 @@ body {
               }
             }
             .menu-item-front:hover {
-              color: $color-light; // $color-accent;
+              color: $color-light; 
               font-weight: 500;
               .btn-link-menu {
                 text-decoration: none;
-                color: $color-light;  // $color-accent;
+                color: $color-light;  
               }
             }
             .future .btn-link-menu {
@@ -132,8 +114,8 @@ body {
           }
           .service-time {
             margin: 0 auto;
-            padding-bottom: 1vh; // 2%;
-            margin-right: 24%;  // 1.39vw;
+            padding-bottom: 1vh; 
+            margin-right: 24%;  
             width: 30%; 
             height: 100%; 
             @include flex-vertical();
@@ -150,7 +132,6 @@ body {
         width: 0.5 * ($site-width - $block-width);
         height: 100%;
         @include flex-vertical();
-        //justify-content: flex-end;
         .header-right-block-front {
           margin: 0 auto; 
           width: 100%;
@@ -159,16 +140,14 @@ body {
           align-items: end;
           .menu-front {
             margin: 0 auto;
-            padding-bottom: 1vh; // 2%;
+            padding-bottom: 1vh; 
             width: 100%; 
             height: 100%; 
             @include flex-horizontal();
             justify-content: flex-start;
-            //align-items: end;
-            //border: 1px solid black;
             .menu-item-front {
-              margin: auto; // 0; 
-              margin-left: 40px;  // 8%;
+              margin: auto; 
+              margin-left: 40px; 
               width: fit-content;
               height: fit-content;
               border: none;
@@ -184,6 +163,12 @@ body {
                 @include text-font(1.11vw, 300, 1.11vw, 0); //16px
                 color: $color-dark;
                 align-items: center;
+              }
+              .btn-link-menu.active {
+                color: #4f46e5; //#0c3387; // 
+                font-weight: bold;
+                text-decoration: underline;
+                pointer-events: none;
               }
             }
             .header {
@@ -201,29 +186,25 @@ body {
               fill: $color-accent;
             }
             .combo-block-front {
-              margin: auto; // 0; 
+              margin: auto;  
               width: fit-content; 
               height: auto;
-              @include flex-vertical();
+              //@include flex-vertical();
+              @include flex-horizontal();
               position: relative;
-              //border: 1px solid red;
-              //align-items: center;
               #appLangEng,
               #appLangRus,
-              #appLangEngChoice {
-                margin-left: 20px;  // 40%; // 20px;
-                //margin-top: 15%;
+              #appLangEngChoice, #appLangRusChoice {
+                margin-left: 10px; // 20px;  
                 opacity: 1;
                 border: none;
                 outline: none;
               }
               .combo-list-front {
-                margin: 0; // auto;
+                margin: 0; 
                 width: 100%;
                 height: auto;
                 @include flex-vertical();
-                //border: 2px solid $color-grey;
-                //background-color: $color-grey;
                 opacity: 1;
                 position: absolute;
                 top: -100%;

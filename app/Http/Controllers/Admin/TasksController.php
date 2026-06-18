@@ -35,7 +35,7 @@ class TasksController extends Controller
                 ->getTasksWithPagination();
         
         return view('admin.tasks.index', [
-            'tasksList' => $tasks,  // $tasksQueryBuilder->getTasksWithPagination(),    // getAll(),
+            'tasksList' => $tasks,  
             'themes' => $themes,
             'langs' => $langs,
             'users' => $users,
@@ -73,33 +73,6 @@ class TasksController extends Controller
 
             $task->themes()->attach($themeIds);
             $task->langs()->attach($langIds);
-            // foreach ($themeIds as $id) {
-            //     DB::table('theme_has_tasks')->insert([
-            //         'task_id' => $task->id,
-            //         'theme_id' => $id,
-            //     ]);
-            // }
-            // foreach ($langIds as $id) {
-            //     DB::table('lang_has_tasks')->insert([
-            //         'task_id' => $task->id,
-            //         'lang_id' => $id,
-            //     ]);
-            // }
-            // $task->themes_ids = $request->input('theme_ids');
-            // $task->langs_ids = $request->input('lang_ids');
-
-            // // $langIds = $request->input('lang_ids');
-            // // $themeIds = $request->input('theme_ids');
-            // //dd($themeIds);
-            
-            // $task->langs()->attach($request->getLangIds());
-            // $task->themes()->attach($request->getThemeIds());
-
-            // // $task->langs()->sync($request->getLangIds());
-            // // $task->themes()->sync($request->getThemeIds());
-
-            // //$task->langs()->attach($request->input('lang_ids')->getLangIds());
-            // //$task->themes()->attach($request->input('theme_ids')->getThemeIds());
 
             $task->save();
             return \redirect()->route('admin.tasks.index')->with('success', 'Task already saved');

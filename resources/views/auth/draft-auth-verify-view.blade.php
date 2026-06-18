@@ -56,24 +56,11 @@
       let menuFooterTask = document.getElementById('menuFooterTask');
       let menuFooterResults = document.getElementById('menuFooterResults');
       
-      //if (thisPage.includes('login') || thisPage.includes('register')) {
-       //btnEnter.style.visibility = "hidden";
-       //btnAdmin.style.visibility = "hidden";
-       //btnEnterMobile.style.visibility = "hidden";
-       //btnAdminMobile.style.visibility = "hidden";
-
-      //  menuHeaderTask.style.visibility = 'hidden';
-      //  menuHeaderResults.style.visibility = 'hidden';
-
        menuHeaderTask.style.display = 'none';
        menuHeaderResults.style.display = 'none';
 
-      //  menuFooterTask.style.visibility = 'hidden';
-      //  menuFooterResults.style.visibility = 'hidden';
-
        menuFooterTask.style.display = 'none';
        menuFooterResults.style.display = 'none';
-      //} 
 
     </script>
 @endpush

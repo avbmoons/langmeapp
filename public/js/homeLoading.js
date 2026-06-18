@@ -65,8 +65,6 @@ function verifyStorage() {
   verifyResource("modeChoice");
 }
 
-//localStorage.removeItem("");
-
 //// Modal Results open-close
 
 const resultsButton = document.getElementById("resultsButton");
@@ -148,8 +146,6 @@ function grandTotals() {
 
   //// Results modal and report
   console.log("numTotalsChoice[0]" + numTotalsChoice[0].valueOf());
-
-  //enjoyChoice. = numTotalsChoice[0];
 
   enjoyChoice.textContent = numTotalsChoice[0];
   worryChoice.textContent = numTotalsChoice[1];

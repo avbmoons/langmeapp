@@ -20,7 +20,6 @@ class TaskMixController extends Controller
             'themes' => $themesQueryBuilder->getThemesActive()->toArray(),
             'modes' => $modesQueryBuilder->getModesActive()->toArray(),
             'words' => $wordsQueryBuilder->getWordsWithThemes()->toArray(),
-            //'words' => $wordsQueryBuilder->getWordsActive()->toArray(),
             'patterns' => $patternsQueryBuilder->getPatternsActive()->toArray(),
             'patternRus' => $lexiconsQueryBuilder->getLexiconsByPatternActive(9)->toArray(),
             'patternEng' => $lexiconsQueryBuilder->getLexiconsByPatternActive(1)->toArray(),

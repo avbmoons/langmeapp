@@ -1,6 +1,5 @@
 @use 'sass:math';
 
-//@import '../varsfront/varsfront.scss';
 @import '../../varsfront/varsfront.scss';
 
 @font-face {
@@ -20,11 +19,10 @@ body {
 @mixin settings-resume() {
   .settings-block {
     margin: 0 auto;
-    padding: 0.69vw 1.39vw; //10 px 20px;
+    padding: 0.69vw 1.39vw; 
     width: fit-content; 
-    max-width: 40vw; // 25vw;  // 12vw;
-    //width: 30vw;
-    height: 100%; // fit-content;  
+    max-width: 40vw;
+    height: 100%;  
     @include flex-vertical();
     border-radius: 5px;
     @include media-mobile() {
@@ -33,7 +31,7 @@ body {
     .settings-title {
       margin: 0 auto;
       width: 96%;
-      height: 40%; // 50%;
+      height: 40%; 
       @include flex-horizontal();
       @include media-mobile() {
         height: 30%;
@@ -41,10 +39,9 @@ body {
     }
     .sett-langs {
       margin: 0 auto;
-      margin-top: 0.10vw; // 0.25vw; // 0.97vw;
+      margin-top: 0.10vw; 
       width: 100%;  
       height: fit-content;  
-      //@include flex-vertical();
       @include flex-horizontal();
       justify-content: flex-start;
       cursor: pointer;
@@ -60,7 +57,7 @@ body {
     }
     .sett-themes {
       margin: 0 auto;
-      margin-top: 0.10vw; // 0.97vw;
+      margin-top: 0.10vw; 
       width: 100%;  
       height: fit-content;  
       @include flex-horizontal();

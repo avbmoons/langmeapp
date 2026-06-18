@@ -1,7 +1,5 @@
 @use 'sass:math';
 
-//@import '../varsfront/varsfront.scss';
-//@import '../varsfront/varsfront.scss';
 @import '../varsfront/varsfront.scss';
 
 @font-face {
@@ -39,22 +37,18 @@ body {
   @include media-mobile() {
     width: 90%;
     min-height: 100vh - 7vh - 4vh;
-    //height: auto;
   }                      
   .title-block-auth {
-    margin: auto; // 0 auto;
-    //margin-top: 20px;
-    //margin-bottom: 20px;
+    margin: auto; 
     padding-top: 20px;
     padding-bottom: 20px;
     width: 100%;
-    height: 7vh;  // 20%;
+    height: 7vh;  
     @include flex-vertical();
     //border: 1px solid green;
     @include media-mobile() {
       margin-top: 20px;
-      //min-height: 20%;
-      height: 100%; // auto;
+      height: 100%; 
     }
     .title-box-auth {
       margin: 0 auto;
@@ -63,19 +57,17 @@ body {
       @include flex-horizontal();
       //border: 1px solid green;
       .title-auth {
-        //margin-top: 10px;
-        padding: 20px;  // 10px;  
+        padding: 20px;    
         @include text-font(1.94vw, 400, 1.94vw, 0); // 28px
         @include media-text(18px, 20px, 26px);
         color: $color-dark;
         @include media-mobile() {
-          //margin-top: 20px;
           padding: 0;
         }
       }
       .terve-auth {
         padding: 10px;
-        width: auto;  // 55%;
+        width: auto;  
         @include text-font(1.39vw, 300, 1.39vw, 0);
         @include media-text(14px, 16px, 18px);
         text-align: center;
@@ -95,10 +87,9 @@ body {
     }
   }
   .form-input-auth {
-    margin: 0 auto 20px;  // 0 auto;
-    //margin-bottom: 40px;  // 90px;
+    margin: 0 auto 20px;  
     width: 60%;
-    height: 100vh - $header-height - $footer-height - 7vh;  // auto; // 75%;  // 70%;
+    height: 100vh - $header-height - $footer-height - 7vh;  
     //border: 2px solid grey;
     border-radius: 5px;
     box-shadow: -20px 20px 10px 0px rgba(0,0,0,0.3),
@@ -107,16 +98,14 @@ body {
     border-bottom: 5px solid orangered;
     border-top: 1px solid $color-grey;
     @include flex-vertical();
-    justify-content: space-around;  // space-between; // space-around;
+    justify-content: space-around;  
     background-color: $color-light;
     @include media-mobile() {
       width: 90%;
-      //height: auto; // 65%;
       min-height: 100vh - 7vh - 4vh - 7vh;  //
     }
     .input-box-auth {
       margin: 0 auto;
-      //margin-bottom: 20px;
       width: 80%;
       height: auto;
       @include flex-vertical();
@@ -125,19 +114,16 @@ body {
       .input-lable-auth {
         margin: 0 auto;
         width: 100%;
-        //margin-bottom: 10px;  // $input-lable-marginb;
         @include text-font(1.39vw, 300, 1.39vw, 0);   // 20px
         @include media-text(14px, 16px, 18px);
         color: $color-dark;
       }
       .input-text-auth {
         margin: 0 auto;
-        margin-top: 10px; // 10px;
-        //padding-left: 10px;
+        margin-top: 10px; 
         padding: 10px;
-        //margin-bottom: $input-marginb;
-        width: 100%;  // $input-width;
-        height: fit-content;  // 30px;
+        width: 100%;  
+        height: fit-content;  
         @include text-font(1.11vw, 300, 1.11vw, 0); // 16px
         @include media-text(10px, 12px, 14px);
         color: $color-dark;
@@ -165,7 +151,6 @@ body {
       }
       .link-page-auth {
         margin: 0 auto;
-        //margin-top:30px;  // 40px;
         width: 100%;
         @include text-font(1.39vw, 300, 1.39vw, 0);
         @include media-text(14px, 16px, 18px);
@@ -180,11 +165,8 @@ body {
       .btn-form-auth {
         margin: 0 auto;
         margin-left: 0;
-        //margin-top: 20px;
-        //margin-bottom: 20px;
-        padding: 30px 60px; // 0;
-        width: auto;  // 40%; // 80px;
-        //height: 40px;
+        padding: 30px 60px; 
+        width: auto;  
         @include flex-horizontal();
         @include text-font(1.53vw, 300, 1.53vw, 0); //22px;
         @include media-text(18px, 20px, 22px);
@@ -204,7 +186,6 @@ body {
         color: $color-dark;
       }
       .link-btn {
-        //margin-top: 40px;
         width: 100%;
         background: none;
         text-align: center;
@@ -218,7 +199,6 @@ body {
       }
       .exit-btn {
         margin: 0 auto;
-        //margin-bottom: 40px;
         width: 60%;
         text-align: center;
         @include media-mobile {
@@ -227,7 +207,7 @@ body {
       }
     }
     .first {
-      margin-top: 0;  // 40px;
+      margin-top: 0;  
     }  
     .first-row {
       margin-top: 40px;
@@ -235,7 +215,6 @@ body {
     }
     .area {
       min-height: 20vh;
-      //max-height: 25%;  // 25vh;
       padding-top: 10px;
       line-height: normal;
       overflow-y: auto;
@@ -250,45 +229,41 @@ body {
     } 
     .single-btn {
       margin: 0 auto;
-      margin-bottom: 0; // 40px;
+      margin-bottom: 0; 
       width: 80%;
       min-height: 15vh;
-      height: 15vh; // inherit;  // auto;
-      //min-height: 50%;
+      height: 15vh; 
       border-top: none;
       border-bottom: none;
       border-left: none;
       box-shadow: none;
       outline: none;
       @include flex-vertical();
-      //justify-content: space-between; // space-around;
       background-color: $color-light;
       //border: 1px solid blue;
       @include media-mobile() {
         width: 90%;
-        height: 15vh;  // 65%;
+        height: 15vh;  
       }
     } 
   }
   .single-btn-block {
     margin: 0 auto 0;
-    //margin-bottom: 0; // 40px;
     width: 80%;
-    //max-height: 55vh; // auto;
-    height: fit-content;  // 45%;
+    height: fit-content;  
     border-top: none;
     border-bottom: none;
     border-left: none;
     box-shadow: none;
     outline: none;
     @include flex-vertical();
-    justify-content: space-around;  // space-between; // space-around;
+    justify-content: space-around;  
     background-color: $color-light;
     //border:  1px solid green;
     @include media-mobile() {
       width: 90%;
       min-height: 30vh;
-      height: 30vh; // 65%;
+      height: 30vh; 
     }
   } 
 }

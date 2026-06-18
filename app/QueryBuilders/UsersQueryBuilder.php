@@ -28,11 +28,6 @@ final class UsersQueryBuilder extends QueryBuilder
         return User::query()->where('id', $id)->get();
     }
 
-    // public function getUsersByIsAdmin(string $isAdmin): Collection
-    // {
-    //     return User::query()->where('is_admin', $isAdmin)->get();
-    // }
-
     public function getUsersWithPagination(int $quantity = 10): LengthAwarePaginator
     {
         $search = request()->query('search');
@@ -50,13 +45,7 @@ final class UsersQueryBuilder extends QueryBuilder
             ->orderBy('id', 'desc') // 'asc'
             ->paginate(10)
             ->withQueryString();
-        
-        //$this->model->paginate($quantity);
-    }
 
-    // public function getUsersWithPagination(int $quantity = 10): LengthAwarePaginator
-    // {
-    //     return $this->model->paginate($quantity);
-    // }
+    }
 
 }

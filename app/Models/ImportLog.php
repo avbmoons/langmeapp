@@ -33,11 +33,6 @@ class ImportLog extends Model
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
 
-    // public function importDraftsFromModes()
-    // {
-    //     return $this->hasMany(ImportDraft::class);
-    // }
-
     public function getImportLogs():Collection
     {
         return DB::table($this->table)->get();

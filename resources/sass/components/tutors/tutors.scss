@@ -1,11 +1,9 @@
   @use 'sass:math';
 
-//@import '../varsfront/varsfront.scss';
 @import '../../varsfront/varsfront.scss';
 
 @font-face {
   font-family: Roboto;
-  //src: url(../../../public/assets/fonts/Roboto.ttf);
   src: url(../../../../public/assets/fonts/Roboto.ttf);
 }
 
@@ -47,7 +45,7 @@ body {
       .btn-close {
         position: absolute;
         top: 10px;
-        right: 5%; // 20px;
+        right: 5%; 
         width: fit-content;
         height: fit-content;
         border: none;
@@ -112,7 +110,7 @@ body {
           }
           #tutorSkip {
             margin-right: 0;
-            width: 15%; // 20%; ////
+            width: 15%; 
             @include text-font(1.67vw, 500, 1.67vw, 0); //24px
             @include media-text(14px, 18px, 24px);
             //border: 1px solid green;
@@ -126,23 +124,20 @@ body {
               color: $color-accent;
             }
           }
-          // #tutorPrev, #tutorNext {
-          //   width: 5%;  // 10%;
-          // }          
+        
           .control-panels {
             margin: auto;
             height: 50%;
-            width: 80%; // auto;
+            width: 80%; 
             @include flex-horizontal();
             justify-content: space-between;
 
             .dot-step {
-              height: auto; // 100%;
-              width: 5%;  // auto;
+              height: auto; 
+              width: 5%;  
               @include flex-vertical();
               svg {
-                //height: 100%;  // 2.5vw;  // 100%;
-                width: 100%;  // 2.5vw;
+                width: 100%;  
                 height: auto;
               }
             }

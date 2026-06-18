@@ -8,11 +8,11 @@
 <div class="main-center-front">
   <div class="title-block-auth single-title-block">
     <div class="title-box-auth">
-      <p class="title-auth">Confirm your E-mail</p>
+      <p class="title-auth">{{ __('Confirm your E-mail') }}</p>
     </div>
     <div class="title-box-auth text-auth">
-      <p class="terve-auth">Thank your for registering!</p>
-      <p class="terve-auth">Please confirm your email address by clicking on the link we just sent you!</p>
+      <p class="terve-auth">{{ __('Thank your for registering!') }}</p>
+      <p class="terve-auth">{{ __('Please confirm your email address by clicking on the link we just sent you!') }}</p>
     </div>
     @if (session('status') == 'verification-link-sent')
       <div class="alert">
@@ -24,13 +24,13 @@
     <form method="POST" action="{{ route('verification.send') }}" class="form-input-auth single-btn">
       @csrf
       <div class="input-box-auth">
-        <button type="submit" class="btn-form-auth link-btn">Resend the message</button>
+        <button type="submit" class="btn-form-auth link-btn">{{ __('Resend the message') }}</button>
       </div> 
     </form>    
     <form method="POST" action="{{ route('logout') }}" class="form-input-auth single-btn">
     @csrf
     <div class="input-box-auth">
-      <button type="submit" class="btn-form-auth exit-btn">Exit</button>
+      <button type="submit" class="btn-form-auth exit-btn">{{ __('Exit') }}</button>
     </div> 
   </form>
   </div>
@@ -56,24 +56,11 @@
       let menuFooterTask = document.getElementById('menuFooterTask');
       let menuFooterResults = document.getElementById('menuFooterResults');
       
-      //if (thisPage.includes('login') || thisPage.includes('register')) {
-       //btnEnter.style.visibility = "hidden";
-       //btnAdmin.style.visibility = "hidden";
-       //btnEnterMobile.style.visibility = "hidden";
-       //btnAdminMobile.style.visibility = "hidden";
-
-      //  menuHeaderTask.style.visibility = 'hidden';
-      //  menuHeaderResults.style.visibility = 'hidden';
-
        menuHeaderTask.style.display = 'none';
        menuHeaderResults.style.display = 'none';
 
-      //  menuFooterTask.style.visibility = 'hidden';
-      //  menuFooterResults.style.visibility = 'hidden';
-
        menuFooterTask.style.display = 'none';
        menuFooterResults.style.display = 'none';
-      //} 
 
     </script>
 @endpush

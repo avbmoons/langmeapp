@@ -319,26 +319,3 @@ function findTheme() {
   });
 }
 
-// function findTheme() {
-//   let inputThemes = document.getElementById('inputThemes');
-
-//           inputThemes.addEventListener('input', (event) => {
-//             let query = event.target.value.toLowerCase().trim();
-
-//             let rows = document.querySelectorAll('#themeChoiceList .combo-list-item');
-
-//             rows.foreach(row => {
-//               let checkbox = row.querySelector('input[type="checkbox"]');
-//               let label = row.querySelector('label');
-
-//               let themeValue = checkbox ? checkbox.value.toLowerCase() : '';
-//               let themeText = label ? label.innerHtml.toLowerCase() : '';
-
-//               if (themeValue.includes(query) || themeText.includes(query)) {
-//                 row.style.display = 'flex';
-//               } else {
-//                 row.style.display = 'none';
-//               }
-//             });
-//           });
-// }

@@ -37,7 +37,7 @@ body {
         .logo-footer-front {
           margin: 0 auto;
           margin-right: 8%;
-          height: 50%;  // 100%; // 50%;
+          height: 50%;  
           width: auto;
           align-items: center;
         }
@@ -58,7 +58,7 @@ body {
         justify-content: space-between;
         .menu-front {
           margin: 0 auto;
-          width: 60%; // 70%; 
+          width: 60%; 
           height: 100%; 
           @include flex-horizontal();
           justify-content: flex-end;
@@ -79,10 +79,10 @@ body {
             }
           }
           .menu-item-front:hover {
-            color: $color-light;  // $color-accent;
+            color: $color-light;  
             font-weight: 500;
             .btn-link-menu {
-              color: $color-light;  // $color-accent;
+              color: $color-light;  
             }
           }
           .future .btn-link-menu {
@@ -132,19 +132,13 @@ body {
             @include text-font(16px, 300, 16px, 0);
             cursor: pointer;
             align-items: center;
-            // img {
-            //   margin: 0 auto;
-            //   height: 16px;
-            //   width: auto;
-            //   align-items: end;
-            // }
           }
           .menu-item-front:hover {
-            color: $color-light;  // $color-accent;
+            color: $color-light;  
             font-weight: 500;
           }
           .menu-item-front:hover path {
-            fill: $color-light; // $color-accent;
+            fill: $color-light; 
           }
         }
       }

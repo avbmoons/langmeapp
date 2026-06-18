@@ -49,14 +49,8 @@ final class ModesQueryBuilder extends QueryBuilder
             })
             ->orderBy('id', 'asc')
             ->paginate(10)
-            ->withQueryString();
-        
-        //$this->model->paginate($quantity);
-    }
+            ->withQueryString();        
 
-    // public function getModesWithPagination(int $quantity = 10): LengthAwarePaginator
-    // {
-    //     return $this->model->paginate($quantity);
-    // }
+    }
 
 }

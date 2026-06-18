@@ -84,20 +84,6 @@
         <path d="M20 3H4C2.9 3 2 3.9 2 5V19C2 20.1 2.9 21 4 21H20C21.1 21 22 20.1 22 19V5C22 3.9 21.1 3 20 3ZM4 19V5H20V19H4Z" fill="#1B1357"/>
         <path d="M13 8.00004H18V10H13V8.00004ZM8.00004 8.59004L6.96004 7.54004L5.54004 8.96004L8.00004 11.41L11.46 7.96004L10.04 6.54004L8.00004 8.59004ZM13 14H18V16H13V14ZM8.00004 14.59L6.96004 13.54L5.54004 14.96L8.00004 17.41L11.46 13.96L10.04 12.54L8.00004 14.59Z" fill="#1B1357"/>
       </svg>
-      {{-- <svg
-        class="menu-icon"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M11 16H13V7H16L12 2L8 7H11V16Z" fill="#1B1357" />
-        <path  
-          d="M5 22H19C20.103 22 21 21.103 21 20V11C21 9.897 20.103 9 19 9H15V11H19V20H5V11H9V9H5C3.897 9 3 9.897 3 11V20C3 21.103 3.897 22 5 22Z"
-          fill="#1B1357"
-        />
-      </svg> --}}
       <a href="{{ route('admin.tasks.index') }}">
         <button class="bth-menu-item @if(request()->routeIs('admin.tasks.index')) active @endif" id="btnMenuTasks">Tasks</button>
       </a>

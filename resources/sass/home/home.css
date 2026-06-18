@@ -459,6 +459,12 @@ body {
   color: #0f1a1c;
   align-items: center;
 }
+.header-front .header-right-front .header-right-block-front .menu-front .menu-item-front .btn-link-menu.active {
+  color: #4f46e5;
+  font-weight: bold;
+  text-decoration: underline;
+  pointer-events: none;
+}
 .header-front .header-right-front .header-right-block-front .menu-front .header {
   margin-left: 10%;
 }
@@ -479,15 +485,14 @@ body {
   width: fit-content;
   height: auto;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
   position: relative;
 }
 .header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangEng,
 .header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangRus,
-.header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangEngChoice {
-  margin-left: 20px;
+.header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangEngChoice, .header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangRusChoice {
+  margin-left: 10px;
   opacity: 1;
   border: none;
   outline: none;
@@ -759,7 +764,7 @@ body {
 .footer-front .footer-center-front .footer-center-block-front #menuSocials .menu-item-front:hover path {
   fill: #fcfcfc;
 }
-.footer-front .footer-center-front .footer-center-block-front #menuSocials #btnTelegram, .footer-front .footer-center-front .footer-center-block-front #menuSocials #btnWhatsapp {
+.footer-front .footer-center-front .footer-center-block-front #menuSocials #btnTelegram, .footer-front .footer-center-front .footer-center-block-front #menuSocials #btnWhatsapp, .footer-front .footer-center-front .footer-center-block-front #menuSocials #btnGithub {
   display: none;
 }
 .footer-front .footer-right-front {
@@ -826,7 +831,7 @@ body {
 .footer-front .footer-right-front .footer-right-block-front .menu-front .menu-item-front:hover path {
   fill: #fcfcfc;
 }
-.footer-front .footer-right-front .footer-right-block-front .menu-front #btnTelegram, .footer-front .footer-right-front .footer-right-block-front .menu-front #btnWhatsapp {
+.footer-front .footer-right-front .footer-right-block-front .menu-front #btnTelegram, .footer-front .footer-right-front .footer-right-block-front .menu-front #btnWhatsapp, .footer-front .footer-right-front .footer-right-block-front .menu-front #btnGithub {
   display: none;
 }
 
@@ -1292,6 +1297,12 @@ body {
   color: #0f1a1c;
   align-items: center;
 }
+.wrapper-front .top-front .header-front .header-right-front .header-right-block-front .menu-front .menu-item-front .btn-link-menu.active {
+  color: #4f46e5;
+  font-weight: bold;
+  text-decoration: underline;
+  pointer-events: none;
+}
 .wrapper-front .top-front .header-front .header-right-front .header-right-block-front .menu-front .header {
   margin-left: 10%;
 }
@@ -1312,15 +1323,14 @@ body {
   width: fit-content;
   height: auto;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
   position: relative;
 }
 .wrapper-front .top-front .header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangEng,
 .wrapper-front .top-front .header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangRus,
-.wrapper-front .top-front .header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangEngChoice {
-  margin-left: 20px;
+.wrapper-front .top-front .header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangEngChoice, .wrapper-front .top-front .header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangRusChoice {
+  margin-left: 10px;
   opacity: 1;
   border: none;
   outline: none;
@@ -2178,7 +2188,7 @@ body {
 .wrapper-front .footer-front .footer-center-front .footer-center-block-front #menuSocials .menu-item-front:hover path {
   fill: #fcfcfc;
 }
-.wrapper-front .footer-front .footer-center-front .footer-center-block-front #menuSocials #btnTelegram, .wrapper-front .footer-front .footer-center-front .footer-center-block-front #menuSocials #btnWhatsapp {
+.wrapper-front .footer-front .footer-center-front .footer-center-block-front #menuSocials #btnTelegram, .wrapper-front .footer-front .footer-center-front .footer-center-block-front #menuSocials #btnWhatsapp, .wrapper-front .footer-front .footer-center-front .footer-center-block-front #menuSocials #btnGithub {
   display: none;
 }
 .wrapper-front .footer-front .footer-right-front {
@@ -2245,6 +2255,6 @@ body {
 .wrapper-front .footer-front .footer-right-front .footer-right-block-front .menu-front .menu-item-front:hover path {
   fill: #fcfcfc;
 }
-.wrapper-front .footer-front .footer-right-front .footer-right-block-front .menu-front #btnTelegram, .wrapper-front .footer-front .footer-right-front .footer-right-block-front .menu-front #btnWhatsapp {
+.wrapper-front .footer-front .footer-right-front .footer-right-block-front .menu-front #btnTelegram, .wrapper-front .footer-front .footer-right-front .footer-right-block-front .menu-front #btnWhatsapp, .wrapper-front .footer-front .footer-right-front .footer-right-block-front .menu-front #btnGithub {
   display: none;
 }/*# sourceMappingURL=home.css.map */

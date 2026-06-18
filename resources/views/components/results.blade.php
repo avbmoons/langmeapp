@@ -11,53 +11,53 @@
     <div class="results-front-main" id="resultsMain">
       <div class="results-mode">
         <div class="results-totals title">
-          <p class="totals-title">Choice mode:</p>
+          <p class="totals-title">{{ __('Choice mode') }}:</p>
         </div>
         <div class="results-totals">
-          <p class="totals-text">Enjoy:&nbsp;</p>
+          <p class="totals-text">{{ __('Enjoy') }}:&nbsp;</p>
           <p class="totals-text" id="enjoyChoice">0</p>
         </div>
         <div class="results-totals">
-          <p class="totals-text">Worry:&nbsp;</p>
+          <p class="totals-text">{{ __('Worry') }}:&nbsp;</p>
           <p class="totals-text" id="worryChoice">0</p>
         </div>
       </div>
       <div class="results-mode">
         <div class="results-totals title">
-          <p class="totals-title">Mix mode:</p>
+          <p class="totals-title">{{ __('Mix mode') }}:</p>
         </div>
         <div class="results-totals">
-          <p class="totals-text">Enjoy:&nbsp;</p>
+          <p class="totals-text">{{ __('Enjoy') }}:&nbsp;</p>
           <p class="totals-text" id="enjoyMix">0</p>
         </div>
         <div class="results-totals">
-          <p class="totals-text">Worry:&nbsp;</p>
+          <p class="totals-text">{{ __('Worry') }}:&nbsp;</p>
           <p class="totals-text" id="worryMix">0</p>
         </div>
       </div>
       <div class="results-mode">
         <div class="results-totals title">
-          <p class="totals-title">Lang mode:</p>
+          <p class="totals-title">{{ __('Lang mode') }}:</p>
         </div>
         <div class="results-totals">
-          <p class="totals-text">Enjoy:&nbsp;</p>
+          <p class="totals-text">{{ __('Enjoy') }}:&nbsp;</p>
           <p class="totals-text" id="enjoyLang">0</p>
         </div>
         <div class="results-totals">
-          <p class="totals-text">Worry:&nbsp;</p>
+          <p class="totals-text">{{ __('Worry') }}:&nbsp;</p>
           <p class="totals-text" id="worryLang">0</p>
         </div>
       </div>
       <div class="results-mode">
         <div class="results-totals title">
-          <p class="grand-title">Grand totals:</p>
+          <p class="grand-title">{{ __('Grand totals') }}:</p>
         </div>
         <div class="results-totals">
-          <p class="grand-text">Enjoy:&nbsp;</p>
+          <p class="grand-text">{{ __('Enjoy') }}:&nbsp;</p>
           <p class="grand-text" id="enjoyGrand">0</p>
         </div>
         <div class="results-totals">
-          <p class="grand-text">Worry:&nbsp;</p>
+          <p class="grand-text">{{ __('Worry') }}:&nbsp;</p>
           <p class="grand-text" id="worryGrand">0</p>
         </div>
       </div>
@@ -67,7 +67,7 @@
         <button class="btn-ok" onclick="closeModalResults()">OK</button>
       </a>
       <a href="">
-        <button class="btn-ok" id="getPdf" onclick="window.print()">Get PDF</button>
+        <button class="btn-ok" id="getPdf" onclick="window.print()">{{ __('Get PDF') }}</button>
       </a>
     </div>
   </div>

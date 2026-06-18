@@ -14,9 +14,9 @@ class HomeController extends Controller
         LangsQueryBuilder $langsQueryBuilder, ThemesQueryBuilder $themesQueryBuilder, ModesQueryBuilder $modesQueryBuilder):View
     {
         return (\view('home.index', [
-            'langs' => $langsQueryBuilder->getLangsActive()->toArray(), //getLangsActive(),
-            'themes' => $themesQueryBuilder->getThemesActive()->toArray(),   //getThemesActive(),
-            'modes' => $modesQueryBuilder->getModesActive()->toArray(),    //getModesActive(),
+            'langs' => $langsQueryBuilder->getLangsActive()->toArray(), 
+            'themes' => $themesQueryBuilder->getThemesActive()->toArray(),   
+            'modes' => $modesQueryBuilder->getModesActive()->toArray(),    
         ]));
     }
 }

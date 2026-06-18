@@ -53,13 +53,7 @@ final class PatternsQueryBuilder extends QueryBuilder
             ->orderBy('id', 'asc') // 'desc'
             ->paginate(10)
             ->withQueryString();
-        
-        //$this->model->paginate($quantity);
-    }
 
-    // public function getPatternsWithPagination(int $quantity = 10): LengthAwarePaginator
-    // {
-    //     return $this->model->paginate($quantity);
-    // }
+    }
 
 }

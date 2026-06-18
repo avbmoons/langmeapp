@@ -50,7 +50,7 @@ const paginate = (products) => {
         console.log('lastProductIndex: ', lastProductIndex);
 
         const productsOnPage = products.slice(firstProductIndex, lastProductIndex);
-        console.log('productsOnPage: ', productsOnPage);
+        //console.log('productsOnPage: ', productsOnPage);
 
         switch (pageUrl) {
             case "taskChoice":
@@ -125,18 +125,6 @@ const paginate = (products) => {
 
           managePagination(liElements.length);
 
-            // if(!event.target.closest('.pagination-item')) {
-            //     return;
-            // } else {
-            //     currentPage = event.target.textContent;
-
-            //     console.log('Click on none');
-            //     renderProducts(products, productContainer, productCount, currentPage);
-
-            //     let currentLi = document.querySelector('.pagination-item.active');
-            //     currentLi.classList.remove('active');
-            //     event.target.classList.add('active');
-            // }
         });
     };
 
@@ -179,24 +167,8 @@ const paginate = (products) => {
               container.insertBefore(ellipsisRight, links[currentIdx + 2]);
             }
 
-            // let ellipsis = container.querySelector('span');
-            // if (!ellipsis) {
-            //     ellipsis = document.createElement('span');
-            //     ellipsis.textContent = '...';
-            //     container.insertBefore(ellipsis, links[links.length - 1]);
-            // }
-            // ellipsis.style.display = '';
-            // // show first and last parts
-            // for (let j=1; j < 4; j++) {
-            //     links[j].style.display = '';
-            // }
-            // links[links.length - 1].style.display = '';
         } else {
             links.forEach(link => link.style.display = '');
-            // const ellipsis = container.querySelector('span');
-            // if (ellipsis) {
-            //     ellipsis.style.display = 'none';
-            // }
         }
     };
 
@@ -224,10 +196,6 @@ const paginate = (products) => {
           } else {
             newActiveLi = currentActiveLi.nextElementSibling;
           }
-            // newActiveLi = currentActiveLi.nextElementSibling;
-            // console.log('newActiveLi: ', newActiveLi);
-
-            // currentPage++;
         } else {
           currentPage--;
           if (currentPage < 1) {
@@ -236,27 +204,8 @@ const paginate = (products) => {
           } else {
             newActiveLi = currentActiveLi.previousElementSibling;
           }
-            // newActiveLi = currentActiveLi.previousElementSibling;
-            // console.log('newActiveLi: ', newActiveLi);
-
-            // currentPage--;
         }
 
-        // if (!newActiveLi && event.target.closest('#nextBtn')) {
-        //     newActiveLi = liElements[0];
-        // } else if (!newActiveLi) {
-        //     newActiveLi = liElements[liElements.length - 1];
-        // }
-
-        // currentActiveLi.classList.remove('active');
-        // newActiveLi.classList.add('active');
-
-        // // condition for circle render
-        // if (currentPage > liElements.length) {
-        //     currentPage = 1;
-        // } else if (currentPage < 1) {
-        //     currentPage = liElements.length;
-        // }
         if (currentActiveLi && newActiveLi) {
           currentActiveLi.classList.remove('active');
           newActiveLi.classList.add('active');

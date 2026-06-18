@@ -22,18 +22,18 @@
   <div class="main-center-front-task">
     <div class="task-info">
       <div class="info-title-block">
-        <p class="info-title" id="infoTitle">Choice mode</p>
+        <p class="info-title" id="infoTitle">{{ __('Choice mode') }}</p>
       </div>
       <div class="info-description-block">
         <div class="task-description">
           <div class="task-description">
-            <p class="info-content" id="taskDescription">Choosing the right translation for each selected languages</p>
+            <p class="info-content" id="taskDescription">{{ __('Choosing the right translation for each selected languages') }}</p>
           </div>
         </div>
       </div>
       <div class="info-service-block">
         <button class="btn-link" id="changeModeBtn">Change mode</button>
-        <button class="btn-link" onclick="openModalSettings()">Change settings</button>
+        <button class="btn-link" onclick="openModalSettings()">{{ __('Change settings') }}</button>
       </div>
     </div>
     <div class="info-content-block-mobile">
@@ -80,13 +80,13 @@
     </div>
     <div class="task-navi">
       <div class="navi-buttons" id="naviButtons">
-        <button class="btn-link" id="prevBtn">Prev&nbsp;&#9668;</button>
+        <button class="btn-link" id="prevBtn">{{ __('Previous') }}&nbsp;&#9668;</button>
         <ul class="pagination-list">
         </ul>
-        <button class="btn-link" id="nextBtn">&#9658;&nbsp;Next</button>
+        <button class="btn-link" id="nextBtn">&#9658;&nbsp;{{ __('Next') }}</button>
       </div>
       <div class="navi-buttons-exit">
-        <button class="btn-link" id="exitChoice" title="Save totals!"><a class="btn-link" href="{{ route('home') }}">Exit&nbsp;
+        <button class="btn-link" id="exitChoice" title="Save totals!"><a class="btn-link" href="{{ route('home') }}">{{ __('Exit') }}&nbsp;
           <!-- icon-exit.png" -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path

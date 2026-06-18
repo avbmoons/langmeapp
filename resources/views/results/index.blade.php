@@ -6,10 +6,10 @@
 <div class="main-center-front-task guide">
   <div class="task-info" style="margin-top: 40px;">
     <div class="info-title-block results">
-      <p class="info-title" >Results for user: <strong>{{ auth()->user()->name }}</strong></p>      
+      <p class="info-title" >{{ __('Results for user') }}: <strong>{{ auth()->user()->name }}</strong></p>      
     </div>
     <div class="info-service-block">
-      <button onclick="window.print()" class="btn-print" id="btnPrint">Save to PDF</button>
+      <button onclick="window.print()" class="btn-print" id="btnPrint">{{ __('Save to PDF') }}</button>
     </div>
   </div>
   <section class="table-block" style="margin-top: 40px; margin-bottom: 40px;">
@@ -17,14 +17,14 @@
       <thead>
         <tr>
           <th class="th-id">#ID</th>          
-          <th>Mode</th>
-          <th>Langs</th>
-          <th>Themes</th>
-          <th>Enjoy score</th>
-          <th>Normal score</th>
-          <th>Worry score</th>
-          <th>User</th>
-          <th class="th-fixed">Updated</th>
+          <th>{{ __('Mode') }}</th>
+          <th>{{ __('Langs') }}</th>
+          <th>{{ __('Themes') }}</th>
+          <th>{{ __('Enjoy score') }}</th>
+          {{-- <th>Normal score</th> --}}
+          <th>{{ __('Worry score') }}</th>
+          <th>{{ __('User') }}</th>
+          <th class="th-fixed">{{ __('Updated') }}</th>
         </tr>
       </thead>
       <tbody>
@@ -55,7 +55,7 @@
             @endif
           </td>
           <td>{{ $task->num_enjoy }}</td>
-          <td>{{ $task->num_normal }}</td>
+          {{-- <td>{{ $task->num_normal }}</td> --}}
           <td>{{ $task->num_worry }}</td>
           <td>{{ optional($task->users)->name }}</td>
           <td>{{ $task->updated_at->format('d.m.Y H:i') }}</td>

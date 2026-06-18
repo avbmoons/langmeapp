@@ -36,11 +36,10 @@ final class WordsQueryBuilder extends QueryBuilder
 
     public function getWordsWithThemes():Collection
     {
-        return Word::query()  // DB::table('words')
+        return Word::query()  
             ->join('theme_has_words', 'words.id', '=', 'theme_has_words.word_id')
             ->join('themes', 'theme_has_words.theme_id', '=', 'themes.id')
             ->select('words.id', 'words.code', 'theme_has_words.theme_id', 'words.status', 'words.title')
-            //->select('words.id', 'themes.id')
             ->where('themes.status', '=', 'active')
             ->where('words.status', '=', 'active')
             ->orderBy('words.id')
@@ -67,12 +66,7 @@ final class WordsQueryBuilder extends QueryBuilder
             ->orderBy('id', 'asc') // 'desc'
             ->paginate(10)
             ->withQueryString();
-        
-        //$this->model->paginate($quantity);
+
     }
 
-    // public function getWordsWithPagination(int $quantity = 10): LengthAwarePaginator
-    // {
-    //     return $this->model->paginate($quantity);
-    // }
 }

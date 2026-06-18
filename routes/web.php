@@ -29,6 +29,7 @@ use App\Http\Controllers\MailController;
 use App\Http\Controllers\SocialiteProvidersController;
 use App\Http\Controllers\TaskController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -94,3 +95,10 @@ Route::post('save-task', [TaskController::class, 'store'])->name('saveTask');
 //Route::get('/import', function () { return view('import'); });
 
 Route::get('/draftAuth', [DraftAuthController::class, 'index'])->name('draftAuth');
+
+Route::get('lang/{locale}', function ($locale) {
+    if (in_array($locale, ['ru', 'en'])) {
+        Session::put('locale', $locale);
+    }
+    return redirect()->back();
+})->name('lang.switch');

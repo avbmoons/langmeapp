@@ -451,6 +451,12 @@ body {
   color: #0f1a1c;
   align-items: center;
 }
+.header-front .header-right-front .header-right-block-front .menu-front .menu-item-front .btn-link-menu.active {
+  color: #4f46e5;
+  font-weight: bold;
+  text-decoration: underline;
+  pointer-events: none;
+}
 .header-front .header-right-front .header-right-block-front .menu-front .header {
   margin-left: 10%;
 }
@@ -471,15 +477,14 @@ body {
   width: fit-content;
   height: auto;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
   position: relative;
 }
 .header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangEng,
 .header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangRus,
-.header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangEngChoice {
-  margin-left: 20px;
+.header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangEngChoice, .header-front .header-right-front .header-right-block-front .menu-front .combo-block-front #appLangRusChoice {
+  margin-left: 10px;
   opacity: 1;
   border: none;
   outline: none;
