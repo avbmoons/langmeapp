@@ -11,32 +11,9 @@
         </div>
       </div>
     </section>
-    {{-- @if ($errors->any())
-      @foreach ($errors->all() as $error)
-        <x-alert type="danger" :message="$error"></x-alert>        
-      @endforeach        
-    @endif
-    <form method="post" action="{{ route('admin.importlogs.store') }}" class="form-input admin" enctype="multipart/form-data">
-      @csrf
-      <div class="input-box" name="btns-box">
-        <div class="input-group">
-          <input type="file" class="input-text" name="csv_file">
-          <button type="submit" class="btn-form">Import start</button>          
-          <a class="btn-form cancel" href="{{ route('admin.importlogs.index') }}">Cancel</a>       
-        </div>
-      </div> 
-    </form> --}}
 
     @if ($importLog)
-      {{-- <div class="alert {{ $importLog->status === 'success' ? 'alert-success' : 'alert-warning' }}">
-        <h4>Import result: {{ $importLog->filename }}</h4>
-        <p><strong>Status: </strong> {{ strtoupper($importLog->status) }}</p>
-        <p><strong>Rows processed: </strong> {{ $importLog->rows_processed }}</p>
-        <hr>
-        <p><strong>Details: </strong> {{ $importLog->message }}</p>
 
-        <a href="{{ route('admin.importlogs.index')}}" class="btn btn-link">Go to all logs</a>
-      </div> --}}
       <div class="form-input" style="margin-bottom: 0; margin-top: 0;">
         <div class="input-box admin" name="filename-box">
           <label for="filename" class="input-lable">Import file</label>            
@@ -65,7 +42,6 @@
 
       @php $currentLog = $importLog; @endphp
 
-      {{-- <div class="alert alert-info">File import results: {{ $currentLog->filename }}</div> --}}
       <section class="forms-head-block admin">
         <div class="title-block">
           <div class="title-box">

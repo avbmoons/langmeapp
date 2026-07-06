@@ -12,7 +12,7 @@
     </div>
     <div class="services-block">
       <div class="services-box">
-        {{-- <div class="search-block"> --}}
+
         <form method="GET" action="{{ route('admin.mails.index') }}" class="search-block">
           <div class="search-box">
             <input type="text" name="search" class="input-search" id="searchMials" placeholder="Record search" value="{{ request('search') }}"/>
@@ -22,7 +22,7 @@
               </button>            
           </div>
         </form>
-        {{-- </div> --}}
+
         <div class="add-block" style="display: none">
           <div class="add-box">            
               <button class="btn-add">
@@ -59,9 +59,6 @@
           <td>{{ $mail->user_id }}</td>
           <td>{{ $mail->username }}</td>
           <td>{{ $mail->email }}</td>
-          {{-- <td>{{ $mail->modes->title }}</td>
-          <td>{{ $mail->langs->map(fn($item) => $item->title)->implode(", ") }}</td>
-          <td>{{ $mail->themes->map(fn($item) => $item->title)->implode(", ") }}</td> --}}
           <td>{{ Str::limit($mail->description, 100) }}</td>
           <td>
             <div class="statuses">

@@ -49,9 +49,7 @@
       </div>
       <div class="input-box" name="btns-box">
         <div class="input-group">
-          {{-- <button type="submit" class="btn-form">Save & close</button>    --}}
           <a class="btn-form" href="{{ route('admin.mails.edit', ['mail' => $mail->id]) }}">Edit</a>       
-          {{-- <button type="reset" class="btn-form cancel">Clear</button>  --}}
           <a class="btn-form cancel" href="{{ route('admin.mails.index') }}">Close</a>       
         </div>
       </div>

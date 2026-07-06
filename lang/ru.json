@@ -72,5 +72,15 @@
     "Send": "Отправить",
     "Cancel": "Отмена",
     "Skip": "Пропустить",
-    "What's there now": "Что есть сейчас"
+    "What's there now": "Что есть сейчас",
+    "Attention": "Внимание",
+    "For the website operation correctly, data saving must be enabled": "Для корректной работы сайта необходимо включить сохранение данных",
+    "Please disable incognito mode or allow the site to use cookies and site data in your browser settings": "Пожалуйста, отключите режим инкогнито или разрешите сайту использовать файлы cookie и данные сайтов в настройках браузера",
+    "Welcome to langMeApp": "Добро пожаловать в лангМиАпп",
+    "Six languages": "шесть языков",
+    "Fifty topics and concepts": "пятьдесят тем и понятий",
+    "more than 1300 words": "более 1300 слов",
+    "Compare and memorize": "Сравнить и запомнить",
+    "And it's just interesting": "И это просто интересно",
+    "Go": "Вперёд"
 }

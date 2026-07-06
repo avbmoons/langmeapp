@@ -26,10 +26,6 @@
               @endforeach              
             </select>
       </div>
-      {{-- <div class="input-box admin" name="title-box">
-        <label for="is_admin" class="input-lable">IsAdmin</label>            
-        <input type="text" class="input-text" name="is_admin" id="is_admin" value="{{ old('is_admin') }}" @error('is_admin') is-invalid @enderror>              
-      </div> --}}
       <div class="input-box admin" name="title-box">
         <label for="name" class="input-lable">Name</label>            
         <input type="text" class="input-text" name="name" id="name" value="{{ old('name') }}" @error('name') is-invalid @enderror>              

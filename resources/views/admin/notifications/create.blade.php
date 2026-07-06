@@ -25,7 +25,6 @@
               <option value="{{ $user->id }}">{{ $user->name }} ({{ $user->email }})</option>
           @endforeach
         </select>          
-        {{-- <input type="email" class="input-text" name="email" id="email" value="{{ old('email') }}" @error('email') is-invalid @enderror>               --}}
       </div>
       <div class="input-box admin" name="subject-box">
         <label for="subject" class="input-lable">Subject</label>            
@@ -35,22 +34,6 @@
         <label for="message" class="input-lable">Message</label>
         <textarea class="input-text area" name="message" id="message">{{ old('message') }}</textarea>            
       </div>     
-      {{-- <div class="input-box" name="image-box">
-        <div class="input-group">
-          <div class="input-box mini" name="code-box">
-            <label for="code" class="input-lable">Code</label>
-            <input type="number" class="input-text" name="code" id="code" value="{{ old('code') }}" @error('code') is-invalid @enderror>            
-          </div>
-          <div class="input-box mini" name="status-box">
-            <label for="status" class="input-lable">Status</label>            
-            <select class="input-text" name="status" id="status">
-              @foreach ($statuses as $status)
-                 <option @if(old('status') === $status) selected @endif>{{ $status }}</option> 
-              @endforeach              
-            </select>
-          </div>
-        </div>
-      </div> --}}
       <div class="input-box" name="btns-box">
         <div class="input-group">
           <button type="submit" class="btn-form">Send & close</button>          

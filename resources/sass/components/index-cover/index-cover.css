@@ -75,6 +75,52 @@ body {
   outline: none;
   cursor: pointer;
 }
+.index-cover .wellcome .wellcome-header .menu-langs {
+  margin: 0 auto;
+  margin-right: 15px;
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+.index-cover .wellcome .wellcome-header .menu-langs .menu-item-front {
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  background: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  font-size: 1.11vw;
+  font-weight: 300;
+  line-height: 1.11vw;
+  letter-spacing: 0;
+  cursor: pointer;
+  align-items: end;
+}
+.index-cover .wellcome .wellcome-header .menu-langs .menu-item-front .btn-link-menu {
+  text-decoration: none;
+  font-size: 1.11vw;
+  font-weight: 300;
+  line-height: 1.11vw;
+  letter-spacing: 0;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #46494a;
+  align-items: center;
+}
+.index-cover .wellcome .wellcome-header .menu-langs .menu-item-front .btn-link-menu.active {
+  color: orangered;
+  font-weight: bold;
+  text-decoration: underline;
+  pointer-events: none;
+}
 .index-cover .wellcome .wellcome-main {
   margin: 0 auto;
   width: 70%;

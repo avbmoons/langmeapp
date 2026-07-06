@@ -217,5 +217,5 @@
       //console.log(themesWordsStr);
 
     </script>
-    {{-- <script src="{{ asset('js/charts.js') }}"></script> --}}
+
 @endpush

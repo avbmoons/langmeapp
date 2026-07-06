@@ -2,7 +2,7 @@
 
 @section('title', 'Home')
 @section('content')
-{{-- <main> --}}
+
   <div class="main-left-front">
     <div class="btn-tutor-block">
        <button type="button" class="btn-tutor" onclick="openTutorPages()"> 
@@ -28,6 +28,9 @@
     </div>
   </div>
   <div class="main-center-front">
+    <div id="storage-warning" style="display: none; background: #fff3cd; color: #856404; padding: 15px; border: 1px solid #ffeeba; border-radius: 4px; margin: 10px 0;">
+      <strong>{{ __('Attention') }}! </strong>{{ __('For the website operation correctly, data saving must be enabled')}}. {{ __('Please disable incognito mode or allow the site to use cookies and site data in your browser settings')}}.
+    </div>
     <div class="settings-front">
       <button class="set-get-front" id="setButton" onclick="openModalSettings()">
           <!-- icon-settings-regular.svg" -->
@@ -118,7 +121,6 @@
     </div>
     <div class="results-front">
       <button class="set-get-front" id="resultsButton" onclick="openModalResults()">
-        {{-- <a class="btn-link-set-get" href=""> --}}
           <!-- icon-finish-flag.svg" -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -126,7 +128,6 @@
                 fill="#0F1A1C"
               />
           </svg>          
-        {{-- </a> --}}
         {{ __('Results') }}
       </button>
       <div class="totals-front">
@@ -227,10 +228,33 @@
       </button>
     </div>
   </div>
-{{-- </main>   --}}
+
 @endsection
 
 @push('js')
+    {{-- check localstorage saving --}}
+    <script>
+      function checkStorageAndNotify() {
+        let available = false;
+        try {
+          const testKey = '__storage_test__';
+          localStorage.setItem(testKey, testKey);
+          localStorage.removeItem(testKey);
+          available = true;
+        } catch (e) {
+          available = false;
+        }
+        if (!available) {
+          const warningBlock = document.getElementById('storage-warning');
+          if (warningBlock) {
+            warningBlock.style.display = 'block';
+          }
+        }        
+      }
+
+      window.addEventListener('DOMContentLoaded', checkStorageAndNotify);
+
+    </script>
     {{-- get task button --}}
     <script>
       // here function getTask()
@@ -240,24 +264,8 @@
 
       getTaskButton.addEventListener('click', function() {
         getTask(modeChoice);
-        // switch(modeChoice) {
-        //   case 'Plain':
-        //     window.location.href = "{{ route('taskPlain')}}"; 
-        //     break;
-        //   case 'Choice':
-        //     window.location.href = "{{ route('taskChoice')}}"; 
-        //     break;
-        //   case 'Lang':
-        //     window.location.href = "{{ route('taskLang')}}";   
-        //     break;
-        //   case 'Mix':
-        //     window.location.href = "{{ route('taskMix')}}";   
-        //     break;
-        // }
       });
       function getTask(modeChoice) {
-        //let modeChoice = localStorage.getItem('modeChoice').trim();
-        //let pageName;
         switch(modeChoice) {
           case 'Plain':
             window.location.href = "{{ route('taskPlain')}}"; 
@@ -323,27 +331,10 @@
       console.log(strModeChoice);
       localStorage.setItem("modeChoice", strModeChoice);
 
-      //window.location.href = "{{ route('about') }}";
-      //console.log("urlName = " + urlName);
       if (window.location.href.includes('home')) {    
         window.location.href =  "{{ route('home') }}" ;   
       } else {
-        //submitTaskSettings();
         getTask();
-        // switch(strModeChoice) {
-        //     case "Plain":
-        //         window.location.href = "{{ route('taskPlain') }}";
-        //         break;
-        //     case "Choice":
-        //         window.location.href = "{{ route('taskChoice') }}";
-        //         break;
-        //     case "Lang":
-        //         window.location.href = "{{ route('taskLang') }}";
-        //         break;
-        //     case "Mix":
-        //         window.location.href = "{{ route('taskMix') }}";
-        //         break;
-        // }
       }
 
     });    
@@ -375,10 +366,6 @@
         tutorClose.onclick = closeTutorPages();
         });
       }
-
-      // tutorClose.addEventListener('click', function(event) {
-      //   tutorClose.onclick = closeTutorPages();
-      // })
 
       tutorSkip.addEventListener('click', function(event) {
         tutorSkip.onclick = closeTutorPages();

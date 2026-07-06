@@ -78,10 +78,6 @@
       </div>
     </div>
     <div class="task-mode-block" id="taskModeLang">
-      {{-- <div class="task-mode" name="row" id="item">
-        <div class="item-card base" name="itemCardBase" id="itemBase">
-        </div>
-      </div> --}}
     </div>
     <div class="task-navi">
       <div class="navi-buttons" id="naviButtons">
@@ -291,7 +287,6 @@
     <script defer src="{{ asset('js/listThemes.js')}}"></script>
     <script defer src="{{ asset('js/task.js')}}"></script> 
     <script defer src="{{ asset('js/modeLang.js')}}"></script>
-    {{-- <script defer src="{{ asset('js/paginationLang.js')}}"></script> --}}
     <script defer src="{{ asset('js/paginationnew.js')}}"></script>
     <script defer src="{{ asset('js/tutor.js')}}"></script>
 

@@ -41,10 +41,6 @@
             <label for="id-field" class="input-lable">ID#</label>
             <input type="text" class="input-text notread" name="id-field" id="id-field" value="{{ $mail->id }}" readonly >            
           </div>
-          {{-- <div class="input-box mini" name="code-box">
-            <label for="code" class="input-lable">Code</label>
-            <input type="number" class="input-text" name="code" id="code" value="{{ $mail->code }}" @error('code') is-invalid @enderror>            
-          </div> --}}
           <div class="input-box mini" name="status-box" style="width: 25%">
             <label for="status" class="input-lable">Status</label>            
             <select class="input-text" name="status" id="status">
@@ -58,7 +54,6 @@
       <div class="input-box" name="btns-box">
         <div class="input-group">
           <button type="submit" class="btn-form">Save & close</button>          
-          {{-- <button type="reset" class="btn-form cancel">Clear</button>  --}}
           <a class="btn-form cancel" href="{{ route('admin.mails.index') }}">Cancel</a>       
         </div>
       </div>

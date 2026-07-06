@@ -78,10 +78,6 @@
       </div>
     </div>
     <div class="task-mode-block" id="taskModePlain">
-      {{-- <div class="task-mode" name="row" id="item">
-        <div class="item-card base" name="itemCardBase" id="itemBase">
-        </div>
-      </div> --}}
     </div>
     <div class="task-navi">
       <div class="navi-buttons" id="naviButtons">
@@ -91,7 +87,6 @@
         <button class="btn-link" id="nextBtn">&#9658;&nbsp;{{ __('Next') }}</button>
       </div>
       <form method="POST" action="" class="navi-buttons-exit">
-      {{-- <div class="navi-buttons-exit"> --}}
         <button type="button" class="btn-link" id="btnSubmitTask">{{ __('Exit') }}&nbsp;
           <!-- icon-exit.png" -->
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -100,7 +95,6 @@
           </svg>
           </a>
         </button>
-      {{-- </div> --}}
       </form>
     </div>
     <div class="task-results" style="display: none;">

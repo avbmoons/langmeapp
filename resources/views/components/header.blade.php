@@ -83,7 +83,7 @@
             <a class="btn-link-menu {{ app()->getLocale() === 'en' ? 'active' : ''}}" href="{{ route('lang.switch', 'en') }}">Eng</a>
           </button>
           <button class="menu-item-front header" id="appLangRusChoice">
-            <a class="btn-link-menu {{ app()->getLocale() === 'ru' ? 'active' : ''}}" href="{{ route('lang.switch', 'ru') }}">Rus</a>
+            <a class="btn-link-menu {{ app()->getLocale() === 'ru' ? 'active' : ''}}" href="{{ route('lang.switch', 'ru') }}">Рус</a>
           </button>
           {{-- <div class="combo-list-front" id="appLangChoice"></div> --}}
         </div>
@@ -110,9 +110,7 @@
           </button>
         </form>
         @endif
-        {{-- <button class="menu-item-front header" id="btnAdmin">
-          <a class="btn-link-menu" href="{{ route('admin.index') }}">Admin</a>
-        </button>         --}}
+
         @if (Auth::check())        
         <button class="menu-item-front header" id="btnAdmin" title="to Admin panel">
           @if (Auth::user()->isAdmin())

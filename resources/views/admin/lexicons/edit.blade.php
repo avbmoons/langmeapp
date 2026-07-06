@@ -43,16 +43,6 @@
         <label for="title" class="input-lable">Translation</label>            
         <input type="text" class="input-text" name="translation" id="translation" value="{{ $lexicon->translation }}" @error('translation') is-invalid @enderror>              
       </div>
-      {{-- <div class="input-box admin" name="lang-box">
-        <label class="input-lable" for="lang_id">Lang</label>
-        <select class="input-text" name="lang_id" id="lang_id" @error('lang_id') is-invalid @enderror>
-          <option value="0">--Select lang--</option>
-          @foreach ($langs as $lang)
-            <option @if ((int) old('lang_id') === $lang->id) selected @endif value="{{ $lang->id }}">{{ $lang->title }}</option>
-          @endforeach
-        </select>
-        @error('lang_id') @enderror
-      </div> --}}
       <div class="input-box admin" name="spell-base-box">
         <label for="spell_base" class="input-lable">Spelling base</label>            
         <input type="text" class="input-text" name="spell_base" id="spell_base" value="{{ $lexicon->spell_base }}" @error('spell_base') is-invalid @enderror>              

@@ -51,6 +51,7 @@ body {
           justify-content: space-between;
           img {
             margin-left: 3%;
+            //border: 1px solid green;
           }
           button {
             margin-right: 3%;
@@ -58,6 +59,44 @@ body {
             border: none;
             outline: none;
             cursor: pointer;
+            //border: 1px solid green;
+          }
+          .menu-langs {
+            margin: 0 auto;
+            margin-right: 15px;
+            width: 20%;
+            height: 100%;
+            @include flex-horizontal();
+            //border: 1px solid green;
+          //}
+            .menu-item-front {
+                margin: auto; 
+                //margin-left: 40px; 
+                width: fit-content;
+                height: fit-content;
+                border: none;
+                background: none;
+                @include flex-vertical();
+                justify-content: flex-end;
+                @include text-font(1.11vw, 300, 1.11vw, 0); //16px
+                cursor: pointer;
+                align-items: end;
+                //border: 1px solid red;
+                .btn-link-menu {
+                  text-decoration: none;
+                  @include text-font(1.11vw, 300, 1.11vw, 0); //16px
+                  font-weight: bold;
+                  text-decoration: underline;
+                  color: $color-grey-link;  // $color-dark;
+                  align-items: center;
+                }
+                .btn-link-menu.active {
+                  color: orangered; // #4f46e5; //#0c3387; // 
+                  font-weight: bold;
+                  text-decoration: underline;
+                  pointer-events: none;
+                }
+            }
           }
         }
         .wellcome-main {

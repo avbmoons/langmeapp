@@ -21,7 +21,6 @@
           <th>{{ __('Langs') }}</th>
           <th>{{ __('Themes') }}</th>
           <th>{{ __('Enjoy score') }}</th>
-          {{-- <th>Normal score</th> --}}
           <th>{{ __('Worry score') }}</th>
           <th>{{ __('User') }}</th>
           <th class="th-fixed">{{ __('Updated') }}</th>
@@ -55,7 +54,6 @@
             @endif
           </td>
           <td>{{ $task->num_enjoy }}</td>
-          {{-- <td>{{ $task->num_normal }}</td> --}}
           <td>{{ $task->num_worry }}</td>
           <td>{{ optional($task->users)->name }}</td>
           <td>{{ $task->updated_at->format('d.m.Y H:i') }}</td>
@@ -67,10 +65,6 @@
         @endforelse
       </tbody>
     </table>
-
-    {{-- <div class="custom-pagination">
-      {{ $tasksList->links() }}
-    </div> --}}
 
   </section>  
 </div>

@@ -290,7 +290,6 @@
       }); 
     </script>
 
-    {{-- <script defer src="{{ asset('js/homeLoading.js')}}"></script> --}}
     <script defer src="{{ asset('js/pageLoading.js')}}"></script>    
     <script defer src="{{ asset('js/showModals.js')}}"></script>
     <script defer src="{{ asset('js/listLangs.js')}}"></script>
@@ -307,8 +306,7 @@
       let themes = @json($themes);
       let modes = @json($modes);
       let words = @json($words);
-      //let patternRus = @json($patternRus);
-      //console.log("patternRus => " + patternRus); 
+ 
       let _patternRus = @json($patternRus);     
       let _patternEng = @json($patternEng);
       let _patternArm = @json($patternArm);
@@ -390,9 +388,6 @@
       let totalEnjoy = [];
       let totalWorry = [];
 
-      // let totalsChoice = [];
-      // totalsEnjoy();
-      // totalsWorry();
       totalEnjoy.push(valueEnjoy);
       totalWorry.push(valueWorry);
       

@@ -22,9 +22,6 @@
     <div class="input-box-auth">
       <label class="input-lable-auth">{{ __('E-mail') }}</label>            
       <input type="email" class="input-text-auth readonly" id="email" name="email" value="{{ auth()->user()->email }}" readonly>
-      {{-- @error('email')
-          <span class="error">{{ $message }}</span>
-      @enderror              --}}
     </div>
     <div class="input-box-auth" name="description-box">
         <label for="description" class="input-lable-auth">{{ __('Description') }}</label>

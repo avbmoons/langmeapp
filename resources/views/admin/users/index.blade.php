@@ -12,7 +12,6 @@
     </div>
     <div class="services-block">
       <div class="services-box">
-        {{-- <div class="search-block"> --}}
         <form method="GET" action="{{ route('admin.users.index') }}" class="search-block">
           <div class="search-box">
             <input type="text" name="search" class="input-search" id="searchUsers" placeholder="Record search" value="{{ request('search') }}"/>
@@ -22,7 +21,6 @@
               </button>            
           </div>
         </form>
-        {{-- </div> --}}
         <div class="add-block">
           <div class="add-box">            
               <button class="btn-add">
@@ -46,7 +44,6 @@
           <th>IsAdmin</th>
           <th>Name</th>
           <th>E-mail</th>
-          {{-- <th class="th-status">Status</th> --}}
           <th class="th-fixed">Last login</th>
           <th class="th-fixed">Updated</th>
           <th class="th-fixed">Actions</th>
@@ -59,11 +56,6 @@
           <td>{{ $user->is_admin }}</td>
           <td>{{ $user->name }}</td>
           <td>{{ $user->email }}</td>
-          {{-- <td>
-            <div class="statuses">
-              <p>{{ $mode->status }}</p>
-            </div>
-          </td> --}}
           <td>{{ $user->last_login_at ? $user->last_login_at->format('d.m.Y H:i') : "Never entered" }}</td>
           <td>{{ $user->updated_at->format('d.m.Y H:i') }}</td>
           <td>

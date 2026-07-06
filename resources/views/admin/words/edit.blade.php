@@ -52,7 +52,6 @@
       <div class="input-box" name="btns-box">
         <div class="input-group">
           <button type="submit" class="btn-form">Save & close</button>          
-          {{-- <button type="reset" class="btn-form cancel">Clear</button>  --}}
           <a class="btn-form cancel" href="{{ route('admin.words.index') }}">Cancel</a>       
         </div>
       </div> 

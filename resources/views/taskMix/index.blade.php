@@ -78,10 +78,6 @@
       </div>
     </div>
     <div class="task-mode-block" id="taskModeMix">
-      {{-- <div class="task-mode" name="row" id="item">
-        <div class="item-card base" name="itemCardBase" id="itemBase">
-        </div>
-      </div> --}}
     </div>
     <div class="task-navi">
       <div class="navi-buttons" id="naviButtons">
@@ -237,7 +233,7 @@
     <script>
       function getTask() {
         let modeChoice = localStorage.getItem('modeChoice').trim();
-        //let pageName;
+
         switch(modeChoice) {
           case 'Plain':
             window.location.href = "{{ route('taskPlain')}}"; 
@@ -291,7 +287,6 @@
     <script defer src="{{ asset('js/listThemes.js')}}"></script>
     <script defer src="{{ asset('js/task.js')}}"></script> 
     <script defer src="{{ asset('js/modeMix.js')}}"></script>
-    {{-- <script defer src="{{ asset('js/paginationMix.js')}}"></script> --}}
     <script defer src="{{ asset('js/paginationnew.js')}}"></script>
     <script defer src="{{ asset('js/tutor.js')}}"></script>
 
@@ -381,9 +376,6 @@
       let totalEnjoy = [];
       let totalWorry = [];
 
-      // let totalsChoice = [];
-      // totalsEnjoy();
-      // totalsWorry();
       totalEnjoy.push(valueEnjoy);
       totalWorry.push(valueWorry);
       

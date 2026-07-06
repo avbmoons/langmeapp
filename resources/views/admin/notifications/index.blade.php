@@ -56,7 +56,6 @@
           <td>{{ $notification->notifiable->name}}</td>
           <td>{{ class_basename($notification->type) }}</td>
           <td>{{ $notification->data['message'] ?? 'No data' }}</td>
-          {{-- <td>{{ $notification->created_at->diffForHumans() }}</td> --}}
           <td>{{ $notification->created_at->format('d.m.Y H:i') }}</td>
           <td>{{ $notification->read_at }}</td>
         </tr>
@@ -77,34 +76,3 @@
     
 @endsection
 
-{{-- @push('js')
-    <script type="text/javascript">
-        document.addEventListener('DOMContentLoaded', function() {
-            let elements = document.querySelectorAll(".delete");
-            elements.forEach(function(e, k) {
-                e.addEventListener("click", function() {
-                const id = this.getAttribute('rel');
-                if(confirm(`Подтверждаете удаление записи с #ID = ${id}`)) {
-                    send(`/admin/mails/${id}`).then(() => {
-                        location.reload();
-                    });
-                } else {
-                    alert("Удаление отменено");
-                }
-            });
-            });
-        });
-
-        async function send(url) {
-            let response = await fetch(url, {
-                method: 'DELETE',
-                headers: {
-                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
-                }
-            });
-
-            let result = await response.json();
-            return result.ok;
-        }
-    </script>
-@endpush --}}

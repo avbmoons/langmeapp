@@ -12,7 +12,6 @@
     </div>
     <div class="services-block">
       <div class="services-box">
-        {{-- <div class="search-block"> --}}
         <form method="GET" action="{{ route('admin.words.index') }}" class="search-block">
           <div class="search-box">
             <input type="text" name="search" class="input-search" id="searchWords" placeholder="Record search" value="{{ request('search') }}"/>
@@ -22,7 +21,6 @@
             </button>            
           </div>
         </form>
-        {{-- </div> --}}
         <div class="add-block">
           <div class="add-box">            
               <button class="btn-add">
