@@ -59,6 +59,8 @@ class TaskController extends Controller
 
         //JobTaskStore::dispatch($taskData);
 
+        ////dispatch(new JobTaskStore($task));
+
         $task = new Task();
         
         $task->mode_id = $modeId;
